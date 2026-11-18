@@ -9,7 +9,7 @@ This repository holds the code, frozen split definitions, run configurations and
 of the paper.
 
 The package contains what the reviewers asked to be released. It does not contain the raw
-datasets (public, linked below), model checkpoints or per-record predictions.
+datasets (public, linked below) or per-record predictions.
 
 | Request | Where |
 |---|---|
@@ -31,6 +31,7 @@ splits/<dataset>/          frozen split manifests, split plans, feature statisti
 configs/
   run_variants.json        settings and inputs of all 802 runs defined by the builder
   checkpoint_configs/      training configuration stored in each reported graph checkpoint
+checkpoints/<dataset>/      the 12 reported graph-branch checkpoints (3 seeds per setting)
 results/                   all 826 result files of the study (JSON, JSONL, CSV)
 paper/
   tools/make_tables.py     regenerates every number and table of the paper
@@ -48,7 +49,8 @@ paper/
 | `splits/<dataset>/split_audit.json` | Split plan: block length, selection rule, split fractions and segments (for `nids-cic`, prepared with an earlier version that stored the plan only in its manifest, the same fields are copied from the manifest; its segments equal those of `nids-cic-rel`) |
 | `splits/<dataset>/preprocess.json` | Feature statistics and vocabularies fitted on the training split only; its SHA-256 equals the `preprocess_sha256` recorded in the manifest |
 | `configs/run_variants.json` | Settings and inputs of every run |
-| `configs/checkpoint_configs/` | Configuration and parameter count read from the 11 reported graph checkpoints: `5gs/` for both 5G-NIDD directions, `tc/` for ToN and CIC |
+| `configs/checkpoint_configs/` | Configuration and parameter count read from 11 of the 12 released checkpoints (all but ToN seed 42): `5gs/` for both 5G-NIDD directions, `tc/` for ToN and CIC |
+| `checkpoints/<dataset>/seed<k>/best.pt` | The frozen graph-branch checkpoints of the reported model, three seeds per setting; `checkpoints/SHA256SUMS` lists their digests |
 | `results/` | Every result file of the study, with paths as in the original run tree: the files behind each number and table, the per-seed runs, and the development and diagnostic runs. Copies of the split manifests that each run carried are omitted; they are identical to `splits/` |
 | `paper/tools/make_tables.py` | Writes `paper/tables/numbers.tex` (every number quoted in the paper) and the table files |
 
@@ -68,6 +70,17 @@ python paper/tools/make_tables.py   # creates paper/tables/
 
 From the files in `results/`, this reproduces the revised manuscript exactly:
 1,543 numbers and 24 tables.
+
+## Re-evaluating the released checkpoints
+
+1. Prepare the dataset from the public release with its preparation run (`experiments/build_runs.py`,
+   e.g. the `ton-prepare-full` variant) and check that the resulting `manifest.json` equals
+   `splits/<dataset>/manifest.json`; preparation is deterministic.
+2. Copy `checkpoints/<dataset>/seed<k>/best.pt` into the prepared folder.
+3. Run `python run_pipeline.py --mode evaluate --output_dir <prepared folder>` (set `CTG_CPU=1`
+   to evaluate on CPU). The test results are written under `<prepared folder>/evaluations/`.
+
+Each checkpoint stores the configuration it was trained with (see `configs/checkpoint_configs/`).
 
 ## Reproducing the experiments
 
