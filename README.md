@@ -1,5 +1,7 @@
 # CT-Graph: reproducibility package
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24347748.svg)](https://doi.org/10.5281/zenodo.24347748)
+
 **Paper:** *CT-Graph: Collector-Causal Temporal Graph Context for Detecting Multi-Flow Attacks
 Missed by Per-Flow Intrusion Detectors* (revised manuscript)
 
@@ -112,6 +114,7 @@ If you use this code or these results, please cite the paper:
 }
 ```
 
+This package is archived at Zenodo: <https://doi.org/10.5281/zenodo.24347748>.
 The same information is in `CITATION.cff`.
 
 ## Licence

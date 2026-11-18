@@ -1,6 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the paper."
 title: "CT-Graph: reproducibility package"
+doi: 10.5281/zenodo.24347748
+repository-code: "https://github.com/Dr-Haitham83/CT-Graph"
 license: MIT
 authors:
   - family-names: Elwahsh
