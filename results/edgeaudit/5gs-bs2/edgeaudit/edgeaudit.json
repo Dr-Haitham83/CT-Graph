@@ -1,0 +1,98 @@
+{
+ "prepared": "nids-5gs-bs2",
+ "K_per_endpoint": 6,
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "splits": {},
+ "definition": {
+  "definite": "lo_j > hi_i",
+  "not_certifiable": "hi_j > lo_i",
+  "intervals": "lo = last packet time; hi = lo + g"
+ },
+ "start": {
+  "edges": 7486608,
+  "definite_edges": 66615,
+  "definite_frac": 0.008897888068935891,
+  "not_certifiable_edges": 66615,
+  "not_certifiable_frac": 0.008897888068935891,
+  "roots_with_edges": 1190744,
+  "roots_with_definite": 25234,
+  "roots_with_definite_frac": 0.021191792694315488,
+  "per_class_roots_with_definite_frac": {
+   "Benign": 0.006947959129652179,
+   "httpflood": 0.07914925706195126,
+   "icmpflood": 0.0,
+   "slowratedos": 0.09740113629971311,
+   "synflood": 0.001161072408697488,
+   "synscan": 6.2375249500998e-05,
+   "tcpconnectscan": 0.00016710299114354148,
+   "udpflood": 0.010334030140556805,
+   "udpscan": 0.0
+  },
+  "lead_s": {
+   "p50": 0.10000000000013642,
+   "p90": 0.6000000000003638,
+   "p99": 4.799999999999272,
+   "max": 16.0
+  }
+ },
+ "end": {
+  "edges": 7486399,
+  "definite_edges": 222552,
+  "definite_frac": 0.029727509848192703,
+  "not_certifiable_edges": 222552,
+  "not_certifiable_frac": 0.029727509848192703,
+  "roots_with_edges": 1190717,
+  "roots_with_definite": 68636,
+  "roots_with_definite_frac": 0.057642580058905685,
+  "per_class_roots_with_definite_frac": {
+   "Benign": 0.02696120475140672,
+   "httpflood": 0.09044530113806874,
+   "icmpflood": 0.0,
+   "slowratedos": 0.5774655810094362,
+   "synflood": 0.0035887692632467806,
+   "synscan": 6.2375249500998e-05,
+   "tcpconnectscan": 0.0,
+   "udpflood": 0.006675792217333882,
+   "udpscan": 0.0
+  },
+  "lead_s": {
+   "p50": 1.6000000000003638,
+   "p90": 4.599999999999909,
+   "p99": 4.900000000000091,
+   "max": 16.799999999999272
+  }
+ },
+ "causal": {
+  "edges": 7486884,
+  "definite_edges": 0,
+  "definite_frac": 0.0,
+  "not_certifiable_edges": 0,
+  "not_certifiable_frac": 0.0,
+  "roots_with_edges": 1190746,
+  "roots_with_definite": 0,
+  "roots_with_definite_frac": 0.0,
+  "per_class_roots_with_definite_frac": {
+   "Benign": 0.0,
+   "httpflood": 0.0,
+   "icmpflood": 0.0,
+   "slowratedos": 0.0,
+   "synflood": 0.0,
+   "synscan": 0.0,
+   "tcpconnectscan": 0.0,
+   "udpflood": 0.0,
+   "udpscan": 0.0
+  },
+  "lead_s": null
+ },
+ "elapsed_s": 16.662721157073975
+}

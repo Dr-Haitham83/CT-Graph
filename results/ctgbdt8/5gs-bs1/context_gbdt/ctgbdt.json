@@ -1,0 +1,101 @@
+{
+ "model": "CT-GBDT v8 (multi-view random-subspace context ensemble; double held-out maximin rule)",
+ "views": {
+  "flow+REL": [
+   "flow",
+   "REL"
+  ],
+  "flow+T_segz": [
+   "flow",
+   "T_segz"
+  ],
+  "all": [
+   "flow",
+   "REL",
+   "T_count",
+   "T_novelty",
+   "T_flags",
+   "T_volume",
+   "T_timing",
+   "T_segz"
+  ]
+ },
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.8448327636601833,
+    "balanced": 0.9857412574140568
+   },
+   "calibration": {
+    "bayes": 0.6694175410626064,
+    "balanced": 0.6503540402028877
+   },
+   "rule_on_val": "balanced"
+  },
+  "flow+REL": {
+   "validation": {
+    "bayes": 0.9921356718940411,
+    "balanced": 0.9885430481008065
+   },
+   "calibration": {
+    "bayes": 0.546033198593302,
+    "balanced": 0.5456349437008134
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.006394414479984234,
+   "gain_calibration": -0.10432084160958566
+  },
+  "flow+T_segz": {
+   "validation": {
+    "bayes": 0.9959785967781377,
+    "balanced": 0.9974562604171343
+   },
+   "calibration": {
+    "bayes": 0.5398237022733879,
+    "balanced": 0.5308861680278303
+   },
+   "rule_on_val": "balanced",
+   "gain_validation": 0.011715003003077484,
+   "gain_calibration": -0.11946787217505739
+  },
+  "all": {
+   "validation": {
+    "bayes": 0.9914792403699154,
+    "balanced": 0.8677657154891674
+   },
+   "calibration": {
+    "bayes": 0.5479420817684932,
+    "balanced": 0.38931371201669335
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.005737982955858589,
+   "gain_calibration": -0.10241195843439443
+  },
+  "multiview": {
+   "validation": {
+    "bayes": 0.9935329940688146,
+    "balanced": 0.8957704394962253
+   },
+   "calibration": {
+    "bayes": 0.5436260814815268,
+    "balanced": 0.4874643188022935
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.007791736654757742,
+   "gain_calibration": -0.10672795872136087
+  }
+ },
+ "chosen_feature_set": "flow",
+ "rule": "maximin of (gain_val, gain_cal) over candidates with both >= 0.002 vs flow"
+}

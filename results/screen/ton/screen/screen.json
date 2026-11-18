@@ -1,0 +1,636 @@
+{
+ "prepared": "nids-ton",
+ "protocol": "train/validation/calibration only; test never opened",
+ "features": 445,
+ "groups": {
+  "flow": 62,
+  "REL": 59,
+  "T_count": 65,
+  "T_novelty": 33,
+  "T_flags": 105,
+  "T_volume": 57,
+  "T_timing": 49,
+  "T_segz": 15
+ },
+ "configs": {
+  "P0_flow": {
+   "features": 62,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7816419181968057,
+    "per_class_mcc": {
+     "Benign": 0.9148,
+     "backdoor": 0.9985,
+     "ddos": 0.98,
+     "dos": 0.8113,
+     "injection": 0.9548,
+     "mitm": 0.3092,
+     "password": 0.9749,
+     "ransomware": 0.8064,
+     "scanning": 0.0856,
+     "xss": 0.9811
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8379905596689674,
+    "per_class_mcc": {
+     "Benign": 0.9112,
+     "backdoor": 0.9986,
+     "ddos": 0.986,
+     "dos": 0.8198,
+     "injection": 0.9525,
+     "mitm": 0.585,
+     "password": 0.9848,
+     "ransomware": 0.9503,
+     "scanning": 0.2154,
+     "xss": 0.9763
+    }
+   },
+   "fit_seconds": 713,
+   "gain_vs_flow": [
+    0.0,
+    0.0
+   ]
+  },
+  "P1_flow+REL": {
+   "features": 121,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7999695224824628,
+    "per_class_mcc": {
+     "Benign": 0.9215,
+     "backdoor": 0.9994,
+     "ddos": 0.9814,
+     "dos": 0.9973,
+     "injection": 0.983,
+     "mitm": 0.3841,
+     "password": 0.9566,
+     "ransomware": 0.7823,
+     "scanning": -0.001,
+     "xss": 0.995
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.760217301897699,
+    "per_class_mcc": {
+     "Benign": 0.9049,
+     "backdoor": 0.9997,
+     "ddos": 0.9869,
+     "dos": 0.9981,
+     "injection": 0.9734,
+     "mitm": 0.0109,
+     "password": 0.977,
+     "ransomware": 0.7549,
+     "scanning": 0.0041,
+     "xss": 0.9924
+    }
+   },
+   "fit_seconds": 686,
+   "gain_vs_flow": [
+    0.01832760428565705,
+    -0.07777325777126842
+   ]
+  },
+  "P2_all": {
+   "features": 445,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.7530826552790634,
+    "per_class_mcc": {
+     "Benign": 0.9119,
+     "backdoor": 0.9988,
+     "ddos": 0.9749,
+     "dos": 0.9539,
+     "injection": 0.9939,
+     "mitm": 0.368,
+     "password": 0.9665,
+     "ransomware": 0.3424,
+     "scanning": 0.0315,
+     "xss": 0.989
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7837051903738071,
+    "per_class_mcc": {
+     "Benign": 0.9119,
+     "backdoor": 0.9987,
+     "ddos": 0.9841,
+     "dos": 0.9958,
+     "injection": 0.9603,
+     "mitm": 0.2383,
+     "password": 0.9873,
+     "ransomware": 0.6549,
+     "scanning": 0.1315,
+     "xss": 0.9743
+    }
+   },
+   "fit_seconds": 468,
+   "gain_vs_flow": [
+    -0.028559262917742356,
+    -0.05428536929516026
+   ]
+  },
+  "P3_all-lowgain": {
+   "features": 347,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8084727409048588,
+    "per_class_mcc": {
+     "Benign": 0.9199,
+     "backdoor": 0.9986,
+     "ddos": 0.9815,
+     "dos": 0.9923,
+     "injection": 0.9955,
+     "mitm": 0.4038,
+     "password": 0.9491,
+     "ransomware": 0.8377,
+     "scanning": 0.0103,
+     "xss": 0.996
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7767335592560657,
+    "per_class_mcc": {
+     "Benign": 0.9101,
+     "backdoor": 0.9992,
+     "ddos": 0.9865,
+     "dos": 0.9965,
+     "injection": 0.9636,
+     "mitm": 0.1542,
+     "password": 0.9736,
+     "ransomware": 0.7619,
+     "scanning": 0.0348,
+     "xss": 0.9868
+    }
+   },
+   "fit_seconds": 894,
+   "gain_vs_flow": [
+    0.026830822708053037,
+    -0.06125700041290172
+   ]
+  },
+  "P4_all-redundant": {
+   "features": 287,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7585569899679039,
+    "per_class_mcc": {
+     "Benign": 0.9145,
+     "backdoor": 0.9997,
+     "ddos": 0.9813,
+     "dos": 0.884,
+     "injection": 0.9824,
+     "mitm": 0.1281,
+     "password": 0.9423,
+     "ransomware": 0.7616,
+     "scanning": -0.0018,
+     "xss": 0.9934
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7576066045360664,
+    "per_class_mcc": {
+     "Benign": 0.9031,
+     "backdoor": 0.9985,
+     "ddos": 0.9872,
+     "dos": 0.8469,
+     "injection": 0.9645,
+     "mitm": 0.0033,
+     "password": 0.9665,
+     "ransomware": 0.9199,
+     "scanning": 0.0,
+     "xss": 0.9862
+    }
+   },
+   "fit_seconds": 1091,
+   "gain_vs_flow": [
+    -0.023084928228901846,
+    -0.08038395513290097
+   ]
+  },
+  "P5_all-drift": {
+   "features": 367,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8069824855427816,
+    "per_class_mcc": {
+     "Benign": 0.921,
+     "backdoor": 0.9995,
+     "ddos": 0.9812,
+     "dos": 0.9893,
+     "injection": 0.9984,
+     "mitm": 0.3589,
+     "password": 0.9516,
+     "ransomware": 0.8661,
+     "scanning": 0.0085,
+     "xss": 0.9954
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7897832792291427,
+    "per_class_mcc": {
+     "Benign": 0.9115,
+     "backdoor": 0.998,
+     "ddos": 0.9878,
+     "dos": 0.9942,
+     "injection": 0.9747,
+     "mitm": 0.1063,
+     "password": 0.9806,
+     "ransomware": 0.9365,
+     "scanning": 0.0206,
+     "xss": 0.9876
+    }
+   },
+   "fit_seconds": 1351,
+   "gain_vs_flow": [
+    0.025340567345975895,
+    -0.048207280439824696
+   ]
+  },
+  "P6_all-unstable": {
+   "features": 379,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.7762311337648125,
+    "per_class_mcc": {
+     "Benign": 0.9148,
+     "backdoor": 0.9991,
+     "ddos": 0.9759,
+     "dos": 0.997,
+     "injection": 0.9979,
+     "mitm": 0.337,
+     "password": 0.9714,
+     "ransomware": 0.5649,
+     "scanning": 0.0178,
+     "xss": 0.9866
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7691316803137564,
+    "per_class_mcc": {
+     "Benign": 0.9077,
+     "backdoor": 0.9994,
+     "ddos": 0.9844,
+     "dos": 0.9971,
+     "injection": 0.9669,
+     "mitm": 0.0719,
+     "password": 0.9885,
+     "ransomware": 0.7348,
+     "scanning": 0.0531,
+     "xss": 0.9875
+    }
+   },
+   "fit_seconds": 1369,
+   "gain_vs_flow": [
+    -0.005410784431993276,
+    -0.06885887935521096
+   ]
+  },
+  "P7_scale_free": {
+   "features": 284,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.778464329661736,
+    "per_class_mcc": {
+     "Benign": 0.9143,
+     "backdoor": 0.9983,
+     "ddos": 0.9737,
+     "dos": 0.9959,
+     "injection": 0.9637,
+     "mitm": 0.3873,
+     "password": 0.9671,
+     "ransomware": 0.5552,
+     "scanning": 0.0378,
+     "xss": 0.9914
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7106194805965838,
+    "per_class_mcc": {
+     "Benign": 0.9111,
+     "backdoor": 0.9979,
+     "ddos": 0.9829,
+     "dos": 0.9873,
+     "injection": 0.9536,
+     "mitm": 0.0375,
+     "password": 0.9795,
+     "ransomware": 0.1953,
+     "scanning": 0.0772,
+     "xss": 0.984
+    }
+   },
+   "fit_seconds": 1119,
+   "gain_vs_flow": [
+    -0.0031775885350697752,
+    -0.12737107907238365
+   ]
+  },
+  "P8_all-(redundant|drift|unstable)": {
+   "features": 207,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.7703196852596637,
+    "per_class_mcc": {
+     "Benign": 0.9094,
+     "backdoor": 0.9989,
+     "ddos": 0.9737,
+     "dos": 0.994,
+     "injection": 0.9087,
+     "mitm": 0.4441,
+     "password": 0.9673,
+     "ransomware": 0.4852,
+     "scanning": 0.0254,
+     "xss": 0.9965
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7360214920681589,
+    "per_class_mcc": {
+     "Benign": 0.9099,
+     "backdoor": 0.999,
+     "ddos": 0.984,
+     "dos": 0.9972,
+     "injection": 0.9542,
+     "mitm": 0.0355,
+     "password": 0.9898,
+     "ransomware": 0.4534,
+     "scanning": 0.0487,
+     "xss": 0.9885
+    }
+   },
+   "fit_seconds": 924,
+   "gain_vs_flow": [
+    -0.011322232937142074,
+    -0.10196906760080848
+   ]
+  },
+  "P9_all-negative_val_permutation (val-selected; cal is the unbiased check)": {
+   "features": 295,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7875988133422916,
+    "per_class_mcc": {
+     "Benign": 0.9211,
+     "backdoor": 0.9992,
+     "ddos": 0.9814,
+     "dos": 0.9937,
+     "injection": 0.9972,
+     "mitm": 0.5194,
+     "password": 0.9504,
+     "ransomware": 0.5164,
+     "scanning": 0.0013,
+     "xss": 0.9958
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7604315597994855,
+    "per_class_mcc": {
+     "Benign": 0.9073,
+     "backdoor": 0.9992,
+     "ddos": 0.9876,
+     "dos": 0.9965,
+     "injection": 0.9662,
+     "mitm": 0.0194,
+     "password": 0.9739,
+     "ransomware": 0.6865,
+     "scanning": 0.0806,
+     "xss": 0.9871
+    }
+   },
+   "fit_seconds": 1117,
+   "gain_vs_flow": [
+    0.005956895145485919,
+    -0.07755899986948189
+   ]
+  },
+  "P10_flow+T_segz": {
+   "features": 77,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8088005544421458,
+    "per_class_mcc": {
+     "Benign": 0.822,
+     "backdoor": 0.989,
+     "ddos": 0.9807,
+     "dos": 0.9956,
+     "injection": 0.9733,
+     "mitm": 0.1713,
+     "password": 0.9466,
+     "ransomware": 0.9235,
+     "scanning": 0.2996,
+     "xss": 0.9864
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8121976121312209,
+    "per_class_mcc": {
+     "Benign": 0.898,
+     "backdoor": 0.9907,
+     "ddos": 0.9869,
+     "dos": 0.9917,
+     "injection": 0.9527,
+     "mitm": 0.1253,
+     "password": 0.9628,
+     "ransomware": 0.9567,
+     "scanning": 0.2818,
+     "xss": 0.9753
+    }
+   },
+   "fit_seconds": 697,
+   "gain_vs_flow": [
+    0.027158636245340095,
+    -0.025792947537746524
+   ]
+  },
+  "P11_flow+REL+T_segz": {
+   "features": 136,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.7724169732383374,
+    "per_class_mcc": {
+     "Benign": 0.8996,
+     "backdoor": 0.9994,
+     "ddos": 0.9677,
+     "dos": 0.9774,
+     "injection": 0.9378,
+     "mitm": 0.4815,
+     "password": 0.9662,
+     "ransomware": 0.4151,
+     "scanning": 0.0884,
+     "xss": 0.9911
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7906631944833515,
+    "per_class_mcc": {
+     "Benign": 0.9071,
+     "backdoor": 0.999,
+     "ddos": 0.9759,
+     "dos": 0.9702,
+     "injection": 0.9373,
+     "mitm": 0.4247,
+     "password": 0.9853,
+     "ransomware": 0.5518,
+     "scanning": 0.1712,
+     "xss": 0.984
+    }
+   },
+   "fit_seconds": 751,
+   "gain_vs_flow": [
+    -0.009224944958468373,
+    -0.047327365185615866
+   ]
+  },
+  "E1_views(REL,T_segz,all)": {
+   "views": [
+    "P1_flow+REL",
+    "P10_flow+T_segz",
+    "P2_all"
+   ],
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7847500055954988,
+    "per_class_mcc": {
+     "Benign": 0.9227,
+     "backdoor": 0.9998,
+     "ddos": 0.9817,
+     "dos": 0.9984,
+     "injection": 0.998,
+     "mitm": 0.066,
+     "password": 0.9539,
+     "ransomware": 0.9302,
+     "scanning": 0.0006,
+     "xss": 0.9963
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7825810869717607,
+    "per_class_mcc": {
+     "Benign": 0.9094,
+     "backdoor": 0.9999,
+     "ddos": 0.9879,
+     "dos": 0.9986,
+     "injection": 0.9817,
+     "mitm": 0.0713,
+     "password": 0.9797,
+     "ransomware": 0.9054,
+     "scanning": 0.0,
+     "xss": 0.9919
+    }
+   },
+   "gain_vs_flow": [
+    0.00310808739869306,
+    -0.05540947269720675
+   ]
+  },
+  "E2_views(REL,T_segz,all,pruned)": {
+   "views": [
+    "P1_flow+REL",
+    "P10_flow+T_segz",
+    "P2_all",
+    "P8_all-(redundant|drift|unstable)"
+   ],
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7880945963285095,
+    "per_class_mcc": {
+     "Benign": 0.9225,
+     "backdoor": 0.9997,
+     "ddos": 0.9816,
+     "dos": 0.9987,
+     "injection": 0.9991,
+     "mitm": 0.0909,
+     "password": 0.953,
+     "ransomware": 0.9381,
+     "scanning": 0.0009,
+     "xss": 0.9965
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7833715468087259,
+    "per_class_mcc": {
+     "Benign": 0.9101,
+     "backdoor": 0.9999,
+     "ddos": 0.9879,
+     "dos": 0.9986,
+     "injection": 0.9668,
+     "mitm": 0.0216,
+     "password": 0.9818,
+     "ransomware": 0.978,
+     "scanning": 0.0,
+     "xss": 0.9889
+    }
+   },
+   "gain_vs_flow": [
+    0.006452678131703804,
+    -0.05461901286024151
+   ]
+  },
+  "E3_views(flow,REL,T_segz)": {
+   "views": [
+    "P0_flow",
+    "P1_flow+REL",
+    "P10_flow+T_segz"
+   ],
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8088065955124069,
+    "per_class_mcc": {
+     "Benign": 0.9241,
+     "backdoor": 0.9995,
+     "ddos": 0.9816,
+     "dos": 0.998,
+     "injection": 0.9935,
+     "mitm": 0.282,
+     "password": 0.9649,
+     "ransomware": 0.9264,
+     "scanning": 0.022,
+     "xss": 0.996
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8052743985037617,
+    "per_class_mcc": {
+     "Benign": 0.9114,
+     "backdoor": 0.9999,
+     "ddos": 0.9876,
+     "dos": 0.9983,
+     "injection": 0.9812,
+     "mitm": 0.101,
+     "password": 0.9834,
+     "ransomware": 0.9822,
+     "scanning": 0.1146,
+     "xss": 0.9932
+    }
+   },
+   "gain_vs_flow": [
+    0.027164677315601127,
+    -0.032716161165205704
+   ]
+  }
+ },
+ "adversarial_auc": 0.9999923558328556,
+ "correlation_clusters": 273,
+ "pruning_sets": {
+  "P0_flow": 62,
+  "P1_flow+REL": 121,
+  "P2_all": 445,
+  "P3_all-lowgain": 347,
+  "P4_all-redundant": 287,
+  "P5_all-drift": 367,
+  "P6_all-unstable": 379,
+  "P7_scale_free": 284,
+  "P8_all-(redundant|drift|unstable)": 207,
+  "P9_all-negative_val_permutation (val-selected; cal is the unbiased check)": 295,
+  "P10_flow+T_segz": 77,
+  "P11_flow+REL+T_segz": 136
+ },
+ "removed": {
+  "low_gain": 98,
+  "drift": 78,
+  "unstable": 66,
+  "redundant": 158,
+  "negative_val_permutation": 150
+ },
+ "recommended": "P0_flow"
+}

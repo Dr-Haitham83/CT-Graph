@@ -1,0 +1,39 @@
+{
+ "rel_mode": "none",
+ "smoothing_key": null,
+ "features": 76,
+ "relational": 0,
+ "train_rows": 416312,
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "iterations": [
+  53,
+  59,
+  59
+ ],
+ "protocol": "context-branch parameters and training rows; smoothing fixed; rule chosen on validation only",
+ "scores": {
+  "bayes": {
+   "val": 0.8560105646940536,
+   "calibration": 0.8284780388052495,
+   "test": 0.7401401004205221,
+   "val_cvar": 0.7419043053307002
+  },
+  "balanced": {
+   "val": 0.9963404826819134,
+   "calibration": 0.8511640527695549,
+   "test": 0.7613131057575991,
+   "val_cvar": 0.965931986613523
+  }
+ },
+ "selected": {
+  "by_val_macro_mcc": "balanced",
+  "by_val_cvar": "balanced"
+ },
+ "test_by_val_macro_mcc": 0.7613131057575991,
+ "test_by_val_cvar": 0.7613131057575991,
+ "elapsed_s": 87.23157739639282
+}

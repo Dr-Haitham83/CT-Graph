@@ -1,0 +1,1080 @@
+{
+ "prepared": "nids-5gs-bs1",
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "families": {
+  "F1_size_shape": [
+   "mean_size_in",
+   "mean_size_out",
+   "log_size_ratio"
+  ],
+  "F2_direction_balance": [
+   "log_byte_ratio",
+   "response_present",
+   "log_pkt_ratio"
+  ],
+  "F3_temporal_shape": [
+   "iat_cv_src",
+   "iat_cv_dst",
+   "zero_duration",
+   "log_byte_rate",
+   "log_pkt_rate",
+   "single_packet"
+  ],
+  "F5_reliability": [
+   "retrans_rate_in",
+   "retrans_rate_out",
+   "loss_rate_src",
+   "loss_rate_dst"
+  ],
+  "F6_payload": [
+   "app_bytes_per_pkt_src",
+   "header_overhead_src",
+   "app_bytes_per_pkt_dst",
+   "header_overhead_dst"
+  ],
+  "F7_window": [
+   "log_win_ratio",
+   "zero_win_in",
+   "zero_win_out"
+  ]
+ },
+ "removal_groups": {
+  "R_window_raw": [
+   "SrcWin",
+   "DstWin"
+  ],
+  "R_absolute_throughput": [
+   "SrcLoad",
+   "DstLoad",
+   "Load",
+   "Rate",
+   "SrcRate",
+   "DstRate"
+  ]
+ },
+ "results": {
+  "BASE_current_features": {
+   "families": [],
+   "dropped": [],
+   "features": 76,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9857916762018203,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9884,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9414,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.897940070358916,
+   "calibration": {
+    "macro_mcc": 0.6514770686406449,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6452,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.988,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     2022123.9
+    ],
+    [
+     "SrcWin",
+     1356468.8
+    ],
+    [
+     "AckDat",
+     625643.8
+    ],
+    [
+     "DstWin",
+     232550.7
+    ],
+    [
+     "SrcBytes",
+     230839.8
+    ],
+    [
+     "TotBytes",
+     191328.3
+    ],
+    [
+     "TcpRtt",
+     131214.4
+    ],
+    [
+     "DstBytes",
+     96574.8
+    ],
+    [
+     "State",
+     84665.6
+    ],
+    [
+     "Flgs",
+     63747.9
+    ],
+    [
+     "byte_asymmetry",
+     55812.1
+    ],
+    [
+     "TcpOpt",
+     52249.9
+    ],
+    [
+     "Dur",
+     26520.5
+    ],
+    [
+     "pLoss",
+     23237.3
+    ],
+    [
+     "dTos",
+     18058.0
+    ]
+   ],
+   "seconds": 71.60811471939087
+  },
+  "ADD_F1_size_shape": {
+   "families": [
+    "F1_size_shape"
+   ],
+   "dropped": [],
+   "features": 79,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9860623441623847,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9885,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9421,
+     "synflood": 1.0,
+     "udpscan": 1.0
+    }
+   },
+   "val_cvar": 0.8986026190675624,
+   "calibration": {
+    "macro_mcc": 0.6519656715692224,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6481,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.9881,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     1882477.7
+    ],
+    [
+     "SrcWin",
+     1163361.9
+    ],
+    [
+     "AckDat",
+     582385.9
+    ],
+    [
+     "TcpOpt",
+     278154.4
+    ],
+    [
+     "DstWin",
+     225246.0
+    ],
+    [
+     "TcpRtt",
+     174876.4
+    ],
+    [
+     "SrcBytes",
+     146259.4
+    ],
+    [
+     "TotBytes",
+     146099.9
+    ],
+    [
+     "mean_size_in",
+     145231.0
+    ],
+    [
+     "DstBytes",
+     93051.5
+    ],
+    [
+     "State",
+     79152.8
+    ],
+    [
+     "Flgs",
+     60609.3
+    ],
+    [
+     "Dir",
+     54131.5
+    ],
+    [
+     "DstPkts",
+     50881.9
+    ],
+    [
+     "packet_asymmetry",
+     50770.7
+    ]
+   ],
+   "seconds": 74.20640993118286
+  },
+  "ADD_F2_direction_balance": {
+   "families": [
+    "F2_direction_balance"
+   ],
+   "dropped": [],
+   "features": 79,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9862159229840115,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9887,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9427,
+     "synflood": 1.0,
+     "udpscan": 1.0
+    }
+   },
+   "val_cvar": 0.8993642564833813,
+   "calibration": {
+    "macro_mcc": 0.6514770686406449,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6452,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.988,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     1884479.5
+    ],
+    [
+     "SrcWin",
+     1143579.8
+    ],
+    [
+     "AckDat",
+     581670.7
+    ],
+    [
+     "log_byte_ratio",
+     252151.6
+    ],
+    [
+     "DstWin",
+     221785.1
+    ],
+    [
+     "TcpRtt",
+     176627.0
+    ],
+    [
+     "Flgs",
+     170129.4
+    ],
+    [
+     "SrcBytes",
+     149930.2
+    ],
+    [
+     "TotBytes",
+     147775.5
+    ],
+    [
+     "DstBytes",
+     84982.1
+    ],
+    [
+     "State",
+     80573.8
+    ],
+    [
+     "Dir",
+     60636.8
+    ],
+    [
+     "TcpOpt",
+     52141.1
+    ],
+    [
+     "packet_asymmetry",
+     50772.4
+    ],
+    [
+     "Proto",
+     44800.7
+    ]
+   ],
+   "seconds": 73.97588205337524
+  },
+  "ADD_F3_temporal_shape": {
+   "families": [
+    "F3_temporal_shape"
+   ],
+   "dropped": [],
+   "features": 82,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9860696083148127,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9886,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9425,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.8990207204578539,
+   "calibration": {
+    "macro_mcc": 0.6509594701687483,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6422,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.9878,
+     "synscan": 0.9985,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     2015873.1
+    ],
+    [
+     "SrcWin",
+     1101906.9
+    ],
+    [
+     "AckDat",
+     628756.2
+    ],
+    [
+     "DstWin",
+     377887.1
+    ],
+    [
+     "SrcBytes",
+     278953.5
+    ],
+    [
+     "TotBytes",
+     214148.9
+    ],
+    [
+     "TcpRtt",
+     137704.3
+    ],
+    [
+     "DstBytes",
+     112765.6
+    ],
+    [
+     "State",
+     71832.1
+    ],
+    [
+     "Flgs",
+     67420.5
+    ],
+    [
+     "byte_asymmetry",
+     61334.1
+    ],
+    [
+     "log_byte_rate",
+     54141.2
+    ],
+    [
+     "TcpOpt",
+     47946.8
+    ],
+    [
+     "Rate",
+     24544.6
+    ],
+    [
+     "Cause",
+     22720.1
+    ]
+   ],
+   "seconds": 75.1090476512909
+  },
+  "ADD_F5_reliability": {
+   "families": [
+    "F5_reliability"
+   ],
+   "dropped": [],
+   "features": 80,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9861162044647823,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9887,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9427,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.8993642564833813,
+   "calibration": {
+    "macro_mcc": 0.6509953987351466,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6422,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.9878,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     2015872.8
+    ],
+    [
+     "SrcWin",
+     1355606.0
+    ],
+    [
+     "AckDat",
+     597266.7
+    ],
+    [
+     "SrcBytes",
+     273395.6
+    ],
+    [
+     "DstWin",
+     195294.7
+    ],
+    [
+     "TcpRtt",
+     157775.4
+    ],
+    [
+     "DstBytes",
+     97101.2
+    ],
+    [
+     "TotBytes",
+     91795.8
+    ],
+    [
+     "State",
+     79924.3
+    ],
+    [
+     "Flgs",
+     59025.4
+    ],
+    [
+     "Proto",
+     57534.6
+    ],
+    [
+     "TcpOpt",
+     55620.4
+    ],
+    [
+     "packet_asymmetry",
+     52286.5
+    ],
+    [
+     "dTos",
+     39547.1
+    ],
+    [
+     "byte_asymmetry",
+     39324.0
+    ]
+   ],
+   "seconds": 72.07348132133484
+  },
+  "ADD_F6_payload": {
+   "families": [
+    "F6_payload"
+   ],
+   "dropped": [],
+   "features": 80,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9857916762018203,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9884,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9414,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.897940070358916,
+   "calibration": {
+    "macro_mcc": 0.6514770686406449,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6452,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.988,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     2022123.9
+    ],
+    [
+     "SrcWin",
+     1356468.8
+    ],
+    [
+     "AckDat",
+     625643.8
+    ],
+    [
+     "DstWin",
+     232550.7
+    ],
+    [
+     "SrcBytes",
+     230826.5
+    ],
+    [
+     "TotBytes",
+     191328.3
+    ],
+    [
+     "TcpRtt",
+     131214.4
+    ],
+    [
+     "DstBytes",
+     96574.8
+    ],
+    [
+     "State",
+     84665.6
+    ],
+    [
+     "Flgs",
+     63747.9
+    ],
+    [
+     "byte_asymmetry",
+     55825.4
+    ],
+    [
+     "TcpOpt",
+     52249.9
+    ],
+    [
+     "Dur",
+     26520.5
+    ],
+    [
+     "pLoss",
+     23237.3
+    ],
+    [
+     "dTos",
+     18058.0
+    ]
+   ],
+   "seconds": 71.54918932914734
+  },
+  "ADD_F7_window": {
+   "families": [
+    "F7_window"
+   ],
+   "dropped": [],
+   "features": 79,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9860268023697033,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9886,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9423,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.8988531064918158,
+   "calibration": {
+    "macro_mcc": 0.6519656715692224,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6481,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.9881,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     1801206.5
+    ],
+    [
+     "SrcWin",
+     1095593.3
+    ],
+    [
+     "AckDat",
+     628391.3
+    ],
+    [
+     "TcpOpt",
+     365703.6
+    ],
+    [
+     "log_win_ratio",
+     232952.8
+    ],
+    [
+     "Flgs",
+     170172.9
+    ],
+    [
+     "SrcBytes",
+     155622.3
+    ],
+    [
+     "TotBytes",
+     143974.0
+    ],
+    [
+     "TcpRtt",
+     129252.6
+    ],
+    [
+     "DstBytes",
+     117391.9
+    ],
+    [
+     "State",
+     80086.1
+    ],
+    [
+     "Dir",
+     61365.6
+    ],
+    [
+     "DstWin",
+     56891.0
+    ],
+    [
+     "packet_asymmetry",
+     51796.5
+    ],
+    [
+     "Proto",
+     44749.7
+    ]
+   ],
+   "seconds": 73.59533929824829
+  },
+  "DROP_R_window_raw": {
+   "families": [],
+   "dropped": [
+    "SrcWin",
+    "DstWin"
+   ],
+   "features": 74,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9842594476664202,
+    "per_class_f1": {
+     "Benign": 0.9991,
+     "httpflood": 0.9874,
+     "icmpflood": 0.9954,
+     "slowratedos": 0.9397,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.8853617940763601,
+   "calibration": {
+    "macro_mcc": 0.6490924712748559,
+    "per_class_f1": {
+     "Benign": 0.0929,
+     "httpflood": 0.6311,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.9869,
+     "synscan": 0.9988,
+     "tcpconnectscan": 0.999,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     1686877.3
+    ],
+    [
+     "AckDat",
+     964626.8
+    ],
+    [
+     "TcpOpt",
+     476760.2
+    ],
+    [
+     "TotBytes",
+     357695.6
+    ],
+    [
+     "dTos",
+     295717.8
+    ],
+    [
+     "Load",
+     172185.3
+    ],
+    [
+     "Flgs",
+     164844.4
+    ],
+    [
+     "SrcGap",
+     150741.3
+    ],
+    [
+     "DstRate",
+     139462.4
+    ],
+    [
+     "SynAck",
+     133081.5
+    ],
+    [
+     "State",
+     103092.8
+    ],
+    [
+     "pLoss",
+     95222.5
+    ],
+    [
+     "SrcBytes",
+     66521.4
+    ],
+    [
+     "DstBytes",
+     65630.1
+    ],
+    [
+     "TcpRtt",
+     64703.3
+    ]
+   ],
+   "seconds": 71.93045234680176
+  },
+  "DROP_R_absolute_throughput": {
+   "families": [],
+   "dropped": [
+    "SrcLoad",
+    "DstLoad",
+    "Load",
+    "Rate",
+    "SrcRate",
+    "DstRate"
+   ],
+   "features": 70,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9860482031949278,
+    "per_class_f1": {
+     "Benign": 0.9998,
+     "httpflood": 0.9886,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9424,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "val_cvar": 0.8989368510316509,
+   "calibration": {
+    "macro_mcc": 0.6511315363283019,
+    "per_class_f1": {
+     "Benign": 0.093,
+     "httpflood": 0.6419,
+     "icmpflood": 0.9839,
+     "slowratedos": 0.9878,
+     "synscan": 0.9993,
+     "tcpconnectscan": 0.9988,
+     "udpflood": 0.0
+    }
+   },
+   "top_gain": [
+    [
+     "sMeanPktSz",
+     1864668.4
+    ],
+    [
+     "SrcWin",
+     1241734.4
+    ],
+    [
+     "AckDat",
+     634490.1
+    ],
+    [
+     "dTos",
+     232387.3
+    ],
+    [
+     "SrcBytes",
+     226937.9
+    ],
+    [
+     "DstWin",
+     201187.0
+    ],
+    [
+     "TcpRtt",
+     128251.5
+    ],
+    [
+     "Flgs",
+     117734.0
+    ],
+    [
+     "DstBytes",
+     81735.0
+    ],
+    [
+     "TotBytes",
+     81345.2
+    ],
+    [
+     "pLoss",
+     79241.2
+    ],
+    [
+     "TcpOpt",
+     76158.5
+    ],
+    [
+     "packet_asymmetry",
+     64996.4
+    ],
+    [
+     "Proto",
+     56874.1
+    ],
+    [
+     "Cause",
+     52205.8
+    ]
+   ],
+   "seconds": 68.50052618980408
+  }
+ },
+ "kept_after_screening": [],
+ "removed_raw_groups": [],
+ "final_families": [],
+ "final": {
+  "val": {
+   "macro_mcc": 0.9857916762018203,
+   "per_class_f1": {
+    "Benign": 0.9998,
+    "httpflood": 0.9884,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9414,
+    "synflood": 1.0,
+    "udpscan": 0.9995
+   }
+  },
+  "calibration": {
+   "macro_mcc": 0.6514770686406449,
+   "per_class_f1": {
+    "Benign": 0.093,
+    "httpflood": 0.6452,
+    "icmpflood": 0.9839,
+    "slowratedos": 0.988,
+    "synscan": 0.9988,
+    "tcpconnectscan": 0.9988,
+    "udpflood": 0.0
+   }
+  },
+  "val_cvar": 0.897940070358916,
+  "features": 76,
+  "families": [],
+  "dropped": []
+ },
+ "base": {
+  "val": {
+   "macro_mcc": 0.9857916762018203,
+   "per_class_f1": {
+    "Benign": 0.9998,
+    "httpflood": 0.9884,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9414,
+    "synflood": 1.0,
+    "udpscan": 0.9995
+   }
+  },
+  "calibration": {
+   "macro_mcc": 0.6514770686406449,
+   "per_class_f1": {
+    "Benign": 0.093,
+    "httpflood": 0.6452,
+    "icmpflood": 0.9839,
+    "slowratedos": 0.988,
+    "synscan": 0.9988,
+    "tcpconnectscan": 0.9988,
+    "udpflood": 0.0
+   }
+  },
+  "val_cvar": 0.897940070358916,
+  "features": 76
+ },
+ "invariance": {
+  "mean_size_in": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.1192012731663493
+  },
+  "mean_size_out": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.12685217958479056
+  },
+  "log_size_ratio": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.13835897132368366
+  },
+  "log_byte_ratio": {
+   "family": "F2_direction_balance",
+   "mean_classwise_ks_train_val": 0.13731172917503714
+  },
+  "response_present": {
+   "family": "F2_direction_balance",
+   "mean_classwise_ks_train_val": 0.0831095702960587
+  },
+  "log_pkt_ratio": {
+   "family": "F2_direction_balance",
+   "mean_classwise_ks_train_val": 0.12019353822841417
+  },
+  "iat_cv_src": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "iat_cv_dst": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "zero_duration": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.0933899829776859
+  },
+  "log_byte_rate": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.16804361631654188
+  },
+  "log_pkt_rate": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.1607410445057683
+  },
+  "single_packet": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.10292274895809113
+  },
+  "retrans_rate_in": {
+   "family": "F5_reliability",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "retrans_rate_out": {
+   "family": "F5_reliability",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "loss_rate_src": {
+   "family": "F5_reliability",
+   "mean_classwise_ks_train_val": 0.012719194454997307
+  },
+  "loss_rate_dst": {
+   "family": "F5_reliability",
+   "mean_classwise_ks_train_val": 0.004199335897601186
+  },
+  "app_bytes_per_pkt_src": {
+   "family": "F6_payload",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "header_overhead_src": {
+   "family": "F6_payload",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "app_bytes_per_pkt_dst": {
+   "family": "F6_payload",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "header_overhead_dst": {
+   "family": "F6_payload",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "log_win_ratio": {
+   "family": "F7_window",
+   "mean_classwise_ks_train_val": 0.11969886495721475
+  },
+  "zero_win_in": {
+   "family": "F7_window",
+   "mean_classwise_ks_train_val": 0.07171732410742061
+  },
+  "zero_win_out": {
+   "family": "F7_window",
+   "mean_classwise_ks_train_val": 0.08495060080181144
+  }
+ },
+ "protocol": "train/validation/calibration only; keep iff better on validation AND calibration (+0.002) without CVaR loss"
+}

@@ -1,0 +1,221 @@
+{
+ "prepared": "nids-5gs-bs2",
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "protocol": "train/validation/calibration only; test never opened",
+ "oof": "two folds of alternating blocks of min(2000, segment/10) flows per segment",
+ "fold_class_coverage": [
+  [
+   25491,
+   20661,
+   184,
+   12885,
+   1580,
+   2856,
+   2863,
+   139964,
+   3083
+  ],
+  [
+   21409,
+   20428,
+   206,
+   12486,
+   1783,
+   3157,
+   3153,
+   141025,
+   3098
+  ]
+ ],
+ "neighbour_features": [
+  "nb_src_count_60s",
+  "nb_src_count_300s",
+  "nb_src_p_Benign_60s",
+  "nb_src_p_Benign_300s",
+  "nb_src_p_httpflood_60s",
+  "nb_src_p_httpflood_300s",
+  "nb_src_p_icmpflood_60s",
+  "nb_src_p_icmpflood_300s",
+  "nb_src_p_slowratedos_60s",
+  "nb_src_p_slowratedos_300s",
+  "nb_src_p_synflood_60s",
+  "nb_src_p_synflood_300s",
+  "nb_src_p_synscan_60s",
+  "nb_src_p_synscan_300s",
+  "nb_src_p_tcpconnectscan_60s",
+  "nb_src_p_tcpconnectscan_300s",
+  "nb_src_p_udpflood_60s",
+  "nb_src_p_udpflood_300s",
+  "nb_src_p_udpscan_60s",
+  "nb_src_p_udpscan_300s",
+  "nb_dst_count_60s",
+  "nb_dst_count_300s",
+  "nb_dst_p_Benign_60s",
+  "nb_dst_p_Benign_300s",
+  "nb_dst_p_httpflood_60s",
+  "nb_dst_p_httpflood_300s",
+  "nb_dst_p_icmpflood_60s",
+  "nb_dst_p_icmpflood_300s",
+  "nb_dst_p_slowratedos_60s",
+  "nb_dst_p_slowratedos_300s",
+  "nb_dst_p_synflood_60s",
+  "nb_dst_p_synflood_300s",
+  "nb_dst_p_synscan_60s",
+  "nb_dst_p_synscan_300s",
+  "nb_dst_p_tcpconnectscan_60s",
+  "nb_dst_p_tcpconnectscan_300s",
+  "nb_dst_p_udpflood_60s",
+  "nb_dst_p_udpflood_300s",
+  "nb_dst_p_udpscan_60s",
+  "nb_dst_p_udpscan_300s",
+  "nb_pair_count_60s",
+  "nb_pair_count_300s",
+  "nb_pair_p_Benign_60s",
+  "nb_pair_p_Benign_300s",
+  "nb_pair_p_httpflood_60s",
+  "nb_pair_p_httpflood_300s",
+  "nb_pair_p_icmpflood_60s",
+  "nb_pair_p_icmpflood_300s",
+  "nb_pair_p_slowratedos_60s",
+  "nb_pair_p_slowratedos_300s",
+  "nb_pair_p_synflood_60s",
+  "nb_pair_p_synflood_300s",
+  "nb_pair_p_synscan_60s",
+  "nb_pair_p_synscan_300s",
+  "nb_pair_p_tcpconnectscan_60s",
+  "nb_pair_p_tcpconnectscan_300s",
+  "nb_pair_p_udpflood_60s",
+  "nb_pair_p_udpflood_300s",
+  "nb_pair_p_udpscan_60s",
+  "nb_pair_p_udpscan_300s"
+ ],
+ "oof_train_macro_mcc": 0.9964214263459792,
+ "configs": {
+  "flow": {
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9959150878071851,
+    "per_class_mcc": {
+     "Benign": 1.0,
+     "httpflood": 0.989,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9865,
+     "synflood": 1.0,
+     "udpscan": 1.0
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8498426769896965,
+    "per_class_mcc": {
+     "Benign": 0.9983,
+     "httpflood": 0.9644,
+     "icmpflood": 0.9901,
+     "slowratedos": 0.9597,
+     "synflood": 1.0,
+     "tcpconnectscan": 0.9937,
+     "udpflood": 0.0863,
+     "udpscan": 0.8061
+    }
+   }
+  },
+  "flow+REL (stage 1)": {
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9993226550993667,
+    "per_class_mcc": {
+     "Benign": 0.9996,
+     "httpflood": 0.9991,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9995,
+     "synflood": 1.0,
+     "udpscan": 0.9977
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.844513027068087,
+    "per_class_mcc": {
+     "Benign": 0.9739,
+     "httpflood": 0.9657,
+     "icmpflood": 0.5142,
+     "slowratedos": 0.9611,
+     "synflood": 0.9858,
+     "tcpconnectscan": 0.9991,
+     "udpflood": 0.3617,
+     "udpscan": 0.9945
+    }
+   }
+  },
+  "stage2_neighbours": {
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.9983560374946947,
+    "per_class_mcc": {
+     "Benign": 0.9992,
+     "httpflood": 0.9995,
+     "icmpflood": 0.9937,
+     "slowratedos": 0.9989,
+     "synflood": 1.0,
+     "udpscan": 0.9988
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.954181531559567,
+    "per_class_mcc": {
+     "Benign": 0.9996,
+     "httpflood": 0.9726,
+     "icmpflood": 0.7447,
+     "slowratedos": 0.9684,
+     "synflood": 1.0,
+     "tcpconnectscan": 0.9989,
+     "udpflood": 0.9543,
+     "udpscan": 0.995
+    }
+   },
+   "gain_vs_stage1": [
+    -0.0009666176046719821,
+    0.10966850449148002
+   ]
+  },
+  "stage2_own+neighbours": {
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.997869724368604,
+    "per_class_mcc": {
+     "Benign": 0.9995,
+     "httpflood": 0.9995,
+     "icmpflood": 0.9936,
+     "slowratedos": 0.9992,
+     "synflood": 1.0,
+     "udpscan": 0.9954
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.9819203476178189,
+    "per_class_mcc": {
+     "Benign": 1.0,
+     "httpflood": 0.971,
+     "icmpflood": 0.9343,
+     "slowratedos": 0.967,
+     "synflood": 1.0,
+     "tcpconnectscan": 0.9989,
+     "udpflood": 0.9892,
+     "udpscan": 0.995
+    }
+   },
+   "gain_vs_stage1": [
+    -0.0014529307307626915,
+    0.13740732054973193
+   ]
+  }
+ }
+}

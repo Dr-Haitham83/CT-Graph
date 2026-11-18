@@ -1,0 +1,2474 @@
+{
+  "RS": {
+    "rows": 182179,
+    "accuracy": 0.7628650942205194,
+    "macro_f1": 0.9256576731921388,
+    "weighted_f1": 0.7523615794039419,
+    "mcc": 0.6830394035981973,
+    "macro_mcc": 0.8930509529359737,
+    "binary_roc_auc": 0.872355249317065,
+    "binary_pr_auc": 0.9085701180006536,
+    "per_class": {
+      "Benign": {
+        "precision": 0.8432228181374939,
+        "recall": 0.48668917968200365,
+        "f1": 0.6171647783031493,
+        "support": 71070
+      },
+      "HTTPFlood": {
+        "precision": 0.9949085423345276,
+        "recall": 0.99224223047628,
+        "f1": 0.9935735976083425,
+        "support": 21269
+      },
+      "ICMPFlood": {
+        "precision": 0.9880239520958084,
+        "recall": 1.0,
+        "f1": 0.9939759036144579,
+        "support": 165
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1408
+      },
+      "SYNScan": {
+        "precision": 0.9966711051930759,
+        "recall": 0.998998998998999,
+        "f1": 0.9978336943842693,
+        "support": 2997
+      },
+      "SlowrateDoS": {
+        "precision": 0.9850323993793921,
+        "recall": 0.9900018345257751,
+        "f1": 0.9875108650898943,
+        "support": 10902
+      },
+      "TCPConnectScan": {
+        "precision": 0.9993368700265252,
+        "recall": 0.9983438224577674,
+        "f1": 0.9988400994200497,
+        "support": 3019
+      },
+      "UDPFlood": {
+        "precision": 0.6315449256625727,
+        "recall": 0.9067548362771543,
+        "f1": 0.7445316314015932,
+        "support": 68958
+      },
+      "UDPScan": {
+        "precision": 0.9983242563887725,
+        "recall": 0.9966541196152238,
+        "f1": 0.9974884889074926,
+        "support": 2391
+      }
+    },
+    "confusion_matrix": [
+      [
+        34589,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        36480,
+        0
+      ],
+      [
+        1,
+        21104,
+        0,
+        0,
+        0,
+        164,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        165,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1408,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2994,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        108,
+        0,
+        0,
+        0,
+        10793,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        3014,
+        0,
+        1
+      ],
+      [
+        6430,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        62528,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0,
+        0,
+        2383
+      ]
+    ],
+    "protocol": "RS",
+    "strict_features": false,
+    "decision_rule": "balanced",
+    "validation_macro_mcc": {
+      "bayes": 0.888787951121509,
+      "balanced": 0.893278359708946
+    },
+    "trees": 152,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sTtl",
+      "dTtl",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sHops",
+      "dHops",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 729821,
+      "val": 182240,
+      "calibration": 121650,
+      "test": 182179
+    },
+    "test_classes": {
+      "Benign": 71070,
+      "HTTPFlood": 21269,
+      "ICMPFlood": 165,
+      "SYNFlood": 1408,
+      "SYNScan": 2997,
+      "SlowrateDoS": 10902,
+      "TCPConnectScan": 3019,
+      "UDPFlood": 68958,
+      "UDPScan": 2391
+    },
+    "top_features_gain": [
+      [
+        "SrcWin",
+        2385036.2060174756
+      ],
+      [
+        "AckDat",
+        2378172.6623486364
+      ],
+      [
+        "sMeanPktSz",
+        1894044.4428247279
+      ],
+      [
+        "TcpOpt",
+        1304663.9078193307
+      ],
+      [
+        "sTtl",
+        1158147.6936008085
+      ],
+      [
+        "DstWin",
+        688054.2828914875
+      ],
+      [
+        "TotBytes",
+        472890.5448448012
+      ],
+      [
+        "SrcBytes",
+        343932.55539362755
+      ],
+      [
+        "SrcLoad",
+        261208.22609706802
+      ],
+      [
+        "Dur",
+        236040.86238256365
+      ],
+      [
+        "TcpRtt",
+        234141.18348587817
+      ],
+      [
+        "Proto",
+        221364.94406616688
+      ]
+    ]
+  },
+  "RS-strict": {
+    "rows": 182179,
+    "accuracy": 0.7204288090284829,
+    "macro_f1": 0.8405941013055164,
+    "weighted_f1": 0.7271530557105044,
+    "mcc": 0.6268947275667124,
+    "macro_mcc": 0.8170328723750493,
+    "binary_roc_auc": 0.8716630258651149,
+    "binary_pr_auc": 0.9072137965307058,
+    "per_class": {
+      "Benign": {
+        "precision": 0.8485756008217211,
+        "recall": 0.48241170676797523,
+        "f1": 0.615126532882402,
+        "support": 71070
+      },
+      "HTTPFlood": {
+        "precision": 0.9948157224997644,
+        "recall": 0.992430297616249,
+        "f1": 0.993621578365147,
+        "support": 21269
+      },
+      "ICMPFlood": {
+        "precision": 0.9763313609467456,
+        "recall": 1.0,
+        "f1": 0.9880239520958084,
+        "support": 165
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1408
+      },
+      "SYNScan": {
+        "precision": 0.997001998667555,
+        "recall": 0.9986653319986654,
+        "f1": 0.997832972162027,
+        "support": 2997
+      },
+      "SlowrateDoS": {
+        "precision": 0.9853894621495753,
+        "recall": 0.9898183819482663,
+        "f1": 0.9875989566649888,
+        "support": 10902
+      },
+      "TCPConnectScan": {
+        "precision": 0.9983438224577674,
+        "recall": 0.9983438224577674,
+        "f1": 0.9983438224577674,
+        "support": 3019
+      },
+      "UDPFlood": {
+        "precision": 0.6306440352061897,
+        "recall": 0.7990370950433597,
+        "f1": 0.7049235906325761,
+        "support": 68958
+      },
+      "UDPScan": {
+        "precision": 0.1627954638611832,
+        "recall": 0.9966541196152238,
+        "f1": 0.27987550648893067,
+        "support": 2391
+      }
+    },
+    "confusion_matrix": [
+      [
+        34285,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        32271,
+        4510
+      ],
+      [
+        1,
+        21108,
+        0,
+        0,
+        0,
+        160,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        165,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1408,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        2993,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        110,
+        0,
+        0,
+        0,
+        10791,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        3014,
+        0,
+        1
+      ],
+      [
+        6117,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        55100,
+        7741
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0,
+        0,
+        2383
+      ]
+    ],
+    "protocol": "RS",
+    "strict_features": true,
+    "decision_rule": "balanced",
+    "validation_macro_mcc": {
+      "bayes": 0.7893373244188318,
+      "balanced": 0.8184710247032686
+    },
+    "trees": 164,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 729821,
+      "val": 182240,
+      "calibration": 121650,
+      "test": 182179
+    },
+    "test_classes": {
+      "Benign": 71070,
+      "HTTPFlood": 21269,
+      "ICMPFlood": 165,
+      "SYNFlood": 1408,
+      "SYNScan": 2997,
+      "SlowrateDoS": 10902,
+      "TCPConnectScan": 3019,
+      "UDPFlood": 68958,
+      "UDPScan": 2391
+    },
+    "top_features_gain": [
+      [
+        "SrcWin",
+        2574581.758081964
+      ],
+      [
+        "sMeanPktSz",
+        2117567.3296480873
+      ],
+      [
+        "AckDat",
+        2045934.4285004037
+      ],
+      [
+        "TcpOpt",
+        1408529.4886598324
+      ],
+      [
+        "DstWin",
+        663427.5872350552
+      ],
+      [
+        "TcpRtt",
+        634204.2504251521
+      ],
+      [
+        "SrcLoad",
+        393451.7111534917
+      ],
+      [
+        "Flgs",
+        375716.41543102264
+      ],
+      [
+        "SrcBytes",
+        348967.27594801236
+      ],
+      [
+        "TotBytes",
+        333717.63321261865
+      ],
+      [
+        "Proto",
+        235082.3068972975
+      ],
+      [
+        "Dur",
+        211303.17287167974
+      ]
+    ]
+  },
+  "WCF": {
+    "rows": 174998,
+    "accuracy": 0.6287043280494634,
+    "macro_f1": 0.8891068190273754,
+    "weighted_f1": 0.6415739862973414,
+    "mcc": 0.5426067385661347,
+    "macro_mcc": 0.8545787480498624,
+    "binary_roc_auc": 0.8285802668344898,
+    "binary_pr_auc": 0.6668380828383329,
+    "per_class": {
+      "Benign": {
+        "precision": 1.0,
+        "recall": 0.45571047516471314,
+        "f1": 0.6261004271651609,
+        "support": 118843
+      },
+      "HTTPFlood": {
+        "precision": 0.9906417112299465,
+        "recall": 0.9367888748419722,
+        "f1": 0.9629629629629629,
+        "support": 3955
+      },
+      "ICMPFlood": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1273
+      },
+      "SYNScan": {
+        "precision": 1.0,
+        "recall": 0.9994869163673679,
+        "f1": 0.9997433923530922,
+        "support": 1949
+      },
+      "SlowrateDoS": {
+        "precision": 0.9514544025157232,
+        "recall": 0.9918049580004098,
+        "f1": 0.9712107533353396,
+        "support": 4881
+      },
+      "TCPConnectScan": {
+        "precision": 0.9934282584884995,
+        "recall": 1.0,
+        "f1": 0.9967032967032967,
+        "support": 1814
+      },
+      "UDPFlood": {
+        "precision": 0.3854493282405032,
+        "recall": 1.0,
+        "f1": 0.5564250101156961,
+        "support": 40567
+      },
+      "UDPScan": {
+        "precision": 0.9994175888177053,
+        "recall": 1.0,
+        "f1": 0.9997087095834547,
+        "support": 1716
+      }
+    },
+    "confusion_matrix": [
+      [
+        54158,
+        0,
+        2,
+        0,
+        0,
+        0,
+        4,
+        64679,
+        0
+      ],
+      [
+        0,
+        3705,
+        0,
+        0,
+        0,
+        247,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1273,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1948,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        35,
+        0,
+        0,
+        0,
+        4841,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1814,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40567,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1716
+      ]
+    ],
+    "protocol": "WCF",
+    "strict_features": false,
+    "decision_rule": "bayes",
+    "validation_macro_mcc": {
+      "bayes": 0.8386015250928978,
+      "balanced": 0.8345487868554142
+    },
+    "trees": 92,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sTtl",
+      "dTtl",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sHops",
+      "dHops",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 721826,
+      "val": 168060,
+      "calibration": 107414,
+      "test": 174998
+    },
+    "test_classes": {
+      "Benign": 118843,
+      "HTTPFlood": 3955,
+      "ICMPFlood": 0,
+      "SYNFlood": 1273,
+      "SYNScan": 1949,
+      "SlowrateDoS": 4881,
+      "TCPConnectScan": 1814,
+      "UDPFlood": 40567,
+      "UDPScan": 1716
+    },
+    "top_features_gain": [
+      [
+        "AckDat",
+        2457592.1248327345
+      ],
+      [
+        "SrcWin",
+        2426373.7775120772
+      ],
+      [
+        "sMeanPktSz",
+        2047861.1451794263
+      ],
+      [
+        "sTtl",
+        1390649.057514919
+      ],
+      [
+        "TcpOpt",
+        1053332.722251296
+      ],
+      [
+        "SrcBytes",
+        710389.8723889315
+      ],
+      [
+        "DstWin",
+        604620.2176635112
+      ],
+      [
+        "TotBytes",
+        372522.42924469715
+      ],
+      [
+        "sHops",
+        369685.10494244844
+      ],
+      [
+        "Proto",
+        367233.3348812461
+      ],
+      [
+        "TcpRtt",
+        227440.94240980223
+      ],
+      [
+        "Dur",
+        220576.28562251502
+      ]
+    ]
+  },
+  "WCF-strict": {
+    "rows": 174998,
+    "accuracy": 0.626430016343044,
+    "macro_f1": 0.8486716352576948,
+    "weighted_f1": 0.6401023533131678,
+    "mcc": 0.5323390044180343,
+    "macro_mcc": 0.8166111871539178,
+    "binary_roc_auc": 0.81280474106211,
+    "binary_pr_auc": 0.6437113513306107,
+    "per_class": {
+      "Benign": {
+        "precision": 0.99804979404367,
+        "recall": 0.46076756729466606,
+        "f1": 0.6304681968119096,
+        "support": 118843
+      },
+      "HTTPFlood": {
+        "precision": 0.9950344827586207,
+        "recall": 0.9120101137800253,
+        "f1": 0.9517150395778364,
+        "support": 3955
+      },
+      "ICMPFlood": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1273
+      },
+      "SYNScan": {
+        "precision": 1.0,
+        "recall": 0.9989738327347357,
+        "f1": 0.9994866529774127,
+        "support": 1949
+      },
+      "SlowrateDoS": {
+        "precision": 0.9331668907240254,
+        "recall": 0.9954927269002254,
+        "f1": 0.9633227597145123,
+        "support": 4881
+      },
+      "TCPConnectScan": {
+        "precision": 0.9917987971569163,
+        "recall": 1.0,
+        "f1": 0.9958825144111996,
+        "support": 1814
+      },
+      "UDPFlood": {
+        "precision": 0.3848147213541161,
+        "recall": 0.9773707693445411,
+        "f1": 0.5522106392016769,
+        "support": 40567
+      },
+      "UDPScan": {
+        "precision": 0.5340802987861811,
+        "recall": 1.0,
+        "f1": 0.6962872793670115,
+        "support": 1716
+      }
+    },
+    "confusion_matrix": [
+      [
+        54759,
+        1,
+        2,
+        0,
+        0,
+        6,
+        9,
+        63385,
+        681
+      ],
+      [
+        3,
+        3607,
+        2,
+        0,
+        0,
+        342,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1273,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1947,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        17,
+        0,
+        0,
+        0,
+        4859,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1814,
+        0,
+        0
+      ],
+      [
+        104,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        39649,
+        814
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1716
+      ]
+    ],
+    "protocol": "WCF",
+    "strict_features": true,
+    "decision_rule": "balanced",
+    "validation_macro_mcc": {
+      "bayes": 0.7321660349706813,
+      "balanced": 0.803038436134806
+    },
+    "trees": 98,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 721826,
+      "val": 168060,
+      "calibration": 107414,
+      "test": 174998
+    },
+    "test_classes": {
+      "Benign": 118843,
+      "HTTPFlood": 3955,
+      "ICMPFlood": 0,
+      "SYNFlood": 1273,
+      "SYNScan": 1949,
+      "SlowrateDoS": 4881,
+      "TCPConnectScan": 1814,
+      "UDPFlood": 40567,
+      "UDPScan": 1716
+    },
+    "top_features_gain": [
+      [
+        "SrcWin",
+        2688251.0617733398
+      ],
+      [
+        "sMeanPktSz",
+        2371784.067730016
+      ],
+      [
+        "AckDat",
+        2128095.312955321
+      ],
+      [
+        "TcpOpt",
+        937606.0239619017
+      ],
+      [
+        "Flgs",
+        668107.7679796219
+      ],
+      [
+        "TcpRtt",
+        624911.2567237578
+      ],
+      [
+        "DstWin",
+        587819.4568197858
+      ],
+      [
+        "SrcBytes",
+        576046.4903994524
+      ],
+      [
+        "Proto",
+        349402.2685240209
+      ],
+      [
+        "State",
+        318098.4731308073
+      ],
+      [
+        "SrcLoad",
+        292046.36285884865
+      ],
+      [
+        "Dur",
+        245783.66326678614
+      ]
+    ]
+  },
+  "XS12": {
+    "rows": 487574,
+    "accuracy": 0.6485620644250923,
+    "macro_f1": 0.886668417288726,
+    "weighted_f1": 0.6683178610765163,
+    "mcc": 0.646941883691749,
+    "macro_mcc": 0.870884414153466,
+    "binary_roc_auc": 0.9609448290179887,
+    "binary_pr_auc": 0.9928653865650598,
+    "per_class": {
+      "Benign": {
+        "precision": 0.29398640563717343,
+        "recall": 0.9997315550029671,
+        "f1": 0.4543609896425292,
+        "support": 70778
+      },
+      "HTTPFlood": {
+        "precision": 0.9942265982180474,
+        "recall": 0.9849438098035276,
+        "f1": 0.9895634347481713,
+        "support": 64691
+      },
+      "ICMPFlood": {
+        "precision": 0.9908256880733946,
+        "recall": 0.996309963099631,
+        "f1": 0.9935602575896965,
+        "support": 542
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4929
+      },
+      "SYNScan": {
+        "precision": 0.998800719568259,
+        "recall": 0.9970071827613727,
+        "f1": 0.9979031452820769,
+        "support": 10024
+      },
+      "SlowrateDoS": {
+        "precision": 0.9741702319895831,
+        "recall": 0.9899276301577015,
+        "f1": 0.9819857225131591,
+        "support": 37032
+      },
+      "TCPConnectScan": {
+        "precision": 0.9975089677162216,
+        "recall": 0.9981056829511465,
+        "f1": 0.9978072361208014,
+        "support": 10030
+      },
+      "UDPFlood": {
+        "precision": 1.0,
+        "recall": 0.396413868553506,
+        "f1": 0.5677598561293818,
+        "support": 281529
+      },
+      "UDPScan": {
+        "precision": 0.9951552795031056,
+        "recall": 0.9990023693727398,
+        "f1": 0.9970751135727176,
+        "support": 8019
+      }
+    },
+    "confusion_matrix": [
+      [
+        70759,
+        0,
+        0,
+        0,
+        0,
+        1,
+        15,
+        0,
+        3
+      ],
+      [
+        0,
+        63717,
+        0,
+        0,
+        0,
+        971,
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        540,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4929,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        9994,
+        0,
+        3,
+        0,
+        24
+      ],
+      [
+        0,
+        370,
+        0,
+        0,
+        0,
+        36659,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7,
+        0,
+        10011,
+        0,
+        12
+      ],
+      [
+        169927,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        111602,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        5,
+        0,
+        1,
+        0,
+        8011
+      ]
+    ],
+    "protocol": "XS12",
+    "strict_features": false,
+    "decision_rule": "bayes",
+    "validation_macro_mcc": {
+      "bayes": 0.8067958562469486,
+      "balanced": 0.8058559918771528
+    },
+    "trees": 165,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sTtl",
+      "dTtl",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sHops",
+      "dHops",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 433136,
+      "val": 102067,
+      "calibration": 171267,
+      "test": 487574
+    },
+    "test_classes": {
+      "Benign": 70778,
+      "HTTPFlood": 64691,
+      "ICMPFlood": 542,
+      "SYNFlood": 4929,
+      "SYNScan": 10024,
+      "SlowrateDoS": 37032,
+      "TCPConnectScan": 10030,
+      "UDPFlood": 281529,
+      "UDPScan": 8019
+    },
+    "top_features_gain": [
+      [
+        "AckDat",
+        1432683.735134486
+      ],
+      [
+        "SrcWin",
+        1388146.797921319
+      ],
+      [
+        "sMeanPktSz",
+        1069814.9425926465
+      ],
+      [
+        "TcpOpt",
+        614044.6049709469
+      ],
+      [
+        "SrcLoad",
+        552591.5078262095
+      ],
+      [
+        "SrcBytes",
+        518747.7647750657
+      ],
+      [
+        "sTtl",
+        491963.29734883714
+      ],
+      [
+        "SrcRate",
+        416529.78952234075
+      ],
+      [
+        "Rate",
+        390262.4081872657
+      ],
+      [
+        "Dur",
+        338682.0508231561
+      ],
+      [
+        "DstWin",
+        307828.3932734006
+      ],
+      [
+        "Load",
+        278344.6775963702
+      ]
+    ]
+  },
+  "XS12-strict": {
+    "rows": 487574,
+    "accuracy": 0.6480390668903592,
+    "macro_f1": 0.8177371344998815,
+    "weighted_f1": 0.6642104441311382,
+    "mcc": 0.634872765699179,
+    "macro_mcc": 0.8133036441743031,
+    "binary_roc_auc": 0.9386354823198051,
+    "binary_pr_auc": 0.9881410537416836,
+    "per_class": {
+      "Benign": {
+        "precision": 0.3355332504012079,
+        "recall": 0.9984458447540197,
+        "f1": 0.502274407232615,
+        "support": 70778
+      },
+      "HTTPFlood": {
+        "precision": 0.9957474853672698,
+        "recall": 0.9809092454900991,
+        "f1": 0.9882726720553193,
+        "support": 64691
+      },
+      "ICMPFlood": {
+        "precision": 0.9660107334525939,
+        "recall": 0.996309963099631,
+        "f1": 0.9809264305177112,
+        "support": 542
+      },
+      "SYNFlood": {
+        "precision": 0.9977732793522267,
+        "recall": 1.0,
+        "f1": 0.9988853987232749,
+        "support": 4929
+      },
+      "SYNScan": {
+        "precision": 0.9986011191047163,
+        "recall": 0.9970071827613727,
+        "f1": 0.9978035143769968,
+        "support": 10024
+      },
+      "SlowrateDoS": {
+        "precision": 0.9677020268491708,
+        "recall": 0.9927360120976453,
+        "f1": 0.980059182639759,
+        "support": 37032
+      },
+      "TCPConnectScan": {
+        "precision": 0.994535519125683,
+        "recall": 0.9980059820538385,
+        "f1": 0.9962677282906196,
+        "support": 10030
+      },
+      "UDPFlood": {
+        "precision": 0.9999910396673924,
+        "recall": 0.396413868553506,
+        "f1": 0.5677584119328877,
+        "support": 281529
+      },
+      "UDPScan": {
+        "precision": 0.21028160134496166,
+        "recall": 0.9982541464022946,
+        "f1": 0.34738646472975027,
+        "support": 8019
+      }
+    },
+    "confusion_matrix": [
+      [
+        70668,
+        6,
+        1,
+        10,
+        0,
+        4,
+        49,
+        1,
+        39
+      ],
+      [
+        2,
+        63456,
+        8,
+        0,
+        0,
+        1223,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        540,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        4929,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        9994,
+        0,
+        1,
+        0,
+        25
+      ],
+      [
+        1,
+        265,
+        0,
+        0,
+        0,
+        36763,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        4,
+        0,
+        10010,
+        0,
+        13
+      ],
+      [
+        139942,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        111602,
+        29985
+      ],
+      [
+        0,
+        0,
+        3,
+        1,
+        10,
+        0,
+        0,
+        0,
+        8005
+      ]
+    ],
+    "protocol": "XS12",
+    "strict_features": true,
+    "decision_rule": "balanced",
+    "validation_macro_mcc": {
+      "bayes": 0.6972721539860258,
+      "balanced": 0.7574311534725708
+    },
+    "trees": 165,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 433136,
+      "val": 102067,
+      "calibration": 171267,
+      "test": 487574
+    },
+    "test_classes": {
+      "Benign": 70778,
+      "HTTPFlood": 64691,
+      "ICMPFlood": 542,
+      "SYNFlood": 4929,
+      "SYNScan": 10024,
+      "SlowrateDoS": 37032,
+      "TCPConnectScan": 10030,
+      "UDPFlood": 281529,
+      "UDPScan": 8019
+    },
+    "top_features_gain": [
+      [
+        "SrcWin",
+        1490755.4524440272
+      ],
+      [
+        "AckDat",
+        1232300.720328227
+      ],
+      [
+        "sMeanPktSz",
+        1064913.1877821982
+      ],
+      [
+        "SrcLoad",
+        661468.091943136
+      ],
+      [
+        "TcpOpt",
+        615854.9362646341
+      ],
+      [
+        "Rate",
+        551277.1138007317
+      ],
+      [
+        "SrcBytes",
+        495043.54818467685
+      ],
+      [
+        "Dur",
+        462278.50097265816
+      ],
+      [
+        "TcpRtt",
+        365888.8040720965
+      ],
+      [
+        "State",
+        345939.0978310466
+      ],
+      [
+        "DstWin",
+        296260.37108323013
+      ],
+      [
+        "SrcRate",
+        211827.62534927254
+      ]
+    ]
+  },
+  "XS21": {
+    "rows": 728316,
+    "accuracy": 0.6096337304137215,
+    "macro_f1": 0.8467170659130576,
+    "weighted_f1": 0.5932874571432992,
+    "mcc": 0.5914408480032476,
+    "macro_mcc": 0.8280472279465073,
+    "binary_roc_auc": 0.4221783179280784,
+    "binary_pr_auc": 0.37924644132749563,
+    "per_class": {
+      "Benign": {
+        "precision": 0.9999601374460859,
+        "recall": 0.30820303765244167,
+        "f1": 0.47118090121903117,
+        "support": 406959
+      },
+      "HTTPFlood": {
+        "precision": 0.9938877399127949,
+        "recall": 0.991171949921835,
+        "f1": 0.9925279871607666,
+        "support": 76121
+      },
+      "ICMPFlood": {
+        "precision": 0.7530712530712531,
+        "recall": 1.0,
+        "f1": 0.8591450595655221,
+        "support": 613
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 0.7109766277128547,
+        "f1": 0.8310769606049518,
+        "support": 4792
+      },
+      "SYNScan": {
+        "precision": 0.9985029940119761,
+        "recall": 0.9986026549555844,
+        "f1": 0.9985528219971056,
+        "support": 10019
+      },
+      "SlowrateDoS": {
+        "precision": 0.9815174019064509,
+        "recall": 0.9814086224093982,
+        "f1": 0.9814630091438071,
+        "support": 36092
+      },
+      "TCPConnectScan": {
+        "precision": 0.8763031099430574,
+        "recall": 0.9981041708241868,
+        "f1": 0.9332462564724542,
+        "support": 10022
+      },
+      "UDPFlood": {
+        "precision": 0.3844207810381773,
+        "recall": 1.0,
+        "f1": 0.5553525146450057,
+        "support": 175811
+      },
+      "UDPScan": {
+        "precision": 0.9978448275862069,
+        "recall": 0.99797134525168,
+        "f1": 0.9979080824088749,
+        "support": 7887
+      }
+    },
+    "confusion_matrix": [
+      [
+        125426,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        281529,
+        1
+      ],
+      [
+        5,
+        75449,
+        0,
+        0,
+        0,
+        667,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        613,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        187,
+        3407,
+        0,
+        0,
+        1198,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        10005,
+        0,
+        2,
+        0,
+        7
+      ],
+      [
+        0,
+        464,
+        0,
+        0,
+        0,
+        35421,
+        207,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        5,
+        0,
+        10003,
+        0,
+        9
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        175811,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        10,
+        0,
+        4,
+        0,
+        7871
+      ]
+    ],
+    "protocol": "XS21",
+    "strict_features": false,
+    "decision_rule": "balanced",
+    "validation_macro_mcc": {
+      "bayes": 0.9979167294122475,
+      "balanced": 0.9980409810788254
+    },
+    "trees": 118,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sTtl",
+      "dTtl",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sHops",
+      "dHops",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 288690,
+      "val": 65993,
+      "calibration": 111145,
+      "test": 728316
+    },
+    "test_classes": {
+      "Benign": 406959,
+      "HTTPFlood": 76121,
+      "ICMPFlood": 613,
+      "SYNFlood": 4792,
+      "SYNScan": 10019,
+      "SlowrateDoS": 36092,
+      "TCPConnectScan": 10022,
+      "UDPFlood": 175811,
+      "UDPScan": 7887
+    },
+    "top_features_gain": [
+      [
+        "sMeanPktSz",
+        1335168.831113921
+      ],
+      [
+        "sTtl",
+        1109637.3896003503
+      ],
+      [
+        "SrcWin",
+        1031715.6346938915
+      ],
+      [
+        "AckDat",
+        937229.1044118055
+      ],
+      [
+        "TcpOpt",
+        350054.92003056407
+      ],
+      [
+        "DstWin",
+        294896.51966836164
+      ],
+      [
+        "Proto",
+        248133.25620138645
+      ],
+      [
+        "SrcBytes",
+        204223.81763634016
+      ],
+      [
+        "DstBytes",
+        137141.9744973667
+      ],
+      [
+        "DstGap",
+        112213.95717824996
+      ],
+      [
+        "Flgs",
+        109171.09230709076
+      ],
+      [
+        "State",
+        96255.53109687567
+      ]
+    ]
+  },
+  "XS21-strict": {
+    "rows": 728316,
+    "accuracy": 0.5802453879909271,
+    "macro_f1": 0.773069751036055,
+    "weighted_f1": 0.5788286321100669,
+    "mcc": 0.5335467537120656,
+    "macro_mcc": 0.7612314889683863,
+    "binary_roc_auc": 0.43901270276249205,
+    "binary_pr_auc": 0.3807717070162666,
+    "per_class": {
+      "Benign": {
+        "precision": 0.9969589134882536,
+        "recall": 0.3077238739037593,
+        "f1": 0.4702875855283417,
+        "support": 406959
+      },
+      "HTTPFlood": {
+        "precision": 0.9936884824687389,
+        "recall": 0.9907121556469305,
+        "f1": 0.9921980870183009,
+        "support": 76121
+      },
+      "ICMPFlood": {
+        "precision": 0.9760765550239234,
+        "recall": 0.99836867862969,
+        "f1": 0.9870967741935484,
+        "support": 613
+      },
+      "SYNFlood": {
+        "precision": 1.0,
+        "recall": 0.7109766277128547,
+        "f1": 0.8310769606049518,
+        "support": 4792
+      },
+      "SYNScan": {
+        "precision": 0.8907488202297213,
+        "recall": 0.998502844595269,
+        "f1": 0.9415529411764706,
+        "support": 10019
+      },
+      "SlowrateDoS": {
+        "precision": 0.980454583206445,
+        "recall": 0.9812423805829547,
+        "f1": 0.9808483237090274,
+        "support": 36092
+      },
+      "TCPConnectScan": {
+        "precision": 0.9893893893893894,
+        "recall": 0.9862302933546199,
+        "f1": 0.9878073156106336,
+        "support": 10022
+      },
+      "UDPFlood": {
+        "precision": 0.3808867504276239,
+        "recall": 0.8802634647433892,
+        "f1": 0.5317061941916355,
+        "support": 175811
+      },
+      "UDPScan": {
+        "precision": 0.13320590673049273,
+        "recall": 0.99847850893876,
+        "f1": 0.23505357729158582,
+        "support": 7887
+      }
+    },
+    "confusion_matrix": [
+      [
+        125231,
+        9,
+        3,
+        0,
+        0,
+        4,
+        42,
+        251555,
+        30115
+      ],
+      [
+        5,
+        75414,
+        0,
+        0,
+        0,
+        702,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        612,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        54,
+        0,
+        0,
+        3407,
+        1214,
+        0,
+        60,
+        0,
+        57
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        10004,
+        0,
+        0,
+        0,
+        10
+      ],
+      [
+        205,
+        470,
+        0,
+        0,
+        0,
+        35415,
+        2,
+        0,
+        0
+      ],
+      [
+        118,
+        0,
+        5,
+        0,
+        5,
+        0,
+        9884,
+        0,
+        10
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        154760,
+        21051
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        8,
+        0,
+        2,
+        0,
+        7875
+      ]
+    ],
+    "protocol": "XS21",
+    "strict_features": true,
+    "decision_rule": "balanced",
+    "validation_macro_mcc": {
+      "bayes": 0.8909547833132938,
+      "balanced": 0.9913054730023294
+    },
+    "trees": 143,
+    "features": [
+      "Dur",
+      "SrcBytes",
+      "DstBytes",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "TotPkts",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "SrcLoad",
+      "DstLoad",
+      "Load",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "SrcWin",
+      "DstWin",
+      "SIntPkt",
+      "DIntPkt",
+      "SIntDist",
+      "DIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "sTos",
+      "dTos",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "State",
+      "Cause",
+      "Dir",
+      "Flgs",
+      "sDSb",
+      "dDSb",
+      "TcpOpt"
+    ],
+    "split_rows": {
+      "train": 288690,
+      "val": 65993,
+      "calibration": 111145,
+      "test": 728316
+    },
+    "test_classes": {
+      "Benign": 406959,
+      "HTTPFlood": 76121,
+      "ICMPFlood": 613,
+      "SYNFlood": 4792,
+      "SYNScan": 10019,
+      "SlowrateDoS": 36092,
+      "TCPConnectScan": 10022,
+      "UDPFlood": 175811,
+      "UDPScan": 7887
+    },
+    "top_features_gain": [
+      [
+        "sMeanPktSz",
+        1498694.0341619079
+      ],
+      [
+        "SrcWin",
+        1229229.663161844
+      ],
+      [
+        "AckDat",
+        814692.2834303447
+      ],
+      [
+        "Flgs",
+        479499.8861448467
+      ],
+      [
+        "TcpOpt",
+        321165.90935894847
+      ],
+      [
+        "DstWin",
+        312426.69166931073
+      ],
+      [
+        "TcpRtt",
+        257542.2020070842
+      ],
+      [
+        "SrcBytes",
+        253594.22489061503
+      ],
+      [
+        "Proto",
+        245468.43978193402
+      ],
+      [
+        "DstBytes",
+        161576.90294744438
+      ],
+      [
+        "Dir",
+        135773.82100719213
+      ],
+      [
+        "State",
+        118269.64970619418
+      ]
+    ]
+  }
+}

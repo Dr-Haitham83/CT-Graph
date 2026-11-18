@@ -1,0 +1,436 @@
+{
+ "model": "CT-GBDT (flow + causal graph context, feature set chosen on validation)",
+ "context_features": [
+  "src_flows_60s",
+  "src_packets_60s",
+  "src_bytes_60s",
+  "src_flows_3600s",
+  "src_packets_3600s",
+  "src_bytes_3600s",
+  "src_flows_86400s",
+  "src_packets_86400s",
+  "src_bytes_86400s",
+  "src_flows_604800s",
+  "src_packets_604800s",
+  "src_bytes_604800s",
+  "src_rhythm_max",
+  "src_rhythm_mean",
+  "src_rhythm_entropy",
+  "src_seen_before",
+  "dst_flows_60s",
+  "dst_packets_60s",
+  "dst_bytes_60s",
+  "dst_flows_3600s",
+  "dst_packets_3600s",
+  "dst_bytes_3600s",
+  "dst_flows_86400s",
+  "dst_packets_86400s",
+  "dst_bytes_86400s",
+  "dst_flows_604800s",
+  "dst_packets_604800s",
+  "dst_bytes_604800s",
+  "dst_rhythm_max",
+  "dst_rhythm_mean",
+  "dst_rhythm_entropy",
+  "dst_seen_before",
+  "rel_fan_out",
+  "rel_fan_in",
+  "rel_pivot",
+  "rel_response",
+  "rel_repeat",
+  "rel_continuation",
+  "log_degree",
+  "same_dport",
+  "same_sport",
+  "same_proto"
+ ],
+ "classes": [
+  "Benign",
+  "bot",
+  "brute_force_-web",
+  "brute_force_-xss",
+  "ddos_attack-hoic",
+  "ddos_attack-loic-udp",
+  "ddos_attacks-loic-http",
+  "dos_attacks-goldeneye",
+  "dos_attacks-hulk",
+  "dos_attacks-slowhttptest",
+  "dos_attacks-slowloris",
+  "ftp-bruteforce",
+  "infilteration",
+  "sql_injection",
+  "ssh-bruteforce"
+ ],
+ "feature_set_selection": {
+  "flow": {
+   "validation_macro_mcc": {
+    "bayes": 0.6549142443313808,
+    "balanced": 0.5586054552784008
+   },
+   "best": 0.6549142443313808,
+   "trees": 92,
+   "fit_seconds": 1401.0676906108856
+  },
+  "flow+short_context": {
+   "validation_macro_mcc": {
+    "bayes": 0.6804986991578081,
+    "balanced": 0.6443290600089204
+   },
+   "best": 0.6804986991578081,
+   "trees": 31,
+   "fit_seconds": 933.3385932445526
+  },
+  "flow+full_context": {
+   "validation_macro_mcc": {
+    "bayes": 0.6943771831476632,
+    "balanced": 0.6563877462496408
+   },
+   "best": 0.6943771831476632,
+   "trees": 36,
+   "fit_seconds": 1171.4070038795471
+  }
+ },
+ "chosen_feature_set": "flow+full_context",
+ "seed42": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.6943771831476632,
+   "balanced": 0.6563877462496408
+  },
+  "test": {
+   "macro_mcc": 0.7173826964853616,
+   "macro_f1": 0.7167529580401839,
+   "accuracy": 0.9718412528283474,
+   "mcc": 0.8560418327279968,
+   "per_class_f1": {
+    "Benign": 0.9855784220905935,
+    "bot": 0.9828530771967271,
+    "brute_force_-web": 0.689108910891089,
+    "brute_force_-xss": 0.49295774647887325,
+    "ddos_attack-hoic": 0.8354781231439319,
+    "ddos_attack-loic-udp": 0.5776805251641138,
+    "ddos_attacks-loic-http": 0.8480693234299862,
+    "dos_attacks-goldeneye": 0.0,
+    "dos_attacks-hulk": 0.9889195117835649,
+    "dos_attacks-slowhttptest": 0.6632191338073691,
+    "dos_attacks-slowloris": 0.9669565217391304,
+    "ftp-bruteforce": 0.9530841963079694,
+    "infilteration": 0.05065776556057334,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 0.9999781549686524
+   }
+  },
+  "trees": 36,
+  "fit_seconds": 27.718636989593506,
+  "top_features_gain": [
+   [
+    "TCP_WIN_MAX_IN",
+    19758017.154209673
+   ],
+   [
+    "src_flows_60s",
+    8728047.754327357
+   ],
+   [
+    "L7_PROTO",
+    8662442.121998293
+   ],
+   [
+    "dst_flows_60s",
+    6794037.369455148
+   ],
+   [
+    "same_dport",
+    6027428.7469341485
+   ],
+   [
+    "src_bytes_60s",
+    5303040.063715064
+   ],
+   [
+    "DST_TO_SRC_SECOND_BYTES",
+    5106760.44526238
+   ],
+   [
+    "src_rhythm_entropy",
+    4133623.378122367
+   ],
+   [
+    "NUM_PKTS_512_TO_1024_BYTES",
+    3636547.2580002365
+   ],
+   [
+    "TCP_FLAGS",
+    3284503.8740414227
+   ],
+   [
+    "packet_asymmetry",
+    2428791.695032354
+   ],
+   [
+    "IN_BYTES",
+    2333567.5952784736
+   ],
+   [
+    "SRC_TO_DST_SECOND_BYTES",
+    2198519.4367563967
+   ],
+   [
+    "MIN_TTL",
+    2024853.3428287504
+   ],
+   [
+    "DST_TO_SRC_IAT_STDDEV",
+    1709400.502375618
+   ],
+   [
+    "IN_PKTS",
+    1343524.911452524
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    1144483.1259303929
+   ],
+   [
+    "RETRANSMITTED_IN_BYTES",
+    1125947.2672196687
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    1097114.681969733
+   ],
+   [
+    "dst_packets_60s",
+    1015966.8337644874
+   ]
+  ]
+ },
+ "seed43": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.6795688403537697,
+   "balanced": 0.668750238941863
+  },
+  "test": {
+   "macro_mcc": 0.7102002089761381,
+   "macro_f1": 0.7055436440605423,
+   "accuracy": 0.9793036578312212,
+   "mcc": 0.8959119985475629,
+   "per_class_f1": {
+    "Benign": 0.9901630928678955,
+    "bot": 0.9889079554902966,
+    "brute_force_-web": 0.6948529411764706,
+    "brute_force_-xss": 0.3486238532110092,
+    "ddos_attack-hoic": 0.9539391783745331,
+    "ddos_attack-loic-udp": 0.5789473684210527,
+    "ddos_attacks-loic-http": 0.842090147586757,
+    "dos_attacks-goldeneye": 0.0,
+    "dos_attacks-hulk": 0.9977134571412637,
+    "dos_attacks-slowhttptest": 0.5444646098003629,
+    "dos_attacks-slowloris": 0.9544498948843728,
+    "ftp-bruteforce": 0.9367371187844309,
+    "infilteration": 0.04674324414049532,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 0.9999781549686524
+   }
+  },
+  "trees": 82,
+  "fit_seconds": 1997.6034655570984,
+  "top_features_gain": [
+   [
+    "TCP_WIN_MAX_IN",
+    11677157.293515256
+   ],
+   [
+    "src_flows_60s",
+    9398781.346477535
+   ],
+   [
+    "dst_flows_60s",
+    8961300.962177396
+   ],
+   [
+    "L7_PROTO",
+    8276666.190478128
+   ],
+   [
+    "MIN_TTL",
+    6691815.270501797
+   ],
+   [
+    "same_dport",
+    6681836.339315899
+   ],
+   [
+    "dst_bytes_60s",
+    5702644.453691781
+   ],
+   [
+    "dst_flows_86400s",
+    4704385.705597333
+   ],
+   [
+    "SRC_TO_DST_SECOND_BYTES",
+    4540992.11151205
+   ],
+   [
+    "NUM_PKTS_512_TO_1024_BYTES",
+    3485009.2989118267
+   ],
+   [
+    "CLIENT_TCP_FLAGS",
+    2707676.884546573
+   ],
+   [
+    "DST_TO_SRC_IAT_STDDEV",
+    2603484.9958007243
+   ],
+   [
+    "IN_BYTES",
+    2351532.9894822547
+   ],
+   [
+    "dst_packets_3600s",
+    1664125.3768327977
+   ],
+   [
+    "rel_repeat",
+    1615151.0579824252
+   ],
+   [
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    1506964.503193403
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    1390113.7593275758
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    1160117.4097450627
+   ],
+   [
+    "src_rhythm_entropy",
+    1133449.4116316256
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    1103285.445484819
+   ]
+  ]
+ },
+ "seed44": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.6631893759220387,
+   "balanced": 0.6609275523285821
+  },
+  "test": {
+   "macro_mcc": 0.713404183646406,
+   "macro_f1": 0.7133543199118645,
+   "accuracy": 0.9714797078775407,
+   "mcc": 0.8540846634769818,
+   "per_class_f1": {
+    "Benign": 0.9854730236222328,
+    "bot": 0.9906469487876328,
+    "brute_force_-web": 0.7025948103792415,
+    "brute_force_-xss": 0.49333333333333335,
+    "ddos_attack-hoic": 0.8326012587156921,
+    "ddos_attack-loic-udp": 0.5789473684210527,
+    "ddos_attacks-loic-http": 0.8480775935845827,
+    "dos_attacks-goldeneye": 0.0,
+    "dos_attacks-hulk": 0.9726050326396251,
+    "dos_attacks-slowhttptest": 0.6382418739307804,
+    "dos_attacks-slowloris": 0.9464221503056455,
+    "ftp-bruteforce": 0.9506871463217461,
+    "infilteration": 0.047351783755886716,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 0.9999781549686524
+   }
+  },
+  "trees": 41,
+  "fit_seconds": 1370.321272611618,
+  "top_features_gain": [
+   [
+    "TCP_WIN_MAX_IN",
+    20197802.071023
+   ],
+   [
+    "src_flows_60s",
+    8557838.252609536
+   ],
+   [
+    "L7_PROTO",
+    8253853.123924768
+   ],
+   [
+    "dst_flows_60s",
+    7150818.585668307
+   ],
+   [
+    "MIN_TTL",
+    6519159.647529913
+   ],
+   [
+    "same_dport",
+    5997151.749667157
+   ],
+   [
+    "src_bytes_60s",
+    5200342.030184431
+   ],
+   [
+    "NUM_PKTS_512_TO_1024_BYTES",
+    3542609.4858995755
+   ],
+   [
+    "src_rhythm_entropy",
+    3212212.0154056703
+   ],
+   [
+    "TCP_FLAGS",
+    3117815.619886619
+   ],
+   [
+    "DST_TO_SRC_IAT_STDDEV",
+    2456207.680578367
+   ],
+   [
+    "packet_asymmetry",
+    2447715.185719528
+   ],
+   [
+    "IN_BYTES",
+    2338684.5948440256
+   ],
+   [
+    "SRC_TO_DST_SECOND_BYTES",
+    2176224.1421292936
+   ],
+   [
+    "dst_packets_3600s",
+    1564289.5497361594
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    1308933.8338006467
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    1295778.8429286573
+   ],
+   [
+    "src_rhythm_max",
+    1115127.4935334476
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    1094434.1106740758
+   ],
+   [
+    "RETRANSMITTED_IN_BYTES",
+    1057755.7074159144
+   ]
+  ]
+ }
+}

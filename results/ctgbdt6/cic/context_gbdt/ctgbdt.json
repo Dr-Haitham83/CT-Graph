@@ -1,0 +1,109 @@
+{
+ "model": "CT-GBDT v6 (flow / flow + relational / flow + lab temporal; double held-out maximin rule)",
+ "lab_parts": [
+  "flow",
+  "T_count",
+  "T_novelty",
+  "T_flags",
+  "T_volume",
+  "T_timing",
+  "T_segz"
+ ],
+ "candidates": {
+  "flow": [
+   "flow"
+  ],
+  "flow+relational": [
+   "flow",
+   "REL"
+  ],
+  "flow+lab_temporal": [
+   "flow",
+   "T_count",
+   "T_novelty",
+   "T_flags",
+   "T_volume",
+   "T_timing",
+   "T_segz"
+  ]
+ },
+ "classes": [
+  "Benign",
+  "bot",
+  "brute_force_-web",
+  "brute_force_-xss",
+  "ddos_attack-hoic",
+  "ddos_attack-loic-udp",
+  "ddos_attacks-loic-http",
+  "dos_attacks-goldeneye",
+  "dos_attacks-hulk",
+  "dos_attacks-slowhttptest",
+  "dos_attacks-slowloris",
+  "ftp-bruteforce",
+  "infilteration",
+  "sql_injection",
+  "ssh-bruteforce"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.6729154692398053,
+    "balanced": 0.5633978088073565
+   },
+   "calibration": {
+    "bayes": 0.619877941034423,
+    "balanced": 0.5660113845179392
+   },
+   "rule_on_val": "bayes",
+   "features": 62
+  },
+  "flow+relational": {
+   "validation": {
+    "bayes": 0.8392437144677579,
+    "balanced": 0.7481322432871648
+   },
+   "calibration": {
+    "bayes": 0.9018867746207042,
+    "balanced": 0.7819136695382715
+   },
+   "rule_on_val": "bayes",
+   "features": 121,
+   "gain_validation": 0.16632824522795264,
+   "gain_calibration": 0.28200883358628126
+  },
+  "flow+lab_temporal": {
+   "validation": {
+    "bayes": 0.8265242228657489,
+    "balanced": 0.7885618601052585
+   },
+   "calibration": {
+    "bayes": 0.8931436311416121,
+    "balanced": 0.8097922237259674
+   },
+   "rule_on_val": "bayes",
+   "features": 386,
+   "gain_validation": 0.15360875362594362,
+   "gain_calibration": 0.27326569010718915
+  }
+ },
+ "chosen_feature_set": "flow+relational",
+ "rule": "maximin of (gain_val, gain_cal) over candidates with both >= 0.002 vs flow",
+ "seed42": {
+  "validation_macro_mcc": {
+   "bayes": 0.8392437144677579,
+   "balanced": 0.7481322432871648
+  }
+ },
+ "seed43": {
+  "validation_macro_mcc": {
+   "bayes": 0.8428677024677357,
+   "balanced": 0.7487904829398518
+  }
+ },
+ "seed44": {
+  "validation_macro_mcc": {
+   "bayes": 0.8460000649691106,
+   "balanced": 0.748151969946277
+  }
+ }
+}

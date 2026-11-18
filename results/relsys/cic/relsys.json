@@ -1,0 +1,155 @@
+{
+ "flows": 2729951,
+ "segments": 14,
+ "streaming_ns_per_flow_single_core": 4815.9041026743635,
+ "streaming_flows_per_s_single_core": 207645.3306959914,
+ "batch_library_us_per_flow": 4.564752017160741,
+ "peak_flow_records_per_s": 2114,
+ "p99_flow_records_per_s": 260.2900000000009,
+ "headroom_single_core_vs_peak": 98.22390288362885,
+ "peak_flows_in_any_60s_window": 18457,
+ "peak_active_keys_60s": {
+  "src": 1192,
+  "dst": 1371,
+  "pair": 4709
+ },
+ "max_live_first_seen_entries": 22447,
+ "state_bytes_estimate": 6364632,
+ "exactness_max_abs_diff_vs_batch": {
+  "src_flows_10s": 9.5367431640625e-07,
+  "src_newdport_frac_10s": 0.0,
+  "src_syn_frac_10s": 0.0,
+  "src_empty_frac_10s": 0.0,
+  "src_newpeer_10s": 2.384185791015625e-07,
+  "src_newsport_frac_10s": 0.0,
+  "src_flows_60s": 9.5367431640625e-07,
+  "src_newdport_frac_60s": 0.0,
+  "src_syn_frac_60s": 0.0,
+  "src_empty_frac_60s": 0.0,
+  "src_newpeer_60s": 2.384185791015625e-07,
+  "src_newsport_frac_60s": 0.0,
+  "dst_flows_10s": 9.5367431640625e-07,
+  "dst_newdport_frac_10s": 0.0,
+  "dst_syn_frac_10s": 0.0,
+  "dst_empty_frac_10s": 0.0,
+  "dst_newpeer_10s": 2.384185791015625e-07,
+  "dst_newsport_frac_10s": 0.0,
+  "dst_flows_60s": 9.5367431640625e-07,
+  "dst_newdport_frac_60s": 0.0,
+  "dst_syn_frac_60s": 0.0,
+  "dst_empty_frac_60s": 0.0,
+  "dst_newpeer_60s": 4.76837158203125e-07,
+  "dst_newsport_frac_60s": 0.0,
+  "pair_flows_10s": 9.5367431640625e-07,
+  "pair_newdport_frac_10s": 0.0,
+  "pair_syn_frac_10s": 0.0,
+  "pair_empty_frac_10s": 0.0,
+  "pair_flows_60s": 9.5367431640625e-07,
+  "pair_newdport_frac_60s": 0.0,
+  "pair_syn_frac_60s": 0.0,
+  "pair_empty_frac_60s": 0.0
+ },
+ "window_count_referee_integer_us": {
+  "src_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "pair_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "pair_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_newpeer_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_newpeer_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_newsport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "src_newsport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_newpeer_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_newpeer_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_newsport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "dst_newsport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "pair_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  },
+  "pair_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 2729951
+  }
+ },
+ "streaming_exact_vs_integer_referee": true
+}

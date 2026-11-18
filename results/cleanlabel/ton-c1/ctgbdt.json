@@ -1,0 +1,373 @@
+{
+ "model": "CT-GBDT (flow + causal graph context, feature set chosen on validation)",
+ "context_features": [],
+ "classes": [
+  "Benign",
+  "backdoor",
+  "ddos",
+  "dos",
+  "injection",
+  "mitm",
+  "password",
+  "ransomware",
+  "scanning",
+  "xss"
+ ],
+ "feature_set_selection": {
+  "flow": {
+   "validation_macro_mcc": {
+    "bayes": 0.8517501632033649,
+    "balanced": 0.8125910290053981
+   },
+   "best": 0.8517501632033649,
+   "trees": 754,
+   "fit_seconds": 6087.998802661896
+  }
+ },
+ "chosen_feature_set": "flow",
+ "seed42": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.8517501632033649,
+   "balanced": 0.8125910290053981
+  },
+  "test": {
+   "macro_mcc": 0.7753583757521076,
+   "macro_f1": 0.7743393405386779,
+   "accuracy": 0.8495326908953468,
+   "mcc": 0.8143924475500229,
+   "per_class_f1": {
+    "Benign": 0.8279554203444791,
+    "backdoor": 0.9651445894789752,
+    "ddos": 0.9671545684609597,
+    "dos": 0.8251089863354948,
+    "injection": 0.9544737008271769,
+    "mitm": 0.9379042690815006,
+    "password": 0.9005834845845565,
+    "ransomware": 0.3662297609868928,
+    "scanning": 0.016709737650353815,
+    "xss": 0.9821288876363896
+   }
+  },
+  "trees": 754,
+  "fit_seconds": 2164.2841601371765,
+  "top_features_gain": [
+   [
+    "TCP_WIN_MAX_IN",
+    12196014.162247654
+   ],
+   [
+    "OUT_BYTES",
+    10981260.28204664
+   ],
+   [
+    "TCP_WIN_MAX_OUT",
+    9085551.491737498
+   ],
+   [
+    "IN_BYTES",
+    7510934.265937228
+   ],
+   [
+    "LONGEST_FLOW_PKT",
+    5364253.268824203
+   ],
+   [
+    "TCP_FLAGS",
+    4748160.7141957665
+   ],
+   [
+    "NUM_PKTS_128_TO_256_BYTES",
+    3148986.9267561072
+   ],
+   [
+    "RETRANSMITTED_IN_PKTS",
+    2927226.0682055196
+   ],
+   [
+    "L7_PROTO",
+    2406665.437289317
+   ],
+   [
+    "IN_PKTS",
+    2378902.766575463
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    2270521.1614646674
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    2108245.377449326
+   ],
+   [
+    "MAX_TTL",
+    1964638.7351884951
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    1608568.0071683738
+   ],
+   [
+    "byte_asymmetry",
+    1584873.5019528335
+   ],
+   [
+    "SRC_TO_DST_IAT_STDDEV",
+    1564580.4535011076
+   ],
+   [
+    "forward_byte_fraction",
+    1456601.7089527305
+   ],
+   [
+    "CLIENT_TCP_FLAGS",
+    1403889.2329393052
+   ],
+   [
+    "SERVER_TCP_FLAGS",
+    1346402.178418355
+   ],
+   [
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    1329744.547756118
+   ]
+  ]
+ },
+ "seed43": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.8510442342681799,
+   "balanced": 0.8067701669700222
+  },
+  "test": {
+   "macro_mcc": 0.7725702235889302,
+   "macro_f1": 0.7725023409968756,
+   "accuracy": 0.8479259557442991,
+   "mcc": 0.8123371898468895,
+   "per_class_f1": {
+    "Benign": 0.8262624346414054,
+    "backdoor": 0.9651900722588753,
+    "ddos": 0.9650201613725892,
+    "dos": 0.8233758114047186,
+    "injection": 0.9532812714070421,
+    "mitm": 0.9322355921469284,
+    "password": 0.8962527643041285,
+    "ransomware": 0.36319612590799033,
+    "scanning": 0.017554702248879613,
+    "xss": 0.9826544742761986
+   }
+  },
+  "trees": 252,
+  "fit_seconds": 2385.842785358429,
+  "top_features_gain": [
+   [
+    "TCP_WIN_MAX_IN",
+    10605254.046949608
+   ],
+   [
+    "IN_BYTES",
+    9655388.624637801
+   ],
+   [
+    "TCP_WIN_MAX_OUT",
+    9245148.316331387
+   ],
+   [
+    "OUT_BYTES",
+    9216383.699117625
+   ],
+   [
+    "LONGEST_FLOW_PKT",
+    5612723.490253643
+   ],
+   [
+    "SERVER_TCP_FLAGS",
+    3976784.9519722476
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    3747191.3572266446
+   ],
+   [
+    "TCP_FLAGS",
+    3374819.5628048386
+   ],
+   [
+    "RETRANSMITTED_IN_PKTS",
+    2945172.4168432876
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    2653549.3889866453
+   ],
+   [
+    "IN_PKTS",
+    2601684.2663219054
+   ],
+   [
+    "NUM_PKTS_128_TO_256_BYTES",
+    2014706.9885192513
+   ],
+   [
+    "L7_PROTO",
+    2007179.1701804206
+   ],
+   [
+    "CLIENT_TCP_FLAGS",
+    1883485.0927547961
+   ],
+   [
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    1862765.6776325055
+   ],
+   [
+    "MIN_TTL",
+    1826328.0353297123
+   ],
+   [
+    "DST_TO_SRC_IAT_MAX",
+    1767318.4569645307
+   ],
+   [
+    "SRC_TO_DST_IAT_STDDEV",
+    1666086.616338734
+   ],
+   [
+    "byte_asymmetry",
+    1653024.8024856434
+   ],
+   [
+    "forward_byte_fraction",
+    1558037.8358746297
+   ]
+  ]
+ },
+ "seed44": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.8548450391329634,
+   "balanced": 0.8041388114091836
+  },
+  "test": {
+   "macro_mcc": 0.7797037700820852,
+   "macro_f1": 0.7795213770380892,
+   "accuracy": 0.8491973622348483,
+   "mcc": 0.8139741791363909,
+   "per_class_f1": {
+    "Benign": 0.8275114418217497,
+    "backdoor": 0.9651619388684698,
+    "ddos": 0.9671251307143764,
+    "dos": 0.8231576239733955,
+    "injection": 0.9535678137651822,
+    "mitm": 0.9469598965071151,
+    "password": 0.8982519990047664,
+    "ransomware": 0.41539763113367173,
+    "scanning": 0.01534109749412951,
+    "xss": 0.9827391970980348
+   }
+  },
+  "trees": 264,
+  "fit_seconds": 2537.306459903717,
+  "top_features_gain": [
+   [
+    "OUT_BYTES",
+    11615022.199428609
+   ],
+   [
+    "IN_BYTES",
+    9543810.415139208
+   ],
+   [
+    "TCP_WIN_MAX_IN",
+    8911213.37337288
+   ],
+   [
+    "TCP_WIN_MAX_OUT",
+    8580084.364551764
+   ],
+   [
+    "LONGEST_FLOW_PKT",
+    5670031.291805408
+   ],
+   [
+    "SERVER_TCP_FLAGS",
+    4362089.415067686
+   ],
+   [
+    "TCP_FLAGS",
+    3514338.7961779013
+   ],
+   [
+    "L7_PROTO",
+    3007782.4567222563
+   ],
+   [
+    "RETRANSMITTED_IN_PKTS",
+    2925757.1012758017
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    2721748.2500283723
+   ],
+   [
+    "IN_PKTS",
+    2462219.376817272
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    2391685.3979078596
+   ],
+   [
+    "MAX_TTL",
+    2158292.0611733245
+   ],
+   [
+    "NUM_PKTS_128_TO_256_BYTES",
+    1903211.5550896616
+   ],
+   [
+    "SRC_TO_DST_IAT_STDDEV",
+    1795068.7266034351
+   ],
+   [
+    "forward_byte_fraction",
+    1589054.8805126264
+   ],
+   [
+    "SRC_TO_DST_IAT_MIN",
+    1483184.5383620546
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    1418967.7744792518
+   ],
+   [
+    "RETRANSMITTED_OUT_BYTES",
+    1107552.7133204888
+   ],
+   [
+    "CLIENT_TCP_FLAGS",
+    1048609.0472619352
+   ]
+  ]
+ },
+ "cleaned_label_gate": {
+  "standard_files": [
+   "/data/input/ctg-ton-ctgbdt4-full/context_gbdt/ctgbdt_seed42.npz",
+   "/data/input/ctg-ton-ctgbdt4-full/context_gbdt/ctgbdt_seed43.npz",
+   "/data/input/ctg-ton-ctgbdt4-full/context_gbdt/ctgbdt_seed44.npz"
+  ],
+  "cleaned_validation_rows": 1634974,
+  "standard_branch": {
+   "bayes": 0.8415571483339367,
+   "balanced": 0.7727356746217278
+  },
+  "cleaned_label_branch": {
+   "bayes": 0.8557311121610797,
+   "balanced": 0.8088896211998942
+  },
+  "gain": 0.014173963827142977,
+  "helps": true
+ }
+}

@@ -1,0 +1,696 @@
+{
+ "prepared": "nids-cic",
+ "protocol": "train/validation/calibration only; test never opened",
+ "features": 445,
+ "groups": {
+  "flow": 62,
+  "REL": 59,
+  "T_count": 65,
+  "T_novelty": 33,
+  "T_flags": 105,
+  "T_volume": 57,
+  "T_timing": 49,
+  "T_segz": 15
+ },
+ "configs": {
+  "P0_flow": {
+   "features": 62,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6573787685228981,
+    "per_class_mcc": {
+     "Benign": 0.9579,
+     "bot": 1.0,
+     "brute_force_-web": 0.0399,
+     "brute_force_-xss": 0.0638,
+     "ddos_attack-hoic": 0.9817,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9927,
+     "ftp-bruteforce": 0.9012,
+     "infilteration": 0.673,
+     "sql_injection": 0.2791,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.6109926155200139,
+    "per_class_mcc": {
+     "Benign": 0.8933,
+     "bot": 1.0,
+     "brute_force_-web": 0.1347,
+     "brute_force_-xss": -0.0,
+     "ddos_attack-hoic": 0.8621,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9795,
+     "ftp-bruteforce": 0.9126,
+     "infilteration": 0.5615,
+     "sql_injection": -0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "fit_seconds": 636,
+   "gain_vs_flow": [
+    0.0,
+    0.0
+   ]
+  },
+  "P1_flow+REL": {
+   "features": 121,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8091483039589217,
+    "per_class_mcc": {
+     "Benign": 0.9478,
+     "bot": 0.9999,
+     "brute_force_-web": 0.1347,
+     "brute_force_-xss": 0.8152,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.98,
+     "dos_attacks-slowhttptest": 0.9997,
+     "dos_attacks-slowloris": 0.9104,
+     "ftp-bruteforce": 0.9995,
+     "infilteration": 0.5309,
+     "sql_injection": 0.3925,
+     "ssh-bruteforce": 0.9992
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8711874224731289,
+    "per_class_mcc": {
+     "Benign": 0.9478,
+     "bot": 0.9998,
+     "brute_force_-web": 0.5225,
+     "brute_force_-xss": 0.8857,
+     "ddos_attack-hoic": 0.9995,
+     "ddos_attacks-loic-http": 0.9318,
+     "dos_attacks-slowhttptest": 0.9987,
+     "dos_attacks-slowloris": 0.9039,
+     "ftp-bruteforce": 0.9989,
+     "infilteration": 0.665,
+     "sql_injection": 0.6025,
+     "ssh-bruteforce": 0.9981
+    }
+   },
+   "fit_seconds": 819,
+   "gain_vs_flow": [
+    0.15176953543602356,
+    0.2601948069531149
+   ]
+  },
+  "P2_all": {
+   "features": 445,
+   "rule": "balanced",
+   "val": {
+    "macro_mcc": 0.7941004290509883,
+    "per_class_mcc": {
+     "Benign": 0.9619,
+     "bot": 0.9999,
+     "brute_force_-web": 0.2275,
+     "brute_force_-xss": 0.6161,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9889,
+     "dos_attacks-slowhttptest": 0.9446,
+     "dos_attacks-slowloris": 0.7446,
+     "ftp-bruteforce": 0.9979,
+     "infilteration": 0.725,
+     "sql_injection": 0.3236,
+     "ssh-bruteforce": 0.9992
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8290058654767223,
+    "per_class_mcc": {
+     "Benign": 0.9257,
+     "bot": 0.9999,
+     "brute_force_-web": 0.5675,
+     "brute_force_-xss": 0.6386,
+     "ddos_attack-hoic": 0.9988,
+     "ddos_attacks-loic-http": 0.9443,
+     "dos_attacks-slowhttptest": 0.9943,
+     "dos_attacks-slowloris": 0.7222,
+     "ftp-bruteforce": 0.9992,
+     "infilteration": 0.6554,
+     "sql_injection": 0.5039,
+     "ssh-bruteforce": 0.9984
+    }
+   },
+   "fit_seconds": 410,
+   "gain_vs_flow": [
+    0.1367216605280902,
+    0.21801324995670834
+   ]
+  },
+  "P3_all-lowgain": {
+   "features": 342,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8516746082786879,
+    "per_class_mcc": {
+     "Benign": 0.9571,
+     "bot": 0.9999,
+     "brute_force_-web": 0.3186,
+     "brute_force_-xss": 0.8884,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 0.999,
+     "dos_attacks-slowhttptest": 0.866,
+     "dos_attacks-slowloris": 0.7502,
+     "ftp-bruteforce": 0.999,
+     "infilteration": 0.6457,
+     "sql_injection": 0.7966,
+     "ssh-bruteforce": 0.9997
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.9029975981985205,
+    "per_class_mcc": {
+     "Benign": 0.9531,
+     "bot": 0.9999,
+     "brute_force_-web": 0.6411,
+     "brute_force_-xss": 0.9239,
+     "ddos_attack-hoic": 0.9977,
+     "ddos_attacks-loic-http": 0.9972,
+     "dos_attacks-slowhttptest": 0.9946,
+     "dos_attacks-slowloris": 0.731,
+     "ftp-bruteforce": 0.9995,
+     "infilteration": 0.6986,
+     "sql_injection": 0.8995,
+     "ssh-bruteforce": 0.9999
+    }
+   },
+   "fit_seconds": 1249,
+   "gain_vs_flow": [
+    0.1942958397557898,
+    0.2920049826785066
+   ]
+  },
+  "P4_all-redundant": {
+   "features": 323,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7688620443933223,
+    "per_class_mcc": {
+     "Benign": 0.9388,
+     "bot": 0.9999,
+     "brute_force_-web": 0.308,
+     "brute_force_-xss": 0.8336,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 0.9881,
+     "dos_attacks-slowhttptest": 0.4329,
+     "dos_attacks-slowloris": 0.6005,
+     "ftp-bruteforce": 0.9934,
+     "infilteration": 0.5843,
+     "sql_injection": 0.5471,
+     "ssh-bruteforce": 0.9998
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8482733766807588,
+    "per_class_mcc": {
+     "Benign": 0.9374,
+     "bot": 0.9999,
+     "brute_force_-web": 0.5547,
+     "brute_force_-xss": 0.9429,
+     "ddos_attack-hoic": 0.9976,
+     "ddos_attacks-loic-http": 0.9425,
+     "dos_attacks-slowhttptest": 0.7401,
+     "dos_attacks-slowloris": 0.5561,
+     "ftp-bruteforce": 0.9847,
+     "infilteration": 0.6958,
+     "sql_injection": 0.8282,
+     "ssh-bruteforce": 0.9995
+    }
+   },
+   "fit_seconds": 1765,
+   "gain_vs_flow": [
+    0.11148327587042417,
+    0.2372807611607448
+   ]
+  },
+  "P5_all-drift": {
+   "features": 367,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8477201772753916,
+    "per_class_mcc": {
+     "Benign": 0.9717,
+     "bot": 0.9996,
+     "brute_force_-web": 0.3042,
+     "brute_force_-xss": 0.7159,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 0.9875,
+     "dos_attacks-slowhttptest": 0.9993,
+     "dos_attacks-slowloris": 0.7065,
+     "ftp-bruteforce": 0.9996,
+     "infilteration": 0.7619,
+     "sql_injection": 0.7295,
+     "ssh-bruteforce": 0.9971
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8624806841870565,
+    "per_class_mcc": {
+     "Benign": 0.9597,
+     "bot": 0.9999,
+     "brute_force_-web": 0.7353,
+     "brute_force_-xss": 0.7388,
+     "ddos_attack-hoic": 0.9977,
+     "ddos_attacks-loic-http": 0.9341,
+     "dos_attacks-slowhttptest": 0.9988,
+     "dos_attacks-slowloris": 0.6808,
+     "ftp-bruteforce": 0.9992,
+     "infilteration": 0.7391,
+     "sql_injection": 0.5729,
+     "ssh-bruteforce": 0.9934
+    }
+   },
+   "fit_seconds": 1850,
+   "gain_vs_flow": [
+    0.1903414087524935,
+    0.25148806866704254
+   ]
+  },
+  "P6_all-unstable": {
+   "features": 379,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7661322395089596,
+    "per_class_mcc": {
+     "Benign": 0.9651,
+     "bot": 1.0,
+     "brute_force_-web": 0.2704,
+     "brute_force_-xss": 0.8714,
+     "ddos_attack-hoic": 0.9995,
+     "ddos_attacks-loic-http": 0.9693,
+     "dos_attacks-slowhttptest": 0.9955,
+     "dos_attacks-slowloris": -0.0,
+     "ftp-bruteforce": 0.9989,
+     "infilteration": 0.6659,
+     "sql_injection": 0.4576,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8517937021390131,
+    "per_class_mcc": {
+     "Benign": 0.9597,
+     "bot": 0.9999,
+     "brute_force_-web": 0.6643,
+     "brute_force_-xss": 0.8775,
+     "ddos_attack-hoic": 0.9977,
+     "ddos_attacks-loic-http": 0.8498,
+     "dos_attacks-slowhttptest": 0.9974,
+     "dos_attacks-slowloris": 0.3136,
+     "ftp-bruteforce": 0.9985,
+     "infilteration": 0.7223,
+     "sql_injection": 0.8409,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "fit_seconds": 1832,
+   "gain_vs_flow": [
+    0.10875347098606147,
+    0.24080108661899913
+   ]
+  },
+  "P7_scale_free": {
+   "features": 284,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8401357957617881,
+    "per_class_mcc": {
+     "Benign": 0.9583,
+     "bot": 0.9999,
+     "brute_force_-web": 0.337,
+     "brute_force_-xss": 0.898,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9972,
+     "dos_attacks-slowhttptest": 0.9996,
+     "dos_attacks-slowloris": 0.3961,
+     "ftp-bruteforce": 0.9996,
+     "infilteration": 0.6305,
+     "sql_injection": 0.866,
+     "ssh-bruteforce": 0.9994
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8695379405406921,
+    "per_class_mcc": {
+     "Benign": 0.9521,
+     "bot": 0.9998,
+     "brute_force_-web": 0.6522,
+     "brute_force_-xss": 0.917,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9819,
+     "dos_attacks-slowhttptest": 0.9991,
+     "dos_attacks-slowloris": 0.3529,
+     "ftp-bruteforce": 0.9992,
+     "infilteration": 0.7283,
+     "sql_injection": 0.8533,
+     "ssh-bruteforce": 0.9988
+    }
+   },
+   "fit_seconds": 1439,
+   "gain_vs_flow": [
+    0.18275702723888998,
+    0.2585453250206782
+   ]
+  },
+  "P8_all-(redundant|drift|unstable)": {
+   "features": 235,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8269283945943293,
+    "per_class_mcc": {
+     "Benign": 0.9634,
+     "bot": 0.9999,
+     "brute_force_-web": 0.2635,
+     "brute_force_-xss": 0.834,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 0.9894,
+     "dos_attacks-slowhttptest": 0.9983,
+     "dos_attacks-slowloris": 0.7391,
+     "ftp-bruteforce": 0.9997,
+     "infilteration": 0.6772,
+     "sql_injection": 0.4592,
+     "ssh-bruteforce": 0.9996
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8799265310336915,
+    "per_class_mcc": {
+     "Benign": 0.9612,
+     "bot": 0.9999,
+     "brute_force_-web": 0.6754,
+     "brute_force_-xss": 0.8607,
+     "ddos_attack-hoic": 0.9976,
+     "ddos_attacks-loic-http": 0.9486,
+     "dos_attacks-slowhttptest": 0.9951,
+     "dos_attacks-slowloris": 0.6129,
+     "ftp-bruteforce": 0.9993,
+     "infilteration": 0.7831,
+     "sql_injection": 0.7257,
+     "ssh-bruteforce": 0.9996
+    }
+   },
+   "fit_seconds": 1304,
+   "gain_vs_flow": [
+    0.1695496260714312,
+    0.2689339155136775
+   ]
+  },
+  "P9_all-negative_val_permutation (val-selected; cal is the unbiased check)": {
+   "features": 266,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8033334882414769,
+    "per_class_mcc": {
+     "Benign": 0.9665,
+     "bot": 0.9997,
+     "brute_force_-web": 0.378,
+     "brute_force_-xss": 0.8336,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9659,
+     "dos_attacks-slowhttptest": 0.9987,
+     "dos_attacks-slowloris": 0.1424,
+     "ftp-bruteforce": 0.9995,
+     "infilteration": 0.7121,
+     "sql_injection": 0.6438,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.8497722821389533,
+    "per_class_mcc": {
+     "Benign": 0.9534,
+     "bot": 0.9994,
+     "brute_force_-web": 0.5647,
+     "brute_force_-xss": 0.9203,
+     "ddos_attack-hoic": 0.998,
+     "ddos_attacks-loic-http": 0.8305,
+     "dos_attacks-slowhttptest": 0.997,
+     "dos_attacks-slowloris": 0.3006,
+     "ftp-bruteforce": 0.9979,
+     "infilteration": 0.748,
+     "sql_injection": 0.8876,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "fit_seconds": 1365,
+   "gain_vs_flow": [
+    0.14595471971857876,
+    0.23877966661893935
+   ]
+  },
+  "P10_flow+T_segz": {
+   "features": 77,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.5286162706841538,
+    "per_class_mcc": {
+     "Benign": 0.9195,
+     "bot": 0.9999,
+     "brute_force_-web": 0.2797,
+     "brute_force_-xss": 0.3428,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9917,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.0277,
+     "ftp-bruteforce": 0.0699,
+     "infilteration": 0.2946,
+     "sql_injection": 0.8293,
+     "ssh-bruteforce": 0.5881
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.5712170212011416,
+    "per_class_mcc": {
+     "Benign": 0.9225,
+     "bot": 0.9999,
+     "brute_force_-web": 0.1497,
+     "brute_force_-xss": 0.7666,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9931,
+     "dos_attacks-slowhttptest": 0.0184,
+     "dos_attacks-slowloris": -0.0004,
+     "ftp-bruteforce": 0.1528,
+     "infilteration": 0.4277,
+     "sql_injection": 0.8255,
+     "ssh-bruteforce": 0.5987
+    }
+   },
+   "fit_seconds": 697,
+   "gain_vs_flow": [
+    -0.12876249783874427,
+    -0.03977559431887234
+   ]
+  },
+  "P11_flow+REL+T_segz": {
+   "features": 136,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7399913583315084,
+    "per_class_mcc": {
+     "Benign": 0.9614,
+     "bot": 0.9982,
+     "brute_force_-web": 0.3098,
+     "brute_force_-xss": 0.3792,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9981,
+     "dos_attacks-slowhttptest": 0.9997,
+     "dos_attacks-slowloris": 0.0085,
+     "ftp-bruteforce": 0.9995,
+     "infilteration": 0.6318,
+     "sql_injection": 0.5944,
+     "ssh-bruteforce": 0.9993
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.7880478270214244,
+    "per_class_mcc": {
+     "Benign": 0.9458,
+     "bot": 0.9968,
+     "brute_force_-web": 0.2181,
+     "brute_force_-xss": 0.8789,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9938,
+     "dos_attacks-slowhttptest": 0.9995,
+     "dos_attacks-slowloris": -0.0,
+     "ftp-bruteforce": 0.9992,
+     "infilteration": 0.6266,
+     "sql_injection": 0.7989,
+     "ssh-bruteforce": 0.9991
+    }
+   },
+   "fit_seconds": 897,
+   "gain_vs_flow": [
+    0.0826125898086103,
+    0.17705521150141046
+   ]
+  },
+  "E1_views(REL,T_segz,all)": {
+   "views": [
+    "P1_flow+REL",
+    "P10_flow+T_segz",
+    "P2_all"
+   ],
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8548402259764392,
+    "per_class_mcc": {
+     "Benign": 0.9607,
+     "bot": 1.0,
+     "brute_force_-web": 0.2836,
+     "brute_force_-xss": 0.8634,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9992,
+     "dos_attacks-slowhttptest": 0.9997,
+     "dos_attacks-slowloris": 0.7828,
+     "ftp-bruteforce": 0.9999,
+     "infilteration": 0.619,
+     "sql_injection": 0.7501,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.9073988957076337,
+    "per_class_mcc": {
+     "Benign": 0.9537,
+     "bot": 0.9999,
+     "brute_force_-web": 0.6973,
+     "brute_force_-xss": 0.9276,
+     "ddos_attack-hoic": 0.9995,
+     "ddos_attacks-loic-http": 0.9961,
+     "dos_attacks-slowhttptest": 0.9992,
+     "dos_attacks-slowloris": 0.7382,
+     "ftp-bruteforce": 0.9996,
+     "infilteration": 0.6906,
+     "sql_injection": 0.8876,
+     "ssh-bruteforce": 0.9995
+    }
+   },
+   "gain_vs_flow": [
+    0.19746145745354104,
+    0.2964062801876197
+   ]
+  },
+  "E2_views(REL,T_segz,all,pruned)": {
+   "views": [
+    "P1_flow+REL",
+    "P10_flow+T_segz",
+    "P2_all",
+    "P8_all-(redundant|drift|unstable)"
+   ],
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.8603935143046487,
+    "per_class_mcc": {
+     "Benign": 0.9663,
+     "bot": 1.0,
+     "brute_force_-web": 0.2931,
+     "brute_force_-xss": 0.8634,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9894,
+     "dos_attacks-slowhttptest": 0.9995,
+     "dos_attacks-slowloris": 0.7846,
+     "ftp-bruteforce": 0.9999,
+     "infilteration": 0.6926,
+     "sql_injection": 0.7361,
+     "ssh-bruteforce": 0.9999
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.9102603539929851,
+    "per_class_mcc": {
+     "Benign": 0.9618,
+     "bot": 0.9999,
+     "brute_force_-web": 0.7311,
+     "brute_force_-xss": 0.9276,
+     "ddos_attack-hoic": 0.9989,
+     "ddos_attacks-loic-http": 0.9483,
+     "dos_attacks-slowhttptest": 0.9977,
+     "dos_attacks-slowloris": 0.7382,
+     "ftp-bruteforce": 0.9994,
+     "infilteration": 0.7631,
+     "sql_injection": 0.8576,
+     "ssh-bruteforce": 0.9995
+    }
+   },
+   "gain_vs_flow": [
+    0.2030147457817506,
+    0.29926773847297117
+   ]
+  },
+  "E3_views(flow,REL,T_segz)": {
+   "views": [
+    "P0_flow",
+    "P1_flow+REL",
+    "P10_flow+T_segz"
+   ],
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.7740615662798342,
+    "per_class_mcc": {
+     "Benign": 0.9547,
+     "bot": 1.0,
+     "brute_force_-web": 0.2376,
+     "brute_force_-xss": 0.9003,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0777,
+     "dos_attacks-slowloris": 0.9173,
+     "ftp-bruteforce": 0.9018,
+     "infilteration": 0.5227,
+     "sql_injection": 0.7772,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "calibration": {
+    "macro_mcc": 0.768867794830555,
+    "per_class_mcc": {
+     "Benign": 0.9426,
+     "bot": 1.0,
+     "brute_force_-web": 0.4369,
+     "brute_force_-xss": 0.7928,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9979,
+     "dos_attacks-slowhttptest": 0.0159,
+     "dos_attacks-slowloris": 0.9122,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.5464,
+     "sql_injection": 0.6691,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "gain_vs_flow": [
+    0.11668279775693613,
+    0.15787517931054107
+   ]
+  }
+ },
+ "adversarial_auc": 0.9953502425893721,
+ "correlation_clusters": 307,
+ "pruning_sets": {
+  "P0_flow": 62,
+  "P1_flow+REL": 121,
+  "P2_all": 445,
+  "P3_all-lowgain": 342,
+  "P4_all-redundant": 323,
+  "P5_all-drift": 367,
+  "P6_all-unstable": 379,
+  "P7_scale_free": 284,
+  "P8_all-(redundant|drift|unstable)": 235,
+  "P9_all-negative_val_permutation (val-selected; cal is the unbiased check)": 266,
+  "P10_flow+T_segz": 77,
+  "P11_flow+REL+T_segz": 136
+ },
+ "removed": {
+  "low_gain": 103,
+  "drift": 78,
+  "unstable": 66,
+  "redundant": 122,
+  "negative_val_permutation": 179
+ },
+ "recommended": "E2_views(REL,T_segz,all,pruned)"
+}

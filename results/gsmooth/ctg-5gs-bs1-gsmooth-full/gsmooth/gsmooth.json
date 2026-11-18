@@ -1,0 +1,18 @@
+{
+ "graph": 0.9997830001814028,
+ "graph_smoothed": 0.9988963877150882,
+ "hybrid": 0.9999561631738407,
+ "hybrid_smoothed_graph": 0.999812905487739,
+ "graph_gain": -0.0008866124663146069,
+ "hybrid_gain": -0.0001432576861016832,
+ "adopt": false,
+ "key": "pair",
+ "tau_s": 10.0,
+ "mix": 0.5,
+ "runs": [
+  "/data/input/ctg-5gs-bs1-v4bs42-train-full/nids-5gs-bs1/evaluations/1b271ea4005b9e4c854b6fe6/results.json",
+  "/data/input/ctg-5gs-bs1-v4bs43-train-full/nids-5gs-bs1/evaluations/3df512274ef63514017b4a3b/results.json",
+  "/data/input/ctg-5gs-bs1-v4bs44-train-full/nids-5gs-bs1/evaluations/d8bf760f6bb581ebd7c11a42/results.json"
+ ],
+ "context_files": 3
+}

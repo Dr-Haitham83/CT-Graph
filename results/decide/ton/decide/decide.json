@@ -1,0 +1,172 @@
+{
+ "protocol": "validation predictions only; no test file opened",
+ "runs": {
+  "v4b": [
+   "/data/input/ctg-ton-v4bs42-graph/evaluations/86eb06cc4f94d2a51842e86f/results.json",
+   "/data/input/ctg-ton-v4bs43-train-full/nids-ton/evaluations/1be348b4db87b73e6312e0a1/results.json",
+   "/data/input/ctg-ton-v4bs44-train-full/nids-ton/evaluations/75f0751c406f13ba1f44ba2e/results.json"
+  ],
+  "v6r": [],
+  "v6r8": [
+   "/data/input/ctg-ton-v6r8s42-graph/nids-ton-rel/evaluations/303f7d5ef930b52ce4c13991/results.json",
+   "/data/input/ctg-ton-v6r8s43-graph/nids-ton-rel/evaluations/42d5744ba70260267ab41510/results.json",
+   "/data/input/ctg-ton-v6r8s44-train-full/nids-ton-rel/evaluations/b3206abaa3f07b1af7257d51/results.json"
+  ]
+ },
+ "context_files": [
+  "/data/input/ctg-ton-smooth787-full/context_gbdt/ctgbdt_seed42.npz",
+  "/data/input/ctg-ton-smooth787-full/context_gbdt/ctgbdt_seed43.npz",
+  "/data/input/ctg-ton-smooth787-full/context_gbdt/ctgbdt_seed44.npz"
+ ],
+ "v4b": {
+  "seed_val_macro_mcc": [
+   0.8163939980203855,
+   0.7661393928919896,
+   0.7977419048050074
+  ],
+  "graph_ensemble": {
+   "rule": "bayes",
+   "macro_mcc": 0.832466408198877,
+   "per_class": {
+    "Benign": 0.9162,
+    "backdoor": 0.9987,
+    "ddos": 0.9807,
+    "dos": 0.9912,
+    "injection": 0.9379,
+    "mitm": 0.4536,
+    "password": 0.9573,
+    "ransomware": 0.4764,
+    "scanning": 0.6218,
+    "xss": 0.9909
+   },
+   "both_rules": {
+    "bayes": 0.832466408198877,
+    "balanced": 0.6628932503766776
+   }
+  },
+  "hybrid": {
+   "smooth787": {
+    "hybrid_equal_weight": {
+     "rule": "bayes",
+     "macro_mcc": 0.8325927647510571,
+     "per_class": {
+      "Benign": 0.9168,
+      "backdoor": 0.9992,
+      "ddos": 0.9814,
+      "dos": 0.9956,
+      "injection": 0.9885,
+      "mitm": 0.4972,
+      "password": 0.9684,
+      "ransomware": 0.8816,
+      "scanning": 0.1009,
+      "xss": 0.9962
+     },
+     "both_rules": {
+      "bayes": 0.8325927647510571,
+      "balanced": 0.6666173147062691
+     }
+    },
+    "context_branch": {
+     "rule": "bayes",
+     "macro_mcc": 0.8053336546298404,
+     "per_class": {
+      "Benign": 0.9149,
+      "backdoor": 0.9993,
+      "ddos": 0.9608,
+      "dos": 0.8655,
+      "injection": 0.9863,
+      "mitm": 0.3761,
+      "password": 0.9875,
+      "ransomware": 0.894,
+      "scanning": 0.0789,
+      "xss": 0.9901
+     },
+     "both_rules": {
+      "bayes": 0.8053336546298404,
+      "balanced": 0.6924366967975969
+     }
+    }
+   }
+  }
+ },
+ "v6r8": {
+  "seed_val_macro_mcc": [
+   0.8157457205497535,
+   0.7786816351292425,
+   0.8144077912959645
+  ],
+  "graph_ensemble": {
+   "rule": "bayes",
+   "macro_mcc": 0.8256018502588397,
+   "per_class": {
+    "Benign": 0.9101,
+    "backdoor": 0.9993,
+    "ddos": 0.9812,
+    "dos": 0.9942,
+    "injection": 0.9047,
+    "mitm": 0.5445,
+    "password": 0.9484,
+    "ransomware": 0.8724,
+    "scanning": 0.1165,
+    "xss": 0.9846
+   },
+   "both_rules": {
+    "bayes": 0.8256018502588397,
+    "balanced": 0.636314084444031
+   }
+  },
+  "hybrid": {
+   "smooth787": {
+    "hybrid_equal_weight": {
+     "rule": "bayes",
+     "macro_mcc": 0.8424350829982414,
+     "per_class": {
+      "Benign": 0.924,
+      "backdoor": 0.9992,
+      "ddos": 0.9816,
+      "dos": 0.9968,
+      "injection": 0.9896,
+      "mitm": 0.5393,
+      "password": 0.9682,
+      "ransomware": 0.9241,
+      "scanning": 0.1052,
+      "xss": 0.9963
+     },
+     "both_rules": {
+      "bayes": 0.8424350829982414,
+      "balanced": 0.654141844869834
+     }
+    },
+    "context_branch": {
+     "rule": "bayes",
+     "macro_mcc": 0.8053336546298404,
+     "per_class": {
+      "Benign": 0.9149,
+      "backdoor": 0.9993,
+      "ddos": 0.9608,
+      "dos": 0.8655,
+      "injection": 0.9863,
+      "mitm": 0.3761,
+      "password": 0.9875,
+      "ransomware": 0.894,
+      "scanning": 0.0789,
+      "xss": 0.9901
+     },
+     "both_rules": {
+      "bayes": 0.8053336546298404,
+      "balanced": 0.6924366967975969
+     }
+    }
+   }
+  }
+ },
+ "decisions": {
+  "v6r8": {
+   "graph_gain": -0.006864557940037264,
+   "hybrid_gain": {
+    "smooth787": 0.00984231824718429
+   },
+   "adopt": false
+  }
+ }
+}

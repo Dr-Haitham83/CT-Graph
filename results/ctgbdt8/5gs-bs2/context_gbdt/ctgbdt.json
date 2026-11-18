@@ -1,0 +1,119 @@
+{
+ "model": "CT-GBDT v8 (multi-view random-subspace context ensemble; double held-out maximin rule)",
+ "views": {
+  "flow+REL": [
+   "flow",
+   "REL"
+  ],
+  "flow+T_segz": [
+   "flow",
+   "T_segz"
+  ],
+  "all": [
+   "flow",
+   "REL",
+   "T_count",
+   "T_novelty",
+   "T_flags",
+   "T_volume",
+   "T_timing",
+   "T_segz"
+  ]
+ },
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.855131700888422,
+    "balanced": 0.9955022073263377
+   },
+   "calibration": {
+    "bayes": 0.8307711303023473,
+    "balanced": 0.853045284951105
+   },
+   "rule_on_val": "balanced"
+  },
+  "flow+REL": {
+   "validation": {
+    "bayes": 0.9972943149592779,
+    "balanced": 0.9991155840759811
+   },
+   "calibration": {
+    "bayes": 0.9839539007222575,
+    "balanced": 0.8707640822523173
+   },
+   "rule_on_val": "balanced",
+   "gain_validation": 0.00361337674964346,
+   "gain_calibration": 0.017718797301212286
+  },
+  "flow+T_segz": {
+   "validation": {
+    "bayes": 0.9987905414722592,
+    "balanced": 0.9984228023905706
+   },
+   "calibration": {
+    "bayes": 0.951216067077329,
+    "balanced": 0.9484012897329857
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.0032883341459215565,
+   "gain_calibration": 0.09817078212622399
+  },
+  "all": {
+   "validation": {
+    "bayes": 0.9946023849771732,
+    "balanced": 0.6769155816291361
+   },
+   "calibration": {
+    "bayes": 0.8021324041174256,
+    "balanced": 0.6061342241626357
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": -0.0008998223491644142,
+   "gain_calibration": -0.0509128808336794
+  },
+  "multiview": {
+   "validation": {
+    "bayes": 0.9996247027108133,
+    "balanced": 0.6793793288028178
+   },
+   "calibration": {
+    "bayes": 0.9873601614316956,
+    "balanced": 0.6808333234136178
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.004122495384475622,
+   "gain_calibration": 0.1343148764805906
+  }
+ },
+ "chosen_feature_set": "multiview",
+ "rule": "maximin of (gain_val, gain_cal) over candidates with both >= 0.002 vs flow",
+ "seed42": {
+  "validation_macro_mcc": {
+   "bayes": 0.9996247027108133,
+   "balanced": 0.6793793288028178
+  }
+ },
+ "seed43": {
+  "validation_macro_mcc": {
+   "bayes": 0.9996605600047133,
+   "balanced": 0.6793986077504917
+  }
+ },
+ "seed44": {
+  "validation_macro_mcc": {
+   "bayes": 0.9996426311942228,
+   "balanced": 0.6789121725089889
+  }
+ }
+}

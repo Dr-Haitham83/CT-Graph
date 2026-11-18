@@ -1,0 +1,432 @@
+{
+ "model": "CT-GBDT (flow + causal graph context, feature set chosen on validation)",
+ "context_features": [
+  "src_flows_60s",
+  "src_packets_60s",
+  "src_bytes_60s",
+  "src_newpeers_60s",
+  "src_newservices_60s",
+  "src_flows_3600s",
+  "src_packets_3600s",
+  "src_bytes_3600s",
+  "src_newpeers_3600s",
+  "src_newservices_3600s",
+  "src_flows_86400s",
+  "src_packets_86400s",
+  "src_bytes_86400s",
+  "src_newpeers_86400s",
+  "src_newservices_86400s",
+  "src_flows_604800s",
+  "src_packets_604800s",
+  "src_bytes_604800s",
+  "src_newpeers_604800s",
+  "src_newservices_604800s",
+  "src_rhythm_max",
+  "src_rhythm_mean",
+  "src_rhythm_entropy",
+  "src_seen_before",
+  "dst_flows_60s",
+  "dst_packets_60s",
+  "dst_bytes_60s",
+  "dst_newpeers_60s",
+  "dst_newservices_60s",
+  "dst_flows_3600s",
+  "dst_packets_3600s",
+  "dst_bytes_3600s",
+  "dst_newpeers_3600s",
+  "dst_newservices_3600s",
+  "dst_flows_86400s",
+  "dst_packets_86400s",
+  "dst_bytes_86400s",
+  "dst_newpeers_86400s",
+  "dst_newservices_86400s",
+  "dst_flows_604800s",
+  "dst_packets_604800s",
+  "dst_bytes_604800s",
+  "dst_newpeers_604800s",
+  "dst_newservices_604800s",
+  "dst_rhythm_max",
+  "dst_rhythm_mean",
+  "dst_rhythm_entropy",
+  "dst_seen_before",
+  "rel_fan_out",
+  "rel_fan_in",
+  "rel_pivot",
+  "rel_response",
+  "rel_repeat",
+  "rel_continuation",
+  "log_degree",
+  "same_dport",
+  "same_sport",
+  "same_proto"
+ ],
+ "classes": [
+  "Benign",
+  "backdoor",
+  "ddos",
+  "dos",
+  "injection",
+  "mitm",
+  "password",
+  "ransomware",
+  "scanning",
+  "xss"
+ ],
+ "feature_set_selection": {
+  "flow": {
+   "validation_macro_mcc": {
+    "bayes": 0.8036440514962075,
+    "balanced": 0.7307492269921168
+   },
+   "best": 0.8036440514962075,
+   "trees": 108,
+   "fit_seconds": 2703.7912361621857
+  },
+  "flow+short_context": {
+   "validation_macro_mcc": {
+    "bayes": 0.6591886288351937,
+    "balanced": 0.6423313583452843
+   },
+   "best": 0.6591886288351937,
+   "trees": 18,
+   "fit_seconds": 1110.5107848644257
+  },
+  "flow+full_context": {
+   "validation_macro_mcc": {
+    "bayes": 0.4508697552409906,
+    "balanced": 0.4684093223000646
+   },
+   "best": 0.4684093223000646,
+   "trees": 26,
+   "fit_seconds": 1600.9191207885742
+  }
+ },
+ "chosen_feature_set": "flow",
+ "seed42": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.8036440514962075,
+   "balanced": 0.7307492269921168
+  },
+  "test": {
+   "macro_mcc": 0.7876928709999053,
+   "macro_f1": 0.7865034821390617,
+   "accuracy": 0.8668445611458176,
+   "mcc": 0.8362048263115137,
+   "per_class_f1": {
+    "Benign": 0.8453879812558923,
+    "backdoor": 0.9979531498749147,
+    "ddos": 0.9861945386902028,
+    "dos": 0.8191214470284238,
+    "injection": 0.9500343513834238,
+    "mitm": 0.9187817258883249,
+    "password": 0.9509318619560262,
+    "ransomware": 0.39896373056994816,
+    "scanning": 0.014308285921596019,
+    "xss": 0.9833577488218651
+   }
+  },
+  "trees": 108,
+  "fit_seconds": 160.1558632850647,
+  "top_features_gain": [
+   [
+    "DST_TO_SRC_SECOND_BYTES",
+    97743408.85149541
+   ],
+   [
+    "DNS_TTL_ANSWER",
+    69079192.69403386
+   ],
+   [
+    "OUT_BYTES",
+    50937892.09575838
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    36055055.578218184
+   ],
+   [
+    "TCP_WIN_MAX_IN",
+    18089505.492257614
+   ],
+   [
+    "LONGEST_FLOW_PKT",
+    16268140.847790608
+   ],
+   [
+    "L7_PROTO",
+    12216077.474702792
+   ],
+   [
+    "TCP_WIN_MAX_OUT",
+    11560375.63954177
+   ],
+   [
+    "IN_BYTES",
+    11033027.792593779
+   ],
+   [
+    "RETRANSMITTED_IN_PKTS",
+    7852787.76964156
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    7434608.022826626
+   ],
+   [
+    "SRC_TO_DST_SECOND_BYTES",
+    6649856.502281092
+   ],
+   [
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    6618071.890596109
+   ],
+   [
+    "NUM_PKTS_128_TO_256_BYTES",
+    5339041.98381643
+   ],
+   [
+    "TCP_FLAGS",
+    5251103.763944013
+   ],
+   [
+    "byte_asymmetry",
+    4515998.842784845
+   ],
+   [
+    "IN_PKTS",
+    3973040.523614517
+   ],
+   [
+    "MAX_TTL",
+    3910335.103716612
+   ],
+   [
+    "CLIENT_TCP_FLAGS",
+    3008815.412728974
+   ],
+   [
+    "MIN_IP_PKT_LEN",
+    2745974.261893389
+   ]
+  ]
+ },
+ "seed43": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.7924979656903796,
+   "balanced": 0.7219730987131177
+  },
+  "test": {
+   "macro_mcc": 0.7890679941842352,
+   "macro_f1": 0.7884367414907818,
+   "accuracy": 0.8669851456701503,
+   "mcc": 0.8364048491069539,
+   "per_class_f1": {
+    "Benign": 0.8452867068087078,
+    "backdoor": 0.9979696255989604,
+    "ddos": 0.9866209361033537,
+    "dos": 0.8181246997080238,
+    "injection": 0.9574184614416248,
+    "mitm": 0.9193650793650794,
+    "password": 0.9500162980209546,
+    "ransomware": 0.411522633744856,
+    "scanning": 0.014713709855134373,
+    "xss": 0.9833292642611247
+   }
+  },
+  "trees": 101,
+  "fit_seconds": 2757.5445997714996,
+  "top_features_gain": [
+   [
+    "DST_TO_SRC_SECOND_BYTES",
+    214213384.80220392
+   ],
+   [
+    "DNS_TTL_ANSWER",
+    95499152.04650825
+   ],
+   [
+    "DNS_QUERY_TYPE",
+    69953978.9644373
+   ],
+   [
+    "IN_BYTES",
+    51370964.05224199
+   ],
+   [
+    "SRC_TO_DST_SECOND_BYTES",
+    46343871.2929043
+   ],
+   [
+    "duration_s",
+    44631482.02211227
+   ],
+   [
+    "OUT_BYTES",
+    40530193.622666664
+   ],
+   [
+    "TCP_WIN_MAX_IN",
+    30861064.84292026
+   ],
+   [
+    "LONGEST_FLOW_PKT",
+    17210011.545797113
+   ],
+   [
+    "TCP_FLAGS",
+    11107558.765775869
+   ],
+   [
+    "L7_PROTO",
+    10971941.341352662
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    10486190.209362652
+   ],
+   [
+    "TCP_WIN_MAX_OUT",
+    9696655.419758502
+   ],
+   [
+    "RETRANSMITTED_IN_PKTS",
+    7890174.521680951
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    6724893.191543929
+   ],
+   [
+    "forward_byte_fraction",
+    4638530.849871893
+   ],
+   [
+    "IN_PKTS",
+    4156761.9601600384
+   ],
+   [
+    "NUM_PKTS_128_TO_256_BYTES",
+    3933288.6379825845
+   ],
+   [
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    3676545.4753929633
+   ],
+   [
+    "MIN_TTL",
+    3642835.740078116
+   ]
+  ]
+ },
+ "seed44": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.8013807074550569,
+   "balanced": 0.7248309273234476
+  },
+  "test": {
+   "macro_mcc": 0.7904998089926971,
+   "macro_f1": 0.7901282703447666,
+   "accuracy": 0.8670097287563724,
+   "mcc": 0.8364607741005904,
+   "per_class_f1": {
+    "Benign": 0.8453768972000016,
+    "backdoor": 0.9980670207754658,
+    "ddos": 0.9868406866131519,
+    "dos": 0.8184686929081548,
+    "injection": 0.9530987049096363,
+    "mitm": 0.9495081967213115,
+    "password": 0.9507397299793634,
+    "ransomware": 0.4028906955736224,
+    "scanning": 0.012984192271928216,
+    "xss": 0.98330788649503
+   }
+  },
+  "trees": 90,
+  "fit_seconds": 2531.572273492813,
+  "top_features_gain": [
+   [
+    "LONGEST_FLOW_PKT",
+    111595459.25281149
+   ],
+   [
+    "DNS_TTL_ANSWER",
+    82621751.03702329
+   ],
+   [
+    "DST_TO_SRC_SECOND_BYTES",
+    74264770.72426474
+   ],
+   [
+    "OUT_BYTES",
+    50179246.64669593
+   ],
+   [
+    "SRC_TO_DST_SECOND_BYTES",
+    43445874.70933485
+   ],
+   [
+    "SHORTEST_FLOW_PKT",
+    34664785.92369205
+   ],
+   [
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    19779543.454860166
+   ],
+   [
+    "TCP_WIN_MAX_IN",
+    17907886.717746038
+   ],
+   [
+    "L7_PROTO",
+    12802417.801928312
+   ],
+   [
+    "IN_BYTES",
+    12294420.56911312
+   ],
+   [
+    "TCP_WIN_MAX_OUT",
+    9999406.399986263
+   ],
+   [
+    "RETRANSMITTED_IN_PKTS",
+    7832120.142620647
+   ],
+   [
+    "NUM_PKTS_UP_TO_128_BYTES",
+    7272763.65503328
+   ],
+   [
+    "duration_s",
+    5719009.832081348
+   ],
+   [
+    "TCP_FLAGS",
+    5455113.999505055
+   ],
+   [
+    "byte_asymmetry",
+    4409067.634841386
+   ],
+   [
+    "MAX_TTL",
+    4114440.659339659
+   ],
+   [
+    "IN_PKTS",
+    3869326.683465982
+   ],
+   [
+    "forward_byte_fraction",
+    3217672.205751349
+   ],
+   [
+    "CLIENT_TCP_FLAGS",
+    3216636.891170224
+   ]
+  ]
+ }
+}

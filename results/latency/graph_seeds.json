@@ -1,0 +1,119 @@
+{
+ "ton": {
+  "42": {
+   "test_pass_elapsed_s": 388.97538680300204,
+   "microbatch_latency_s": {
+    "50": 0.06740123800045694,
+    "95": 0.07533749250069377,
+    "99": 0.08106233929720483
+   },
+   "source": "ton42/results.json"
+  },
+  "43": {
+   "test_pass_elapsed_s": 375.2437926290004,
+   "microbatch_latency_s": {
+    "50": 0.06515483800103539,
+    "95": 0.07243160949838057,
+    "99": 0.07987829799822067
+   },
+   "source": "ton43/nids-ton/evaluations/1be348b4db87b73e6312e0a1/results.json"
+  },
+  "44": {
+   "test_pass_elapsed_s": 397.0272191240001,
+   "microbatch_latency_s": {
+    "50": 0.06866160700155888,
+    "95": 0.07702801599953091,
+    "99": 0.08348223759930988
+   },
+   "source": "ton44/nids-ton/evaluations/75f0751c406f13ba1f44ba2e/results.json"
+  }
+ },
+ "cic": {
+  "42": {
+   "test_pass_elapsed_s": 278.3050184749991,
+   "microbatch_latency_s": {
+    "50": 0.07663898849932593,
+    "95": 0.09525941579831851,
+    "99": 0.10837361403930115
+   },
+   "source": "cic42/results.json"
+  },
+  "43": {
+   "test_pass_elapsed_s": 230.15761628600012,
+   "microbatch_latency_s": {
+    "50": 0.06938156650085148,
+    "95": 0.08000888759988811,
+    "99": 0.09215521449987135
+   },
+   "source": "cic43/results.json"
+  },
+  "44": {
+   "test_pass_elapsed_s": 230.732647154,
+   "microbatch_latency_s": {
+    "50": 0.06930611050029256,
+    "95": 0.07971073374947081,
+    "99": 0.09042019101972981
+   },
+   "source": "cic44/results.json"
+  }
+ },
+ "bs1": {
+  "42": {
+   "test_pass_elapsed_s": 153.11279678999995,
+   "microbatch_latency_s": {
+    "50": 0.057839683999986846,
+    "95": 0.06577532575005307,
+    "99": 0.07343296274998466
+   },
+   "source": "bs142/nids-5gs-bs1/evaluations/1b271ea4005b9e4c854b6fe6/results.json"
+  },
+  "43": {
+   "test_pass_elapsed_s": 152.48642181500009,
+   "microbatch_latency_s": {
+    "50": 0.05710402799991243,
+    "95": 0.06524196575009,
+    "99": 0.07280867370002403
+   },
+   "source": "bs143/nids-5gs-bs1/evaluations/3df512274ef63514017b4a3b/results.json"
+  },
+  "44": {
+   "test_pass_elapsed_s": 171.22661788300002,
+   "microbatch_latency_s": {
+    "50": 0.0646911054998327,
+    "95": 0.07427862974986965,
+    "99": 0.0847625336000647
+   },
+   "source": "bs144/nids-5gs-bs1/evaluations/d8bf760f6bb581ebd7c11a42/results.json"
+  }
+ },
+ "bs2": {
+  "42": {
+   "test_pass_elapsed_s": 243.09176354500005,
+   "microbatch_latency_s": {
+    "50": 0.05752121399996213,
+    "95": 0.06706528999998226,
+    "99": 0.0728716266399897
+   },
+   "source": "bs242/nids-5gs-bs2/evaluations/0446606d2c635c53f63ba704/results.json"
+  },
+  "43": {
+   "test_pass_elapsed_s": 226.63127351900016,
+   "microbatch_latency_s": {
+    "50": 0.05378028199993423,
+    "95": 0.06360811860004105,
+    "99": 0.0699821896800404
+   },
+   "source": "bs243/nids-5gs-bs2/evaluations/64ed867774f12ae6db40baf7/results.json"
+  },
+  "44": {
+   "test_pass_elapsed_s": 230.61753550799995,
+   "microbatch_latency_s": {
+    "50": 0.054919896000001245,
+    "95": 0.06471041480003806,
+    "99": 0.07072196680003799
+   },
+   "source": "bs244/nids-5gs-bs2/evaluations/569651a4411ce5074ab05fb9/results.json"
+  }
+ },
+ "note": "Per-seed frozen test passes of the headline graph branches (2 x Tesla T4, fp16): wall time of the whole test pass (input wait included) and micro-batch latency percentiles, copied from each seed's evaluation results.json (ToN/5G: v4b seeds; CIC: relational-input seeds). Source of graph_us_flow_3seeds_2xT4 in latency_table.json."
+}

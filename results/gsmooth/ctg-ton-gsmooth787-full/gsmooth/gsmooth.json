@@ -1,0 +1,18 @@
+{
+ "graph": 0.832466408198877,
+ "graph_smoothed": 0.8371464606068123,
+ "hybrid": 0.8325927647510571,
+ "hybrid_smoothed_graph": 0.8277677539647581,
+ "graph_gain": 0.004680052407935342,
+ "hybrid_gain": -0.004825010786299044,
+ "adopt": false,
+ "key": "src",
+ "tau_s": 10.0,
+ "mix": 0.5,
+ "runs": [
+  "/data/input/ctg-ton-v4bs42-graph/evaluations/86eb06cc4f94d2a51842e86f/results.json",
+  "/data/input/ctg-ton-v4bs43-train-full/nids-ton/evaluations/1be348b4db87b73e6312e0a1/results.json",
+  "/data/input/ctg-ton-v4bs44-train-full/nids-ton/evaluations/75f0751c406f13ba1f44ba2e/results.json"
+ ],
+ "context_files": 3
+}

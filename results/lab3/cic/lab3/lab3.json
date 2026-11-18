@@ -1,0 +1,591 @@
+{
+ "prepared": "nids-cic",
+ "protocol": "transductive self-training; targets = validation / calibration (labels only for scoring); test never opened",
+ "rounds": 2,
+ "cap_per_class": 20000,
+ "results": {
+  "flow": {
+   "val": {
+    "rule": "bayes",
+    "base": 0.6719632094898169,
+    "base_per_class": {
+     "Benign": 0.9604,
+     "bot": 1.0,
+     "brute_force_-web": 0.042,
+     "brute_force_-xss": 0.2209,
+     "ddos_attack-hoic": 0.9876,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": -0.0001,
+     "dos_attacks-slowloris": 0.9989,
+     "ftp-bruteforce": 0.9013,
+     "infilteration": 0.6759,
+     "sql_injection": 0.2773,
+     "ssh-bruteforce": 0.9999
+    },
+    "ST-thr": {
+     "final": 0.6473298957165433,
+     "gain": -0.024633313773273602,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 102419,
+       "pseudo_label_accuracy": 0.9968951073531278,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 20000,
+        "brute_force_-web": 200,
+        "ddos_attack-hoic": 20000,
+        "ddos_attack-loic-udp": 3,
+        "ddos_attacks-loic-http": 20000,
+        "dos_attacks-goldeneye": 30,
+        "dos_attacks-hulk": 75,
+        "dos_attacks-slowloris": 1358,
+        "infilteration": 753,
+        "ssh-bruteforce": 20000
+       },
+       "macro_mcc": 0.6612030200849425
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 103207,
+       "pseudo_label_accuracy": 0.9912505934674973,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 20000,
+        "brute_force_-web": 699,
+        "brute_force_-xss": 7,
+        "ddos_attack-hoic": 20000,
+        "ddos_attack-loic-udp": 6,
+        "ddos_attacks-loic-http": 20000,
+        "dos_attacks-goldeneye": 61,
+        "dos_attacks-hulk": 81,
+        "dos_attacks-slowloris": 1358,
+        "infilteration": 995,
+        "ssh-bruteforce": 20000
+       },
+       "macro_mcc": 0.6473298957165433
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9566,
+      "bot": 1.0,
+      "brute_force_-web": 0.0372,
+      "brute_force_-xss": 0.2193,
+      "ddos_attack-hoic": 0.9815,
+      "ddos_attacks-loic-http": 0.9995,
+      "dos_attacks-slowhttptest": 0.0,
+      "dos_attacks-slowloris": 0.9993,
+      "ftp-bruteforce": 0.9013,
+      "infilteration": 0.6734,
+      "sql_injection": 0.0,
+      "ssh-bruteforce": 1.0
+     }
+    },
+    "ST-bal": {
+     "final": 0.6558142728814454,
+     "gain": -0.016148936608371467,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 70246,
+       "pseudo_label_accuracy": 0.9959713008569883,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 5922,
+        "brute_force_-web": 112,
+        "brute_force_-xss": 1,
+        "ddos_attack-hoic": 18691,
+        "ddos_attack-loic-udp": 1,
+        "ddos_attacks-loic-http": 7157,
+        "dos_attacks-goldeneye": 6,
+        "dos_attacks-hulk": 15,
+        "dos_attacks-slowhttptest": 2,
+        "dos_attacks-slowloris": 271,
+        "ftp-bruteforce": 10714,
+        "infilteration": 2799,
+        "sql_injection": 3,
+        "ssh-bruteforce": 4552
+       },
+       "macro_mcc": 0.6543572352151491
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 70110,
+       "pseudo_label_accuracy": 0.9941663100841535,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 5921,
+        "brute_force_-web": 167,
+        "brute_force_-xss": 4,
+        "ddos_attack-hoic": 18472,
+        "ddos_attack-loic-udp": 3,
+        "ddos_attacks-loic-http": 7157,
+        "dos_attacks-goldeneye": 13,
+        "dos_attacks-hulk": 24,
+        "dos_attacks-slowhttptest": 2,
+        "dos_attacks-slowloris": 275,
+        "ftp-bruteforce": 10714,
+        "infilteration": 2801,
+        "sql_injection": 5,
+        "ssh-bruteforce": 4552
+       },
+       "macro_mcc": 0.6558142728814454
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9574,
+      "bot": 1.0,
+      "brute_force_-web": 0.0448,
+      "brute_force_-xss": -0.0,
+      "ddos_attack-hoic": 0.9816,
+      "ddos_attacks-loic-http": 0.9995,
+      "dos_attacks-slowhttptest": -0.0001,
+      "dos_attacks-slowloris": 0.9985,
+      "ftp-bruteforce": 0.9013,
+      "infilteration": 0.6724,
+      "sql_injection": 0.3145,
+      "ssh-bruteforce": 1.0
+     }
+    }
+   },
+   "calibration": {
+    "rule": "bayes",
+    "base": 0.616961074255022,
+    "base_per_class": {
+     "Benign": 0.895,
+     "bot": 1.0,
+     "brute_force_-web": 0.1833,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8676,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": -0.0001,
+     "dos_attacks-slowloris": 0.9989,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.5579,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    },
+    "ST-thr": {
+     "final": 0.6236155756588225,
+     "gain": 0.006654501403800528,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 76422,
+       "pseudo_label_accuracy": 0.981065661720447,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 15947,
+        "brute_force_-web": 37,
+        "ddos_attack-hoic": 20000,
+        "ddos_attacks-loic-http": 6949,
+        "dos_attacks-goldeneye": 1340,
+        "dos_attacks-hulk": 64,
+        "dos_attacks-slowloris": 1396,
+        "infilteration": 381,
+        "ssh-bruteforce": 10308
+       },
+       "macro_mcc": 0.6257268152955656
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 76806,
+       "pseudo_label_accuracy": 0.9780616097700701,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 15952,
+        "brute_force_-web": 214,
+        "brute_force_-xss": 2,
+        "ddos_attack-hoic": 20000,
+        "ddos_attacks-loic-http": 6949,
+        "dos_attacks-goldeneye": 1349,
+        "dos_attacks-hulk": 106,
+        "dos_attacks-slowloris": 1396,
+        "infilteration": 530,
+        "ssh-bruteforce": 10308
+       },
+       "macro_mcc": 0.6236155756588225
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9275,
+      "bot": 1.0,
+      "brute_force_-web": 0.1227,
+      "brute_force_-xss": -0.0,
+      "ddos_attack-hoic": 0.979,
+      "ddos_attacks-loic-http": 0.9882,
+      "dos_attacks-slowhttptest": -0.0001,
+      "dos_attacks-slowloris": 0.9993,
+      "ftp-bruteforce": 0.9127,
+      "infilteration": 0.5542,
+      "sql_injection": 0.0,
+      "ssh-bruteforce": 1.0
+     }
+    },
+    "ST-bal": {
+     "final": 0.6093807010043525,
+     "gain": -0.007580373250669514,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 37715,
+       "pseudo_label_accuracy": 0.989738830703964,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 3190,
+        "brute_force_-web": 25,
+        "ddos_attack-hoic": 4675,
+        "ddos_attacks-loic-http": 1445,
+        "dos_attacks-goldeneye": 268,
+        "dos_attacks-hulk": 12,
+        "dos_attacks-slowhttptest": 1,
+        "dos_attacks-slowloris": 279,
+        "ftp-bruteforce": 4738,
+        "infilteration": 1021,
+        "ssh-bruteforce": 2061
+       },
+       "macro_mcc": 0.6170161827396015
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 38065,
+       "pseudo_label_accuracy": 0.9884933666097465,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 3190,
+        "brute_force_-web": 34,
+        "brute_force_-xss": 15,
+        "ddos_attack-hoic": 4997,
+        "ddos_attacks-loic-http": 1445,
+        "dos_attacks-goldeneye": 267,
+        "dos_attacks-hulk": 12,
+        "dos_attacks-slowhttptest": 1,
+        "dos_attacks-slowloris": 280,
+        "ftp-bruteforce": 4738,
+        "infilteration": 1025,
+        "ssh-bruteforce": 2061
+       },
+       "macro_mcc": 0.6093807010043525
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.8917,
+      "bot": 1.0,
+      "brute_force_-web": 0.1221,
+      "brute_force_-xss": -0.0,
+      "ddos_attack-hoic": 0.8616,
+      "ddos_attacks-loic-http": 0.9882,
+      "dos_attacks-slowhttptest": -0.0001,
+      "dos_attacks-slowloris": 0.9781,
+      "ftp-bruteforce": 0.9127,
+      "infilteration": 0.5583,
+      "sql_injection": 0.0,
+      "ssh-bruteforce": 1.0
+     }
+    }
+   },
+   "ST-thr_passes": false,
+   "ST-bal_passes": false
+  },
+  "flow+REL": {
+   "val": {
+    "rule": "bayes",
+    "base": 0.8233148042685433,
+    "base_per_class": {
+     "Benign": 0.9627,
+     "bot": 0.9994,
+     "brute_force_-web": 0.1339,
+     "brute_force_-xss": 0.875,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.986,
+     "dos_attacks-slowhttptest": 0.999,
+     "dos_attacks-slowloris": 0.9047,
+     "ftp-bruteforce": 0.9997,
+     "infilteration": 0.6658,
+     "sql_injection": 0.3544,
+     "ssh-bruteforce": 0.9994
+    },
+    "ST-thr": {
+     "final": 0.7674060981168149,
+     "gain": -0.05590870615172838,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 139764,
+       "pseudo_label_accuracy": 0.9867848659168312,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 20000,
+        "brute_force_-web": 241,
+        "brute_force_-xss": 44,
+        "ddos_attack-hoic": 20000,
+        "ddos_attack-loic-udp": 2,
+        "ddos_attacks-loic-http": 20000,
+        "dos_attacks-goldeneye": 774,
+        "dos_attacks-hulk": 4,
+        "dos_attacks-slowhttptest": 9893,
+        "dos_attacks-slowloris": 1120,
+        "ftp-bruteforce": 20000,
+        "infilteration": 7666,
+        "sql_injection": 20,
+        "ssh-bruteforce": 20000
+       },
+       "macro_mcc": 0.7854323216879507
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 152818,
+       "pseudo_label_accuracy": 0.9671112041775184,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 20000,
+        "brute_force_-web": 885,
+        "brute_force_-xss": 116,
+        "ddos_attack-hoic": 20000,
+        "ddos_attack-loic-udp": 3,
+        "ddos_attacks-loic-http": 20000,
+        "dos_attacks-goldeneye": 1097,
+        "dos_attacks-hulk": 4,
+        "dos_attacks-slowhttptest": 9894,
+        "dos_attacks-slowloris": 1151,
+        "ftp-bruteforce": 20000,
+        "infilteration": 19600,
+        "sql_injection": 68,
+        "ssh-bruteforce": 20000
+       },
+       "macro_mcc": 0.7674060981168149
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9618,
+      "bot": 0.9999,
+      "brute_force_-web": 0.0999,
+      "brute_force_-xss": 0.2773,
+      "ddos_attack-hoic": 0.9999,
+      "ddos_attacks-loic-http": 0.9583,
+      "dos_attacks-slowhttptest": 0.9994,
+      "dos_attacks-slowloris": 0.9237,
+      "ftp-bruteforce": 0.9997,
+      "infilteration": 0.7114,
+      "sql_injection": 0.278,
+      "ssh-bruteforce": 0.9995
+     }
+    },
+    "ST-bal": {
+     "final": 0.8086705888898381,
+     "gain": -0.014644215378705194,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 71699,
+       "pseudo_label_accuracy": 0.9964434650413534,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 5915,
+        "brute_force_-web": 111,
+        "brute_force_-xss": 9,
+        "ddos_attack-hoic": 19143,
+        "ddos_attack-loic-udp": 1,
+        "ddos_attacks-loic-http": 6954,
+        "dos_attacks-goldeneye": 156,
+        "dos_attacks-hulk": 1,
+        "dos_attacks-slowhttptest": 1980,
+        "dos_attacks-slowloris": 224,
+        "ftp-bruteforce": 8730,
+        "infilteration": 3902,
+        "sql_injection": 16,
+        "ssh-bruteforce": 4557
+       },
+       "macro_mcc": 0.8160561632510194
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 72087,
+       "pseudo_label_accuracy": 0.9948950573612441,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 5921,
+        "brute_force_-web": 156,
+        "brute_force_-xss": 11,
+        "ddos_attack-hoic": 19141,
+        "ddos_attack-loic-udp": 1,
+        "ddos_attacks-loic-http": 6914,
+        "dos_attacks-goldeneye": 178,
+        "dos_attacks-hulk": 1,
+        "dos_attacks-slowhttptest": 1978,
+        "dos_attacks-slowloris": 226,
+        "ftp-bruteforce": 8731,
+        "infilteration": 4244,
+        "sql_injection": 28,
+        "ssh-bruteforce": 4557
+       },
+       "macro_mcc": 0.8086705888898381
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9686,
+      "bot": 0.9999,
+      "brute_force_-web": 0.1157,
+      "brute_force_-xss": 0.672,
+      "ddos_attack-hoic": 0.9999,
+      "ddos_attacks-loic-http": 0.9885,
+      "dos_attacks-slowhttptest": 0.9997,
+      "dos_attacks-slowloris": 0.9356,
+      "ftp-bruteforce": 0.9997,
+      "infilteration": 0.7302,
+      "sql_injection": 0.2947,
+      "ssh-bruteforce": 0.9994
+     }
+    }
+   },
+   "calibration": {
+    "rule": "bayes",
+    "base": 0.8824376414802669,
+    "base_per_class": {
+     "Benign": 0.9586,
+     "bot": 0.9988,
+     "brute_force_-web": 0.5066,
+     "brute_force_-xss": 0.9263,
+     "ddos_attack-hoic": 0.9991,
+     "ddos_attacks-loic-http": 0.9344,
+     "dos_attacks-slowhttptest": 0.9987,
+     "dos_attacks-slowloris": 0.8999,
+     "ftp-bruteforce": 0.9992,
+     "infilteration": 0.7567,
+     "sql_injection": 0.6126,
+     "ssh-bruteforce": 0.9983
+    },
+    "ST-thr": {
+     "final": 0.8295013449000536,
+     "gain": -0.05293629658021337,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 104821,
+       "pseudo_label_accuracy": 0.98459278198071,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 15892,
+        "brute_force_-web": 108,
+        "brute_force_-xss": 32,
+        "ddos_attack-hoic": 20000,
+        "ddos_attacks-loic-http": 5878,
+        "dos_attacks-goldeneye": 735,
+        "dos_attacks-slowhttptest": 3908,
+        "dos_attacks-slowloris": 1129,
+        "ftp-bruteforce": 19741,
+        "infilteration": 7072,
+        "sql_injection": 9,
+        "ssh-bruteforce": 10317
+       },
+       "macro_mcc": 0.8687040733526352
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 111345,
+       "pseudo_label_accuracy": 0.974412860927747,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 15949,
+        "brute_force_-web": 280,
+        "brute_force_-xss": 41,
+        "ddos_attack-hoic": 20000,
+        "ddos_attacks-loic-http": 6227,
+        "dos_attacks-goldeneye": 766,
+        "dos_attacks-hulk": 3,
+        "dos_attacks-slowhttptest": 3910,
+        "dos_attacks-slowloris": 1200,
+        "ftp-bruteforce": 19743,
+        "infilteration": 12874,
+        "sql_injection": 18,
+        "ssh-bruteforce": 10334
+       },
+       "macro_mcc": 0.8295013449000536
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9575,
+      "bot": 1.0,
+      "brute_force_-web": 0.3432,
+      "brute_force_-xss": 0.6499,
+      "ddos_attack-hoic": 0.9998,
+      "ddos_attacks-loic-http": 0.9419,
+      "dos_attacks-slowhttptest": 0.9992,
+      "dos_attacks-slowloris": 0.9274,
+      "ftp-bruteforce": 0.9992,
+      "infilteration": 0.7694,
+      "sql_injection": 0.3681,
+      "ssh-bruteforce": 0.9984
+     }
+    },
+    "ST-bal": {
+     "final": 0.852844864636741,
+     "gain": -0.029592776843525903,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 41138,
+       "pseudo_label_accuracy": 0.9942389032038504,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 3183,
+        "brute_force_-web": 35,
+        "brute_force_-xss": 6,
+        "ddos_attack-hoic": 6171,
+        "ddos_attacks-loic-http": 1233,
+        "dos_attacks-goldeneye": 165,
+        "dos_attacks-hulk": 1,
+        "dos_attacks-slowhttptest": 782,
+        "dos_attacks-slowloris": 225,
+        "ftp-bruteforce": 3949,
+        "infilteration": 3316,
+        "sql_injection": 5,
+        "ssh-bruteforce": 2067
+       },
+       "macro_mcc": 0.8517172617079319
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 41159,
+       "pseudo_label_accuracy": 0.9935858499963556,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "bot": 3189,
+        "brute_force_-web": 86,
+        "brute_force_-xss": 6,
+        "ddos_attack-hoic": 6168,
+        "ddos_attack-loic-udp": 1,
+        "ddos_attacks-loic-http": 1202,
+        "dos_attacks-goldeneye": 199,
+        "dos_attacks-hulk": 1,
+        "dos_attacks-slowhttptest": 781,
+        "dos_attacks-slowloris": 237,
+        "ftp-bruteforce": 3949,
+        "infilteration": 3260,
+        "sql_injection": 12,
+        "ssh-bruteforce": 2068
+       },
+       "macro_mcc": 0.852844864636741
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9587,
+      "bot": 0.9999,
+      "brute_force_-web": 0.3755,
+      "brute_force_-xss": 0.7217,
+      "ddos_attack-hoic": 0.9993,
+      "ddos_attacks-loic-http": 0.844,
+      "dos_attacks-slowhttptest": 0.9994,
+      "dos_attacks-slowloris": 0.9157,
+      "ftp-bruteforce": 0.9992,
+      "infilteration": 0.7674,
+      "sql_injection": 0.6549,
+      "ssh-bruteforce": 0.9983
+     }
+    }
+   },
+   "ST-thr_passes": false,
+   "ST-bal_passes": false
+  }
+ }
+}

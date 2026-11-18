@@ -1,0 +1,412 @@
+{
+ "model": "CT-GBDT (flow + causal graph context, feature set chosen on validation)",
+ "context_features": [
+  "src_flows_60s",
+  "src_packets_60s",
+  "src_bytes_60s",
+  "src_flows_3600s",
+  "src_packets_3600s",
+  "src_bytes_3600s",
+  "src_flows_86400s",
+  "src_packets_86400s",
+  "src_bytes_86400s",
+  "src_flows_604800s",
+  "src_packets_604800s",
+  "src_bytes_604800s",
+  "src_rhythm_max",
+  "src_rhythm_mean",
+  "src_rhythm_entropy",
+  "src_seen_before",
+  "dst_flows_60s",
+  "dst_packets_60s",
+  "dst_bytes_60s",
+  "dst_flows_3600s",
+  "dst_packets_3600s",
+  "dst_bytes_3600s",
+  "dst_flows_86400s",
+  "dst_packets_86400s",
+  "dst_bytes_86400s",
+  "dst_flows_604800s",
+  "dst_packets_604800s",
+  "dst_bytes_604800s",
+  "dst_rhythm_max",
+  "dst_rhythm_mean",
+  "dst_rhythm_entropy",
+  "dst_seen_before",
+  "rel_fan_out",
+  "rel_fan_in",
+  "rel_pivot",
+  "rel_response",
+  "rel_repeat",
+  "rel_continuation",
+  "log_degree",
+  "same_dport",
+  "same_sport",
+  "same_proto"
+ ],
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "feature_set_selection": {
+  "flow": {
+   "validation_macro_mcc": {
+    "bayes": 0.8560907281668996,
+    "balanced": 0.9965409649567852
+   },
+   "best": 0.9965409649567852,
+   "trees": 53,
+   "fit_seconds": 18.79992175102234
+  },
+  "flow+short_context": {
+   "validation_macro_mcc": {
+    "bayes": 0.9964765226248917,
+    "balanced": 0.9852158902428316
+   },
+   "best": 0.9964765226248917,
+   "trees": 189,
+   "fit_seconds": 47.16876435279846
+  },
+  "flow+full_context": {
+   "validation_macro_mcc": {
+    "bayes": 0.9969617075611722,
+    "balanced": 0.9961352899189698
+   },
+   "best": 0.9969617075611722,
+   "trees": 101,
+   "fit_seconds": 36.031368255615234
+  }
+ },
+ "chosen_feature_set": "flow+full_context",
+ "seed42": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.9969617075611722,
+   "balanced": 0.9961352899189698
+  },
+  "test": {
+   "macro_mcc": 0.841757210377616,
+   "macro_f1": 0.8613807670661356,
+   "accuracy": 0.6106842865697224,
+   "mcc": 0.5931565346214083,
+   "per_class_f1": {
+    "Benign": 0.4705831512375312,
+    "httpflood": 0.9999671564731307,
+    "icmpflood": 0.9910931174089069,
+    "slowratedos": 0.9971380939149764,
+    "synflood": 0.8310769606049518,
+    "synscan": 0.9335716974030862,
+    "tcpconnectscan": 0.9983522244969292,
+    "udpflood": 0.5551680090442724,
+    "udpscan": 0.9754764930114358
+   }
+  },
+  "trees": 101,
+  "fit_seconds": 7.09697699546814,
+  "top_features_gain": [
+   [
+    "SrcWin",
+    556320.361571057
+   ],
+   [
+    "src_flows_60s",
+    512350.0379052546
+   ],
+   [
+    "src_bytes_60s",
+    481722.149105557
+   ],
+   [
+    "TotBytes",
+    471373.40433793794
+   ],
+   [
+    "src_packets_60s",
+    371166.48457776883
+   ],
+   [
+    "dst_rhythm_max",
+    295003.77225077554
+   ],
+   [
+    "sMeanPktSz",
+    293855.3863056224
+   ],
+   [
+    "SrcBytes",
+    266474.92315218895
+   ],
+   [
+    "DstWin",
+    225493.18872800702
+   ],
+   [
+    "dst_bytes_60s",
+    165294.7313723652
+   ],
+   [
+    "Flgs",
+    162862.4766070894
+   ],
+   [
+    "AckDat",
+    153091.37709990158
+   ],
+   [
+    "src_rhythm_mean",
+    101834.51712641738
+   ],
+   [
+    "SrcRate",
+    96579.01673630183
+   ],
+   [
+    "dst_bytes_3600s",
+    55650.86898406317
+   ],
+   [
+    "dst_packets_60s",
+    52975.566002795546
+   ],
+   [
+    "DstPkts",
+    34994.21610254358
+   ],
+   [
+    "rel_repeat",
+    33311.56420511765
+   ],
+   [
+    "Rate",
+    28769.612854073795
+   ],
+   [
+    "same_sport",
+    18822.388055091797
+   ]
+  ]
+ },
+ "seed43": {
+  "rule": "balanced",
+  "validation_macro_mcc": {
+   "bayes": 0.9965162499574928,
+   "balanced": 0.9980677497020441
+  },
+  "test": {
+   "macro_mcc": 0.8055973753241663,
+   "macro_f1": 0.8201853540269789,
+   "accuracy": 0.6099879689500025,
+   "mcc": 0.5917297278934942,
+   "per_class_f1": {
+    "Benign": 0.470727315784132,
+    "httpflood": 0.9999671564731307,
+    "icmpflood": 0.63622210690192,
+    "slowratedos": 0.9971380939149764,
+    "synflood": 0.8310580204778157,
+    "synscan": 0.9363168578577161,
+    "tcpconnectscan": 0.9914241808357706,
+    "udpflood": 0.5539817129116967,
+    "udpscan": 0.9648327410856513
+   }
+  },
+  "trees": 215,
+  "fit_seconds": 91.2552547454834,
+  "top_features_gain": [
+   [
+    "SrcWin",
+    792321.2534925854
+   ],
+   [
+    "dst_rhythm_max",
+    688776.1936157595
+   ],
+   [
+    "src_bytes_60s",
+    572015.0389886841
+   ],
+   [
+    "src_packets_60s",
+    391821.27676567005
+   ],
+   [
+    "DstWin",
+    359316.93674734636
+   ],
+   [
+    "SrcBytes",
+    313111.4320891887
+   ],
+   [
+    "sMeanPktSz",
+    290339.88275567594
+   ],
+   [
+    "TotBytes",
+    174306.37677220028
+   ],
+   [
+    "Flgs",
+    161572.4464567954
+   ],
+   [
+    "src_flows_60s",
+    131538.62825581132
+   ],
+   [
+    "same_sport",
+    124329.12531439243
+   ],
+   [
+    "AckDat",
+    115507.65234100923
+   ],
+   [
+    "src_rhythm_mean",
+    97770.41489096354
+   ],
+   [
+    "dst_packets_3600s",
+    35242.77805596323
+   ],
+   [
+    "dTos",
+    34804.014860445925
+   ],
+   [
+    "rel_repeat",
+    31822.48222366123
+   ],
+   [
+    "dst_bytes_60s",
+    31463.549738900412
+   ],
+   [
+    "Rate",
+    26252.156639630764
+   ],
+   [
+    "byte_asymmetry",
+    18408.484366789162
+   ],
+   [
+    "dMeanPktSz",
+    10565.33315785236
+   ]
+  ]
+ },
+ "seed44": {
+  "rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.9960460917075199,
+   "balanced": 0.9956339816639486
+  },
+  "test": {
+   "macro_mcc": 0.8427767959242953,
+   "macro_f1": 0.8623786144077392,
+   "accuracy": 0.6109136456278944,
+   "mcc": 0.593491803473836,
+   "per_class_f1": {
+    "Benign": 0.4705809406959113,
+    "httpflood": 0.9999671564731307,
+    "icmpflood": 0.9894907033144705,
+    "slowratedos": 0.9971380939149764,
+    "synflood": 0.8308742836239483,
+    "synscan": 0.9333709768492378,
+    "tcpconnectscan": 0.9985519548609377,
+    "udpflood": 0.5553179459155535,
+    "udpscan": 0.9861154740214865
+   }
+  },
+  "trees": 168,
+  "fit_seconds": 72.62154078483582,
+  "top_features_gain": [
+   [
+    "SrcWin",
+    819735.8471139609
+   ],
+   [
+    "src_bytes_60s",
+    550005.9349244153
+   ],
+   [
+    "dst_rhythm_max",
+    483313.6779866082
+   ],
+   [
+    "sMeanPktSz",
+    474103.5190230354
+   ],
+   [
+    "src_packets_60s",
+    427979.52125736757
+   ],
+   [
+    "DstWin",
+    360343.8931135393
+   ],
+   [
+    "src_flows_60s",
+    325320.18503722124
+   ],
+   [
+    "SrcBytes",
+    306218.1135003175
+   ],
+   [
+    "Flgs",
+    160701.43855234995
+   ],
+   [
+    "AckDat",
+    136361.49865695828
+   ],
+   [
+    "same_sport",
+    122393.63051173101
+   ],
+   [
+    "src_rhythm_mean",
+    79094.03364315863
+   ],
+   [
+    "rel_repeat",
+    31454.129174920014
+   ],
+   [
+    "Rate",
+    25556.269509811926
+   ],
+   [
+    "src_rhythm_entropy",
+    20661.771039085434
+   ],
+   [
+    "dTos",
+    19786.294794039713
+   ],
+   [
+    "src_bytes_3600s",
+    18300.564222041998
+   ],
+   [
+    "packet_asymmetry",
+    16581.499764250708
+   ],
+   [
+    "TotBytes",
+    15395.906920470808
+   ],
+   [
+    "dMeanPktSz",
+    10831.637578862035
+   ]
+  ]
+ }
+}

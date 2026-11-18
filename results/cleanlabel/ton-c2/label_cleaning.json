@@ -1,0 +1,197 @@
+{
+ "rule": "C2",
+ "fit_only": true,
+ "collision_splits": [
+  "train",
+  "val",
+  "calibration"
+ ],
+ "colliding_vectors": 32235,
+ "splits": {
+  "train": {
+   "labelled": 19702887,
+   "nulled": 12985746,
+   "by_class": {
+    "Benign": [
+     12985746,
+     13316551
+    ],
+    "backdoor": [
+     0,
+     122382
+    ],
+    "ddos": [
+     0,
+     2488230
+    ],
+    "dos": [
+     0,
+     121046
+    ],
+    "injection": [
+     0,
+     229867
+    ],
+    "mitm": [
+     0,
+     3681
+    ],
+    "password": [
+     0,
+     948573
+    ],
+    "ransomware": [
+     0,
+     1946
+    ],
+    "scanning": [
+     0,
+     812050
+    ],
+    "xss": [
+     0,
+     1658561
+    ]
+   }
+  },
+  "val": {
+   "labelled": 3319998,
+   "nulled": 1109404,
+   "by_class": {
+    "Benign": [
+     1109404,
+     1866875
+    ],
+    "backdoor": [
+     0,
+     29866
+    ],
+    "ddos": [
+     0,
+     606648
+    ],
+    "dos": [
+     0,
+     27147
+    ],
+    "injection": [
+     0,
+     38784
+    ],
+    "mitm": [
+     0,
+     447
+    ],
+    "password": [
+     0,
+     225901
+    ],
+    "ransomware": [
+     0,
+     326
+    ],
+    "scanning": [
+     0,
+     88440
+    ],
+    "xss": [
+     0,
+     435564
+    ]
+   }
+  },
+  "calibration": {
+   "labelled": 1356396,
+   "nulled": 177938,
+   "by_class": {
+    "Benign": [
+     177938,
+     486476
+    ],
+    "backdoor": [
+     0,
+     18618
+    ],
+    "ddos": [
+     0,
+     333394
+    ],
+    "dos": [
+     0,
+     19106
+    ],
+    "injection": [
+     0,
+     43637
+    ],
+    "mitm": [
+     0,
+     716
+    ],
+    "password": [
+     0,
+     172179
+    ],
+    "ransomware": [
+     0,
+     390
+    ],
+    "scanning": [
+     0,
+     42568
+    ],
+    "xss": [
+     0,
+     239312
+    ]
+   }
+  },
+  "test": {
+   "labelled": 2603416,
+   "nulled": 471627,
+   "by_class": {
+    "Benign": [
+     471627,
+     923308
+    ],
+    "backdoor": [
+     0,
+     30780
+    ],
+    "ddos": [
+     0,
+     629754
+    ],
+    "dos": [
+     0,
+     31384
+    ],
+    "injection": [
+     0,
+     48947
+    ],
+    "mitm": [
+     0,
+     782
+    ],
+    "password": [
+     0,
+     225125
+    ],
+    "ransomware": [
+     0,
+     543
+    ],
+    "scanning": [
+     0,
+     289426
+    ],
+    "xss": [
+     0,
+     423367
+    ]
+   }
+  }
+ },
+ "test_split_unchanged": true
+}

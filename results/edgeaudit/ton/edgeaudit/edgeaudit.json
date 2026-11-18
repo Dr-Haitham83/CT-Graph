@@ -1,0 +1,97 @@
+{
+ "prepared": "nids-ton",
+ "K_per_endpoint": 6,
+ "classes": [
+  "Benign",
+  "backdoor",
+  "ddos",
+  "dos",
+  "injection",
+  "mitm",
+  "password",
+  "ransomware",
+  "scanning",
+  "xss"
+ ],
+ "splits": {},
+ "definition": {
+  "definite": "lo_j > hi_i",
+  "not_certifiable": "hi_j > lo_i",
+  "intervals": "lo = last packet time; hi = lo + g"
+ },
+ "start": {
+  "edges": 230938808,
+  "definite_edges": 16930,
+  "definite_frac": 7.330946299852729e-05,
+  "not_certifiable_edges": 230500467,
+  "not_certifiable_frac": 0.9981019171104408,
+  "roots_with_edges": 26980063,
+  "roots_with_definite": 14635,
+  "roots_with_definite_frac": 0.0005424375769619218,
+  "per_class_roots_with_definite_frac": {
+   "Benign": 0.00040667562835814796,
+   "backdoor": 0.0,
+   "ddos": 0.0,
+   "dos": 0.0,
+   "injection": 0.0,
+   "mitm": 0.08054765291607396,
+   "password": 0.004730326834727407,
+   "ransomware": 0.0,
+   "scanning": 0.0,
+   "xss": 0.0
+  },
+  "lead_s": {
+   "p50": 46.531999826431274,
+   "p90": 48.03599977493286,
+   "p99": 48.657999753952026,
+   "max": 48.93499970436096
+  }
+ },
+ "end": {
+  "edges": 229874098,
+  "definite_edges": 0,
+  "definite_frac": 0.0,
+  "not_certifiable_edges": 229452666,
+  "not_certifiable_frac": 0.9981666833990144,
+  "roots_with_edges": 26980066,
+  "roots_with_definite": 0,
+  "roots_with_definite_frac": 0.0,
+  "per_class_roots_with_definite_frac": {
+   "Benign": 0.0,
+   "backdoor": 0.0,
+   "ddos": 0.0,
+   "dos": 0.0,
+   "injection": 0.0,
+   "mitm": 0.0,
+   "password": 0.0,
+   "ransomware": 0.0,
+   "scanning": 0.0,
+   "xss": 0.0
+  },
+  "lead_s": null
+ },
+ "causal": {
+  "edges": 269080844,
+  "definite_edges": 0,
+  "definite_frac": 0.0,
+  "not_certifiable_edges": 0,
+  "not_certifiable_frac": 0.0,
+  "roots_with_edges": 26588200,
+  "roots_with_definite": 0,
+  "roots_with_definite_frac": 0.0,
+  "per_class_roots_with_definite_frac": {
+   "Benign": 0.0,
+   "backdoor": 0.0,
+   "ddos": 0.0,
+   "dos": 0.0,
+   "injection": 0.0,
+   "mitm": 0.0,
+   "password": 0.0,
+   "ransomware": 0.0,
+   "scanning": 0.0,
+   "xss": 0.0
+  },
+  "lead_s": null
+ },
+ "elapsed_s": 548.2179381847382
+}

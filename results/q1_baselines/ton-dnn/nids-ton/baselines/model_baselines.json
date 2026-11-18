@@ -1,0 +1,279 @@
+{
+  "classes": [
+    "Benign",
+    "backdoor",
+    "ddos",
+    "dos",
+    "injection",
+    "mitm",
+    "password",
+    "ransomware",
+    "scanning",
+    "xss"
+  ],
+  "manifest_sha256": "8f00fdd8b40ba43c5e2a032ebb2b91a57970000dceefd50927b8d4a5a492d937",
+  "split_plan": {
+    "scope": "blocked",
+    "block_s": 600.0,
+    "embargo_s": 72.00400002098085
+  },
+  "sizes": {
+    "train": 19702887,
+    "val": 3319998,
+    "calibration": 1356396,
+    "test": 2603416
+  },
+  "label_permutation_control": false,
+  "excluded": {},
+  "models": {
+    "DNN": {
+      "name": "DNN (Vinayakumar et al., IEEE Access 2019)",
+      "doi": "10.1109/ACCESS.2019.2895334",
+      "paper_sha256": "405a3bcb46676f7f42fcca1c5413b97d0c88261c6887192fd9e3c16b1623d29c",
+      "paper_path": "/data/output/nids-ton/papers/ctg-dnn-vinayakumar2019-access.pdf",
+      "source": "https://github.com/vinayakumarr/Network-Intrusion-Detection (UNSW-NB15/dnn/multiclass/dnn5.py)",
+      "source_commit": "197e51c6d7e27456c15b958f538ac16309c43ac9",
+      "implementation": "re-implementation in run_pipeline.py (--mode baseline_models) of the paper's NIDS DNN (Table 8) and the authors' released Keras code",
+      "architecture": "input -> 5 x [Dense(ReLU) -> BatchNorm -> Dropout 0.01] with 1024, 768, 512, 256, 128 units -> Dense(K, softmax); categorical cross-entropy",
+      "paper_hyperparameters": {
+        "hidden_units": [
+          1024,
+          768,
+          512,
+          256,
+          128
+        ],
+        "dropout": 0.01,
+        "batch_normalization": true,
+        "activation": "relu",
+        "optimizer": "adam",
+        "batch_size": 64,
+        "learning_rate": 0.1,
+        "epochs": 500,
+        "input_normalisation": "row-wise L2"
+      },
+      "resolved_unspecified": {
+        "stopping rule": "best validation-accuracy weights (the paper monitors validation accuracy); stop after 5 epochs without improvement, at 500 epochs, or at the compute budget",
+        "learning rate actually used with Adam": "paper text 0.1 vs released code Keras default 0.001: min(one epoch, 50,000 steps) each from the same initialisation, higher validation accuracy wins; the winner continues with full epochs (best_epoch 0 = the trial weights)"
+      },
+      "changes": [
+        "Input: the frozen split's flow feature vector, the same information budget as the tabular baselines (raw numeric features + train-vocabulary category codes); missing counters are set to 0 before the paper's row-wise L2 normalisation (sklearn Normalizer in the release).",
+        "Output layer: the K classes of the frozen vocabulary (the paper uses 5-10 per dataset).",
+        "Epochs: the paper trains up to 500 epochs; the release runs 1000 epochs checkpointing on training loss with the TEST set passed as validation data. Here the test split is never seen in training (see resolved_unspecified for stopping).",
+        "Batch normalisation follows Table 8 and Section VII-C (the released dnn5.py has dropout only); Keras-1 defaults are reproduced (Glorot-uniform weights, zero biases, BN epsilon 1e-3 and momentum 0.99, Adam epsilon 1e-8).",
+        "Decision rule: posterior argmax or its prior-corrected version, chosen on validation macro-MCC (the common protocol for every baseline).",
+        "PyTorch re-implementation (the release is Keras 1)."
+      ],
+      "decision_rule": "bayes",
+      "validation_macro_mcc": {
+        "bayes": 0.5990946921426499,
+        "balanced": 0.5505080406888432
+      },
+      "training": {
+        "selected_lr": 0.1,
+        "history": {
+          "lr=0.1 (paper text)": {
+            "trial_steps": 50000,
+            "train_loss": 0.5285350043161213,
+            "val_accuracy": 0.7836700504036448,
+            "complete": true
+          },
+          "lr=0.001 (released code)": {
+            "trial_steps": 50000,
+            "train_loss": 0.251826945547238,
+            "val_accuracy": 0.7234142912134285,
+            "complete": true
+          },
+          "epoch1": {
+            "train_loss": 0.4181620232810313,
+            "val_accuracy": 0.7917330070680766,
+            "complete": true
+          },
+          "epoch2": {
+            "train_loss": 0.3561558692404353,
+            "val_accuracy": 0.9180315771274561,
+            "complete": true
+          },
+          "epoch3": {
+            "train_loss": 0.3341580952593617,
+            "val_accuracy": 0.9245595931081886,
+            "complete": true
+          },
+          "epoch4": {
+            "train_loss": 0.3006063253023989,
+            "val_accuracy": 0.9243258580276253,
+            "complete": true
+          },
+          "epoch5": {
+            "train_loss": 0.2918433466567214,
+            "val_accuracy": 0.8712390790596862,
+            "complete": true
+          },
+          "epoch6": {
+            "train_loss": 0.29417083136571776,
+            "val_accuracy": 0.7485594870840284,
+            "complete": false
+          }
+        },
+        "best_epoch": 3,
+        "epochs_run": 6,
+        "stopped_by": "time budget",
+        "best_val_accuracy": 0.9245595931081886
+      },
+      "parameters": 1416330,
+      "fit_seconds": 36225.14643955231,
+      "inputs": 62,
+      "device": "cpu",
+      "test": {
+        "macro_mcc": 0.6163787532516616,
+        "macro_f1": 0.6298938771174873,
+        "accuracy": 0.8091046532709333,
+        "mcc": 0.7570052230221727,
+        "weighted_f1": 0.7654894913390572,
+        "balanced_accuracy": 0.6572206476844963,
+        "detection_rate": 0.7761239158435053,
+        "false_alarm_rate": 0.0520498035325157,
+        "per_class": {
+          "Benign": {
+            "precision": 0.6994244781386398,
+            "recall": 0.9479501964674844,
+            "f1": 0.8049408330551333,
+            "mcc": 0.6933238014527164,
+            "support": 923308
+          },
+          "backdoor": {
+            "precision": 0.8640415209297078,
+            "recall": 0.9951916829109811,
+            "f1": 0.9249909409348955,
+            "mcc": 0.9263967020214046,
+            "support": 30780
+          },
+          "ddos": {
+            "precision": 0.9350033787200028,
+            "recall": 0.9250008733568981,
+            "f1": 0.9299752309081228,
+            "mcc": 0.9078127867201489,
+            "support": 629754
+          },
+          "dos": {
+            "precision": 0.815341052738029,
+            "recall": 0.5137968391537089,
+            "f1": 0.630362971794922,
+            "mcc": 0.6439998898183122,
+            "support": 31384
+          },
+          "injection": {
+            "precision": 0.7966725043782837,
+            "recall": 0.7434980693403068,
+            "f1": 0.7691673623807158,
+            "mcc": 0.7653731559957916,
+            "support": 48947
+          },
+          "mitm": {
+            "precision": 0.36229205175600737,
+            "recall": 0.7519181585677749,
+            "f1": 0.488981288981289,
+            "mcc": 0.521741182893033,
+            "support": 782
+          },
+          "password": {
+            "precision": 0.8864893067412799,
+            "recall": 0.7698212104386452,
+            "f1": 0.8240462933465201,
+            "mcc": 0.8110492025851492,
+            "support": 225125
+          },
+          "ransomware": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "mcc": -0.00042014124882504907,
+            "support": 543
+          },
+          "scanning": {
+            "precision": 0.002241817366611867,
+            "recall": 5.182671909227229e-05,
+            "f1": 0.0001013113060040457,
+            "mcc": -0.017590304238343384,
+            "support": 289426
+          },
+          "xss": {
+            "precision": 0.9277716706310473,
+            "recall": 0.9249776198900718,
+            "f1": 0.9263725384672704,
+            "mcc": 0.9121012565172276,
+            "support": 423367
+          }
+        },
+        "binary": {
+          "macro_f1": 0.832520763840255,
+          "accuracy": 0.8370625362984633,
+          "mcc": 0.6933238014527165,
+          "detection_rate": 0.7761239158435053,
+          "false_alarm_rate": 0.0520498035325157,
+          "precision": 0.9644549307337855,
+          "f1": 0.8601006946253765,
+          "confusion": [
+            [
+              875250,
+              48058
+            ],
+            [
+              376136,
+              1303972
+            ]
+          ],
+          "roc_auc": 0.8654832062644353,
+          "pr_auc": 0.9030733939702205
+        },
+        "ci95_segment_bootstrap": {
+          "macro_mcc": [
+            0.4206889140189596,
+            0.7706848708004101
+          ],
+          "macro_f1": [
+            0.473632456032308,
+            0.7871295728063472
+          ],
+          "accuracy": [
+            0.4984983337997566,
+            0.93556179933009
+          ],
+          "mcc": [
+            0.394974415955734,
+            0.8974197707263515
+          ]
+        },
+        "test_segments": 11,
+        "alternative_rule": {
+          "macro_mcc": 0.5729228294548059,
+          "macro_f1": 0.5744026901539117,
+          "accuracy": 0.7827527371730065,
+          "mcc": 0.7219023389335432
+        },
+        "novel_feature_vector_subset": {
+          "macro_mcc": 0.5407658315902568,
+          "macro_f1": 0.5575228217295612,
+          "accuracy": 0.7943885164787646,
+          "mcc": 0.7162737602104403,
+          "weighted_f1": 0.8049754420829571,
+          "balanced_accuracy": 0.6183307006413871,
+          "detection_rate": 0.9532572580829953,
+          "false_alarm_rate": 0.3700897736508263,
+          "rows": 543457
+        },
+        "rows": 2603416
+      }
+    }
+  },
+  "self_checks": {
+    "dnn_table8_dense_parameters": true,
+    "negsc_bidirectional_multigraph": true,
+    "negsc_subgraphs_centre_last": true,
+    "negsc_sub_adjacency_symmetric": true,
+    "negsc_sinkhorn_marginals": true,
+    "euler_snapshots_and_weights": true,
+    "euler_unseen_hosts_share_extra_identity": true
+  },
+  "smoke_run": false
+}

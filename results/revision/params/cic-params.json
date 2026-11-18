@@ -1,0 +1,21 @@
+{
+ "/data/input/ctg-cic-v6r8s42-train-full/nids-cic-rel/best.pt": {
+  "tensors": 46,
+  "parameters": 238720,
+  "bytes": 954880,
+  "top_level_keys": [
+   "model",
+   "config",
+   "preprocess",
+   "feature_transform",
+   "manifest_sha256",
+   "best_validation_macro_mcc",
+   "epoch",
+   "calibration",
+   "decision_rule",
+   "validation_decision_rules",
+   "weights",
+   "version"
+  ]
+ }
+}

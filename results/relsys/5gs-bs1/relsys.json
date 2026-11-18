@@ -1,0 +1,155 @@
+{
+ "flows": 487560,
+ "segments": 10,
+ "streaming_ns_per_flow_single_core": 6912.048149971277,
+ "streaming_flows_per_s_single_core": 144674.91809994922,
+ "batch_library_us_per_flow": 3.405160013126578,
+ "peak_flow_records_per_s": 41719,
+ "p99_flow_records_per_s": 689.8399999999965,
+ "headroom_single_core_vs_peak": 3.4678424243138433,
+ "peak_flows_in_any_60s_window": 281178,
+ "peak_active_keys_60s": {
+  "src": 42,
+  "dst": 50,
+  "pair": 123
+ },
+ "max_live_first_seen_entries": 60717,
+ "state_bytes_estimate": 68981208,
+ "exactness_max_abs_diff_vs_batch": {
+  "src_flows_10s": 9.5367431640625e-07,
+  "src_newdport_frac_10s": 0.0,
+  "src_syn_frac_10s": 0.0,
+  "src_empty_frac_10s": 0.0,
+  "src_newpeer_10s": 1.1920928955078125e-07,
+  "src_newsport_frac_10s": 0.0,
+  "src_flows_60s": 9.5367431640625e-07,
+  "src_newdport_frac_60s": 0.0,
+  "src_syn_frac_60s": 0.0,
+  "src_empty_frac_60s": 0.0,
+  "src_newpeer_60s": 1.1920928955078125e-07,
+  "src_newsport_frac_60s": 0.0,
+  "dst_flows_10s": 9.5367431640625e-07,
+  "dst_newdport_frac_10s": 0.0,
+  "dst_syn_frac_10s": 0.0,
+  "dst_empty_frac_10s": 0.0,
+  "dst_newpeer_10s": 1.1920928955078125e-07,
+  "dst_newsport_frac_10s": 0.0,
+  "dst_flows_60s": 9.5367431640625e-07,
+  "dst_newdport_frac_60s": 0.0,
+  "dst_syn_frac_60s": 0.0,
+  "dst_empty_frac_60s": 0.0,
+  "dst_newpeer_60s": 1.1920928955078125e-07,
+  "dst_newsport_frac_60s": 0.0,
+  "pair_flows_10s": 9.5367431640625e-07,
+  "pair_newdport_frac_10s": 0.0,
+  "pair_syn_frac_10s": 0.0,
+  "pair_empty_frac_10s": 0.0,
+  "pair_flows_60s": 9.5367431640625e-07,
+  "pair_newdport_frac_60s": 0.0,
+  "pair_syn_frac_60s": 0.0,
+  "pair_empty_frac_60s": 0.0
+ },
+ "window_count_referee_integer_us": {
+  "src_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "pair_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "pair_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_newpeer_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_newpeer_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_newsport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "src_newsport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_newpeer_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_newpeer_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_newsport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "dst_newsport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "pair_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  },
+  "pair_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 487560
+  }
+ },
+ "streaming_exact_vs_integer_referee": true
+}

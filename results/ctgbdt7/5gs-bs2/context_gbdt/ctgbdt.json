@@ -1,0 +1,97 @@
+{
+ "model": "CT-GBDT v7 (flow / flow + relational / collective two-stage; double held-out maximin rule)",
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "fold_class_coverage": [
+  [
+   25491,
+   20661,
+   184,
+   12885,
+   1580,
+   2856,
+   2863,
+   139964,
+   3083
+  ],
+  [
+   21409,
+   20428,
+   206,
+   12486,
+   1783,
+   3157,
+   3153,
+   141025,
+   3098
+  ]
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.8551295665666431,
+    "balanced": 0.9954976063014737
+   },
+   "calibration": {
+    "bayes": 0.8283201491483934,
+    "balanced": 0.85187676554295
+   },
+   "rule_on_val": "balanced"
+  },
+  "flow+relational": {
+   "validation": {
+    "bayes": 0.9879486371059665,
+    "balanced": 0.9993114304066543
+   },
+   "calibration": {
+    "bayes": 0.9633591795519174,
+    "balanced": 0.9067718978796717
+   },
+   "rule_on_val": "balanced",
+   "gain_validation": 0.0038138241051806077,
+   "gain_calibration": 0.05489513233672172
+  },
+  "collective": {
+   "validation": {
+    "bayes": 0.9734572033339465,
+    "balanced": 0.9879486371059665
+   },
+   "calibration": {
+    "bayes": 0.8878125454177391,
+    "balanced": 0.9034966157842885
+   },
+   "rule_on_val": "balanced",
+   "gain_validation": -0.0075489691955071825,
+   "gain_calibration": 0.05161985024133853
+  }
+ },
+ "chosen_feature_set": "flow+relational",
+ "rule": "maximin of (gain_val, gain_cal) over candidates with both >= 0.002 vs flow",
+ "seed42": {
+  "validation_macro_mcc": {
+   "bayes": 0.9879486371059665,
+   "balanced": 0.9993114304066543
+  }
+ },
+ "seed43": {
+  "validation_macro_mcc": {
+   "bayes": 0.9879307086225567,
+   "balanced": 0.9972033481801575
+  }
+ },
+ "seed44": {
+  "validation_macro_mcc": {
+   "bayes": 0.9875043615393366,
+   "balanced": 0.9992217945135916
+  }
+ }
+}

@@ -1,0 +1,918 @@
+{
+  "fairdata_dataset": "9d13ef28-2ca7-44b0-9950-225359afac65",
+  "combined": {
+    "rows": 1215890,
+    "columns": [
+      "Unnamed: 0",
+      "Seq",
+      "Dur",
+      "RunTime",
+      "Mean",
+      "Sum",
+      "Min",
+      "Max",
+      "Proto",
+      "sTos",
+      "dTos",
+      "sDSb",
+      "dDSb",
+      "sTtl",
+      "dTtl",
+      "sHops",
+      "dHops",
+      "Cause",
+      "TotPkts",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "SrcBytes",
+      "DstBytes",
+      "Offset",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "Load",
+      "SrcLoad",
+      "DstLoad",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "State",
+      "SrcWin",
+      "DstWin",
+      "sVid",
+      "dVid",
+      "SrcTCPBase",
+      "DstTCPBase",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "Label",
+      "Attack Type",
+      "Attack Tool"
+    ],
+    "classes": {
+      "Benign": 477737,
+      "UDPFlood": 457340,
+      "HTTPFlood": 140812,
+      "SlowrateDoS": 73124,
+      "TCPConnectScan": 20052,
+      "SYNScan": 20043,
+      "UDPScan": 15906,
+      "SYNFlood": 9721,
+      "ICMPFlood": 1155
+    },
+    "offset_resets": 19,
+    "row_index_resets": 1,
+    "duplicates": {
+      "rows_with_duplicate_feature_vector": 0.7725879808206334,
+      "rows_with_label_conflicting_feature_vector": 0.520141624653546,
+      "max_accuracy_given_exact_conflicts": 0.7684420465667124,
+      "per_class_conflicting": {
+        "Benign": 0.5893305312337123,
+        "HTTPFlood": 0.00011362667954435701,
+        "ICMPFlood": 0.0,
+        "SYNFlood": 0.0,
+        "SYNScan": 0.00019957092251658934,
+        "SlowrateDoS": 0.00016410480827088234,
+        "TCPConnectScan": 0.00014961101137043686,
+        "UDPFlood": 0.7671600997070014,
+        "UDPScan": 0.0001257387149503332
+      }
+    }
+  },
+  "preserved_download": {
+    "path": "/tmp/BTS1_BTS2_fields_preserved.zip",
+    "attempts": [
+      {
+        "endpoint": "https://etsin.fairdata.fi/api/v3/download/authorize",
+        "status": 200,
+        "body": "{\"url\":\"https://download.fairdata.fi:443/download?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTA1MjIxNzksImRhdGFzZXQiOiI5ZDEzZWYyOC0yY2E3LTQ0YjAtOTk1MC0yMjUzNTlhZmFjNjUiLCJmaWxlIjoiL0JUUzFfQlRTMl9maWVsZHNfcHJlc2VydmVkLnppcCIsInByb2plY3QiOiIyMDA2OTM4IiwicmFuZG9tX3NhbHQiOiJlMWJmM2FiZiJ9.98"
+      }
+    ],
+    "sha256_expected": "625f4d178c8a8224018cdedaba09ae397c804853c8db0ee1108773fbcf8f2a9d"
+  },
+  "preserved": {
+    "rows": 1215890,
+    "columns": [
+      "Unnamed: 0",
+      "SrcId",
+      "Rank",
+      "StartTime",
+      "LastTime",
+      "Trans",
+      "Flgs",
+      "Seq",
+      "Dur",
+      "RunTime",
+      "IdleTime",
+      "Mean",
+      "StdDev",
+      "Sum",
+      "Min",
+      "Max",
+      "SrcMac",
+      "DstMac",
+      "SrcOui",
+      "DstOui",
+      "SrcAddr",
+      "DstAddr",
+      "Proto",
+      "Sport",
+      "Dport",
+      "sTos",
+      "dTos",
+      "sDSb",
+      "dDSb",
+      "sCo",
+      "dCo",
+      "sTtl",
+      "dTtl",
+      "sHops",
+      "dHops",
+      "sIpId",
+      "dIpId",
+      "sMpls",
+      "dMpls",
+      "AutoId",
+      "sAS",
+      "dAS",
+      "iAS",
+      "Cause",
+      "NStrok",
+      "sNStrok",
+      "dNStrok",
+      "TotPkts",
+      "SrcPkts",
+      "DstPkts",
+      "TotBytes",
+      "SrcBytes",
+      "DstBytes",
+      "TotAppByte",
+      "SAppBytes",
+      "DAppBytes",
+      "PCRatio",
+      "Offset",
+      "sMeanPktSz",
+      "dMeanPktSz",
+      "Load",
+      "SrcLoad",
+      "DstLoad",
+      "Loss",
+      "SrcLoss",
+      "DstLoss",
+      "pLoss",
+      "Retrans",
+      "SrcRetra",
+      "DstRetra",
+      "pRetran",
+      "SrcGap",
+      "DstGap",
+      "Rate",
+      "SrcRate",
+      "DstRate",
+      "Dir",
+      "SIntPkt",
+      "SIntDist",
+      "SIntPktAct",
+      "SIntActDist",
+      "SIntPktIdl",
+      "SIntIdlDist",
+      "DIntPkt",
+      "DIntDist",
+      "DIntPktAct",
+      "DIntActDist",
+      "DIntPktIdl",
+      "SrcJitAct",
+      "DstJitter",
+      "DstJitAct",
+      "State",
+      "srcUdata",
+      "dstUdata",
+      "SrcWin",
+      "DstWin",
+      "sVlan",
+      "dVlan",
+      "sVid",
+      "dVid",
+      "sVpri",
+      "dVpri",
+      "SRange",
+      "ERange",
+      "SrcTCPBase",
+      "DstTCPBase",
+      "TcpRtt",
+      "SynAck",
+      "AckDat",
+      "TcpOpt",
+      "Label",
+      "Attack Type",
+      "Attack Tool",
+      "_capture",
+      "_site",
+      "_clock"
+    ],
+    "classes": {
+      "Benign": 477737,
+      "UDPFlood": 457340,
+      "HTTPFlood": 140812,
+      "SlowrateDoS": 73124,
+      "TCPConnectScan": 20052,
+      "SYNScan": 20043,
+      "UDPScan": 15906,
+      "SYNFlood": 9721,
+      "ICMPFlood": 1155
+    },
+    "captures": [
+      {
+        "capture": 0,
+        "site": "BS1",
+        "rows": 11450,
+        "classes": {
+          "SYNScan": 10019,
+          "Benign": 1431
+        },
+        "clock_span_s": 522.3000000000002,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 1,
+        "site": "BS1",
+        "rows": 11645,
+        "classes": {
+          "TCPConnectScan": 10022,
+          "Benign": 1623
+        },
+        "clock_span_s": 585.8000000000002,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 2,
+        "site": "BS1",
+        "rows": 10043,
+        "classes": {
+          "UDPScan": 7887,
+          "Benign": 2156
+        },
+        "clock_span_s": 583.8000000000002,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 3,
+        "site": "BS1",
+        "rows": 18279,
+        "classes": {
+          "Benign": 17666,
+          "ICMPFlood": 613
+        },
+        "clock_span_s": 1780.1000000000004,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 4,
+        "site": "BS1",
+        "rows": 467717,
+        "classes": {
+          "Benign": 291906,
+          "UDPFlood": 175811
+        },
+        "clock_span_s": 1726.6000000000004,
+        "idle_time_values": 2
+      },
+      {
+        "capture": 5,
+        "site": "BS1",
+        "rows": 44636,
+        "classes": {
+          "Benign": 39844,
+          "SYNFlood": 4792
+        },
+        "clock_span_s": 1905.1000000000004,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 6,
+        "site": "BS1",
+        "rows": 93803,
+        "classes": {
+          "HTTPFlood": 76121,
+          "Benign": 17682
+        },
+        "clock_span_s": 1806.6999999999998,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 7,
+        "site": "BS1",
+        "rows": 31015,
+        "classes": {
+          "Benign": 24808,
+          "SlowrateDoS": 6207
+        },
+        "clock_span_s": 1745.0,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 8,
+        "site": "BS1",
+        "rows": 38120,
+        "classes": {
+          "SlowrateDoS": 29885,
+          "Benign": 8235
+        },
+        "clock_span_s": 1751.9000000000005,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 9,
+        "site": "BS1",
+        "rows": 1608,
+        "classes": {
+          "Benign": 1608
+        },
+        "clock_span_s": 3346.2000000000003,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 10,
+        "site": "BS2",
+        "rows": 11526,
+        "classes": {
+          "SYNScan": 10024,
+          "Benign": 1502
+        },
+        "clock_span_s": 522.2,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 11,
+        "site": "BS2",
+        "rows": 11653,
+        "classes": {
+          "TCPConnectScan": 10030,
+          "Benign": 1623
+        },
+        "clock_span_s": 585.7999999999997,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 12,
+        "site": "BS2",
+        "rows": 10305,
+        "classes": {
+          "UDPScan": 8019,
+          "Benign": 2286
+        },
+        "clock_span_s": 584.3000000000002,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 13,
+        "site": "BS2",
+        "rows": 14452,
+        "classes": {
+          "Benign": 13910,
+          "ICMPFlood": 542
+        },
+        "clock_span_s": 1783.3999999999996,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 14,
+        "site": "BS2",
+        "rows": 286197,
+        "classes": {
+          "UDPFlood": 281529,
+          "Benign": 4668
+        },
+        "clock_span_s": 1726.5,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 15,
+        "site": "BS2",
+        "rows": 14108,
+        "classes": {
+          "Benign": 9179,
+          "SYNFlood": 4929
+        },
+        "clock_span_s": 1902.9999999999995,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 16,
+        "site": "BS2",
+        "rows": 93650,
+        "classes": {
+          "HTTPFlood": 64691,
+          "Benign": 28959
+        },
+        "clock_span_s": 1806.2000000000003,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 17,
+        "site": "BS2",
+        "rows": 12656,
+        "classes": {
+          "SlowrateDoS": 7047,
+          "Benign": 5609
+        },
+        "clock_span_s": 1745.4,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 18,
+        "site": "BS2",
+        "rows": 31669,
+        "classes": {
+          "SlowrateDoS": 29985,
+          "Benign": 1684
+        },
+        "clock_span_s": 1751.7999999999997,
+        "idle_time_values": 1
+      },
+      {
+        "capture": 19,
+        "site": "BS2",
+        "rows": 1358,
+        "classes": {
+          "Benign": 1358
+        },
+        "clock_span_s": 3346.6000000000004,
+        "idle_time_values": 1
+      }
+    ],
+    "idle_time_distinct_total": 17,
+    "site_class_counts": {
+      "BS1": {
+        "Benign": 406959,
+        "UDPFlood": 175811,
+        "HTTPFlood": 76121,
+        "SlowrateDoS": 36092,
+        "TCPConnectScan": 10022,
+        "SYNScan": 10019,
+        "UDPScan": 7887,
+        "SYNFlood": 4792,
+        "ICMPFlood": 613
+      },
+      "BS2": {
+        "UDPFlood": 281529,
+        "Benign": 70778,
+        "HTTPFlood": 64691,
+        "SlowrateDoS": 37032,
+        "TCPConnectScan": 10030,
+        "SYNScan": 10024,
+        "UDPScan": 8019,
+        "SYNFlood": 4929,
+        "ICMPFlood": 542
+      }
+    },
+    "offset_resets": 19,
+    "row_index_resets": 1,
+    "duplicates": {
+      "rows_with_duplicate_feature_vector": 0.7721356372698188,
+      "rows_with_label_conflicting_feature_vector": 0.5201284655684314,
+      "max_accuracy_given_exact_conflicts": 0.7684486261092698,
+      "per_class_conflicting": {
+        "Benign": 0.5893305312337123,
+        "HTTPFlood": 5.6813339772178505e-05,
+        "ICMPFlood": 0.0,
+        "SYNFlood": 0.0,
+        "SYNScan": 0.00019957092251658934,
+        "SlowrateDoS": 5.470160275696078e-05,
+        "TCPConnectScan": 0.00014961101137043686,
+        "UDPFlood": 0.7671600997070014,
+        "UDPScan": 0.0001257387149503332
+      }
+    }
+  },
+  "benign_attack_identical_vectors_per_capture": [
+    {
+      "capture": 0,
+      "site": "BS1",
+      "attack": [
+        "SYNScan"
+      ],
+      "benign_rows": 1431,
+      "benign_identical_to_SYNScan": 0.0
+    },
+    {
+      "capture": 1,
+      "site": "BS1",
+      "attack": [
+        "TCPConnectScan"
+      ],
+      "benign_rows": 1623,
+      "benign_identical_to_TCPConnectScan": 0.0
+    },
+    {
+      "capture": 2,
+      "site": "BS1",
+      "attack": [
+        "UDPScan"
+      ],
+      "benign_rows": 2156,
+      "benign_identical_to_UDPScan": 0.0
+    },
+    {
+      "capture": 3,
+      "site": "BS1",
+      "attack": [
+        "ICMPFlood"
+      ],
+      "benign_rows": 17666,
+      "benign_identical_to_ICMPFlood": 0.0
+    },
+    {
+      "capture": 4,
+      "site": "BS1",
+      "attack": [
+        "UDPFlood"
+      ],
+      "benign_rows": 291906,
+      "benign_identical_to_UDPFlood": 0.9644508848738977
+    },
+    {
+      "capture": 5,
+      "site": "BS1",
+      "attack": [
+        "SYNFlood"
+      ],
+      "benign_rows": 39844,
+      "benign_identical_to_SYNFlood": 0.0
+    },
+    {
+      "capture": 6,
+      "site": "BS1",
+      "attack": [
+        "HTTPFlood"
+      ],
+      "benign_rows": 17682,
+      "benign_identical_to_HTTPFlood": 0.0
+    },
+    {
+      "capture": 7,
+      "site": "BS1",
+      "attack": [
+        "SlowrateDoS"
+      ],
+      "benign_rows": 24808,
+      "benign_identical_to_SlowrateDoS": 0.0
+    },
+    {
+      "capture": 8,
+      "site": "BS1",
+      "attack": [
+        "SlowrateDoS"
+      ],
+      "benign_rows": 8235,
+      "benign_identical_to_SlowrateDoS": 0.0
+    },
+    {
+      "capture": 9,
+      "site": "BS1",
+      "attack": [],
+      "benign_rows": 1608
+    },
+    {
+      "capture": 10,
+      "site": "BS2",
+      "attack": [
+        "SYNScan"
+      ],
+      "benign_rows": 1502,
+      "benign_identical_to_SYNScan": 0.0
+    },
+    {
+      "capture": 11,
+      "site": "BS2",
+      "attack": [
+        "TCPConnectScan"
+      ],
+      "benign_rows": 1623,
+      "benign_identical_to_TCPConnectScan": 0.0
+    },
+    {
+      "capture": 12,
+      "site": "BS2",
+      "attack": [
+        "UDPScan"
+      ],
+      "benign_rows": 2286,
+      "benign_identical_to_UDPScan": 0.0
+    },
+    {
+      "capture": 13,
+      "site": "BS2",
+      "attack": [
+        "ICMPFlood"
+      ],
+      "benign_rows": 13910,
+      "benign_identical_to_ICMPFlood": 0.0
+    },
+    {
+      "capture": 14,
+      "site": "BS2",
+      "attack": [
+        "UDPFlood"
+      ],
+      "benign_rows": 4668,
+      "benign_identical_to_UDPFlood": 0.0
+    },
+    {
+      "capture": 15,
+      "site": "BS2",
+      "attack": [
+        "SYNFlood"
+      ],
+      "benign_rows": 9179,
+      "benign_identical_to_SYNFlood": 0.0
+    },
+    {
+      "capture": 16,
+      "site": "BS2",
+      "attack": [
+        "HTTPFlood"
+      ],
+      "benign_rows": 28959,
+      "benign_identical_to_HTTPFlood": 6.906315825822715e-05
+    },
+    {
+      "capture": 17,
+      "site": "BS2",
+      "attack": [
+        "SlowrateDoS"
+      ],
+      "benign_rows": 5609,
+      "benign_identical_to_SlowrateDoS": 0.0
+    },
+    {
+      "capture": 18,
+      "site": "BS2",
+      "attack": [
+        "SlowrateDoS"
+      ],
+      "benign_rows": 1684,
+      "benign_identical_to_SlowrateDoS": 0.0
+    },
+    {
+      "capture": 19,
+      "site": "BS2",
+      "attack": [],
+      "benign_rows": 1358
+    }
+  ],
+  "combined_matches_preserved_row_order": true,
+  "embargo_rows": 386,
+  "protocol_class_counts": {
+    "RS": {
+      "train": {
+        "Benign": 287202,
+        "UDPFlood": 274343,
+        "HTTPFlood": 84263,
+        "SlowrateDoS": 43975,
+        "SYNScan": 11966,
+        "TCPConnectScan": 11861,
+        "UDPScan": 9536,
+        "SYNFlood": 5979,
+        "ICMPFlood": 696
+      },
+      "val": {
+        "Benign": 71456,
+        "UDPFlood": 68406,
+        "HTTPFlood": 21343,
+        "SlowrateDoS": 10950,
+        "SYNScan": 3075,
+        "TCPConnectScan": 3023,
+        "UDPScan": 2428,
+        "SYNFlood": 1379,
+        "ICMPFlood": 180
+      },
+      "calibration": {
+        "Benign": 48009,
+        "UDPFlood": 45633,
+        "HTTPFlood": 13937,
+        "SlowrateDoS": 7297,
+        "TCPConnectScan": 2149,
+        "SYNScan": 2005,
+        "UDPScan": 1551,
+        "SYNFlood": 955,
+        "ICMPFlood": 114
+      },
+      "test": {
+        "Benign": 71070,
+        "UDPFlood": 68958,
+        "HTTPFlood": 21269,
+        "SlowrateDoS": 10902,
+        "TCPConnectScan": 3019,
+        "SYNScan": 2997,
+        "UDPScan": 2391,
+        "SYNFlood": 1408,
+        "ICMPFlood": 165
+      }
+    },
+    "WCF": {
+      "train": {
+        "UDPFlood": 344465,
+        "Benign": 196892,
+        "HTTPFlood": 93951,
+        "SlowrateDoS": 48157,
+        "SYNScan": 11657,
+        "TCPConnectScan": 11611,
+        "UDPScan": 8483,
+        "SYNFlood": 5455,
+        "ICMPFlood": 1155
+      },
+      "val": {
+        "Benign": 85412,
+        "UDPFlood": 42153,
+        "HTTPFlood": 24386,
+        "SlowrateDoS": 9378,
+        "TCPConnectScan": 1944,
+        "SYNScan": 1893,
+        "SYNFlood": 1470,
+        "UDPScan": 1424
+      },
+      "calibration": {
+        "Benign": 57363,
+        "UDPFlood": 27842,
+        "HTTPFlood": 15126,
+        "SlowrateDoS": 5129,
+        "TCPConnectScan": 655,
+        "SYNScan": 533,
+        "UDPScan": 417,
+        "SYNFlood": 349
+      },
+      "test": {
+        "Benign": 118843,
+        "UDPFlood": 40567,
+        "SlowrateDoS": 4881,
+        "HTTPFlood": 3955,
+        "SYNScan": 1949,
+        "TCPConnectScan": 1814,
+        "UDPScan": 1716,
+        "SYNFlood": 1273
+      }
+    },
+    "XS12": {
+      "train": {
+        "UDPFlood": 175527,
+        "Benign": 157467,
+        "HTTPFlood": 53834,
+        "SlowrateDoS": 25577,
+        "TCPConnectScan": 5959,
+        "SYNScan": 5955,
+        "UDPScan": 4280,
+        "SYNFlood": 3924,
+        "ICMPFlood": 613
+      },
+      "val": {
+        "Benign": 81058,
+        "HTTPFlood": 13144,
+        "SlowrateDoS": 4502,
+        "TCPConnectScan": 973,
+        "SYNScan": 941,
+        "SYNFlood": 768,
+        "UDPScan": 673,
+        "UDPFlood": 8
+      },
+      "calibration": {
+        "Benign": 155916,
+        "HTTPFlood": 7630,
+        "SlowrateDoS": 3905,
+        "TCPConnectScan": 1239,
+        "SYNScan": 1236,
+        "UDPScan": 1065,
+        "UDPFlood": 276
+      },
+      "test": {
+        "UDPFlood": 281529,
+        "Benign": 70778,
+        "HTTPFlood": 64691,
+        "SlowrateDoS": 37032,
+        "TCPConnectScan": 10030,
+        "SYNScan": 10024,
+        "UDPScan": 8019,
+        "SYNFlood": 4929,
+        "ICMPFlood": 542
+      }
+    },
+    "XS21": {
+      "train": {
+        "UDPFlood": 168938,
+        "HTTPFlood": 40117,
+        "Benign": 39425,
+        "SlowrateDoS": 22580,
+        "SYNScan": 5702,
+        "TCPConnectScan": 5652,
+        "UDPScan": 4203,
+        "SYNFlood": 1531,
+        "ICMPFlood": 542
+      },
+      "val": {
+        "UDPFlood": 42145,
+        "HTTPFlood": 11242,
+        "SlowrateDoS": 4876,
+        "Benign": 4354,
+        "TCPConnectScan": 971,
+        "SYNScan": 952,
+        "UDPScan": 751,
+        "SYNFlood": 702
+      },
+      "calibration": {
+        "UDPFlood": 68133,
+        "Benign": 20290,
+        "HTTPFlood": 11451,
+        "SlowrateDoS": 6105,
+        "SYNFlood": 1622,
+        "SYNScan": 1246,
+        "TCPConnectScan": 1230,
+        "UDPScan": 1068
+      },
+      "test": {
+        "Benign": 406959,
+        "UDPFlood": 175811,
+        "HTTPFlood": 76121,
+        "SlowrateDoS": 36092,
+        "TCPConnectScan": 10022,
+        "SYNScan": 10019,
+        "UDPScan": 7887,
+        "SYNFlood": 4792,
+        "ICMPFlood": 613
+      }
+    }
+  },
+  "lightgbm_reference": {
+    "RS": {
+      "accuracy": 0.7628650942205194,
+      "macro_f1": 0.9256576731921388,
+      "mcc": 0.6830394035981973,
+      "macro_mcc": 0.8930509529359737,
+      "binary_roc_auc": 0.872355249317065,
+      "decision_rule": "balanced"
+    },
+    "RS-strict": {
+      "accuracy": 0.7204288090284829,
+      "macro_f1": 0.8405941013055164,
+      "mcc": 0.6268947275667124,
+      "macro_mcc": 0.8170328723750493,
+      "binary_roc_auc": 0.8716630258651149,
+      "decision_rule": "balanced"
+    },
+    "WCF": {
+      "accuracy": 0.6287043280494634,
+      "macro_f1": 0.8891068190273754,
+      "mcc": 0.5426067385661347,
+      "macro_mcc": 0.8545787480498624,
+      "binary_roc_auc": 0.8285802668344898,
+      "decision_rule": "bayes"
+    },
+    "WCF-strict": {
+      "accuracy": 0.626430016343044,
+      "macro_f1": 0.8486716352576948,
+      "mcc": 0.5323390044180343,
+      "macro_mcc": 0.8166111871539178,
+      "binary_roc_auc": 0.81280474106211,
+      "decision_rule": "balanced"
+    },
+    "XS12": {
+      "accuracy": 0.6485620644250923,
+      "macro_f1": 0.886668417288726,
+      "mcc": 0.646941883691749,
+      "macro_mcc": 0.870884414153466,
+      "binary_roc_auc": 0.9609448290179887,
+      "decision_rule": "bayes"
+    },
+    "XS12-strict": {
+      "accuracy": 0.6480390668903592,
+      "macro_f1": 0.8177371344998815,
+      "mcc": 0.634872765699179,
+      "macro_mcc": 0.8133036441743031,
+      "binary_roc_auc": 0.9386354823198051,
+      "decision_rule": "balanced"
+    },
+    "XS21": {
+      "accuracy": 0.6096337304137215,
+      "macro_f1": 0.8467170659130576,
+      "mcc": 0.5914408480032476,
+      "macro_mcc": 0.8280472279465073,
+      "binary_roc_auc": 0.4221783179280784,
+      "decision_rule": "balanced"
+    },
+    "XS21-strict": {
+      "accuracy": 0.5802453879909271,
+      "macro_f1": 0.773069751036055,
+      "mcc": 0.5335467537120656,
+      "macro_mcc": 0.7612314889683863,
+      "binary_roc_auc": 0.43901270276249205,
+      "decision_rule": "balanced"
+    }
+  },
+  "elapsed_s": 564.1853845119476
+}

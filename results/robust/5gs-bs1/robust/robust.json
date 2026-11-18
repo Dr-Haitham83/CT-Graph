@@ -1,0 +1,361 @@
+{
+ "prepared": "nids-5gs-bs1",
+ "protocol": "train/validation/calibration only; test never opened",
+ "ewma_window_flows": 50000,
+ "fit_seeds": [
+  7,
+  8,
+  9
+ ],
+ "configs": {
+  "flow": {
+   "features": 76,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.9857975058388665,
+     "calibration": 0.6540888777736552
+    },
+    {
+     "rule": "balanced",
+     "val": 0.9854505966140928,
+     "calibration": 0.6519449879104471
+    },
+    {
+     "rule": "balanced",
+     "val": 0.98535618752114,
+     "calibration": 0.6517782668047278
+    }
+   ],
+   "val_mean": 0.9855347633246998,
+   "val_sd": 0.00018974279217058874,
+   "cal_mean": 0.6526040441629434,
+   "cal_sd": 0.0010521397627051001,
+   "seed_ensemble": {
+    "rule": "balanced",
+    "val": 0.9847924023988353,
+    "calibration": 0.6516072651618082,
+    "val_per_class": {
+     "Benign": 0.9996,
+     "httpflood": 0.977,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9327,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    },
+    "cal_per_class": {
+     "Benign": 0.0366,
+     "httpflood": 0.647,
+     "icmpflood": 0.984,
+     "slowratedos": 0.988,
+     "synscan": 0.999,
+     "tcpconnectscan": 0.9992,
+     "udpflood": -0.0926
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.9986352597559955,
+     "rest": 0.8866038137267218,
+     "head_rows": 30828
+    },
+    "calibration": {
+     "head": 0.7594127570682948,
+     "rest": -0.044427470868992736,
+     "head_rows": 23581
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.0,
+    0.0
+   ],
+   "gain_vs_flow_ensemble": [
+    0.0,
+    0.0
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z0_segment_reset": {
+   "features": 91,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.9977135047189719,
+     "calibration": 0.5398784226386344
+    },
+    {
+     "rule": "balanced",
+     "val": 0.9973544724443757,
+     "calibration": 0.5346511919175013
+    },
+    {
+     "rule": "balanced",
+     "val": 0.997241333756732,
+     "calibration": 0.5332414998120302
+    }
+   ],
+   "val_mean": 0.9974364369733598,
+   "val_sd": 0.0002012875098035084,
+   "cal_mean": 0.5359237047893887,
+   "cal_sd": 0.002855013474389008,
+   "seed_ensemble": {
+    "rule": "balanced",
+    "val": 0.9973985257895551,
+    "calibration": 0.5386482795864281,
+    "val_per_class": {
+     "Benign": 1.0,
+     "httpflood": 0.9963,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9888,
+     "synflood": 1.0,
+     "udpscan": 0.9992
+    },
+    "cal_per_class": {
+     "Benign": 0.0129,
+     "httpflood": -0.0002,
+     "icmpflood": 0.984,
+     "slowratedos": 0.9773,
+     "synscan": 0.9479,
+     "tcpconnectscan": 0.9972,
+     "udpflood": -0.1486
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.9966265230265923,
+     "rest": 0.9917637039024092,
+     "head_rows": 30828
+    },
+    "calibration": {
+     "head": 0.659762215062,
+     "rest": -0.17242127401894278,
+     "head_rows": 23581
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.011901673648660016,
+    -0.11668033937355471
+   ],
+   "gain_vs_flow_ensemble": [
+    0.01260612339071987,
+    -0.11295898557538009
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z1_continuous": {
+   "features": 91,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.7146084627445067,
+     "calibration": 0.5500972586302828
+    },
+    {
+     "rule": "balanced",
+     "val": 0.8274028533545721,
+     "calibration": 0.5451136158589623
+    },
+    {
+     "rule": "balanced",
+     "val": 0.7899650278838014,
+     "calibration": 0.5347774089696772
+    }
+   ],
+   "val_mean": 0.7773254479942935,
+   "val_sd": 0.04690744697885715,
+   "cal_mean": 0.5433294278196409,
+   "cal_sd": 0.006380279180183949,
+   "seed_ensemble": {
+    "rule": "balanced",
+    "val": 0.8227760355062821,
+    "calibration": 0.5506791361089921,
+    "val_per_class": {
+     "Benign": 0.9987,
+     "httpflood": 0.9205,
+     "icmpflood": 1.0,
+     "slowratedos": 0.7045,
+     "synflood": 1.0,
+     "udpscan": 0.3129
+    },
+    "cal_per_class": {
+     "Benign": -0.0227,
+     "httpflood": 0.0,
+     "icmpflood": 0.984,
+     "slowratedos": 0.9566,
+     "synscan": 0.999,
+     "tcpconnectscan": 0.991,
+     "udpflood": -0.0531
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.7998527636726408,
+     "rest": 0.9100172106061487,
+     "head_rows": 30828
+    },
+    "calibration": {
+     "head": 0.6547602681043314,
+     "rest": -0.17336494776875389,
+     "head_rows": 23581
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.20820931533040632,
+    -0.10927461634330249
+   ],
+   "gain_vs_flow_ensemble": [
+    -0.16201636689255317,
+    -0.10092812905281612
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z2_ewma_50k": {
+   "features": 91,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.936523036867587,
+     "calibration": 0.5479984674766493
+    },
+    {
+     "rule": "balanced",
+     "val": 0.8527965112145712,
+     "calibration": 0.5470839413623682
+    },
+    {
+     "rule": "bayes",
+     "val": 0.933730778572396,
+     "calibration": 0.5422302927687835
+    }
+   ],
+   "val_mean": 0.9076834422181848,
+   "val_sd": 0.03882765829356986,
+   "cal_mean": 0.5457709005359336,
+   "cal_sd": 0.0025312733322747937,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.9365797336417435,
+    "calibration": 0.5405124130490898,
+    "val_per_class": {
+     "Benign": 0.9986,
+     "httpflood": 0.7653,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9978,
+     "synflood": 1.0,
+     "udpscan": 0.8577
+    },
+    "cal_per_class": {
+     "Benign": -0.014,
+     "httpflood": -0.0,
+     "icmpflood": 0.9756,
+     "slowratedos": 0.9724,
+     "synscan": 0.9987,
+     "tcpconnectscan": 0.9987,
+     "udpflood": -0.1479
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.9750961117867346,
+     "rest": 0.8745238292785581,
+     "head_rows": 30828
+    },
+    "calibration": {
+     "head": 0.6576419103516391,
+     "rest": -0.3191642037720136,
+     "head_rows": 23581
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.07785132110651505,
+    -0.1068331436270098
+   ],
+   "gain_vs_flow_ensemble": [
+    -0.04821266875709174,
+    -0.11109485211271841
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z3_raw_counts": {
+   "features": 91,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.9917729945707,
+     "calibration": 0.5496882494970111
+    },
+    {
+     "rule": "bayes",
+     "val": 0.9907214509878716,
+     "calibration": 0.5471561735667009
+    },
+    {
+     "rule": "balanced",
+     "val": 0.9911704193563134,
+     "calibration": 0.5485105605346988
+    }
+   ],
+   "val_mean": 0.991221621638295,
+   "val_sd": 0.0004308149114619932,
+   "cal_mean": 0.5484516611994703,
+   "cal_sd": 0.001034554325295645,
+   "seed_ensemble": {
+    "rule": "balanced",
+    "val": 0.9920076121020323,
+    "calibration": 0.5485450847369183,
+    "val_per_class": {
+     "Benign": 0.9997,
+     "httpflood": 0.9895,
+     "icmpflood": 0.9954,
+     "slowratedos": 0.9688,
+     "synflood": 1.0,
+     "udpscan": 0.9987
+    },
+    "cal_per_class": {
+     "Benign": -0.0065,
+     "httpflood": 0.0,
+     "icmpflood": 0.984,
+     "slowratedos": 0.9846,
+     "synscan": 0.999,
+     "tcpconnectscan": 0.9992,
+     "udpflood": -0.1205
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.9866944486497357,
+     "rest": 0.9999082263782502,
+     "head_rows": 30828
+    },
+    "calibration": {
+     "head": 0.6615639317353326,
+     "rest": -0.2433340895568838,
+     "head_rows": 23581
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.005686858313595167,
+    -0.10415238296347307
+   ],
+   "gain_vs_flow_ensemble": [
+    0.007215209703197001,
+    -0.1030621804248899
+   ],
+   "passes_rule_seedmean": false
+  }
+ },
+ "rank_correlation_with_segment_reset_z": {
+  "T_segz_cont": {
+   "median_spearman": 0.061995960647883847,
+   "min": -0.15943246858724372
+  },
+  "T_segz_ewma": {
+   "median_spearman": 0.06199727067534286,
+   "min": -0.15934909003179074
+  },
+  "T_segz_static": {
+   "median_spearman": -0.1922066480311261,
+   "min": -0.30987664034941703
+  }
+ }
+}

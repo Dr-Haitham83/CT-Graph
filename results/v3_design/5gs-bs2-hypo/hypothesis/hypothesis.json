@@ -1,0 +1,380 @@
+{
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "train_rows_used": 416312,
+ "val_rows": 22454,
+ "class_prior_train_full": [
+  46900,
+  41089,
+  390,
+  25371,
+  3363,
+  6013,
+  6016,
+  280989,
+  6181
+ ],
+ "feature_means_by_class_val": {
+  "Benign": {
+   "src_flows_60s": 454.4222717285156,
+   "src_new_sp_60s": 1.0733468532562256,
+   "src_new_sp_frac_60s": 0.06605004519224167,
+   "src_new_sd_60s": 1.271108865737915,
+   "src_new_sd_frac_60s": 0.08747182041406631,
+   "dst_flows_60s": 454.3105773925781,
+   "dst_new_dp_60s": 1.3566632270812988,
+   "dst_new_dp_frac_60s": 0.07948306947946548,
+   "dst_new_ds_60s": 1.5225839614868164,
+   "dst_new_ds_frac_60s": 0.0897999033331871
+  },
+  "httpflood": {
+   "src_flows_60s": 3285.500244140625,
+   "src_new_sp_60s": 1.0,
+   "src_new_sp_frac_60s": 0.0014258085284382105,
+   "src_new_sd_60s": 1.0,
+   "src_new_sd_frac_60s": 0.0014258085284382105,
+   "dst_flows_60s": 3285.500244140625,
+   "dst_new_dp_60s": 1.0,
+   "dst_new_dp_frac_60s": 0.0014258085284382105,
+   "dst_new_ds_60s": 1.0,
+   "dst_new_ds_frac_60s": 0.0014258085284382105
+  },
+  "icmpflood": {
+   "src_flows_60s": 39.08860778808594,
+   "src_new_sp_60s": 0.746835470199585,
+   "src_new_sp_frac_60s": 0.05873309448361397,
+   "src_new_sd_60s": 1.3164557218551636,
+   "src_new_sd_frac_60s": 0.06933270394802094,
+   "dst_flows_60s": 37.94936752319336,
+   "dst_new_dp_60s": 0.746835470199585,
+   "dst_new_dp_frac_60s": 0.05902790278196335,
+   "dst_new_ds_60s": 0.746835470199585,
+   "dst_new_ds_frac_60s": 0.05902790278196335
+  },
+  "slowratedos": {
+   "src_flows_60s": 1571.5960693359375,
+   "src_new_sp_60s": 0.7981171607971191,
+   "src_new_sp_frac_60s": 0.003306095488369465,
+   "src_new_sd_60s": 0.8751046061515808,
+   "src_new_sd_frac_60s": 0.003401494584977627,
+   "dst_flows_60s": 1571.51904296875,
+   "dst_new_dp_60s": 0.7981171607971191,
+   "dst_new_dp_frac_60s": 0.003306095488369465,
+   "dst_new_ds_60s": 0.7981171607971191,
+   "dst_new_ds_frac_60s": 0.003306095488369465
+  },
+  "synflood": {
+   "src_flows_60s": 366.63311767578125,
+   "src_new_sp_60s": 0.8410596251487732,
+   "src_new_sp_frac_60s": 0.009313385002315044,
+   "src_new_sd_60s": 1.006622552871704,
+   "src_new_sd_frac_60s": 0.009578715078532696,
+   "dst_flows_60s": 366.3033142089844,
+   "dst_new_dp_60s": 0.8410596251487732,
+   "dst_new_dp_frac_60s": 0.009313414804637432,
+   "dst_new_ds_60s": 0.8410596251487732,
+   "dst_new_ds_frac_60s": 0.009313414804637432
+  },
+  "udpscan": {
+   "src_flows_60s": 220.68182373046875,
+   "src_new_sp_60s": 85.74317932128906,
+   "src_new_sp_frac_60s": 0.4215109348297119,
+   "src_new_sd_60s": 1.0909091234207153,
+   "src_new_sd_frac_60s": 0.015362320467829704,
+   "dst_flows_60s": 220.5,
+   "dst_new_dp_60s": 85.74317932128906,
+   "dst_new_dp_frac_60s": 0.4216693937778473,
+   "dst_new_ds_60s": 1.0,
+   "dst_new_ds_frac_60s": 0.015148015692830086
+  }
+ },
+ "flow": {
+  "validation": {
+   "bayes": {
+    "macro_mcc": 0.8560907281668996,
+    "mcc": 0.9667384328363275,
+    "accuracy": 0.9771532911730649,
+    "per_class_f1": {
+     "Benign": 0.9999,
+     "httpflood": 0.9937,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9913,
+     "synflood": 1.0,
+     "synscan": 0.0,
+     "tcpconnectscan": 0.0,
+     "udpflood": 0.0,
+     "udpscan": 0.0488
+    }
+   },
+   "balanced": {
+    "macro_mcc": 0.9965409649567852,
+    "mcc": 0.9942696539033538,
+    "accuracy": 0.9961254119533268,
+    "per_class_f1": {
+     "Benign": 0.9999,
+     "httpflood": 0.9934,
+     "icmpflood": 1.0,
+     "slowratedos": 0.991,
+     "synflood": 1.0,
+     "synscan": 0.0,
+     "tcpconnectscan": 0.0,
+     "udpflood": 0.0,
+     "udpscan": 1.0
+    }
+   }
+  },
+  "trees": 53,
+  "seconds": 17.381309270858765,
+  "top_gain": [
+   [
+    "sMeanPktSz",
+    1236082.3130307356
+   ],
+   [
+    "SrcWin",
+    949901.1677430328
+   ],
+   [
+    "AckDat",
+    518969.61376292654
+   ],
+   [
+    "DstWin",
+    382952.46120212844
+   ],
+   [
+    "SrcBytes",
+    354963.3556565414
+   ],
+   [
+    "Flgs",
+    207329.1424343288
+   ],
+   [
+    "dTos",
+    70140.26321613789
+   ],
+   [
+    "DstBytes",
+    65203.596519485814
+   ],
+   [
+    "Dir",
+    64212.828738211654
+   ],
+   [
+    "SynAck",
+    62638.93557547196
+   ],
+   [
+    "TcpRtt",
+    58886.384221097105
+   ],
+   [
+    "TotBytes",
+    51692.658311126754
+   ],
+   [
+    "Cause",
+    50523.7014541626
+   ],
+   [
+    "byte_asymmetry",
+    40292.53081470588
+   ],
+   [
+    "Proto",
+    30733.198851158842
+   ],
+   [
+    "Rate",
+    28887.67844006233
+   ],
+   [
+    "State",
+    25851.31150962459
+   ],
+   [
+    "TcpOpt",
+    17329.36197971832
+   ],
+   [
+    "Dur",
+    16363.27914009447
+   ],
+   [
+    "forward_byte_fraction",
+    13191.542017041007
+   ],
+   [
+    "SrcPkts",
+    5609.423339188099
+   ],
+   [
+    "packet_asymmetry",
+    1645.2998751848936
+   ],
+   [
+    "dMeanPktSz",
+    1524.1049590744078
+   ],
+   [
+    "pLoss",
+    510.55481897026766
+   ],
+   [
+    "SrcRate",
+    407.665947297588
+   ]
+  ]
+ },
+ "flow+cardinality": {
+  "validation": {
+   "bayes": {
+    "macro_mcc": 0.9590565552420461,
+    "mcc": 0.927763600206482,
+    "accuracy": 0.9491850004453549,
+    "per_class_f1": {
+     "Benign": 0.9883,
+     "httpflood": 0.9052,
+     "icmpflood": 0.9806,
+     "slowratedos": 0.9352,
+     "synflood": 1.0,
+     "synscan": 0.0,
+     "tcpconnectscan": 0.0,
+     "udpflood": 0.0,
+     "udpscan": 0.9966
+    }
+   },
+   "balanced": {
+    "macro_mcc": 0.9589799319429311,
+    "mcc": 0.9316640128195844,
+    "accuracy": 0.9519462011222944,
+    "per_class_f1": {
+     "Benign": 0.9883,
+     "httpflood": 0.9109,
+     "icmpflood": 0.9937,
+     "slowratedos": 0.9206,
+     "synflood": 1.0,
+     "synscan": 0.0,
+     "tcpconnectscan": 0.0,
+     "udpflood": 0.0,
+     "udpscan": 0.9944
+    }
+   }
+  },
+  "trees": 39,
+  "seconds": 14.354539632797241,
+  "top_gain": [
+   [
+    "dst_flows_10s",
+    1023213.7969445642
+   ],
+   [
+    "SrcWin",
+    733629.2104939185
+   ],
+   [
+    "src_new_sd_600s",
+    565053.8224489652
+   ],
+   [
+    "DstWin",
+    380087.64708840474
+   ],
+   [
+    "AckDat",
+    318375.1549877934
+   ],
+   [
+    "SrcBytes",
+    307054.2892111004
+   ],
+   [
+    "src_flows_10s",
+    296166.5004047081
+   ],
+   [
+    "src_flows_60s",
+    240481.01356624474
+   ],
+   [
+    "dst_new_dp_600s",
+    209660.88503356837
+   ],
+   [
+    "TcpOpt",
+    54152.51532714069
+   ],
+   [
+    "src_new_sp_frac_10s",
+    49396.63690423919
+   ],
+   [
+    "src_new_sp_600s",
+    44776.37808594119
+   ],
+   [
+    "dst_flows_60s",
+    36444.76217011921
+   ],
+   [
+    "sMeanPktSz",
+    35852.53058649879
+   ],
+   [
+    "Flgs",
+    29459.521410763264
+   ],
+   [
+    "Rate",
+    28500.39408561308
+   ],
+   [
+    "src_new_sp_frac_600s",
+    24707.328755775467
+   ],
+   [
+    "SynAck",
+    21999.78767962398
+   ],
+   [
+    "src_flows_600s",
+    11433.47777178511
+   ],
+   [
+    "dst_new_ds_10s",
+    11111.707785129547
+   ],
+   [
+    "TotBytes",
+    9566.909497539513
+   ],
+   [
+    "SrcPkts",
+    8018.719066619873
+   ],
+   [
+    "dst_new_dp_10s",
+    7956.735065720975
+   ],
+   [
+    "forward_byte_fraction",
+    7666.646655619144
+   ],
+   [
+    "Dir",
+    5328.419352114201
+   ]
+  ]
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "prepared": "nids-ton",
+ "merge": "absolute clocks: segments merged on their own times",
+ "protocol": "train/validation/calibration only; test never opened",
+ "eval_rows": {
+  "val": 1000000,
+  "calibration": 1000000
+ },
+ "configs": {
+  "flow [-]": {
+   "rule": "bayes",
+   "val": 0.7732676071583571,
+   "calibration": 0.8062799153334572,
+   "cal_per_class": {
+    "Benign": 0.9087,
+    "backdoor": 0.999,
+    "ddos": 0.9857,
+    "dos": 0.8229,
+    "injection": 0.9522,
+    "mitm": 0.2485,
+    "password": 0.9844,
+    "ransomware": 0.9607,
+    "scanning": 0.2235,
+    "xss": 0.9772
+   },
+   "gain_vs_flow": [
+    0.0,
+    0.0
+   ],
+   "passes_rule": false
+  },
+  "REL [segmented]": {
+   "rule": "balanced",
+   "val": 0.790574285698051,
+   "calibration": 0.7591767904921477,
+   "cal_per_class": {
+    "Benign": 0.902,
+    "backdoor": 0.9988,
+    "ddos": 0.9771,
+    "dos": 0.9975,
+    "injection": 0.9695,
+    "mitm": 0.157,
+    "password": 0.9877,
+    "ransomware": 0.4981,
+    "scanning": 0.111,
+    "xss": 0.9929
+   },
+   "gain_vs_flow": [
+    0.01730667853969392,
+    -0.04710312484130952
+   ],
+   "passes_rule": false
+  },
+  "T_segz [segmented]": {
+   "rule": "bayes",
+   "val": 0.8278967474034727,
+   "calibration": 0.8071508995681038,
+   "cal_per_class": {
+    "Benign": 0.898,
+    "backdoor": 0.9946,
+    "ddos": 0.9855,
+    "dos": 0.9893,
+    "injection": 0.9539,
+    "mitm": 0.103,
+    "password": 0.9597,
+    "ransomware": 0.9543,
+    "scanning": 0.2533,
+    "xss": 0.98
+   },
+   "gain_vs_flow": [
+    0.05462914024511567,
+    0.000870984234646599
+   ],
+   "passes_rule": false
+  },
+  "all [segmented]": {
+   "rule": "balanced",
+   "val": 0.7711023600784741,
+   "calibration": 0.7352200690028119,
+   "cal_per_class": {
+    "Benign": 0.9123,
+    "backdoor": 0.9963,
+    "ddos": 0.9837,
+    "dos": 0.8917,
+    "injection": 0.9549,
+    "mitm": 0.1089,
+    "password": 0.9874,
+    "ransomware": 0.3863,
+    "scanning": 0.1444,
+    "xss": 0.9863
+   },
+   "gain_vs_flow": [
+    -0.0021652470798829704,
+    -0.07105984633064533
+   ],
+   "passes_rule": false
+  },
+  "all_minus_T_segz [segmented]": {
+   "rule": "balanced",
+   "val": 0.7488899252938276,
+   "calibration": 0.7485100268191399,
+   "cal_per_class": {
+    "Benign": 0.9102,
+    "backdoor": 0.9983,
+    "ddos": 0.9828,
+    "dos": 0.993,
+    "injection": 0.9529,
+    "mitm": 0.0978,
+    "password": 0.9881,
+    "ransomware": 0.5235,
+    "scanning": 0.056,
+    "xss": 0.9825
+   },
+   "gain_vs_flow": [
+    -0.024377681864529488,
+    -0.0577698885143173
+   ],
+   "passes_rule": false
+  },
+  "REL [merged]": {
+   "rule": "balanced",
+   "val": 0.7915585075082328,
+   "calibration": 0.7569330477159255,
+   "cal_per_class": {
+    "Benign": 0.9019,
+    "backdoor": 0.999,
+    "ddos": 0.9775,
+    "dos": 0.9968,
+    "injection": 0.9833,
+    "mitm": 0.1401,
+    "password": 0.9893,
+    "ransomware": 0.4998,
+    "scanning": 0.0871,
+    "xss": 0.9946
+   },
+   "gain_vs_flow": [
+    0.018290900349875683,
+    -0.04934686761753171
+   ],
+   "passes_rule": false
+  },
+  "T_segz [merged]": {
+   "rule": "bayes",
+   "val": 0.7179195345815541,
+   "calibration": 0.4390359265028051,
+   "cal_per_class": {
+    "Benign": 0.5672,
+    "backdoor": 0.9991,
+    "ddos": 0.4853,
+    "dos": 0.4352,
+    "injection": 0.0043,
+    "mitm": 0.2645,
+    "password": 0.3916,
+    "ransomware": 0.6624,
+    "scanning": 0.0194,
+    "xss": 0.5615
+   },
+   "gain_vs_flow": [
+    -0.055348072576802965,
+    -0.3672439888306521
+   ],
+   "passes_rule": false
+  },
+  "all [merged]": {
+   "rule": "balanced",
+   "val": 0.7592560792442504,
+   "calibration": 0.7527875138302728,
+   "cal_per_class": {
+    "Benign": 0.9115,
+    "backdoor": 0.9967,
+    "ddos": 0.9832,
+    "dos": 0.995,
+    "injection": 0.9638,
+    "mitm": 0.1123,
+    "password": 0.9883,
+    "ransomware": 0.3936,
+    "scanning": 0.1953,
+    "xss": 0.9881
+   },
+   "gain_vs_flow": [
+    -0.014011527914106647,
+    -0.05349240150318446
+   ],
+   "passes_rule": false
+  },
+  "all_minus_T_segz [merged]": {
+   "rule": "balanced",
+   "val": 0.7490482267640673,
+   "calibration": 0.7481823663168047,
+   "cal_per_class": {
+    "Benign": 0.9097,
+    "backdoor": 0.9986,
+    "ddos": 0.9827,
+    "dos": 0.9941,
+    "injection": 0.9553,
+    "mitm": 0.0776,
+    "password": 0.9871,
+    "ransomware": 0.5536,
+    "scanning": 0.0367,
+    "xss": 0.9865
+   },
+   "gain_vs_flow": [
+    -0.024219380394289725,
+    -0.05809754901665254
+   ],
+   "passes_rule": false
+  },
+  "multiview(REL,T_segz,all) [segmented]": {
+   "rule": "bayes",
+   "val": 0.8081430631719175,
+   "calibration": 0.7637770438154003,
+   "cal_per_class": {
+    "Benign": 0.909,
+    "backdoor": 1.0,
+    "ddos": 0.9877,
+    "dos": 0.9985,
+    "injection": 0.9809,
+    "mitm": 0.0321,
+    "password": 0.978,
+    "ransomware": 0.7596,
+    "scanning": 0.0,
+    "xss": 0.9921
+   },
+   "gain_vs_flow": [
+    0.03487545601356046,
+    -0.04250287151805687
+   ],
+   "passes_rule": false
+  },
+  "multiview_noZ(REL,all-T_segz) [segmented]": {
+   "rule": "balanced",
+   "val": 0.7660880792084617,
+   "calibration": 0.7489878216784323,
+   "cal_per_class": {
+    "Benign": 0.9058,
+    "backdoor": 0.9983,
+    "ddos": 0.9816,
+    "dos": 0.9963,
+    "injection": 0.9431,
+    "mitm": 0.1659,
+    "password": 0.9874,
+    "ransomware": 0.4353,
+    "scanning": 0.0914,
+    "xss": 0.9847
+   },
+   "gain_vs_flow": [
+    -0.0071795279498954034,
+    -0.05729209365502497
+   ],
+   "passes_rule": false
+  },
+  "multiview(REL,T_segz,all) [merged]": {
+   "rule": "bayes",
+   "val": 0.7905441381554252,
+   "calibration": 0.7558913917202876,
+   "cal_per_class": {
+    "Benign": 0.9089,
+    "backdoor": 0.9999,
+    "ddos": 0.9865,
+    "dos": 0.9942,
+    "injection": 0.9879,
+    "mitm": 0.055,
+    "password": 0.983,
+    "ransomware": 0.6489,
+    "scanning": 0.0,
+    "xss": 0.9946
+   },
+   "gain_vs_flow": [
+    0.017276530997068162,
+    -0.05038852361316959
+   ],
+   "passes_rule": false
+  },
+  "multiview_noZ(REL,all-T_segz) [merged]": {
+   "rule": "balanced",
+   "val": 0.7709733521963882,
+   "calibration": 0.7416016283137592,
+   "cal_per_class": {
+    "Benign": 0.905,
+    "backdoor": 0.9986,
+    "ddos": 0.9818,
+    "dos": 0.9948,
+    "injection": 0.9523,
+    "mitm": 0.1228,
+    "password": 0.9885,
+    "ransomware": 0.4289,
+    "scanning": 0.0552,
+    "xss": 0.9881
+   },
+   "gain_vs_flow": [
+    -0.002294254961968889,
+    -0.06467828701969802
+   ],
+   "passes_rule": false
+  }
+ }
+}

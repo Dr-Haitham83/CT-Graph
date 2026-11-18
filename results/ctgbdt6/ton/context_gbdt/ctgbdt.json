@@ -1,0 +1,94 @@
+{
+ "model": "CT-GBDT v6 (flow / flow + relational / flow + lab temporal; double held-out maximin rule)",
+ "lab_parts": [
+  "flow",
+  "T_segz"
+ ],
+ "candidates": {
+  "flow": [
+   "flow"
+  ],
+  "flow+relational": [
+   "flow",
+   "REL"
+  ],
+  "flow+lab_temporal": [
+   "flow",
+   "T_segz"
+  ]
+ },
+ "classes": [
+  "Benign",
+  "backdoor",
+  "ddos",
+  "dos",
+  "injection",
+  "mitm",
+  "password",
+  "ransomware",
+  "scanning",
+  "xss"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.7937380500712079,
+    "balanced": 0.7209126661903149
+   },
+   "calibration": {
+    "bayes": 0.8130507503424896,
+    "balanced": 0.772496519224147
+   },
+   "rule_on_val": "bayes",
+   "features": 62
+  },
+  "flow+relational": {
+   "validation": {
+    "bayes": 0.8063044026861315,
+    "balanced": 0.8204323912235566
+   },
+   "calibration": {
+    "bayes": 0.7756731575768097,
+    "balanced": 0.784007586330391
+   },
+   "rule_on_val": "balanced",
+   "features": 121,
+   "gain_validation": 0.0266943411523487,
+   "gain_calibration": -0.02904316401209861
+  },
+  "flow+lab_temporal": {
+   "validation": {
+    "bayes": 0.8023145749334011,
+    "balanced": 0.8163937850333255
+   },
+   "calibration": {
+    "bayes": 0.802271057658596,
+    "balanced": 0.8395855162079083
+   },
+   "rule_on_val": "balanced",
+   "features": 77,
+   "gain_validation": 0.02265573496211759,
+   "gain_calibration": 0.026534765865418697
+  }
+ },
+ "chosen_feature_set": "flow+lab_temporal",
+ "rule": "maximin of (gain_val, gain_cal) over candidates with both >= 0.002 vs flow",
+ "seed42": {
+  "validation_macro_mcc": {
+   "bayes": 0.8023145749334011,
+   "balanced": 0.8163937850333255
+  }
+ },
+ "seed43": {
+  "validation_macro_mcc": {
+   "bayes": 0.8243332879568246,
+   "balanced": 0.8088682986366387
+  }
+ },
+ "seed44": {
+  "validation_macro_mcc": {
+   "bayes": 0.7990864044931355,
+   "balanced": 0.7768882396677875
+  }
+ }
+}

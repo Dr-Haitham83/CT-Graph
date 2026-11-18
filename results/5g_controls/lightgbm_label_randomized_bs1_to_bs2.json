@@ -1,0 +1,268 @@
+{
+ "protocol": "site",
+ "block_s": 120.0,
+ "sizes": {
+  "train": 352533,
+  "val": 57984,
+  "calibration": 303660,
+  "test": 487560
+ },
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "features_used": 53,
+ "test_novel_fraction": 0.5461666256460743,
+ "protocol_note": "fit on train; early stopping and decision rule on validation; threshold on calibration; test once",
+ "LightGBM": {
+  "macro_mcc": 0.0,
+  "macro_f1": 0.08134559199260423,
+  "accuracy": 0.5774243170071376,
+  "mcc": 0.0,
+  "weighted_f1": 0.42273830608083707,
+  "balanced_accuracy": 0.1111111111111111,
+  "detection_rate": 1.0,
+  "false_alarm_rate": 1.0,
+  "per_class": {
+   "Benign": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 70764
+   },
+   "httpflood": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 64691
+   },
+   "icmpflood": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 542
+   },
+   "slowratedos": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 37032
+   },
+   "synflood": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 4929
+   },
+   "synscan": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 10024
+   },
+   "tcpconnectscan": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 10030
+   },
+   "udpflood": {
+    "precision": 0.5774243170071376,
+    "recall": 1.0,
+    "f1": 0.7321103279334381,
+    "mcc": 0.0,
+    "support": 281529
+   },
+   "udpscan": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "mcc": 0.0,
+    "support": 8019
+   }
+  },
+  "binary_roc_auc": 0.33037465611576317,
+  "binary_pr_auc": 0.8299779040397928,
+  "decision_rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.0,
+   "balanced": -0.012805565460930273
+  },
+  "ci95_segment_bootstrap": {
+   "macro_mcc": [
+    0.0,
+    0.0
+   ],
+   "macro_f1": [
+    0.0,
+    0.1764034902669077
+   ],
+   "accuracy": [
+    0.0,
+    0.8833693677983546
+   ],
+   "mcc": [
+    0.0,
+    0.0
+   ]
+  },
+  "test_segments": 10,
+  "operating_point": {
+   "alpha": 0.001,
+   "threshold": 0.771077948034974,
+   "fpr": 0.013128144254140524,
+   "tpr": 0.009680995019146058
+  },
+  "alternative_rule": {
+   "macro_mcc": -0.008186722841306664,
+   "macro_f1": 0.03919104176480868,
+   "accuracy": 0.02377963737796374,
+   "mcc": -0.007204110253445073
+  },
+  "novel_feature_vector_subset": {
+   "macro_mcc": 0.0,
+   "macro_f1": 0.07655305041275093,
+   "accuracy": 0.5255267772983487,
+   "mcc": 0.0,
+   "weighted_f1": 0.3620761008819392,
+   "balanced_accuracy": 0.1111111111111111,
+   "detection_rate": 1.0,
+   "false_alarm_rate": 1.0,
+   "rows": 266289
+  },
+  "confusion_matrix": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    70764,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    64691,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    542,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    37032,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4929,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    10024,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    10030,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    281529,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    8019,
+    0
+   ]
+  ],
+  "trees_per_class": 1,
+  "fit_seconds": 17.667847394943237,
+  "test_inference_seconds": 0.177032470703125,
+  "train_rows": 352533,
+  "params": {
+   "objective": "multiclass",
+   "num_class": 9,
+   "learning_rate": 0.1,
+   "num_leaves": 127,
+   "min_data_in_leaf": 200,
+   "feature_fraction": 0.9,
+   "bagging_fraction": 0.8,
+   "bagging_freq": 1,
+   "lambda_l2": 1.0,
+   "num_threads": 4,
+   "verbose": -1,
+   "seed": 42,
+   "max_bin": 255
+  }
+ }
+}

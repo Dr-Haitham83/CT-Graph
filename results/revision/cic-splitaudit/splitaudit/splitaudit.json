@@ -1,0 +1,239 @@
+{
+ "prepared": "nids-cic",
+ "records": 16100571,
+ "attack_records": 1833253,
+ "share_same_split": 0.5808991494773694,
+ "share_same_split_attack": 0.6830459298307435,
+ "share_same_split_benign": 0.5677739852717939,
+ "test_records_also_test_under_global": 0.40371860154266503,
+ "test_families": 13,
+ "test_families_without_training_under_global": [
+  "bot",
+  "infilteration"
+ ],
+ "test_families_absent_from_test_under_global": [
+  "brute_force_-web",
+  "brute_force_-xss",
+  "ddos_attack-hoic",
+  "ddos_attack-loic-udp",
+  "ddos_attacks-loic-http",
+  "dos_attacks-hulk",
+  "dos_attacks-slowhttptest",
+  "dos_attacks-slowloris",
+  "ftp-bruteforce",
+  "sql_injection",
+  "ssh-bruteforce"
+ ],
+ "families": {
+  "bot": {
+   "records": 168406,
+   "campaign_forward": {
+    "train": 123879,
+    "validation": 0,
+    "calibration": 15952,
+    "test": 28575
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 0,
+    "calibration": 0,
+    "test": 168406
+   }
+  },
+  "brute_force_-web": {
+   "records": 1414,
+   "campaign_forward": {
+    "train": 1042,
+    "validation": 0,
+    "calibration": 93,
+    "test": 279
+   },
+   "global_cut": {
+    "train": 1414,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "brute_force_-xss": {
+   "records": 395,
+   "campaign_forward": {
+    "train": 286,
+    "validation": 0,
+    "calibration": 35,
+    "test": 74
+   },
+   "global_cut": {
+    "train": 395,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "ddos_attack-hoic": {
+   "records": 710420,
+   "campaign_forward": {
+    "train": 567749,
+    "validation": 0,
+    "calibration": 30913,
+    "test": 111758
+   },
+   "global_cut": {
+    "train": 710420,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "ddos_attack-loic-udp": {
+   "records": 1964,
+   "campaign_forward": {
+    "train": 1518,
+    "validation": 0,
+    "calibration": 0,
+    "test": 446
+   },
+   "global_cut": {
+    "train": 1964,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "ddos_attacks-loic-http": {
+   "records": 199518,
+   "campaign_forward": {
+    "train": 156177,
+    "validation": 0,
+    "calibration": 7059,
+    "test": 36282
+   },
+   "global_cut": {
+    "train": 199518,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "dos_attacks-goldeneye": {
+   "records": 30856,
+   "campaign_forward": {
+    "train": 30856,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   },
+   "global_cut": {
+    "train": 30856,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "dos_attacks-hulk": {
+   "records": 40966,
+   "campaign_forward": {
+    "train": 31989,
+    "validation": 0,
+    "calibration": 0,
+    "test": 8977
+   },
+   "global_cut": {
+    "train": 40966,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "dos_attacks-slowhttptest": {
+   "records": 71300,
+   "campaign_forward": {
+    "train": 57490,
+    "validation": 0,
+    "calibration": 3910,
+    "test": 9900
+   },
+   "global_cut": {
+    "train": 71300,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "dos_attacks-slowloris": {
+   "records": 22382,
+   "campaign_forward": {
+    "train": 19574,
+    "validation": 0,
+    "calibration": 1394,
+    "test": 1414
+   },
+   "global_cut": {
+    "train": 22382,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "ftp-bruteforce": {
+   "records": 294820,
+   "campaign_forward": {
+    "train": 221680,
+    "validation": 0,
+    "calibration": 19780,
+    "test": 53360
+   },
+   "global_cut": {
+    "train": 294820,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "infilteration": {
+   "records": 150732,
+   "campaign_forward": {
+    "train": 107016,
+    "validation": 0,
+    "calibration": 15237,
+    "test": 28479
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 39584,
+    "calibration": 51152,
+    "test": 59996
+   }
+  },
+  "sql_injection": {
+   "records": 336,
+   "campaign_forward": {
+    "train": 233,
+    "validation": 0,
+    "calibration": 47,
+    "test": 56
+   },
+   "global_cut": {
+    "train": 336,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "ssh-bruteforce": {
+   "records": 139744,
+   "campaign_forward": {
+    "train": 106548,
+    "validation": 0,
+    "calibration": 10308,
+    "test": 22888
+   },
+   "global_cut": {
+    "train": 139744,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  }
+ }
+}

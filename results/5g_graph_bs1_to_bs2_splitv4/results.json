@@ -1,0 +1,1207 @@
+{
+  "test": {
+    "macro_mcc": 0.9981782091764217,
+    "mcc": 0.9985175279864508,
+    "accuracy": 0.9990790877020265,
+    "macro_f1": 0.9982917951769193,
+    "weighted_f1": 0.9990791081494312,
+    "balanced_accuracy": 0.9981630817882032,
+    "detection_rate": 0.9999664104262037,
+    "false_alarm_rate": 0.0017240404725566672,
+    "binary_pr_auc_binned": 1.0,
+    "binary_roc_auc_binned": 0.9999994039535522,
+    "ece": 0.0030294887096836485,
+    "confusion_matrix": [
+      [
+        70642,
+        103,
+        0,
+        5,
+        2,
+        1,
+        4,
+        7,
+        0
+      ],
+      [
+        5,
+        64686,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        541,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        268,
+        0,
+        36761,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        4928,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        3,
+        10011,
+        0,
+        0,
+        8
+      ],
+      [
+        1,
+        3,
+        0,
+        0,
+        2,
+        2,
+        10018,
+        0,
+        4
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        281528,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        21,
+        2,
+        0,
+        0,
+        7996
+      ]
+    ],
+    "decision_rules": {
+      "balanced": {
+        "macro_mcc": 0.9785267792681677,
+        "mcc": 0.9974090477469217,
+        "accuracy": 0.9983899417507589,
+        "macro_f1": 0.9772183743619299,
+        "weighted_f1": 0.9984342881454374,
+        "balanced_accuracy": 0.9978945298223378,
+        "detection_rate": 0.9999760074472883,
+        "false_alarm_rate": 0.004437284494940931
+      },
+      "bayes": {
+        "macro_mcc": 0.9981782091764217,
+        "mcc": 0.9985175279864508,
+        "accuracy": 0.9990790877020265,
+        "macro_f1": 0.9982917951769193,
+        "weighted_f1": 0.9990791081494312,
+        "balanced_accuracy": 0.9981630817882032,
+        "detection_rate": 0.9999664104262037,
+        "false_alarm_rate": 0.0017240404725566672
+      }
+    },
+    "per_class": [
+      {
+        "precision": 0.999801856884058,
+        "recall": 0.9982759595274433,
+        "f1": 0.9990383255550841,
+        "support": 70764,
+        "pr_auc_binned": 0.9999964237213135
+      },
+      {
+        "precision": 0.9942514601905933,
+        "recall": 0.9999227094959113,
+        "f1": 0.9970790205855832,
+        "support": 64691,
+        "pr_auc_binned": 0.9999986886978149
+      },
+      {
+        "precision": 1.0,
+        "recall": 0.9981549815498155,
+        "f1": 0.9990766389658357,
+        "support": 542,
+        "pr_auc_binned": 0.9998300075531006
+      },
+      {
+        "precision": 0.9998640047870315,
+        "recall": 0.9926820047526463,
+        "f1": 0.9962600612482723,
+        "support": 37032,
+        "pr_auc_binned": 0.9999858140945435
+      },
+      {
+        "precision": 0.9943502824858758,
+        "recall": 0.9997971190910935,
+        "f1": 0.9970662620131513,
+        "support": 4929,
+        "pr_auc_binned": 0.9999338388442993
+      },
+      {
+        "precision": 0.9995007987220448,
+        "recall": 0.9987031125299282,
+        "f1": 0.9991017964071857,
+        "support": 10024,
+        "pr_auc_binned": 0.999901294708252
+      },
+      {
+        "precision": 0.9996008780682498,
+        "recall": 0.9988035892323031,
+        "f1": 0.9992020746060243,
+        "support": 10030,
+        "pr_auc_binned": 0.9998955726623535
+      },
+      {
+        "precision": 0.9999751363063207,
+        "recall": 0.9999964479680601,
+        "f1": 0.999985792023642,
+        "support": 281529,
+        "pr_auc_binned": 1.0
+      },
+      {
+        "precision": 0.9985014985014985,
+        "recall": 0.9971318119466268,
+        "f1": 0.9978161851874962,
+        "support": 8019,
+        "pr_auc_binned": 0.9999388456344604
+      }
+    ],
+    "known_class_records": 487560,
+    "unknown_class_records": 0,
+    "unlabelled_records": 0,
+    "ranking_metric_threshold_bins": 4096,
+    "decisions": "prior-restored posterior argmax",
+    "decision_rule": "bayes",
+    "operating_point": {
+      "threshold": 0.9998098611831665,
+      "tn": 70764,
+      "fp": 0,
+      "fn": 369053,
+      "tp": 47743,
+      "fpr": 0.0,
+      "tpr": 0.11454764441117476,
+      "fpr_clopper_pearson_95": [
+        0.0,
+        5.212796487494219e-05
+      ]
+    },
+    "loss": 0.003000244265422225,
+    "elapsed_s": 149.92774535599983,
+    "state": {
+      "flow_capacity": 32768,
+      "endpoint_capacity": 32768,
+      "retained_flows": 32768,
+      "retained_endpoints": 41,
+      "flow_state_evictions": 253428,
+      "endpoint_state_evictions": 0,
+      "pending_aggregate_evictions": 0,
+      "current_stream": "3965bc6d15dc5d56c2e578b0/capture-000014",
+      "time_basis": "capture_relative",
+      "capture_resets": 0,
+      "state_bytes": 70357560,
+      "max_indegree": 24,
+      "state_ttl_s": 604800.0
+    },
+    "cuda_peak_allocated_bytes": 166455296,
+    "microbatch_latency_s": {
+      "50": 0.05579914200006897,
+      "95": 0.06428646950007533,
+      "99": 0.07142718425008074
+    },
+    "timed_batches_retained": 2236,
+    "latency_scope": "graph + model + output, with prefetched transfer; input wait and explanations reported separately",
+    "input_wait_s": 19.43886874699433,
+    "loader_workers_per_rank": 2,
+    "prefetch_factor": 2,
+    "precision_policy": {
+      "precision": "fp16",
+      "tf32_requested": "off",
+      "tf32_enabled": false,
+      "input_projection_precision": "fp32",
+      "matmul_precision": "highest",
+      "cuda_capability": [
+        7,
+        5
+      ],
+      "device_name": "Tesla T4"
+    },
+    "rank_sharded_streams": true,
+    "batches_on_rank": 2236,
+    "planned_batches_on_rank": 2236,
+    "explained_alerts_on_rank": 12
+  },
+  "calibration": {
+    "alpha": 0.001,
+    "n_benign": 98287,
+    "order_statistic": 98190,
+    "threshold": 0.9998098611831665,
+    "status": "calibrated",
+    "sampling": "score-independent bounded real-record reservoir",
+    "assumption": "exchangeability of benign calibration and deployment scores; drift can invalidate coverage",
+    "total_calibration_rows": 307664
+  },
+  "temperature": 1.523549124089413,
+  "checkpoint_sha256": "01aa935e3c94bc2f6ea2b7022f602cec89b208131061d9215323d467864189b4",
+  "manifest_sha256": "b36b0ea08f6d84897f3c6e26b09cf72cbd3968dc700358a29ea5170bea52c82b",
+  "classes": [
+    "Benign",
+    "httpflood",
+    "icmpflood",
+    "slowratedos",
+    "synflood",
+    "synscan",
+    "tcpconnectscan",
+    "udpflood",
+    "udpscan"
+  ],
+  "real_data_only": true,
+  "precision_track": "fp16",
+  "decision_rule": "bayes",
+  "decision_rule_selected_on": "validation Macro-MCC",
+  "validation_decision_rules": {
+    "balanced": 0.9331587807183251,
+    "bayes": 0.9783509683515357
+  },
+  "best_epoch": 12,
+  "weights": "exponential moving average",
+  "split_class_counts": {
+    "train": {
+      "Benign": 91781,
+      "synscan": 8015,
+      "tcpconnectscan": 8017,
+      "udpscan": 3663,
+      "icmpflood": 301,
+      "udpflood": 175257,
+      "synflood": 4073,
+      "httpflood": 74649,
+      "slowratedos": 19150
+    },
+    "embargo_or_unusable_group": {
+      "Benign": 2377,
+      "udpscan": 140,
+      "icmpflood": 22,
+      "udpflood": 15,
+      "synflood": 150,
+      "httpflood": 1355,
+      "slowratedos": 957
+    },
+    "calibration": {
+      "Benign": 302385,
+      "synscan": 2004,
+      "tcpconnectscan": 2005,
+      "icmpflood": 1,
+      "udpflood": 539,
+      "synflood": 569,
+      "httpflood": 117,
+      "slowratedos": 44
+    },
+    "val": {
+      "Benign": 10216,
+      "udpscan": 4084,
+      "icmpflood": 289,
+      "slowratedos": 15941
+    },
+    "test": {
+      "Benign": 70764,
+      "synscan": 10024,
+      "tcpconnectscan": 10030,
+      "udpscan": 8019,
+      "icmpflood": 542,
+      "udpflood": 281529,
+      "synflood": 4929,
+      "httpflood": 64691,
+      "slowratedos": 37032
+    }
+  },
+  "precision_policy": {
+    "precision": "fp16",
+    "tf32_requested": "off",
+    "tf32_enabled": false,
+    "input_projection_precision": "fp32",
+    "matmul_precision": "highest",
+    "cuda_capability": [
+      7,
+      5
+    ],
+    "device_name": "Tesla T4"
+  },
+  "input": {
+    "requested_path": "/tmp/fiveg/5G-NIDD/BTS1_BTS2_fields_preserved.zip",
+    "selected_path": "/tmp/fiveg/5G-NIDD/BTS1_BTS2_fields_preserved.zip",
+    "dataset": "5G-NIDD",
+    "input_scope": "full_or_user_supplied",
+    "input_variant": "auto",
+    "metadata": {
+      "capture_layout": {
+        "path": "/tmp/fiveg/dataset_analysis.json",
+        "sha256": "e9fcf97943fabc46f7c9a2263f7cdfb33aef0f2619d97f8bc3a3384e3361ca23",
+        "validation": "row counts and Rank boundaries checked during ingestion"
+      }
+    },
+    "capture_layout": [
+      {
+        "rows": 11450,
+        "site": "BS1"
+      },
+      {
+        "rows": 11645,
+        "site": "BS1"
+      },
+      {
+        "rows": 10043,
+        "site": "BS1"
+      },
+      {
+        "rows": 18279,
+        "site": "BS1"
+      },
+      {
+        "rows": 467717,
+        "site": "BS1"
+      },
+      {
+        "rows": 44636,
+        "site": "BS1"
+      },
+      {
+        "rows": 93803,
+        "site": "BS1"
+      },
+      {
+        "rows": 31015,
+        "site": "BS1"
+      },
+      {
+        "rows": 38120,
+        "site": "BS1"
+      },
+      {
+        "rows": 1608,
+        "site": "BS1"
+      },
+      {
+        "rows": 11526,
+        "site": "BS2"
+      },
+      {
+        "rows": 11653,
+        "site": "BS2"
+      },
+      {
+        "rows": 10305,
+        "site": "BS2"
+      },
+      {
+        "rows": 14452,
+        "site": "BS2"
+      },
+      {
+        "rows": 286197,
+        "site": "BS2"
+      },
+      {
+        "rows": 14108,
+        "site": "BS2"
+      },
+      {
+        "rows": 93650,
+        "site": "BS2"
+      },
+      {
+        "rows": 12656,
+        "site": "BS2"
+      },
+      {
+        "rows": 31669,
+        "site": "BS2"
+      },
+      {
+        "rows": 1358,
+        "site": "BS2"
+      }
+    ],
+    "expected_input_rows": 1215890,
+    "argus_status_interval_s": 5.0
+  },
+  "split_plan": {
+    "scope": "site",
+    "global_forward": false,
+    "per_family_forward": true,
+    "cut_method": "campaign-forward purged blocks from per-block label counts; no features or model scores",
+    "embargo_s": 5.1,
+    "time_basis": "capture_relative",
+    "streams": 10,
+    "origin_s": null,
+    "block_s": 300.0,
+    "selection_rule": "no candidate met the coverage/purge floor; maximised the minimum class coverage ratio",
+    "fractions": [
+      0.7058823529411765,
+      0.17647058823529413,
+      0.11764705882352942
+    ],
+    "candidates": [
+      {
+        "block_s": 10.0,
+        "blocks": 1569,
+        "segments": 60,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.17316471551236345,
+        "estimated_rows": {
+          "train": {
+            "Benign": 83494,
+            "httpflood": 51168,
+            "icmpflood": 431,
+            "slowratedos": 24907,
+            "synflood": 3276,
+            "synscan": 6011,
+            "tcpconnectscan": 6012,
+            "udpflood": 80126,
+            "udpscan": 5227
+          },
+          "val": {
+            "Benign": 17687,
+            "httpflood": 7523,
+            "icmpflood": 88,
+            "slowratedos": 5263,
+            "synflood": 738,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 682
+          },
+          "calibration": {
+            "Benign": 295958,
+            "httpflood": 7715,
+            "icmpflood": 68,
+            "slowratedos": 3995,
+            "synflood": 439,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 584,
+            "udpscan": 640
+          }
+        }
+      },
+      {
+        "block_s": 15.0,
+        "blocks": 1056,
+        "segments": 55,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.17061292431425756,
+        "estimated_rows": {
+          "train": {
+            "Benign": 83875,
+            "httpflood": 51168,
+            "icmpflood": 421,
+            "slowratedos": 25103,
+            "synflood": 3325,
+            "synscan": 8015,
+            "tcpconnectscan": 6012,
+            "udpflood": 80126,
+            "udpscan": 5437
+          },
+          "val": {
+            "Benign": 16102,
+            "httpflood": 9075,
+            "icmpflood": 108,
+            "slowratedos": 5017,
+            "synflood": 588,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 682
+          },
+          "calibration": {
+            "Benign": 295970,
+            "httpflood": 6683,
+            "icmpflood": 60,
+            "slowratedos": 4211,
+            "synflood": 560,
+            "synscan": 4,
+            "tcpconnectscan": 119,
+            "udpflood": 589,
+            "udpscan": 640
+          }
+        }
+      },
+      {
+        "block_s": 20.0,
+        "blocks": 795,
+        "segments": 52,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.16666712446917797,
+        "estimated_rows": {
+          "train": {
+            "Benign": 83722,
+            "httpflood": 48691,
+            "icmpflood": 421,
+            "slowratedos": 24907,
+            "synflood": 3276,
+            "synscan": 8015,
+            "tcpconnectscan": 8017,
+            "udpflood": 80126,
+            "udpscan": 5227
+          },
+          "val": {
+            "Benign": 16969,
+            "httpflood": 13713,
+            "icmpflood": 108,
+            "slowratedos": 5708,
+            "synflood": 638,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 1212
+          },
+          "calibration": {
+            "Benign": 295544,
+            "httpflood": 5262,
+            "icmpflood": 60,
+            "slowratedos": 3494,
+            "synflood": 560,
+            "synscan": 4,
+            "tcpconnectscan": 0,
+            "udpflood": 589,
+            "udpscan": 500
+          }
+        }
+      },
+      {
+        "block_s": 30.0,
+        "blocks": 531,
+        "segments": 52,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.16979162660894698,
+        "estimated_rows": {
+          "train": {
+            "Benign": 84076,
+            "httpflood": 51168,
+            "icmpflood": 421,
+            "slowratedos": 24532,
+            "synflood": 3177,
+            "synscan": 8015,
+            "tcpconnectscan": 6012,
+            "udpflood": 80126,
+            "udpscan": 5885
+          },
+          "val": {
+            "Benign": 15230,
+            "httpflood": 4451,
+            "icmpflood": 108,
+            "slowratedos": 5528,
+            "synflood": 737,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 682
+          },
+          "calibration": {
+            "Benign": 296091,
+            "httpflood": 11439,
+            "icmpflood": 60,
+            "slowratedos": 4211,
+            "synflood": 560,
+            "synscan": 4,
+            "tcpconnectscan": 526,
+            "udpflood": 589,
+            "udpscan": 860
+          }
+        }
+      },
+      {
+        "block_s": 45.0,
+        "blocks": 355,
+        "segments": 53,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.16433645188404045,
+        "estimated_rows": {
+          "train": {
+            "Benign": 81665,
+            "httpflood": 47502,
+            "icmpflood": 421,
+            "slowratedos": 25830,
+            "synflood": 3177,
+            "synscan": 8015,
+            "tcpconnectscan": 6012,
+            "udpflood": 80126,
+            "udpscan": 5437
+          },
+          "val": {
+            "Benign": 20801,
+            "httpflood": 8560,
+            "icmpflood": 122,
+            "slowratedos": 4522,
+            "synflood": 737,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 164
+          },
+          "calibration": {
+            "Benign": 295060,
+            "httpflood": 11439,
+            "icmpflood": 45,
+            "slowratedos": 3966,
+            "synflood": 560,
+            "synscan": 2004,
+            "tcpconnectscan": 526,
+            "udpflood": 589,
+            "udpscan": 1180
+          }
+        }
+      },
+      {
+        "block_s": 60.0,
+        "blocks": 267,
+        "segments": 44,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.16296853798021194,
+        "estimated_rows": {
+          "train": {
+            "Benign": 82335,
+            "httpflood": 41714,
+            "icmpflood": 421,
+            "slowratedos": 25678,
+            "synflood": 3475,
+            "synscan": 8015,
+            "tcpconnectscan": 8017,
+            "udpflood": 80126,
+            "udpscan": 5885
+          },
+          "val": {
+            "Benign": 19538,
+            "httpflood": 12134,
+            "icmpflood": 108,
+            "slowratedos": 6285,
+            "synflood": 439,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 1782
+          },
+          "calibration": {
+            "Benign": 296486,
+            "httpflood": 11439,
+            "icmpflood": 60,
+            "slowratedos": 2361,
+            "synflood": 560,
+            "synscan": 4,
+            "tcpconnectscan": 2005,
+            "udpflood": 589,
+            "udpscan": 0
+          }
+        }
+      },
+      {
+        "block_s": 90.0,
+        "blocks": 181,
+        "segments": 44,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.15509891281059607,
+        "estimated_rows": {
+          "train": {
+            "Benign": 82545,
+            "httpflood": 59888,
+            "icmpflood": 421,
+            "slowratedos": 26346,
+            "synflood": 3177,
+            "synscan": 8015,
+            "tcpconnectscan": 6012,
+            "udpflood": 80126,
+            "udpscan": 5885
+          },
+          "val": {
+            "Benign": 23075,
+            "httpflood": 0,
+            "icmpflood": 78,
+            "slowratedos": 3516,
+            "synflood": 737,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 1782
+          },
+          "calibration": {
+            "Benign": 293775,
+            "httpflood": 11439,
+            "icmpflood": 90,
+            "slowratedos": 4600,
+            "synflood": 560,
+            "synscan": 2004,
+            "tcpconnectscan": 526,
+            "udpflood": 589,
+            "udpscan": 0
+          }
+        }
+      },
+      {
+        "block_s": 120.0,
+        "blocks": 135,
+        "segments": 40,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.02025776112597444,
+        "estimated_rows": {
+          "train": {
+            "Benign": 83229,
+            "httpflood": 41714,
+            "icmpflood": 421,
+            "slowratedos": 26346,
+            "synflood": 3475,
+            "synscan": 8015,
+            "tcpconnectscan": 8017,
+            "udpflood": 175257,
+            "udpscan": 5885
+          },
+          "val": {
+            "Benign": 22791,
+            "httpflood": 26895,
+            "icmpflood": 108,
+            "slowratedos": 4937,
+            "synflood": 1037,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 1938
+          },
+          "calibration": {
+            "Benign": 295437,
+            "httpflood": 80,
+            "icmpflood": 60,
+            "slowratedos": 3176,
+            "synflood": 0,
+            "synscan": 2004,
+            "tcpconnectscan": 2005,
+            "udpflood": 539,
+            "udpscan": 0
+          }
+        }
+      },
+      {
+        "block_s": 180.0,
+        "blocks": 92,
+        "segments": 37,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.1448065967510671,
+        "estimated_rows": {
+          "train": {
+            "Benign": 88394,
+            "httpflood": 59888,
+            "icmpflood": 421,
+            "slowratedos": 26346,
+            "synflood": 4073,
+            "synscan": 8015,
+            "tcpconnectscan": 8017,
+            "udpflood": 80126,
+            "udpscan": 3883
+          },
+          "val": {
+            "Benign": 17264,
+            "httpflood": 0,
+            "icmpflood": 168,
+            "slowratedos": 7534,
+            "synflood": 0,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 3611
+          },
+          "calibration": {
+            "Benign": 297102,
+            "httpflood": 11439,
+            "icmpflood": 0,
+            "slowratedos": 1241,
+            "synflood": 560,
+            "synscan": 2004,
+            "tcpconnectscan": 2005,
+            "udpflood": 589,
+            "udpscan": 0
+          }
+        }
+      },
+      {
+        "block_s": 300.0,
+        "blocks": 56,
+        "segments": 32,
+        "min_share_over_target": 0.0,
+        "estimated_purged_fraction": 0.007467216762164219,
+        "estimated_rows": {
+          "train": {
+            "Benign": 91757,
+            "httpflood": 74649,
+            "icmpflood": 301,
+            "slowratedos": 19150,
+            "synflood": 4073,
+            "synscan": 8015,
+            "tcpconnectscan": 8017,
+            "udpflood": 175257,
+            "udpscan": 3663
+          },
+          "val": {
+            "Benign": 9971,
+            "httpflood": 0,
+            "icmpflood": 288,
+            "slowratedos": 15893,
+            "synflood": 0,
+            "synscan": 0,
+            "tcpconnectscan": 0,
+            "udpflood": 0,
+            "udpscan": 4074
+          },
+          "calibration": {
+            "Benign": 302344,
+            "httpflood": 80,
+            "icmpflood": 0,
+            "slowratedos": 39,
+            "synflood": 560,
+            "synscan": 2004,
+            "tcpconnectscan": 2005,
+            "udpflood": 539,
+            "udpscan": 0
+          }
+        }
+      }
+    ],
+    "segments": [
+      {
+        "segment": 0,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000000",
+        "split": "train",
+        "start_s": 0.0,
+        "end_s": 300.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 294.9
+      },
+      {
+        "segment": 1,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000000",
+        "split": "calibration",
+        "start_s": 300.0,
+        "end_s": 600.0,
+        "kept_lower_s": 305.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 2,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000001",
+        "split": "train",
+        "start_s": 0.0,
+        "end_s": 300.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 294.9
+      },
+      {
+        "segment": 3,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000001",
+        "split": "calibration",
+        "start_s": 300.0,
+        "end_s": 600.0,
+        "kept_lower_s": 305.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 4,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000002",
+        "split": "train",
+        "start_s": -1.0,
+        "end_s": 299.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 293.9
+      },
+      {
+        "segment": 5,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000002",
+        "split": "val",
+        "start_s": 299.0,
+        "end_s": 599.0,
+        "kept_lower_s": 304.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 6,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000003",
+        "split": "train",
+        "start_s": -4.0,
+        "end_s": 596.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 590.9
+      },
+      {
+        "segment": 7,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000003",
+        "split": "val",
+        "start_s": 596.0,
+        "end_s": 896.0,
+        "kept_lower_s": 601.1,
+        "kept_upper_s": 890.9
+      },
+      {
+        "segment": 8,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000003",
+        "split": "calibration",
+        "start_s": 896.0,
+        "end_s": 1196.0,
+        "kept_lower_s": 901.1,
+        "kept_upper_s": 1190.9
+      },
+      {
+        "segment": 9,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000003",
+        "split": "train",
+        "start_s": 1196.0,
+        "end_s": 1796.0,
+        "kept_lower_s": 1201.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 10,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000004",
+        "split": "train",
+        "start_s": 0.0,
+        "end_s": 600.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 594.9
+      },
+      {
+        "segment": 11,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000004",
+        "split": "calibration",
+        "start_s": 600.0,
+        "end_s": 1200.0,
+        "kept_lower_s": 605.1,
+        "kept_upper_s": 1194.9
+      },
+      {
+        "segment": 12,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000004",
+        "split": "train",
+        "start_s": 1200.0,
+        "end_s": 1500.0,
+        "kept_lower_s": 1205.1,
+        "kept_upper_s": 1494.9
+      },
+      {
+        "segment": 13,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000004",
+        "split": "val",
+        "start_s": 1500.0,
+        "end_s": 1800.0,
+        "kept_lower_s": 1505.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 14,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000005",
+        "split": "train",
+        "start_s": 0.0,
+        "end_s": 900.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 894.9
+      },
+      {
+        "segment": 15,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000005",
+        "split": "calibration",
+        "start_s": 900.0,
+        "end_s": 1200.0,
+        "kept_lower_s": 905.1,
+        "kept_upper_s": 1194.9
+      },
+      {
+        "segment": 16,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000005",
+        "split": "val",
+        "start_s": 1200.0,
+        "end_s": 2100.0,
+        "kept_lower_s": 1205.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 17,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000006",
+        "split": "train",
+        "start_s": 0.0,
+        "end_s": 600.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 594.9
+      },
+      {
+        "segment": 18,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000006",
+        "split": "calibration",
+        "start_s": 600.0,
+        "end_s": 900.0,
+        "kept_lower_s": 605.1,
+        "kept_upper_s": 894.9
+      },
+      {
+        "segment": 19,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000006",
+        "split": "train",
+        "start_s": 900.0,
+        "end_s": 1500.0,
+        "kept_lower_s": 905.1,
+        "kept_upper_s": 1494.9
+      },
+      {
+        "segment": 20,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000006",
+        "split": "val",
+        "start_s": 1500.0,
+        "end_s": 1800.0,
+        "kept_lower_s": 1505.1,
+        "kept_upper_s": 1794.9
+      },
+      {
+        "segment": 21,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000006",
+        "split": "calibration",
+        "start_s": 1800.0,
+        "end_s": 2100.0,
+        "kept_lower_s": 1805.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 22,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000007",
+        "split": "train",
+        "start_s": 0.0,
+        "end_s": 600.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 594.9
+      },
+      {
+        "segment": 23,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000007",
+        "split": "val",
+        "start_s": 600.0,
+        "end_s": 900.0,
+        "kept_lower_s": 605.1,
+        "kept_upper_s": 894.9
+      },
+      {
+        "segment": 24,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000007",
+        "split": "train",
+        "start_s": 900.0,
+        "end_s": 1800.0,
+        "kept_lower_s": 905.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 25,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000008",
+        "split": "train",
+        "start_s": -1.0,
+        "end_s": 599.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 593.9
+      },
+      {
+        "segment": 26,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000008",
+        "split": "val",
+        "start_s": 599.0,
+        "end_s": 899.0,
+        "kept_lower_s": 604.1,
+        "kept_upper_s": 893.9
+      },
+      {
+        "segment": 27,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000008",
+        "split": "calibration",
+        "start_s": 899.0,
+        "end_s": 1199.0,
+        "kept_lower_s": 904.1,
+        "kept_upper_s": 1193.9
+      },
+      {
+        "segment": 28,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000008",
+        "split": "train",
+        "start_s": 1199.0,
+        "end_s": 1799.0,
+        "kept_lower_s": 1204.1,
+        "kept_upper_s": null
+      },
+      {
+        "segment": 29,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000009",
+        "split": "train",
+        "start_s": -1.0,
+        "end_s": 2399.0,
+        "kept_lower_s": null,
+        "kept_upper_s": 2393.9
+      },
+      {
+        "segment": 30,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000009",
+        "split": "val",
+        "start_s": 2399.0,
+        "end_s": 2999.0,
+        "kept_lower_s": 2404.1,
+        "kept_upper_s": 2993.9
+      },
+      {
+        "segment": 31,
+        "stream": "3965bc6d15dc5d56c2e578b0/capture-000009",
+        "split": "calibration",
+        "start_s": 2999.0,
+        "end_s": 3599.0,
+        "kept_lower_s": 3004.1,
+        "kept_upper_s": null
+      }
+    ],
+    "state_isolation": "graph and endpoint state reset at every segment; no context crosses a split boundary",
+    "note": "Train/validation/calibration come from the source site only (campaign-forward blocks); the complete other site is the test set.",
+    "source_site": "BS1",
+    "test_sites": [
+      "BS2"
+    ],
+    "site_rows": {
+      "BS1": 728116,
+      "BS2": 487560
+    },
+    "development_fractions": [
+      0.7058823529411765,
+      0.17647058823529413,
+      0.11764705882352942
+    ]
+  },
+  "time_basis": "capture_relative",
+  "timing_profile": {},
+  "availability_source": "capture_relative",
+  "availability_guarantee": "observed availability"
+}

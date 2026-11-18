@@ -1,0 +1,195 @@
+{
+ "protocol": "validation predictions only; no test file opened",
+ "runs": {
+  "v6rm": [
+   "/data/input/ctg-5gs-bs2-v6rms42-train-full/nids-5gs-bs2-relm/evaluations/269955cbf347c1406ca8fe5d/results.json",
+   "/data/input/ctg-5gs-bs2-v6rms43-train-full/nids-5gs-bs2-relm/evaluations/666a75d0a1f749a3c9f19b8f/results.json",
+   "/data/input/ctg-5gs-bs2-v6rms44-train-full/nids-5gs-bs2-relm/evaluations/7b4b1f1168dbd6f4643d8fcf/results.json"
+  ],
+  "v4bc": [
+   "/data/input/ctg-5gs-bs2-v4bcs42-train-full/nids-5gs-bs2/evaluations/6f6f7dd57d9ff433f4c21b70/results.json",
+   "/data/input/ctg-5gs-bs2-v4bcs43-train-full/nids-5gs-bs2/evaluations/80f20c5ce66df4175e7acf0b/results.json",
+   "/data/input/ctg-5gs-bs2-v4bcs44-train-full/nids-5gs-bs2/evaluations/3d9cf58309dac9986713ec50/results.json"
+  ]
+ },
+ "context_files": [
+  "/data/input/ctg-5gs-bs2-ctgbdt4-predictions/context_gbdt/ctgbdt_seed42.npz",
+  "/data/input/ctg-5gs-bs2-ctgbdt4-predictions/context_gbdt/ctgbdt_seed43.npz",
+  "/data/input/ctg-5gs-bs2-ctgbdt4-predictions/context_gbdt/ctgbdt_seed44.npz"
+ ],
+ "v6rm": {
+  "seed_val_macro_mcc": [
+   0.9777538893266834,
+   0.9465934945455364,
+   0.9848697398186457
+  ],
+  "graph_ensemble": {
+   "rule": "balanced",
+   "macro_mcc": 0.9736142418901176,
+   "per_class": {
+    "Benign": 0.9978,
+    "httpflood": 0.9954,
+    "icmpflood": 0.864,
+    "slowratedos": 0.9981,
+    "synflood": 1.0,
+    "udpscan": 0.9864
+   },
+   "both_rules": {
+    "bayes": 0.9672175030555422,
+    "balanced": 0.9736142418901176
+   }
+  },
+  "hybrid": {
+   "ctgbdt4": {
+    "hybrid_equal_weight": {
+     "rule": "bayes",
+     "macro_mcc": 0.9985517288009108,
+     "per_class": {
+      "Benign": 1.0,
+      "httpflood": 1.0,
+      "icmpflood": 0.9936,
+      "slowratedos": 1.0,
+      "synflood": 1.0,
+      "udpscan": 0.9977
+     },
+     "both_rules": {
+      "bayes": 0.9985517288009108,
+      "balanced": 0.9881782156876445
+     }
+    },
+    "context_branch": {
+     "rule": "balanced",
+     "macro_mcc": 0.9963404826819134,
+     "per_class": {
+      "Benign": 0.9999,
+      "httpflood": 0.9902,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9879,
+      "synflood": 1.0,
+      "udpscan": 1.0
+     },
+     "both_rules": {
+      "bayes": 0.8560105646940536,
+      "balanced": 0.9963404826819134
+     }
+    }
+   }
+  },
+  "graph_ensemble_calibration": {
+   "rule": "balanced",
+   "macro_mcc": 0.8420664589903066,
+   "per_class": {
+    "Benign": 0.9539,
+    "httpflood": 0.9837,
+    "icmpflood": 0.8314,
+    "slowratedos": 0.9859,
+    "synflood": 1.0,
+    "tcpconnectscan": 0.9877,
+    "udpflood": 0.0,
+    "udpscan": 0.994
+   },
+   "both_rules": {
+    "bayes": 0.8187561124233848,
+    "balanced": 0.8420664589903066
+   }
+  },
+  "seed_cal_macro_mcc": [
+   0.8451736893664055,
+   0.8109586213164224,
+   0.8502910004208535
+  ]
+ },
+ "v4bc": {
+  "seed_val_macro_mcc": [
+   0.9989752454757322,
+   0.9972905869289305,
+   0.9981446273840388
+  ],
+  "graph_ensemble": {
+   "rule": "bayes",
+   "macro_mcc": 0.9984623660332224,
+   "per_class": {
+    "Benign": 0.9988,
+    "httpflood": 0.9996,
+    "icmpflood": 0.9937,
+    "slowratedos": 0.9987,
+    "synflood": 1.0,
+    "udpscan": 1.0
+   },
+   "both_rules": {
+    "bayes": 0.9984623660332224,
+    "balanced": 0.956542502724797
+   }
+  },
+  "hybrid": {
+   "ctgbdt4": {
+    "hybrid_equal_weight": {
+     "rule": "bayes",
+     "macro_mcc": 0.9986426467647748,
+     "per_class": {
+      "Benign": 1.0,
+      "httpflood": 1.0,
+      "icmpflood": 1.0,
+      "slowratedos": 1.0,
+      "synflood": 1.0,
+      "udpscan": 0.9919
+     },
+     "both_rules": {
+      "bayes": 0.9986426467647748,
+      "balanced": 0.97382674564874
+     }
+    },
+    "context_branch": {
+     "rule": "balanced",
+     "macro_mcc": 0.9963404826819134,
+     "per_class": {
+      "Benign": 0.9999,
+      "httpflood": 0.9902,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9879,
+      "synflood": 1.0,
+      "udpscan": 1.0
+     },
+     "both_rules": {
+      "bayes": 0.8560105646940536,
+      "balanced": 0.9963404826819134
+     }
+    }
+   }
+  },
+  "graph_ensemble_calibration": {
+   "rule": "bayes",
+   "macro_mcc": 0.8655299022609182,
+   "per_class": {
+    "Benign": 0.9989,
+    "httpflood": 0.9914,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9902,
+    "synflood": 1.0,
+    "tcpconnectscan": 0.9989,
+    "udpflood": 0.1365,
+    "udpscan": 0.8084
+   },
+   "both_rules": {
+    "bayes": 0.8655299022609182,
+    "balanced": 0.8577274478152814
+   }
+  },
+  "seed_cal_macro_mcc": [
+   0.8634821905452117,
+   0.9190427155015655,
+   0.8656084493110427
+  ]
+ },
+ "decisions": {
+  "v6rm": {
+   "graph_gain": -0.024848124143104777,
+   "hybrid_gain": {
+    "ctgbdt4": -9.091796386395679e-05
+   },
+   "rule": "cal",
+   "graph_gain_calibration": -0.02346344327061156,
+   "adopt": false
+  }
+ }
+}

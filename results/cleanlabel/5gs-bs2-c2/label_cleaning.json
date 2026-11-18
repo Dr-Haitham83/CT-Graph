@@ -1,0 +1,165 @@
+{
+ "rule": "C2",
+ "fit_only": true,
+ "collision_splits": [
+  "train",
+  "val",
+  "calibration"
+ ],
+ "colliding_vectors": 2,
+ "splits": {
+  "train": {
+   "labelled": 416312,
+   "nulled": 1284,
+   "by_class": {
+    "Benign": [
+     1284,
+     46900
+    ],
+    "httpflood": [
+     0,
+     41089
+    ],
+    "icmpflood": [
+     0,
+     390
+    ],
+    "slowratedos": [
+     0,
+     25371
+    ],
+    "synflood": [
+     0,
+     3363
+    ],
+    "synscan": [
+     0,
+     6013
+    ],
+    "tcpconnectscan": [
+     0,
+     6016
+    ],
+    "udpflood": [
+     0,
+     280989
+    ],
+    "udpscan": [
+     0,
+     6181
+    ]
+   }
+  },
+  "val": {
+   "labelled": 22454,
+   "nulled": 226,
+   "by_class": {
+    "Benign": [
+     226,
+     9830
+    ],
+    "httpflood": [
+     0,
+     6570
+    ],
+    "icmpflood": [
+     0,
+     79
+    ],
+    "slowratedos": [
+     0,
+     4780
+    ],
+    "synflood": [
+     0,
+     755
+    ],
+    "udpscan": [
+     0,
+     440
+    ]
+   }
+  },
+  "calibration": {
+   "labelled": 24058,
+   "nulled": 202,
+   "by_class": {
+    "Benign": [
+     202,
+     8916
+    ],
+    "httpflood": [
+     0,
+     6179
+    ],
+    "icmpflood": [
+     0,
+     50
+    ],
+    "slowratedos": [
+     0,
+     4867
+    ],
+    "synflood": [
+     0,
+     567
+    ],
+    "tcpconnectscan": [
+     0,
+     1916
+    ],
+    "udpflood": [
+     0,
+     525
+    ],
+    "udpscan": [
+     0,
+     1038
+    ]
+   }
+  },
+  "test": {
+   "labelled": 728116,
+   "nulled": 10289,
+   "by_class": {
+    "Benign": [
+     10289,
+     406759
+    ],
+    "httpflood": [
+     0,
+     76121
+    ],
+    "icmpflood": [
+     0,
+     613
+    ],
+    "slowratedos": [
+     0,
+     36092
+    ],
+    "synflood": [
+     0,
+     4792
+    ],
+    "synscan": [
+     0,
+     10019
+    ],
+    "tcpconnectscan": [
+     0,
+     10022
+    ],
+    "udpflood": [
+     0,
+     175811
+    ],
+    "udpscan": [
+     0,
+     7887
+    ]
+   }
+  }
+ },
+ "test_split_unchanged": true
+}

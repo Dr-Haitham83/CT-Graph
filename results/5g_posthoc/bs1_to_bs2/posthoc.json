@@ -1,0 +1,271 @@
+{
+ "evaluation": "/data/input/ctg-5g-bs1-train-full/nids-5g-bs1/evaluations/2a93f88941d4cd996e8694da/results.json",
+ "decision_rule": "balanced",
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "comparisons": {
+  "LightGBM": {
+   "graph": {
+    "macro_mcc": 0.9898393725749339,
+    "macro_f1": 0.9898282103171953,
+    "accuracy": 0.9988186069406843,
+    "mcc": 0.9981006461820462
+   },
+   "baseline": {
+    "macro_mcc": 0.9943838657029962,
+    "macro_f1": 0.994788387442164,
+    "accuracy": 0.9966342603987202,
+    "mcc": 0.994585224936133
+   },
+   "delta_graph_minus_baseline": {
+    "macro_mcc": -0.004544493128062266,
+    "macro_f1": -0.004960177124968768,
+    "accuracy": 0.0021843465419640884,
+    "mcc": 0.0035154212459131973
+   },
+   "delta_ci95_paired_segment_bootstrap": {
+    "macro_mcc": [
+     -0.017399265860732486,
+     0.01892465814917956
+    ],
+    "macro_f1": [
+     -0.017955258588468432,
+     0.018022168684620414
+    ],
+    "accuracy": [
+     -0.0012243222709591994,
+     0.010337883613779332
+    ],
+    "mcc": [
+     -0.005545767107630642,
+     0.016480557437508748
+    ]
+   },
+   "p_delta_le_0": {
+    "macro_mcc": 0.5205,
+    "macro_f1": 0.5385,
+    "accuracy": 0.223,
+    "mcc": 0.222
+   },
+   "per_class_f1": {
+    "Benign": {
+     "graph": 0.9996395785188797,
+     "baseline": 0.9998940041691693
+    },
+    "httpflood": {
+     "graph": 0.9999072528287887,
+     "baseline": 0.9877851429994087
+    },
+    "icmpflood": {
+     "graph": 0.9426086956521739,
+     "baseline": 0.9926470588235294
+    },
+    "slowratedos": {
+     "graph": 0.9991487061685022,
+     "baseline": 0.9790164984782956
+    },
+    "synflood": {
+     "graph": 0.9976708860759493,
+     "baseline": 1.0
+    },
+    "synscan": {
+     "graph": 0.9994014962593516,
+     "baseline": 0.9979050279329609
+    },
+    "tcpconnectscan": {
+     "graph": 0.9986539707861808,
+     "baseline": 0.9981552575160791
+    },
+    "udpflood": {
+     "graph": 0.9992179418362015,
+     "baseline": 0.9999982239871843
+    },
+    "udpscan": {
+     "graph": 0.9722053647287292,
+     "baseline": 0.9976942730728485
+    }
+   },
+   "novel_feature_vector_subset": {
+    "rows": 266289,
+    "segments": 10,
+    "graph": {
+     "macro_mcc": 0.9686057874398669,
+     "macro_f1": 0.9682398047723972,
+     "accuracy": 0.9995118085989282,
+     "mcc": 0.9992374131972591
+    },
+    "baseline": {
+     "macro_mcc": 0.9518384484820083,
+     "macro_f1": 0.9526210587213205,
+     "accuracy": 0.993860054301905,
+     "mcc": 0.9904282226482954
+    },
+    "delta_ci95_paired_segment_bootstrap": {
+     "macro_mcc": [
+      -0.015378136486926805,
+      0.0497095135638537
+     ],
+     "macro_f1": [
+      -0.018024560845857816,
+      0.0467086490292742
+     ],
+     "accuracy": [
+      0.00018571188380851202,
+      0.016101755283154717
+     ],
+     "mcc": [
+      0.0009181812506005472,
+      0.043001409612606456
+     ]
+    },
+    "p_delta_le_0": {
+     "macro_mcc": 0.141,
+     "macro_f1": 0.1635,
+     "accuracy": 0.0145,
+     "mcc": 0.014
+    }
+   },
+   "discordant_rows": {
+    "graph_only_correct": 1618,
+    "baseline_only_correct": 553
+   },
+   "segments": 10
+  },
+  "XGBoost": {
+   "graph": {
+    "macro_mcc": 0.9898393725749339,
+    "macro_f1": 0.9898282103171953,
+    "accuracy": 0.9988186069406843,
+    "mcc": 0.9981006461820462
+   },
+   "baseline": {
+    "macro_mcc": 0.9937035337573678,
+    "macro_f1": 0.994162698454764,
+    "accuracy": 0.9961358602018213,
+    "mcc": 0.9937845841636797
+   },
+   "delta_graph_minus_baseline": {
+    "macro_mcc": -0.003864161182433823,
+    "macro_f1": -0.004334488137568759,
+    "accuracy": 0.002682746738862929,
+    "mcc": 0.00431606201836654
+   },
+   "delta_ci95_paired_segment_bootstrap": {
+    "macro_mcc": [
+     -0.018384901186999647,
+     0.021484501491272186
+    ],
+    "macro_f1": [
+     -0.018750947316042307,
+     0.021177651523554598
+    ],
+    "accuracy": [
+     -0.0012339983406207844,
+     0.012125059650370449
+    ],
+    "mcc": [
+     -0.005534510555265418,
+     0.019403194698251056
+    ]
+   },
+   "p_delta_le_0": {
+    "macro_mcc": 0.495,
+    "macro_f1": 0.514,
+    "accuracy": 0.214,
+    "mcc": 0.214
+   },
+   "per_class_f1": {
+    "Benign": {
+     "graph": 0.9996395785188797,
+     "baseline": 0.9986415350653761
+    },
+    "httpflood": {
+     "graph": 0.9999072528287887,
+     "baseline": 0.9872859912333289
+    },
+    "icmpflood": {
+     "graph": 0.9426086956521739,
+     "baseline": 0.9990766389658357
+    },
+    "slowratedos": {
+     "graph": 0.9991487061685022,
+     "baseline": 0.9781889931740614
+    },
+    "synflood": {
+     "graph": 0.9976708860759493,
+     "baseline": 0.9997971602434077
+    },
+    "synscan": {
+     "graph": 0.9994014962593516,
+     "baseline": 0.997656211040742
+    },
+    "tcpconnectscan": {
+     "graph": 0.9986539707861808,
+     "baseline": 0.9893748455646157
+    },
+    "udpflood": {
+     "graph": 0.9992179418362015,
+     "baseline": 0.9999982239871843
+    },
+    "udpscan": {
+     "graph": 0.9722053647287292,
+     "baseline": 0.9974446868183234
+    }
+   },
+   "novel_feature_vector_subset": {
+    "rows": 266289,
+    "segments": 10,
+    "graph": {
+     "macro_mcc": 0.9686057874398669,
+     "macro_f1": 0.9682398047723972,
+     "accuracy": 0.9995118085989282,
+     "mcc": 0.9992374131972591
+    },
+    "baseline": {
+     "macro_mcc": 0.9155824849350575,
+     "macro_f1": 0.911352234593787,
+     "accuracy": 0.9929475119137479,
+     "mcc": 0.989009032499472
+    },
+    "delta_ci95_paired_segment_bootstrap": {
+     "macro_mcc": [
+      -0.014003453680469753,
+      0.11234032893227197
+     ],
+     "macro_f1": [
+      -0.016439498672622097,
+      0.12002215334290477
+     ],
+     "accuracy": [
+      0.00019033110694942346,
+      0.019032844143468362
+     ],
+     "mcc": [
+      0.0010046257947579685,
+      0.05082064644176125
+     ]
+    },
+    "p_delta_le_0": {
+     "macro_mcc": 0.1085,
+     "macro_f1": 0.1195,
+     "accuracy": 0.0135,
+     "mcc": 0.013
+    }
+   },
+   "discordant_rows": {
+    "graph_only_correct": 1861,
+    "baseline_only_correct": 553
+   },
+   "segments": 10
+  }
+ }
+}

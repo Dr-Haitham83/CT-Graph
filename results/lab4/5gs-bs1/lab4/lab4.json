@@ -1,0 +1,174 @@
+{
+ "prepared": "nids-5gs-bs1",
+ "cap": 600000,
+ "tau_s": 10.0,
+ "protocol": "train/validation/calibration only; test never opened",
+ "refit": {
+  "flow": {
+   "rule": "balanced",
+   "train -> calibration": {
+    "macro_mcc": 0.6540888777736552,
+    "per_class": {
+     "Benign": 0.0366,
+     "httpflood": 0.664,
+     "icmpflood": 0.984,
+     "slowratedos": 0.9881,
+     "synscan": 0.9992,
+     "tcpconnectscan": 0.9992,
+     "udpflood": -0.0926
+    }
+   },
+   "train+val -> calibration": {
+    "macro_mcc": 0.6516387262935582,
+    "per_class": {
+     "Benign": 0.0366,
+     "httpflood": 0.6492,
+     "icmpflood": 0.984,
+     "slowratedos": 0.9861,
+     "synscan": 0.9992,
+     "tcpconnectscan": 0.999,
+     "udpflood": -0.0926
+    }
+   },
+   "train -> val": {
+    "macro_mcc": 0.9857975058388665,
+    "per_class": {
+     "Benign": 0.9996,
+     "httpflood": 0.9786,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9371,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "train+calibration -> val": {
+    "macro_mcc": 0.9850249825354549,
+    "per_class": {
+     "Benign": 0.9996,
+     "httpflood": 0.9773,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9337,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    }
+   },
+   "gain_cal": -0.0024501514800969737,
+   "gain_val": -0.0007725233034115986,
+   "passes": false
+  },
+  "flow+REL": {
+   "rule": "bayes",
+   "train -> calibration": {
+    "macro_mcc": 0.5472287400076549,
+    "per_class": {
+     "Benign": -0.0118,
+     "httpflood": 0.0,
+     "icmpflood": 1.0,
+     "slowratedos": 0.984,
+     "synscan": 0.9997,
+     "tcpconnectscan": 0.9997,
+     "udpflood": -0.1411
+    }
+   },
+   "train+val -> calibration": {
+    "macro_mcc": 0.5795975686486113,
+    "per_class": {
+     "Benign": -0.0109,
+     "httpflood": 0.2264,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9838,
+     "synscan": 0.9997,
+     "tcpconnectscan": 0.9997,
+     "udpflood": -0.1416
+    }
+   },
+   "train -> val": {
+    "macro_mcc": 0.9923651846658913,
+    "per_class": {
+     "Benign": 0.9996,
+     "httpflood": 0.9893,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9679,
+     "synflood": 0.999,
+     "udpscan": 0.9984
+    }
+   },
+   "train+calibration -> val": {
+    "macro_mcc": 0.9940500408872546,
+    "per_class": {
+     "Benign": 0.9998,
+     "httpflood": 0.9921,
+     "icmpflood": 1.0,
+     "slowratedos": 0.976,
+     "synflood": 0.999,
+     "udpscan": 0.9974
+    }
+   },
+   "gain_cal": 0.03236882864095647,
+   "gain_val": 0.0016848562213632734,
+   "passes": false
+  }
+ },
+ "smooth": {
+  "flow": {
+   "val": {
+    "base": 0.9857975058388665,
+    "smoothed": 0.9730915760317269,
+    "gain": -0.012705929807139582,
+    "per_class": {
+     "Benign": 0.9914,
+     "httpflood": 0.9881,
+     "icmpflood": 0.9909,
+     "slowratedos": 0.9642,
+     "synflood": 0.9039,
+     "udpscan": 1.0
+    }
+   },
+   "calibration": {
+    "base": 0.6540888777736552,
+    "smoothed": 0.6635014042919842,
+    "gain": 0.009412526518329023,
+    "per_class": {
+     "Benign": 0.0366,
+     "httpflood": 0.8059,
+     "icmpflood": 0.8732,
+     "slowratedos": 0.9929,
+     "synscan": 0.9985,
+     "tcpconnectscan": 0.9975,
+     "udpflood": -0.06
+    }
+   },
+   "passes": false
+  },
+  "flow+REL": {
+   "val": {
+    "base": 0.9923651846658913,
+    "smoothed": 0.9922740523908549,
+    "gain": -9.113227503643184e-05,
+    "per_class": {
+     "Benign": 0.9995,
+     "httpflood": 0.9895,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9682,
+     "synflood": 0.999,
+     "udpscan": 0.9974
+    }
+   },
+   "calibration": {
+    "base": 0.5472287400076549,
+    "smoothed": 0.546917170295458,
+    "gain": -0.00031156971219681306,
+    "per_class": {
+     "Benign": -0.0127,
+     "httpflood": 0.0,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9841,
+     "synscan": 0.9997,
+     "tcpconnectscan": 0.9997,
+     "udpflood": -0.1425
+    }
+   },
+   "passes": false
+  }
+ }
+}

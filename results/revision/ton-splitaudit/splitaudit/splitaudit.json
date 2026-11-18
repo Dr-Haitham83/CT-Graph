@@ -1,0 +1,161 @@
+{
+ "prepared": "nids-ton",
+ "records": 23662699,
+ "attack_records": 8936364,
+ "share_same_split": 0.5988082340057658,
+ "share_same_split_attack": 0.43066150841662226,
+ "share_same_split_benign": 0.7008445074758927,
+ "test_records_also_test_under_global": 0.2013938609887932,
+ "test_families": 9,
+ "test_families_without_training_under_global": [
+  "backdoor",
+  "mitm",
+  "password",
+  "ransomware",
+  "xss"
+ ],
+ "test_families_absent_from_test_under_global": [
+  "ddos",
+  "dos",
+  "injection",
+  "password",
+  "scanning"
+ ],
+ "families": {
+  "backdoor": {
+   "records": 171780,
+   "campaign_forward": {
+    "train": 122382,
+    "validation": 0,
+    "calibration": 18618,
+    "test": 30780
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 0,
+    "calibration": 0,
+    "test": 171780
+   }
+  },
+  "ddos": {
+   "records": 3451378,
+   "campaign_forward": {
+    "train": 2488230,
+    "validation": 0,
+    "calibration": 333394,
+    "test": 629754
+   },
+   "global_cut": {
+    "train": 2057934,
+    "validation": 1393444,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "dos": {
+   "records": 171536,
+   "campaign_forward": {
+    "train": 121046,
+    "validation": 0,
+    "calibration": 19106,
+    "test": 31384
+   },
+   "global_cut": {
+    "train": 171536,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "injection": {
+   "records": 322451,
+   "campaign_forward": {
+    "train": 229867,
+    "validation": 0,
+    "calibration": 43637,
+    "test": 48947
+   },
+   "global_cut": {
+    "train": 322451,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "mitm": {
+   "records": 5179,
+   "campaign_forward": {
+    "train": 3681,
+    "validation": 0,
+    "calibration": 716,
+    "test": 782
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 0,
+    "calibration": 0,
+    "test": 5179
+   }
+  },
+  "password": {
+   "records": 1345877,
+   "campaign_forward": {
+    "train": 948573,
+    "validation": 0,
+    "calibration": 172179,
+    "test": 225125
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 448517,
+    "calibration": 897360,
+    "test": 0
+   }
+  },
+  "ransomware": {
+   "records": 2879,
+   "campaign_forward": {
+    "train": 1946,
+    "validation": 0,
+    "calibration": 390,
+    "test": 543
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 0,
+    "calibration": 0,
+    "test": 2879
+   }
+  },
+  "scanning": {
+   "records": 1144044,
+   "campaign_forward": {
+    "train": 812050,
+    "validation": 0,
+    "calibration": 42568,
+    "test": 289426
+   },
+   "global_cut": {
+    "train": 1144044,
+    "validation": 0,
+    "calibration": 0,
+    "test": 0
+   }
+  },
+  "xss": {
+   "records": 2321240,
+   "campaign_forward": {
+    "train": 1658561,
+    "validation": 0,
+    "calibration": 239312,
+    "test": 423367
+   },
+   "global_cut": {
+    "train": 0,
+    "validation": 0,
+    "calibration": 1156045,
+    "test": 1165195
+   }
+  }
+ }
+}

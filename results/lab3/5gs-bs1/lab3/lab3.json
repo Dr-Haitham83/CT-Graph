@@ -1,0 +1,419 @@
+{
+ "prepared": "nids-5gs-bs1",
+ "protocol": "transductive self-training; targets = validation / calibration (labels only for scoring); test never opened",
+ "rounds": 2,
+ "cap_per_class": 20000,
+ "results": {
+  "flow": {
+   "val": {
+    "rule": "balanced",
+    "base": 0.9857975058388665,
+    "base_per_class": {
+     "Benign": 0.9996,
+     "httpflood": 0.9786,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9371,
+     "synflood": 1.0,
+     "udpscan": 0.9995
+    },
+    "ST-thr": {
+     "final": 0.9852287920124126,
+     "gain": -0.0005687138264538483,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 46234,
+       "pseudo_label_accuracy": 0.9967340052775014,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "httpflood": 20000,
+        "icmpflood": 109,
+        "slowratedos": 5040,
+        "synflood": 1046,
+        "tcpconnectscan": 1,
+        "udpscan": 38
+       },
+       "macro_mcc": 0.9856035957997271
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 46289,
+       "pseudo_label_accuracy": 0.9958737497029532,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "httpflood": 20000,
+        "icmpflood": 109,
+        "slowratedos": 5093,
+        "synflood": 1046,
+        "tcpconnectscan": 1,
+        "udpscan": 40
+       },
+       "macro_mcc": 0.9852287920124126
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9996,
+      "httpflood": 0.9777,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9346,
+      "synflood": 1.0,
+      "udpscan": 0.9995
+     }
+    },
+    "ST-bal": {
+     "final": 0.9855727913447853,
+     "gain": -0.00022471449408123512,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 11594,
+       "pseudo_label_accuracy": 0.9667931688804554,
+       "pseudo_by_class": {
+        "Benign": 4570,
+        "httpflood": 5308,
+        "icmpflood": 21,
+        "slowratedos": 1093,
+        "synflood": 209,
+        "tcpconnectscan": 1,
+        "udpflood": 384,
+        "udpscan": 8
+       },
+       "macro_mcc": 0.9863025890646607
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 11595,
+       "pseudo_label_accuracy": 0.9667960327727468,
+       "pseudo_by_class": {
+        "Benign": 4570,
+        "httpflood": 5314,
+        "icmpflood": 21,
+        "slowratedos": 1088,
+        "synflood": 209,
+        "tcpconnectscan": 1,
+        "udpflood": 384,
+        "udpscan": 8
+       },
+       "macro_mcc": 0.9855727913447853
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9996,
+      "httpflood": 0.9782,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9361,
+      "synflood": 1.0,
+      "udpscan": 0.9995
+     }
+    }
+   },
+   "calibration": {
+    "rule": "balanced",
+    "base": 0.6540888777736552,
+    "base_per_class": {
+     "Benign": 0.0366,
+     "httpflood": 0.664,
+     "icmpflood": 0.984,
+     "slowratedos": 0.9881,
+     "synscan": 0.9992,
+     "tcpconnectscan": 0.9992,
+     "udpflood": -0.0926
+    },
+    "ST-thr": {
+     "final": 0.6546145242152305,
+     "gain": 0.0005256464415752671,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 41692,
+       "pseudo_label_accuracy": 0.5194521730787681,
+       "pseudo_by_class": {
+        "Benign": 14414,
+        "httpflood": 70,
+        "icmpflood": 63,
+        "slowratedos": 3148,
+        "synscan": 1996,
+        "tcpconnectscan": 2001,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.6564679642977688
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 41730,
+       "pseudo_label_accuracy": 0.5197459861011263,
+       "pseudo_by_class": {
+        "Benign": 14415,
+        "httpflood": 79,
+        "icmpflood": 63,
+        "slowratedos": 3176,
+        "synscan": 1996,
+        "tcpconnectscan": 2001,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.6546145242152305
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.0366,
+      "httpflood": 0.6681,
+      "icmpflood": 0.984,
+      "slowratedos": 0.9885,
+      "synscan": 0.9987,
+      "tcpconnectscan": 0.999,
+      "udpflood": -0.0926
+     }
+    },
+    "ST-bal": {
+     "final": 0.6484079531658014,
+     "gain": -0.0056809246078538544,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 24364,
+       "pseudo_label_accuracy": 0.17887046461993106,
+       "pseudo_by_class": {
+        "Benign": 2883,
+        "httpflood": 23,
+        "icmpflood": 12,
+        "slowratedos": 646,
+        "synscan": 400,
+        "tcpconnectscan": 400,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.6487929569731569
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 24364,
+       "pseudo_label_accuracy": 0.178911508783451,
+       "pseudo_by_class": {
+        "Benign": 2883,
+        "httpflood": 22,
+        "icmpflood": 12,
+        "slowratedos": 647,
+        "synscan": 400,
+        "tcpconnectscan": 400,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.6484079531658014
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.0366,
+      "httpflood": 0.6255,
+      "icmpflood": 0.984,
+      "slowratedos": 0.9869,
+      "synscan": 0.9992,
+      "tcpconnectscan": 0.9992,
+      "udpflood": -0.0926
+     }
+    }
+   },
+   "ST-thr_passes": false,
+   "ST-bal_passes": false
+  },
+  "flow+REL": {
+   "val": {
+    "rule": "bayes",
+    "base": 0.9923651846658913,
+    "base_per_class": {
+     "Benign": 0.9996,
+     "httpflood": 0.9893,
+     "icmpflood": 1.0,
+     "slowratedos": 0.9679,
+     "synflood": 0.999,
+     "udpscan": 0.9984
+    },
+    "ST-thr": {
+     "final": 0.9904666373030323,
+     "gain": -0.0018985473628589933,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 48241,
+       "pseudo_label_accuracy": 0.9966625899131444,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "httpflood": 20000,
+        "icmpflood": 109,
+        "slowratedos": 5132,
+        "synflood": 1044,
+        "udpscan": 1956
+       },
+       "macro_mcc": 0.9909696324004976
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 48387,
+       "pseudo_label_accuracy": 0.9937173207679749,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "httpflood": 20000,
+        "icmpflood": 109,
+        "slowratedos": 5275,
+        "synflood": 1044,
+        "udpscan": 1959
+       },
+       "macro_mcc": 0.9904666373030323
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9999,
+      "httpflood": 0.9858,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9576,
+      "synflood": 1.0,
+      "udpscan": 0.9995
+     }
+    },
+    "ST-bal": {
+     "final": 0.9935745426570604,
+     "gain": 0.0012093579911690577,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 11595,
+       "pseudo_label_accuracy": 0.9999137559292799,
+       "pseudo_by_class": {
+        "Benign": 4571,
+        "httpflood": 5347,
+        "icmpflood": 21,
+        "slowratedos": 1055,
+        "synflood": 208,
+        "udpflood": 1,
+        "udpscan": 392
+       },
+       "macro_mcc": 0.9938197781932508
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 11593,
+       "pseudo_label_accuracy": 0.999913741050634,
+       "pseudo_by_class": {
+        "Benign": 4569,
+        "httpflood": 5358,
+        "icmpflood": 21,
+        "slowratedos": 1043,
+        "synflood": 208,
+        "udpflood": 1,
+        "udpscan": 393
+       },
+       "macro_mcc": 0.9935745426570604
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9997,
+      "httpflood": 0.9909,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9725,
+      "synflood": 0.999,
+      "udpscan": 0.9992
+     }
+    }
+   },
+   "calibration": {
+    "rule": "bayes",
+    "base": 0.5472287400076549,
+    "base_per_class": {
+     "Benign": -0.0118,
+     "httpflood": 0.0,
+     "icmpflood": 1.0,
+     "slowratedos": 0.984,
+     "synscan": 0.9997,
+     "tcpconnectscan": 0.9997,
+     "udpflood": -0.1411
+    },
+    "ST-thr": {
+     "final": 0.5459623395999286,
+     "gain": -0.001266400407726298,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 42682,
+       "pseudo_label_accuracy": 0.5174546647298627,
+       "pseudo_by_class": {
+        "Benign": 15292,
+        "icmpflood": 61,
+        "slowratedos": 3327,
+        "synscan": 2001,
+        "tcpconnectscan": 2001,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.5458585506302461
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 42836,
+       "pseudo_label_accuracy": 0.5183490521990849,
+       "pseudo_by_class": {
+        "Benign": 15428,
+        "icmpflood": 61,
+        "slowratedos": 3342,
+        "synscan": 2004,
+        "tcpconnectscan": 2001,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.5459623395999286
+      }
+     ],
+     "final_per_class": {
+      "Benign": -0.0123,
+      "httpflood": 0.0,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9823,
+      "synscan": 0.9995,
+      "tcpconnectscan": 0.9995,
+      "udpflood": -0.1473
+     }
+    },
+    "ST-bal": {
+     "final": 0.5479733271190329,
+     "gain": 0.0007445871113780367,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 24564,
+       "pseudo_label_accuracy": 0.18580035824784238,
+       "pseudo_by_class": {
+        "Benign": 3084,
+        "icmpflood": 12,
+        "slowratedos": 667,
+        "synscan": 400,
+        "tcpconnectscan": 401,
+        "udpflood": 20000
+       },
+       "macro_mcc": 0.5471158855658315
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 24563,
+       "pseudo_label_accuracy": 0.18572649920612302,
+       "pseudo_by_class": {
+        "Benign": 3081,
+        "icmpflood": 12,
+        "slowratedos": 668,
+        "synscan": 400,
+        "tcpconnectscan": 401,
+        "udpflood": 20000,
+        "udpscan": 1
+       },
+       "macro_mcc": 0.5479733271190329
+      }
+     ],
+     "final_per_class": {
+      "Benign": -0.0101,
+      "httpflood": 0.0,
+      "icmpflood": 1.0,
+      "slowratedos": 0.9834,
+      "synscan": 0.9992,
+      "tcpconnectscan": 1.0,
+      "udpflood": -0.1367
+     }
+    }
+   },
+   "ST-thr_passes": false,
+   "ST-bal_passes": false
+  }
+ }
+}

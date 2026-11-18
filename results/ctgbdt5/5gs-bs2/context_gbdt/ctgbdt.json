@@ -1,0 +1,126 @@
+{
+ "model": "CT-GBDT v5 (flow vs flow + causal relational context; double held-out rule)",
+ "relational_features": [
+  "src_flows_10s",
+  "src_newdport_frac_10s",
+  "src_newdport_10s",
+  "src_syn_frac_10s",
+  "src_rst_frac_10s",
+  "src_empty_frac_10s",
+  "src_newpeer_frac_10s",
+  "src_newpeer_10s",
+  "src_newsport_frac_10s",
+  "src_newsport_10s",
+  "src_seqport_frac_10s",
+  "src_gap_cv_10s",
+  "src_flows_60s",
+  "src_newdport_frac_60s",
+  "src_newdport_60s",
+  "src_syn_frac_60s",
+  "src_rst_frac_60s",
+  "src_empty_frac_60s",
+  "src_newpeer_frac_60s",
+  "src_newpeer_60s",
+  "src_newsport_frac_60s",
+  "src_newsport_60s",
+  "src_seqport_frac_60s",
+  "src_gap_cv_60s",
+  "src_burstiness",
+  "dst_flows_10s",
+  "dst_newdport_frac_10s",
+  "dst_newdport_10s",
+  "dst_syn_frac_10s",
+  "dst_rst_frac_10s",
+  "dst_empty_frac_10s",
+  "dst_newpeer_frac_10s",
+  "dst_newpeer_10s",
+  "dst_newsport_frac_10s",
+  "dst_newsport_10s",
+  "dst_flows_60s",
+  "dst_newdport_frac_60s",
+  "dst_newdport_60s",
+  "dst_syn_frac_60s",
+  "dst_rst_frac_60s",
+  "dst_empty_frac_60s",
+  "dst_newpeer_frac_60s",
+  "dst_newpeer_60s",
+  "dst_newsport_frac_60s",
+  "dst_newsport_60s",
+  "dst_burstiness",
+  "pair_flows_10s",
+  "pair_newdport_frac_10s",
+  "pair_newdport_10s",
+  "pair_syn_frac_10s",
+  "pair_rst_frac_10s",
+  "pair_empty_frac_10s",
+  "pair_flows_60s",
+  "pair_newdport_frac_60s",
+  "pair_newdport_60s",
+  "pair_syn_frac_60s",
+  "pair_rst_frac_60s",
+  "pair_empty_frac_60s",
+  "pair_burstiness"
+ ],
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.8551295665666431,
+    "balanced": 0.9954976063014737
+   },
+   "calibration": {
+    "bayes": 0.8283201491483934,
+    "balanced": 0.85187676554295
+   },
+   "rule_on_val": "balanced",
+   "trees": 300
+  },
+  "flow+relational": {
+   "validation": {
+    "bayes": 0.9879486371059665,
+    "balanced": 0.9993114304066543
+   },
+   "calibration": {
+    "bayes": 0.9633591795519174,
+    "balanced": 0.9067718978796717
+   },
+   "rule_on_val": "balanced",
+   "trees": 300
+  }
+ },
+ "chosen_feature_set": "flow+relational",
+ "gain_validation": 0.0038138241051806077,
+ "gain_calibration": 0.05489513233672172,
+ "rule": "adopt flow+relational iff +0.002 on BOTH validation and calibration",
+ "seed42": {
+  "trees": 300,
+  "validation_macro_mcc": {
+   "bayes": 0.9879486371059665,
+   "balanced": 0.9993114304066543
+  }
+ },
+ "seed43": {
+  "trees": 300,
+  "validation_macro_mcc": {
+   "bayes": 0.9879307086225567,
+   "balanced": 0.9972033481801575
+  }
+ },
+ "seed44": {
+  "trees": 300,
+  "validation_macro_mcc": {
+   "bayes": 0.9875043615393366,
+   "balanced": 0.9992217945135916
+  }
+ }
+}

@@ -1,0 +1,240 @@
+{
+ "prepared": "nids-cic",
+ "cap": 600000,
+ "tau_s": 10.0,
+ "protocol": "train/validation/calibration only; test never opened",
+ "refit": {
+  "flow": {
+   "rule": "bayes",
+   "train -> calibration": {
+    "macro_mcc": 0.6192103090819512,
+    "per_class": {
+     "Benign": 0.9056,
+     "bot": 0.9999,
+     "brute_force_-web": 0.1589,
+     "brute_force_-xss": -0.0,
+     "ddos_attack-hoic": 0.9014,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9986,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.5654,
+     "sql_injection": -0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "train+val -> calibration": {
+    "macro_mcc": 0.6259073664906372,
+    "per_class": {
+     "Benign": 0.9373,
+     "bot": 1.0,
+     "brute_force_-web": 0.097,
+     "brute_force_-xss": -0.0,
+     "ddos_attack-hoic": 0.9991,
+     "ddos_attacks-loic-http": 0.9881,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9975,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.5792,
+     "sql_injection": -0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "train -> val": {
+    "macro_mcc": 0.6730872788631882,
+    "per_class": {
+     "Benign": 0.9585,
+     "bot": 1.0,
+     "brute_force_-web": 0.0719,
+     "brute_force_-xss": 0.3492,
+     "ddos_attack-hoic": 0.9815,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9971,
+     "ftp-bruteforce": 0.9013,
+     "infilteration": 0.6795,
+     "sql_injection": 0.1387,
+     "ssh-bruteforce": 0.9999
+    }
+   },
+   "train+calibration -> val": {
+    "macro_mcc": 0.6618950238997897,
+    "per_class": {
+     "Benign": 0.9658,
+     "bot": 1.0,
+     "brute_force_-web": 0.0456,
+     "brute_force_-xss": 0.1048,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9994,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9963,
+     "ftp-bruteforce": 0.9013,
+     "infilteration": 0.6801,
+     "sql_injection": 0.2496,
+     "ssh-bruteforce": 0.9999
+    }
+   },
+   "gain_cal": 0.00669705740868598,
+   "gain_val": -0.011192254963398485,
+   "passes": false
+  },
+  "flow+REL": {
+   "rule": "bayes",
+   "train -> calibration": {
+    "macro_mcc": 0.8936201061695711,
+    "per_class": {
+     "Benign": 0.9567,
+     "bot": 0.9999,
+     "brute_force_-web": 0.6308,
+     "brute_force_-xss": 0.9263,
+     "ddos_attack-hoic": 0.9987,
+     "ddos_attacks-loic-http": 0.9971,
+     "dos_attacks-slowhttptest": 0.9988,
+     "dos_attacks-slowloris": 0.9003,
+     "ftp-bruteforce": 0.9989,
+     "infilteration": 0.7307,
+     "sql_injection": 0.5871,
+     "ssh-bruteforce": 0.9982
+    }
+   },
+   "train+val -> calibration": {
+    "macro_mcc": 0.8810880949460692,
+    "per_class": {
+     "Benign": 0.9586,
+     "bot": 1.0,
+     "brute_force_-web": 0.582,
+     "brute_force_-xss": 0.8059,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 1.0,
+     "dos_attacks-slowhttptest": 0.999,
+     "dos_attacks-slowloris": 0.925,
+     "ftp-bruteforce": 0.9992,
+     "infilteration": 0.7488,
+     "sql_injection": 0.5561,
+     "ssh-bruteforce": 0.9986
+    }
+   },
+   "train -> val": {
+    "macro_mcc": 0.8151046159398455,
+    "per_class": {
+     "Benign": 0.9573,
+     "bot": 0.9999,
+     "brute_force_-web": 0.18,
+     "brute_force_-xss": 0.7929,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9989,
+     "dos_attacks-slowhttptest": 0.9986,
+     "dos_attacks-slowloris": 0.9031,
+     "ftp-bruteforce": 0.9995,
+     "infilteration": 0.5909,
+     "sql_injection": 0.3611,
+     "ssh-bruteforce": 0.9992
+    }
+   },
+   "train+calibration -> val": {
+    "macro_mcc": 0.8236457585794935,
+    "per_class": {
+     "Benign": 0.9698,
+     "bot": 1.0,
+     "brute_force_-web": 0.1478,
+     "brute_force_-xss": 0.7043,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9999,
+     "dos_attacks-slowhttptest": 0.9994,
+     "dos_attacks-slowloris": 0.9985,
+     "ftp-bruteforce": 0.9997,
+     "infilteration": 0.7361,
+     "sql_injection": 0.3285,
+     "ssh-bruteforce": 0.9996
+    }
+   },
+   "gain_cal": -0.012532011223501893,
+   "gain_val": 0.008541142639648003,
+   "passes": false
+  }
+ },
+ "smooth": {
+  "flow": {
+   "val": {
+    "base": 0.6730872788631882,
+    "smoothed": 0.6681770998819117,
+    "gain": -0.004910178981276547,
+    "per_class": {
+     "Benign": 0.9627,
+     "bot": 0.9996,
+     "brute_force_-web": 0.0603,
+     "brute_force_-xss": 0.3408,
+     "ddos_attack-hoic": 0.9903,
+     "ddos_attacks-loic-http": 0.9996,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9978,
+     "ftp-bruteforce": 0.9013,
+     "infilteration": 0.6858,
+     "sql_injection": 0.0801,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "calibration": {
+    "base": 0.6192103090819512,
+    "smoothed": 0.6249725877986642,
+    "gain": 0.005762278716712976,
+    "per_class": {
+     "Benign": 0.9239,
+     "bot": 0.9996,
+     "brute_force_-web": 0.1436,
+     "brute_force_-xss": -0.0,
+     "ddos_attack-hoic": 0.9572,
+     "ddos_attacks-loic-http": 0.989,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9986,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.5751,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "passes": false
+  },
+  "flow+REL": {
+   "val": {
+    "base": 0.8151046159398455,
+    "smoothed": 0.8171899235854042,
+    "gain": 0.0020853076455586983,
+    "per_class": {
+     "Benign": 0.9592,
+     "bot": 0.9995,
+     "brute_force_-web": 0.1014,
+     "brute_force_-xss": 0.8193,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9992,
+     "dos_attacks-slowhttptest": 0.9989,
+     "dos_attacks-slowloris": 0.9023,
+     "ftp-bruteforce": 0.9995,
+     "infilteration": 0.6017,
+     "sql_injection": 0.4261,
+     "ssh-bruteforce": 0.9992
+    }
+   },
+   "calibration": {
+    "base": 0.8936201061695711,
+    "smoothed": 0.8748600833800556,
+    "gain": -0.018760022789515496,
+    "per_class": {
+     "Benign": 0.9602,
+     "bot": 0.9996,
+     "brute_force_-web": 0.5189,
+     "brute_force_-xss": 0.8625,
+     "ddos_attack-hoic": 0.999,
+     "ddos_attacks-loic-http": 0.9978,
+     "dos_attacks-slowhttptest": 0.999,
+     "dos_attacks-slowloris": 0.9007,
+     "ftp-bruteforce": 0.9989,
+     "infilteration": 0.7481,
+     "sql_injection": 0.5157,
+     "ssh-bruteforce": 0.998
+    }
+   },
+   "passes": false
+  }
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "tau_s": 10.0,
+ "mix": 0.5,
+ "check": {
+  "segmented": {
+   "val": {
+    "base": 0.7929827404021456,
+    "smoothed": 0.8160719339956849,
+    "gain": 0.023089193593539337,
+    "per_class": {
+     "Benign": 0.9129,
+     "backdoor": 0.9972,
+     "ddos": 0.9605,
+     "dos": 0.8693,
+     "injection": 0.983,
+     "mitm": 0.5339,
+     "password": 0.9837,
+     "ransomware": 0.8495,
+     "scanning": 0.0808,
+     "xss": 0.9899
+    }
+   },
+   "calibration": {
+    "base": 0.8404413194714812,
+    "smoothed": 0.8532272959875528,
+    "gain": 0.012785976516071607,
+    "per_class": {
+     "Benign": 0.9069,
+     "backdoor": 0.9974,
+     "ddos": 0.9716,
+     "dos": 0.8686,
+     "injection": 0.9744,
+     "mitm": 0.68,
+     "password": 0.9982,
+     "ransomware": 0.9472,
+     "scanning": 0.202,
+     "xss": 0.986
+    }
+   },
+   "passes": true
+  },
+  "merged": {
+   "val": {
+    "base": 0.7929827404021456,
+    "smoothed": 0.8160719339956849,
+    "gain": 0.023089193593539337,
+    "per_class": {
+     "Benign": 0.9129,
+     "backdoor": 0.9972,
+     "ddos": 0.9605,
+     "dos": 0.8693,
+     "injection": 0.983,
+     "mitm": 0.5339,
+     "password": 0.9837,
+     "ransomware": 0.8495,
+     "scanning": 0.0808,
+     "xss": 0.9899
+    }
+   },
+   "calibration": {
+    "base": 0.8404413194714812,
+    "smoothed": 0.8532272959875528,
+    "gain": 0.012785976516071607,
+    "per_class": {
+     "Benign": 0.9069,
+     "backdoor": 0.9974,
+     "ddos": 0.9716,
+     "dos": 0.8686,
+     "injection": 0.9744,
+     "mitm": 0.68,
+     "password": 0.9982,
+     "ransomware": 0.9472,
+     "scanning": 0.202,
+     "xss": 0.986
+    }
+   },
+   "passes": true
+  }
+ },
+ "adopted": true,
+ "smoothed_files": [
+  "ctgbdt_seed42.npz",
+  "ctgbdt_seed43.npz",
+  "ctgbdt_seed44.npz"
+ ]
+}

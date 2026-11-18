@@ -1,0 +1,2122 @@
+{
+ "protocol": "test-error diagnosis (test labels used); nothing selected here",
+ "rules": {
+  "v4bc": {
+   "graph_ensemble": "bayes",
+   "hybrid": "bayes",
+   "val_graph": 0.9985,
+   "val_hybrid": 0.9986
+  },
+  "v6rm": {
+   "graph_ensemble": "balanced",
+   "hybrid": "bayes",
+   "val_graph": 0.9736,
+   "val_hybrid": 0.9986
+  }
+ },
+ "A_models": {
+  "v4bc_seed0": {
+   "macro_mcc": 0.8285,
+   "accuracy": 0.8259,
+   "per_class": {
+    "Benign": {
+     "recall": 0.8557,
+     "precision": 0.999,
+     "mcc": 0.8495,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.1233,
+     "precision": 0.9998,
+     "mcc": 0.3344,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 0.9543,
+     "precision": 0.9832,
+     "mcc": 0.9686,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9988,
+     "precision": 0.3507,
+     "mcc": 0.5625,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.9937,
+     "precision": 0.9987,
+     "mcc": 0.9962,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9981,
+     "precision": 0.9976,
+     "mcc": 0.9978,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9996,
+     "precision": 0.9997,
+     "mcc": 0.9996,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.993,
+     "precision": 0.7489,
+     "mcc": 0.8137,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 1.0,
+     "precision": 0.8743,
+     "mcc": 0.9343,
+     "support": 7887
+    }
+   }
+  },
+  "v4bc_seed1": {
+   "macro_mcc": 0.7266,
+   "accuracy": 0.5385,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3134,
+     "precision": 0.9997,
+     "mcc": 0.4093,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.2913,
+     "precision": 0.9997,
+     "mcc": 0.5186,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 1.0,
+     "precision": 0.9919,
+     "mcc": 0.9959,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9962,
+     "precision": 0.3999,
+     "mcc": 0.6058,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.7095,
+     "precision": 1.0,
+     "mcc": 0.8415,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.999,
+     "precision": 0.9972,
+     "mcc": 0.9981,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9996,
+     "precision": 0.8788,
+     "mcc": 0.9364,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9928,
+     "precision": 0.3872,
+     "mcc": 0.4342,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9997,
+     "precision": 0.6428,
+     "mcc": 0.7992,
+     "support": 7887
+    }
+   }
+  },
+  "v4bc_seed2": {
+   "macro_mcc": 0.6641,
+   "accuracy": 0.5414,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3118,
+     "precision": 0.9996,
+     "mcc": 0.4079,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.3879,
+     "precision": 1.0,
+     "mcc": 0.6017,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 1.0,
+     "precision": 0.3088,
+     "mcc": 0.5552,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9966,
+     "precision": 0.4355,
+     "mcc": 0.636,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.7097,
+     "precision": 1.0,
+     "mcc": 0.8416,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9991,
+     "precision": 1.0,
+     "mcc": 0.9995,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9998,
+     "precision": 0.9916,
+     "mcc": 0.9956,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9665,
+     "precision": 0.3909,
+     "mcc": 0.4249,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.999,
+     "precision": 0.2729,
+     "mcc": 0.5144,
+     "support": 7887
+    }
+   }
+  },
+  "v4bc_graph_ensemble": {
+   "macro_mcc": 0.7066,
+   "accuracy": 0.5324,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3139,
+     "precision": 0.9994,
+     "mcc": 0.4095,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.238,
+     "precision": 0.9998,
+     "mcc": 0.4674,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 1.0,
+     "precision": 0.9871,
+     "mcc": 0.9935,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9964,
+     "precision": 0.3827,
+     "mcc": 0.5908,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.7124,
+     "precision": 0.9997,
+     "mcc": 0.8431,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9989,
+     "precision": 1.0,
+     "mcc": 0.9994,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9996,
+     "precision": 0.8793,
+     "mcc": 0.9366,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9894,
+     "precision": 0.3899,
+     "mcc": 0.4364,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 1.0,
+     "precision": 0.4716,
+     "mcc": 0.6825,
+     "support": 7887
+    }
+   }
+  },
+  "v4bc_hybrid": {
+   "macro_mcc": 0.8179,
+   "accuracy": 0.6016,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3084,
+     "precision": 0.9979,
+     "mcc": 0.4041,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.9139,
+     "precision": 0.9999,
+     "mcc": 0.9512,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 0.9984,
+     "precision": 0.9792,
+     "mcc": 0.9887,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9942,
+     "precision": 0.8455,
+     "mcc": 0.9123,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.711,
+     "precision": 1.0,
+     "mcc": 0.8424,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9989,
+     "precision": 0.8849,
+     "mcc": 0.9393,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9992,
+     "precision": 0.999,
+     "mcc": 0.9991,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9965,
+     "precision": 0.3849,
+     "mcc": 0.4329,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9997,
+     "precision": 0.7973,
+     "mcc": 0.8915,
+     "support": 7887
+    }
+   }
+  },
+  "v6rm_seed0": {
+   "macro_mcc": 0.833,
+   "accuracy": 0.6056,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3098,
+     "precision": 0.9954,
+     "mcc": 0.4035,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.9475,
+     "precision": 0.9948,
+     "mcc": 0.9676,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 0.9967,
+     "precision": 0.9488,
+     "mcc": 0.9724,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9966,
+     "precision": 0.8715,
+     "mcc": 0.9282,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.6331,
+     "precision": 0.9997,
+     "mcc": 0.7946,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9995,
+     "precision": 1.0,
+     "mcc": 0.9997,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9996,
+     "precision": 0.9986,
+     "mcc": 0.9991,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9971,
+     "precision": 0.3843,
+     "mcc": 0.4323,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9995,
+     "precision": 1.0,
+     "mcc": 0.9997,
+     "support": 7887
+    }
+   }
+  },
+  "v6rm_seed1": {
+   "macro_mcc": 0.7661,
+   "accuracy": 0.5849,
+   "per_class": {
+    "Benign": {
+     "recall": 0.309,
+     "precision": 0.994,
+     "mcc": 0.402,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.7487,
+     "precision": 1.0,
+     "mcc": 0.8529,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 1.0,
+     "precision": 0.3297,
+     "mcc": 0.5737,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9943,
+     "precision": 0.652,
+     "mcc": 0.7937,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.7108,
+     "precision": 0.9994,
+     "mcc": 0.842,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9991,
+     "precision": 0.9996,
+     "mcc": 0.9993,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9993,
+     "precision": 0.9999,
+     "mcc": 0.9996,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9973,
+     "precision": 0.3841,
+     "mcc": 0.4321,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9994,
+     "precision": 0.9997,
+     "mcc": 0.9996,
+     "support": 7887
+    }
+   }
+  },
+  "v6rm_seed2": {
+   "macro_mcc": 0.7837,
+   "accuracy": 0.5787,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3093,
+     "precision": 0.9883,
+     "mcc": 0.3983,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.6924,
+     "precision": 0.9946,
+     "mcc": 0.815,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 0.9984,
+     "precision": 0.7208,
+     "mcc": 0.8482,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9943,
+     "precision": 0.6046,
+     "mcc": 0.7618,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.6619,
+     "precision": 0.9994,
+     "mcc": 0.8124,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9992,
+     "precision": 0.9834,
+     "mcc": 0.9911,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9996,
+     "precision": 0.9962,
+     "mcc": 0.9979,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.997,
+     "precision": 0.3841,
+     "mcc": 0.4319,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9995,
+     "precision": 0.9936,
+     "mcc": 0.9965,
+     "support": 7887
+    }
+   }
+  },
+  "v6rm_graph_ensemble": {
+   "macro_mcc": 0.7554,
+   "accuracy": 0.5839,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3089,
+     "precision": 0.9955,
+     "mcc": 0.4029,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.7413,
+     "precision": 1.0,
+     "mcc": 0.8483,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 1.0,
+     "precision": 0.2401,
+     "mcc": 0.4894,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9943,
+     "precision": 0.6457,
+     "mcc": 0.7895,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.7106,
+     "precision": 0.9991,
+     "mcc": 0.8418,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9991,
+     "precision": 0.9999,
+     "mcc": 0.9995,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9994,
+     "precision": 0.9917,
+     "mcc": 0.9955,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9967,
+     "precision": 0.3844,
+     "mcc": 0.4321,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9991,
+     "precision": 0.9997,
+     "mcc": 0.9994,
+     "support": 7887
+    }
+   }
+  },
+  "v6rm_hybrid": {
+   "macro_mcc": 0.8414,
+   "accuracy": 0.6095,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3089,
+     "precision": 0.9948,
+     "mcc": 0.4024,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.9838,
+     "precision": 0.9999,
+     "mcc": 0.9909,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 0.9984,
+     "precision": 0.9776,
+     "mcc": 0.9879,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9942,
+     "precision": 0.9669,
+     "mcc": 0.9794,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.711,
+     "precision": 1.0,
+     "mcc": 0.8424,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9991,
+     "precision": 0.8848,
+     "mcc": 0.9394,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.9991,
+     "precision": 0.9989,
+     "mcc": 0.999,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.9978,
+     "precision": 0.3843,
+     "mcc": 0.4326,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9996,
+     "precision": 0.9971,
+     "mcc": 0.9983,
+     "support": 7887
+    }
+   }
+  },
+  "context_ctgbdt4": {
+   "macro_mcc": 0.7613,
+   "accuracy": 0.5803,
+   "per_class": {
+    "Benign": {
+     "recall": 0.3075,
+     "precision": 0.9979,
+     "mcc": 0.4034,
+     "support": 406759
+    },
+    "httpflood": {
+     "recall": 0.9912,
+     "precision": 0.9939,
+     "mcc": 0.9917,
+     "support": 76121
+    },
+    "icmpflood": {
+     "recall": 0.9984,
+     "precision": 0.9776,
+     "mcc": 0.9879,
+     "support": 613
+    },
+    "slowratedos": {
+     "recall": 0.9817,
+     "precision": 0.9816,
+     "mcc": 0.9807,
+     "support": 36092
+    },
+    "synflood": {
+     "recall": 0.711,
+     "precision": 1.0,
+     "mcc": 0.8424,
+     "support": 4792
+    },
+    "synscan": {
+     "recall": 0.9883,
+     "precision": 0.8824,
+     "mcc": 0.9329,
+     "support": 10019
+    },
+    "tcpconnectscan": {
+     "recall": 0.998,
+     "precision": 0.993,
+     "mcc": 0.9954,
+     "support": 10022
+    },
+    "udpflood": {
+     "recall": 0.8803,
+     "precision": 0.3809,
+     "mcc": 0.3661,
+     "support": 175811
+    },
+    "udpscan": {
+     "recall": 0.9982,
+     "precision": 0.1331,
+     "mcc": 0.3513,
+     "support": 7887
+    }
+   }
+  }
+ },
+ "B_hybrid_confusion": {
+  "Benign": {
+   "Benign": 125450,
+   "icmpflood": 1,
+   "slowratedos": 5,
+   "tcpconnectscan": 3,
+   "udpflood": 279933,
+   "udpscan": 1367
+  },
+  "httpflood": {
+   "Benign": 5,
+   "httpflood": 69565,
+   "slowratedos": 6551
+  },
+  "icmpflood": {
+   "icmpflood": 612,
+   "udpscan": 1
+  },
+  "slowratedos": {
+   "Benign": 205,
+   "httpflood": 6,
+   "slowratedos": 35881
+  },
+  "synflood": {
+   "Benign": 56,
+   "synflood": 3407,
+   "synscan": 1302,
+   "tcpconnectscan": 6,
+   "udpscan": 21
+  },
+  "synscan": {
+   "Benign": 1,
+   "icmpflood": 5,
+   "synscan": 10008,
+   "tcpconnectscan": 1,
+   "udpscan": 4
+  },
+  "tcpconnectscan": {
+   "icmpflood": 5,
+   "tcpconnectscan": 10014,
+   "udpscan": 3
+  },
+  "udpflood": {
+   "udpflood": 175202,
+   "udpscan": 609
+  },
+  "udpscan": {
+   "icmpflood": 2,
+   "udpscan": 7885
+  }
+ },
+ "B_top_confusions": [
+  [
+   279933,
+   "Benign",
+   "udpflood"
+  ],
+  [
+   6551,
+   "httpflood",
+   "slowratedos"
+  ],
+  [
+   1367,
+   "Benign",
+   "udpscan"
+  ],
+  [
+   1302,
+   "synflood",
+   "synscan"
+  ],
+  [
+   609,
+   "udpflood",
+   "udpscan"
+  ],
+  [
+   205,
+   "slowratedos",
+   "Benign"
+  ],
+  [
+   56,
+   "synflood",
+   "Benign"
+  ],
+  [
+   21,
+   "synflood",
+   "udpscan"
+  ],
+  [
+   6,
+   "synflood",
+   "tcpconnectscan"
+  ],
+  [
+   6,
+   "slowratedos",
+   "httpflood"
+  ]
+ ],
+ "D_error_attribution": {
+  "errors": 290092,
+  "test_rows": 728116,
+  "by_category": {
+   "train_majority_is_predicted_label": 281309,
+   "novel_in_train": 8169,
+   "train_has_both_labels_true_majority": 614
+  },
+  "by_true_class": {
+   "Benign": {
+    "train_majority_is_predicted_label": 281303,
+    "novel_in_train": 6
+   },
+   "httpflood": {
+    "novel_in_train": 6551,
+    "train_majority_is_predicted_label": 5
+   },
+   "icmpflood": {
+    "novel_in_train": 1
+   },
+   "slowratedos": {
+    "novel_in_train": 211
+   },
+   "synflood": {
+    "novel_in_train": 1385
+   },
+   "synscan": {
+    "novel_in_train": 7,
+    "train_has_both_labels_true_majority": 4
+   },
+   "tcpconnectscan": {
+    "novel_in_train": 7,
+    "train_has_both_labels_true_majority": 1
+   },
+   "udpflood": {
+    "train_has_both_labels_true_majority": 609
+   },
+   "udpscan": {
+    "train_majority_is_predicted_label": 1,
+    "novel_in_train": 1
+   }
+  },
+  "novel_fraction_by_class": {
+   "Benign": 0.0837,
+   "httpflood": 0.9998,
+   "icmpflood": 0.6101,
+   "slowratedos": 0.9999,
+   "synflood": 0.9998,
+   "synscan": 0.0152,
+   "tcpconnectscan": 0.0978,
+   "udpflood": 0.6057,
+   "udpscan": 0.0023
+  },
+  "error_rate_seen_vs_novel_by_class": {
+   "Benign": [
+    0.7548,
+    0.0002
+   ],
+   "httpflood": [
+    0.3333,
+    0.0861
+   ],
+   "icmpflood": [
+    0.0,
+    0.0027
+   ],
+   "slowratedos": [
+    0.0,
+    0.0058
+   ],
+   "synflood": [
+    0.0,
+    0.2891
+   ],
+   "synscan": [
+    0.0004,
+    0.0461
+   ],
+   "tcpconnectscan": [
+    0.0001,
+    0.0071
+   ],
+   "udpflood": [
+    0.0088,
+    0.0
+   ],
+   "udpscan": [
+    0.0001,
+    0.0556
+   ]
+  },
+  "bayes_ceiling_note": "errors in 'train_majority_is_predicted_label' follow the training labels of an identical vector"
+ },
+ "D_train_label_mix_of_wrong_seen_vectors": {
+  "Benign": {
+   "Benign": 6,
+   "tcpconnectscan": 14310,
+   "udpflood": 13331024095,
+   "udpscan": 178809813
+  },
+  "httpflood": {
+   "Benign": 28,
+   "slowratedos": 1
+  },
+  "synscan": {
+   "synscan": 5,
+   "tcpconnectscan": 5,
+   "udpscan": 4
+  },
+  "tcpconnectscan": {
+   "synscan": 1,
+   "tcpconnectscan": 1,
+   "udpscan": 1
+  },
+  "udpflood": {
+   "udpflood": 17941140,
+   "udpscan": 3659481
+  },
+  "udpscan": {
+   "icmpflood": 1
+  }
+ },
+ "C_per_capture": [
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000004",
+   "rows": 467530,
+   "errors": 281909,
+   "duration_s": 1726.5999999999995,
+   "classes": {
+    "Benign": 291719,
+    "udpflood": 175811
+   },
+   "top_errors": {
+    "Benign->udpflood": 279933,
+    "Benign->udpscan": 1367,
+    "udpflood->udpscan": 609
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000006",
+   "rows": 93801,
+   "errors": 6564,
+   "duration_s": 1806.6999999999998,
+   "classes": {
+    "httpflood": 76121,
+    "Benign": 17680
+   },
+   "top_errors": {
+    "httpflood->slowratedos": 6551,
+    "Benign->slowratedos": 5,
+    "httpflood->Benign": 5,
+    "Benign->tcpconnectscan": 3
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000005",
+   "rows": 44634,
+   "errors": 1385,
+   "duration_s": 1905.1000000000004,
+   "classes": {
+    "Benign": 39842,
+    "synflood": 4792
+   },
+   "top_errors": {
+    "synflood->synscan": 1302,
+    "synflood->Benign": 56,
+    "synflood->udpscan": 21,
+    "synflood->tcpconnectscan": 6
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000007",
+   "rows": 31013,
+   "errors": 206,
+   "duration_s": 1745.0,
+   "classes": {
+    "Benign": 24806,
+    "slowratedos": 6207
+   },
+   "top_errors": {
+    "slowratedos->Benign": 205,
+    "Benign->icmpflood": 1
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000000",
+   "rows": 11449,
+   "errors": 11,
+   "duration_s": 522.3000000000002,
+   "classes": {
+    "synscan": 10019,
+    "Benign": 1430
+   },
+   "top_errors": {
+    "synscan->icmpflood": 5,
+    "synscan->udpscan": 4,
+    "synscan->Benign": 1,
+    "synscan->tcpconnectscan": 1
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000001",
+   "rows": 11645,
+   "errors": 8,
+   "duration_s": 585.8000000000002,
+   "classes": {
+    "tcpconnectscan": 10022,
+    "Benign": 1623
+   },
+   "top_errors": {
+    "tcpconnectscan->icmpflood": 5,
+    "tcpconnectscan->udpscan": 3
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000008",
+   "rows": 38119,
+   "errors": 6,
+   "duration_s": 1751.8999999999996,
+   "classes": {
+    "slowratedos": 29885,
+    "Benign": 8234
+   },
+   "top_errors": {
+    "slowratedos->httpflood": 6
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000002",
+   "rows": 10042,
+   "errors": 2,
+   "duration_s": 583.8000000000002,
+   "classes": {
+    "udpscan": 7887,
+    "Benign": 2155
+   },
+   "top_errors": {
+    "udpscan->icmpflood": 2
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000003",
+   "rows": 18278,
+   "errors": 1,
+   "duration_s": 1780.0999999999995,
+   "classes": {
+    "Benign": 17665,
+    "icmpflood": 613
+   },
+   "top_errors": {
+    "icmpflood->udpscan": 1
+   }
+  },
+  {
+   "capture": "3965bc6d15dc5d56c2e578b0/capture-000009",
+   "rows": 1605,
+   "errors": 0,
+   "duration_s": 3346.2000000000003,
+   "classes": {
+    "Benign": 1605
+   },
+   "top_errors": {}
+  }
+ ],
+ "E_anatomy": {
+  "Benign": {
+   "train": {
+    "rows": 46900,
+    "sources": 80,
+    "targets": 116,
+    "dports": 528,
+    "captures": 19,
+    "span_s": 2152.4,
+    "flows_per_src_median": 9.5,
+    "dports_per_src_median": 3.0,
+    "proto": {
+     "17": 36665,
+     "6": 4864,
+     "1": 3978
+    },
+    "top_dports": {
+     "-1": 40287,
+     "853": 904,
+     "39873": 335,
+     "47952": 332,
+     "45449": 331
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 74.0,
+    "out_bytes_zero_frac": 0.7244
+   },
+   "test": {
+    "rows": 406759,
+    "sources": 89,
+    "targets": 146,
+    "dports": 401,
+    "captures": 10,
+    "span_s": 3346.2,
+    "flows_per_src_median": 10.0,
+    "dports_per_src_median": 3.0,
+    "proto": {
+     "17": 373531,
+     "1": 22487,
+     "6": 8458
+    },
+    "top_dports": {
+     "-1": 395976,
+     "853": 1690,
+     "44104": 446,
+     "48301": 444,
+     "39210": 438
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 74.0,
+    "out_bytes_zero_frac": 0.9248
+   }
+  },
+  "httpflood": {
+   "train": {
+    "rows": 41089,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 152.4,
+    "flows_per_src_median": 41089.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "6": 41089
+    },
+    "top_dports": {
+     "-1": 41089
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 66.0,
+    "out_bytes_zero_frac": 0.1017
+   },
+   "test": {
+    "rows": 76121,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 290.2,
+    "flows_per_src_median": 76121.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "6": 76121
+    },
+    "top_dports": {
+     "-1": 76121
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 66.0,
+    "out_bytes_zero_frac": 0.1131
+   }
+  },
+  "icmpflood": {
+   "train": {
+    "rows": 390,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 387.5,
+    "flows_per_src_median": 390.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "1": 390
+    },
+    "top_dports": {
+     "-1": 390
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 42.0,
+    "out_bytes_zero_frac": 0.0026
+   },
+   "test": {
+    "rows": 613,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 611.0,
+    "flows_per_src_median": 613.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "1": 613
+    },
+    "top_dports": {
+     "-1": 613
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 42.0,
+    "out_bytes_zero_frac": 0.0
+   }
+  },
+  "slowratedos": {
+   "train": {
+    "rows": 25371,
+    "sources": 2,
+    "targets": 1,
+    "dports": 1,
+    "captures": 2,
+    "span_s": 427.5,
+    "flows_per_src_median": 12685.5,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "6": 25371
+    },
+    "top_dports": {
+     "-1": 25371
+    },
+    "in_pkts_median": 4.0,
+    "in_bytes_median": 268.0,
+    "out_bytes_zero_frac": 0.0
+   },
+   "test": {
+    "rows": 36092,
+    "sources": 2,
+    "targets": 1,
+    "dports": 1,
+    "captures": 2,
+    "span_s": 773.0,
+    "flows_per_src_median": 18046.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "6": 36092
+    },
+    "top_dports": {
+     "-1": 36092
+    },
+    "in_pkts_median": 4.0,
+    "in_bytes_median": 278.0,
+    "out_bytes_zero_frac": 0.0057
+   }
+  },
+  "synflood": {
+   "train": {
+    "rows": 3363,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 335.6,
+    "flows_per_src_median": 3363.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "6": 3363
+    },
+    "top_dports": {
+     "-1": 3363
+    },
+    "in_pkts_median": 2.0,
+    "in_bytes_median": 108.0,
+    "out_bytes_zero_frac": 0.0
+   },
+   "test": {
+    "rows": 4792,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 485.6,
+    "flows_per_src_median": 4792.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "6": 4792
+    },
+    "top_dports": {
+     "-1": 4792
+    },
+    "in_pkts_median": 2.0,
+    "in_bytes_median": 108.0,
+    "out_bytes_zero_frac": 0.289
+   }
+  },
+  "synscan": {
+   "train": {
+    "rows": 6013,
+    "sources": 1,
+    "targets": 1,
+    "dports": 355,
+    "captures": 1,
+    "span_s": 226.0,
+    "flows_per_src_median": 6013.0,
+    "dports_per_src_median": 355.0,
+    "proto": {
+     "6": 6007,
+     "1": 6
+    },
+    "top_dports": {
+     "-1": 3889,
+     "16001": 6,
+     "34572": 6,
+     "15660": 6,
+     "8290": 6
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 58.0,
+    "out_bytes_zero_frac": 0.996
+   },
+   "test": {
+    "rows": 10019,
+    "sources": 1,
+    "targets": 1,
+    "dports": 355,
+    "captures": 1,
+    "span_s": 405.1,
+    "flows_per_src_median": 10019.0,
+    "dports_per_src_median": 355.0,
+    "proto": {
+     "6": 10009,
+     "1": 10
+    },
+    "top_dports": {
+     "-1": 6479,
+     "30000": 10,
+     "5962": 10,
+     "9220": 10,
+     "44442": 10
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 58.0,
+    "out_bytes_zero_frac": 0.9961
+   }
+  },
+  "tcpconnectscan": {
+   "train": {
+    "rows": 6016,
+    "sources": 1,
+    "targets": 1,
+    "dports": 355,
+    "captures": 1,
+    "span_s": 265.2,
+    "flows_per_src_median": 6016.0,
+    "dports_per_src_median": 355.0,
+    "proto": {
+     "6": 6010,
+     "1": 6
+    },
+    "top_dports": {
+     "-1": 3892,
+     "10012": 6,
+     "44442": 6,
+     "10002": 6,
+     "6000": 6
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 74.0,
+    "out_bytes_zero_frac": 0.9955
+   },
+   "test": {
+    "rows": 10022,
+    "sources": 1,
+    "targets": 1,
+    "dports": 355,
+    "captures": 1,
+    "span_s": 425.1,
+    "flows_per_src_median": 10022.0,
+    "dports_per_src_median": 355.0,
+    "proto": {
+     "6": 10012,
+     "1": 10
+    },
+    "top_dports": {
+     "-1": 6482,
+     "9110": 10,
+     "8084": 10,
+     "3766": 10,
+     "63331": 10
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 74.0,
+    "out_bytes_zero_frac": 0.9958
+   }
+  },
+  "udpflood": {
+   "train": {
+    "rows": 280989,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 30.8,
+    "flows_per_src_median": 280989.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "17": 280989
+    },
+    "top_dports": {
+     "-1": 280989
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 42.0,
+    "out_bytes_zero_frac": 1.0
+   },
+   "test": {
+    "rows": 175811,
+    "sources": 1,
+    "targets": 1,
+    "dports": 1,
+    "captures": 1,
+    "span_s": 621.9,
+    "flows_per_src_median": 175811.0,
+    "dports_per_src_median": 1.0,
+    "proto": {
+     "17": 175811
+    },
+    "top_dports": {
+     "-1": 175811
+    },
+    "in_pkts_median": 2.0,
+    "in_bytes_median": 84.0,
+    "out_bytes_zero_frac": 1.0
+   }
+  },
+  "udpscan": {
+   "train": {
+    "rows": 6181,
+    "sources": 1,
+    "targets": 1,
+    "dports": 738,
+    "captures": 2,
+    "span_s": 333.9,
+    "flows_per_src_median": 6181.0,
+    "dports_per_src_median": 738.0,
+    "proto": {
+     "17": 6149,
+     "6": 24,
+     "1": 8
+    },
+    "top_dports": {
+     "-1": 1631,
+     "18258": 8,
+     "49167": 8,
+     "40915": 8,
+     "41524": 8
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 42.0,
+    "out_bytes_zero_frac": 0.9964
+   },
+   "test": {
+    "rows": 7887,
+    "sources": 1,
+    "targets": 1,
+    "dports": 738,
+    "captures": 1,
+    "span_s": 525.0,
+    "flows_per_src_median": 7887.0,
+    "dports_per_src_median": 738.0,
+    "proto": {
+     "17": 7862,
+     "6": 17,
+     "1": 8
+    },
+    "top_dports": {
+     "-1": 2083,
+     "16974": 8,
+     "24279": 8,
+     "16896": 8,
+     "49179": 8
+    },
+    "in_pkts_median": 1.0,
+    "in_bytes_median": 42.0,
+    "out_bytes_zero_frac": 0.9978
+   }
+  }
+ },
+ "F_separability": {
+  "Benign vs udpflood (279933 errors)": {
+   "max_test": 0.984,
+   "max_train": 1.0,
+   "top": [
+    [
+     "dst_burst_60_300",
+     0.984,
+     0.843
+    ],
+    [
+     "svc_burst_60_300",
+     0.982,
+     0.825
+    ],
+    [
+     "dst_dnewdport_60s",
+     0.971,
+     0.767
+    ],
+    [
+     "scan_dnewpeer_300s",
+     0.969,
+     0.709
+    ],
+    [
+     "dst_newdport_60s",
+     0.963,
+     0.587
+    ],
+    [
+     "src_dnewpeer_300s",
+     0.962,
+     0.566
+    ],
+    [
+     "dst_newdport_frac_60s",
+     0.957,
+     0.617
+    ],
+    [
+     "dst_newdport_frac_60s",
+     0.944,
+     0.263
+    ],
+    [
+     "src_dnewdport_300s",
+     0.929,
+     0.446
+    ],
+    [
+     "dst_dnewdport_300s",
+     0.909,
+     0.441
+    ],
+    [
+     "src_newdport_frac_300s",
+     0.901,
+     0.446
+    ],
+    [
+     "dst_newdport_frac_300s",
+     0.872,
+     0.073
+    ],
+    [
+     "dst_onepkt_frac_300s",
+     0.866,
+     0.472
+    ],
+    [
+     "svc_onepkt_frac_300s",
+     0.849,
+     0.441
+    ],
+    [
+     "dst_onepkt_frac_60s",
+     0.849,
+     0.49
+    ]
+   ]
+  },
+  "httpflood vs slowratedos (6551 errors)": {
+   "max_test": 0.989,
+   "max_train": 1.0,
+   "top": [
+    [
+     "svc_n_10s",
+     0.989,
+     0.98
+    ],
+    [
+     "pair_n_10s",
+     0.989,
+     0.98
+    ],
+    [
+     "dst_n_10s",
+     0.989,
+     0.98
+    ],
+    [
+     "scan_n_10s",
+     0.989,
+     0.98
+    ],
+    [
+     "src_n_10s",
+     0.989,
+     0.98
+    ],
+    [
+     "src_gap_cv_60s",
+     0.989,
+     0.991
+    ],
+    [
+     "dst_flows_10s",
+     0.988,
+     0.98
+    ],
+    [
+     "pair_flows_10s",
+     0.988,
+     0.98
+    ],
+    [
+     "src_flows_10s",
+     0.988,
+     0.981
+    ],
+    [
+     "src_newsport_60s",
+     0.982,
+     0.975
+    ],
+    [
+     "dst_newsport_60s",
+     0.982,
+     0.974
+    ],
+    [
+     "src_gap_cv_10s",
+     0.979,
+     0.992
+    ],
+    [
+     "pair_empty_frac_60s",
+     0.975,
+     0.974
+    ],
+    [
+     "dst_empty_frac_60s",
+     0.975,
+     0.974
+    ],
+    [
+     "pair_empty_frac_60s",
+     0.975,
+     0.974
+    ]
+   ]
+  },
+  "Benign vs udpscan (1367 errors)": {
+   "max_test": 1.0,
+   "max_train": 0.999,
+   "top": [
+    [
+     "dst_newdport_60s",
+     1.0,
+     0.997
+    ],
+    [
+     "dst_newdport_10s",
+     0.999,
+     0.969
+    ],
+    [
+     "pair_dnewdport_300s",
+     0.999,
+     0.999
+    ],
+    [
+     "pair_newdport_10s",
+     0.999,
+     0.969
+    ],
+    [
+     "pair_newdport_60s",
+     0.999,
+     0.999
+    ],
+    [
+     "src_newdport_60s",
+     0.999,
+     0.998
+    ],
+    [
+     "src_newdport_10s",
+     0.998,
+     0.969
+    ],
+    [
+     "src_dnewdport_300s",
+     0.997,
+     0.997
+    ],
+    [
+     "dst_dnewdport_300s",
+     0.996,
+     0.996
+    ],
+    [
+     "src_newdport_frac_60s",
+     0.993,
+     0.936
+    ],
+    [
+     "src_newdport_frac_10s",
+     0.991,
+     0.904
+    ],
+    [
+     "dst_newdport_frac_10s",
+     0.99,
+     0.895
+    ],
+    [
+     "dst_newdport_frac_60s",
+     0.99,
+     0.913
+    ],
+    [
+     "pair_newdport_frac_10s",
+     0.98,
+     0.854
+    ],
+    [
+     "pair_newdport_frac_60s",
+     0.977,
+     0.862
+    ]
+   ]
+  },
+  "synflood vs synscan (1302 errors)": {
+   "max_test": 1.0,
+   "max_train": 1.0,
+   "top": [
+    [
+     "dst_tcp_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_icmp_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "src_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "scan_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_tcp_frac_60s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_tcp_frac_10s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_icmp_frac_10s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_icmp_frac_60s",
+     1.0,
+     1.0
+    ],
+    [
+     "svc_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "pair_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "pair_empty_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_empty_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "svc_empty_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "src_empty_frac_300s",
+     0.999,
+     1.0
+    ]
+   ]
+  },
+  "udpflood vs udpscan (609 errors)": {
+   "max_test": 1.0,
+   "max_train": 1.0,
+   "top": [
+    [
+     "dst_udp_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_tcp_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "src_newdport_frac_60s",
+     1.0,
+     1.0
+    ],
+    [
+     "src_newdport_60s",
+     1.0,
+     0.997
+    ],
+    [
+     "src_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_newdport_frac_60s",
+     1.0,
+     1.0
+    ],
+    [
+     "pair_newdport_frac_60s",
+     1.0,
+     1.0
+    ],
+    [
+     "scan_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "svc_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_onepkt_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "src_icmp_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "dst_icmp_frac_300s",
+     1.0,
+     1.0
+    ],
+    [
+     "pair_empty_frac_300s",
+     1.0,
+     0.999
+    ],
+    [
+     "dst_empty_frac_300s",
+     1.0,
+     0.999
+    ],
+    [
+     "src_dnewdport_300s",
+     0.999,
+     1.0
+    ]
+   ]
+  },
+  "slowratedos vs Benign (205 errors)": {
+   "max_test": 0.996,
+   "max_train": 1.0,
+   "top": [
+    [
+     "src_tcp_frac_60s",
+     0.996,
+     0.971
+    ],
+    [
+     "src_tcp_frac_300s",
+     0.995,
+     0.961
+    ],
+    [
+     "dst_tcp_frac_300s",
+     0.995,
+     0.971
+    ],
+    [
+     "src_tcp_frac_10s",
+     0.994,
+     0.96
+    ],
+    [
+     "dst_tcp_frac_60s",
+     0.991,
+     0.955
+    ],
+    [
+     "dst_tcp_frac_10s",
+     0.988,
+     0.945
+    ],
+    [
+     "SynAck",
+     0.984,
+     0.968
+    ],
+    [
+     "AckDat",
+     0.982,
+     0.947
+    ],
+    [
+     "TcpRtt",
+     0.981,
+     0.947
+    ],
+    [
+     "DstGap",
+     0.98,
+     0.896
+    ],
+    [
+     "SrcGap",
+     0.98,
+     0.896
+    ],
+    [
+     "Proto",
+     0.98,
+     0.896
+    ],
+    [
+     "TcpOpt",
+     0.979,
+     0.886
+    ],
+    [
+     "dst_udp_frac_300s",
+     0.974,
+     0.908
+    ],
+    [
+     "dst_udp_frac_60s",
+     0.969,
+     0.891
+    ]
+   ]
+  }
+ },
+ "G_complementarity": {
+  "v4bc": {
+   "both_right": 365163,
+   "graph_only_right": 22483,
+   "context_only_right": 57358,
+   "both_wrong": 283112,
+   "oracle_macro_mcc": 0.8333,
+   "by_class": {
+    "Benign": {
+     "graph_only_right": 2599,
+     "context_only_right": 8,
+     "both_wrong": 279081
+    },
+    "httpflood": {
+     "graph_only_right": 4,
+     "context_only_right": 57340,
+     "both_wrong": 664
+    },
+    "icmpflood": {
+     "graph_only_right": 1,
+     "context_only_right": 0,
+     "both_wrong": 0
+    },
+    "slowratedos": {
+     "graph_only_right": 531,
+     "context_only_right": 1,
+     "both_wrong": 128
+    },
+    "synflood": {
+     "graph_only_right": 13,
+     "context_only_right": 6,
+     "both_wrong": 1372
+    },
+    "synscan": {
+     "graph_only_right": 109,
+     "context_only_right": 3,
+     "both_wrong": 8
+    },
+    "tcpconnectscan": {
+     "graph_only_right": 16,
+     "context_only_right": 0,
+     "both_wrong": 4
+    },
+    "udpflood": {
+     "graph_only_right": 19196,
+     "context_only_right": 0,
+     "both_wrong": 1855
+    },
+    "udpscan": {
+     "graph_only_right": 14,
+     "context_only_right": 0,
+     "both_wrong": 0
+    }
+   },
+   "graph_destinations": {
+    "Benign": {
+     "udpflood": 272097,
+     "udpscan": 6981,
+     "slowratedos": 6
+    },
+    "httpflood": {
+     "slowratedos": 58003,
+     "Benign": 1
+    },
+    "slowratedos": {
+     "udpflood": 64,
+     "Benign": 45,
+     "udpscan": 13
+    },
+    "synflood": {
+     "tcpconnectscan": 1366,
+     "Benign": 6,
+     "httpflood": 3
+    },
+    "synscan": {
+     "Benign": 3,
+     "icmpflood": 3,
+     "tcpconnectscan": 2
+    },
+    "tcpconnectscan": {
+     "Benign": 2,
+     "udpscan": 2
+    },
+    "udpflood": {
+     "udpscan": 1839,
+     "Benign": 16
+    }
+   }
+  },
+  "v6rm": {
+   "both_right": 402910,
+   "graph_only_right": 22225,
+   "context_only_right": 19611,
+   "both_wrong": 283370,
+   "oracle_macro_mcc": 0.8441,
+   "by_class": {
+    "Benign": {
+     "graph_only_right": 987,
+     "context_only_right": 407,
+     "both_wrong": 280693
+    },
+    "httpflood": {
+     "graph_only_right": 158,
+     "context_only_right": 19179,
+     "both_wrong": 510
+    },
+    "icmpflood": {
+     "graph_only_right": 1,
+     "context_only_right": 0,
+     "both_wrong": 0
+    },
+    "slowratedos": {
+     "graph_only_right": 454,
+     "context_only_right": 2,
+     "both_wrong": 205
+    },
+    "synflood": {
+     "graph_only_right": 0,
+     "context_only_right": 2,
+     "both_wrong": 1385
+    },
+    "synscan": {
+     "graph_only_right": 112,
+     "context_only_right": 4,
+     "both_wrong": 5
+    },
+    "tcpconnectscan": {
+     "graph_only_right": 14,
+     "context_only_right": 0,
+     "both_wrong": 6
+    },
+    "udpflood": {
+     "graph_only_right": 20487,
+     "context_only_right": 12,
+     "both_wrong": 564
+    },
+    "udpscan": {
+     "graph_only_right": 12,
+     "context_only_right": 5,
+     "both_wrong": 2
+    }
+   },
+   "graph_destinations": {
+    "Benign": {
+     "udpflood": 280690,
+     "icmpflood": 407,
+     "udpscan": 1
+    },
+    "httpflood": {
+     "slowratedos": 19687,
+     "icmpflood": 2
+    },
+    "slowratedos": {
+     "icmpflood": 124,
+     "tcpconnectscan": 82,
+     "Benign": 1
+    },
+    "synflood": {
+     "icmpflood": 1384,
+     "Benign": 3
+    },
+    "synscan": {
+     "Benign": 3,
+     "icmpflood": 3,
+     "synflood": 2
+    },
+    "tcpconnectscan": {
+     "Benign": 3,
+     "icmpflood": 3
+    },
+    "udpflood": {
+     "Benign": 563,
+     "icmpflood": 13
+    },
+    "udpscan": {
+     "icmpflood": 4,
+     "tcpconnectscan": 2,
+     "synscan": 1
+    }
+   }
+  }
+ }
+}

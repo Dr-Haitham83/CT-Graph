@@ -1,0 +1,258 @@
+{
+ "prepared": "nids-5gs-bs1",
+ "merge": "capture-relative clocks: 16 segments laid back to back",
+ "protocol": "train/validation/calibration only; test never opened",
+ "eval_rows": {
+  "val": 57984,
+  "calibration": 303660
+ },
+ "configs": {
+  "flow [-]": {
+   "rule": "balanced",
+   "val": 0.9857975058388665,
+   "calibration": 0.6540888777736552,
+   "cal_per_class": {
+    "Benign": 0.0366,
+    "httpflood": 0.664,
+    "icmpflood": 0.984,
+    "slowratedos": 0.9881,
+    "synscan": 0.9992,
+    "tcpconnectscan": 0.9992,
+    "udpflood": -0.0926
+   },
+   "gain_vs_flow": [
+    0.0,
+    0.0
+   ],
+   "passes_rule": false
+  },
+  "REL [segmented]": {
+   "rule": "bayes",
+   "val": 0.9923651846658913,
+   "calibration": 0.5472287400076549,
+   "cal_per_class": {
+    "Benign": -0.0118,
+    "httpflood": 0.0,
+    "icmpflood": 1.0,
+    "slowratedos": 0.984,
+    "synscan": 0.9997,
+    "tcpconnectscan": 0.9997,
+    "udpflood": -0.1411
+   },
+   "gain_vs_flow": [
+    0.006567678827024803,
+    -0.10686013776600034
+   ],
+   "passes_rule": false
+  },
+  "T_segz [segmented]": {
+   "rule": "balanced",
+   "val": 0.9977135047189719,
+   "calibration": 0.5398784226386344,
+   "cal_per_class": {
+    "Benign": 0.013,
+    "httpflood": -0.0002,
+    "icmpflood": 0.984,
+    "slowratedos": 0.9769,
+    "synscan": 0.9566,
+    "tcpconnectscan": 0.9975,
+    "udpflood": -0.1487
+   },
+   "gain_vs_flow": [
+    0.011915998880105416,
+    -0.11421045513502082
+   ],
+   "passes_rule": false
+  },
+  "all [segmented]": {
+   "rule": "bayes",
+   "val": 0.9902772879633366,
+   "calibration": 0.549660039692981,
+   "cal_per_class": {
+    "Benign": -0.0146,
+    "httpflood": 0.0,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9958,
+    "synscan": 0.9987,
+    "tcpconnectscan": 0.9932,
+    "udpflood": -0.1255
+   },
+   "gain_vs_flow": [
+    0.004479782124470089,
+    -0.10442883808067416
+   ],
+   "passes_rule": false
+  },
+  "all_minus_T_segz [segmented]": {
+   "rule": "bayes",
+   "val": 0.9886481800244956,
+   "calibration": 0.5471880869923996,
+   "cal_per_class": {
+    "Benign": -0.0134,
+    "httpflood": 0.0,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9935,
+    "synscan": 0.9987,
+    "tcpconnectscan": 0.9955,
+    "udpflood": -0.1439
+   },
+   "gain_vs_flow": [
+    0.0028506741856291207,
+    -0.10690079078125558
+   ],
+   "passes_rule": false
+  },
+  "REL [merged]": {
+   "rule": "bayes",
+   "val": 0.9962315523035484,
+   "calibration": 0.5472174808109908,
+   "cal_per_class": {
+    "Benign": -0.011,
+    "httpflood": 0.0,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9826,
+    "synscan": 1.0,
+    "tcpconnectscan": 1.0,
+    "udpflood": -0.1411
+   },
+   "gain_vs_flow": [
+    0.010434046464681934,
+    -0.10687139696266446
+   ],
+   "passes_rule": false
+  },
+  "T_segz [merged]": {
+   "rule": "balanced",
+   "val": 0.7427599311575067,
+   "calibration": 0.44584116880243146,
+   "cal_per_class": {
+    "Benign": -0.0287,
+    "httpflood": 0.0,
+    "icmpflood": 0.984,
+    "slowratedos": 0.9477,
+    "synscan": 0.7669,
+    "tcpconnectscan": 0.5544,
+    "udpflood": -0.1035
+   },
+   "gain_vs_flow": [
+    -0.24303757468135978,
+    -0.20824770897122374
+   ],
+   "passes_rule": false
+  },
+  "all [merged]": {
+   "rule": "balanced",
+   "val": 0.3487602684028277,
+   "calibration": 0.1321914547879093,
+   "cal_per_class": {
+    "Benign": 0.0365,
+    "httpflood": 0.0,
+    "icmpflood": -0.0015,
+    "slowratedos": 0.0,
+    "synscan": 0.0212,
+    "tcpconnectscan": 0.8691,
+    "udpflood": 0.0
+   },
+   "gain_vs_flow": [
+    -0.6370372374360388,
+    -0.5218974229857459
+   ],
+   "passes_rule": false
+  },
+  "all_minus_T_segz [merged]": {
+   "rule": "balanced",
+   "val": 0.3485201604080547,
+   "calibration": 0.006917647218685727,
+   "cal_per_class": {
+    "Benign": 0.0293,
+    "httpflood": 0.0,
+    "icmpflood": -0.0012,
+    "slowratedos": 0.0,
+    "synscan": 0.0203,
+    "tcpconnectscan": 0.0,
+    "udpflood": 0.0
+   },
+   "gain_vs_flow": [
+    -0.6372773454308118,
+    -0.6471712305549695
+   ],
+   "passes_rule": false
+  },
+  "multiview(REL,T_segz,all) [segmented]": {
+   "rule": "bayes",
+   "val": 0.9931156595407254,
+   "calibration": 0.5442273861474931,
+   "cal_per_class": {
+    "Benign": -0.0134,
+    "httpflood": 0.0,
+    "icmpflood": 0.9919,
+    "slowratedos": 0.9823,
+    "synscan": 0.9992,
+    "tcpconnectscan": 0.9967,
+    "udpflood": -0.1473
+   },
+   "gain_vs_flow": [
+    0.007318153701858954,
+    -0.1098614916261621
+   ],
+   "passes_rule": false
+  },
+  "multiview_noZ(REL,all-T_segz) [segmented]": {
+   "rule": "bayes",
+   "val": 0.9920595196196557,
+   "calibration": 0.5470258772590016,
+   "cal_per_class": {
+    "Benign": -0.0117,
+    "httpflood": 0.0,
+    "icmpflood": 1.0,
+    "slowratedos": 0.9835,
+    "synscan": 0.9997,
+    "tcpconnectscan": 0.9992,
+    "udpflood": -0.1416
+   },
+   "gain_vs_flow": [
+    0.006262013780789166,
+    -0.10706300051465356
+   ],
+   "passes_rule": false
+  },
+  "multiview(REL,T_segz,all) [merged]": {
+   "rule": "bayes",
+   "val": 0.8161507429152471,
+   "calibration": 0.4810773114026081,
+   "cal_per_class": {
+    "Benign": -0.0343,
+    "httpflood": 0.0,
+    "icmpflood": 0.7682,
+    "slowratedos": 0.958,
+    "synscan": 0.9192,
+    "tcpconnectscan": 0.905,
+    "udpflood": -0.1485
+   },
+   "gain_vs_flow": [
+    -0.16964676292361935,
+    -0.1730115663710471
+   ],
+   "passes_rule": false
+  },
+  "multiview_noZ(REL,all-T_segz) [merged]": {
+   "rule": "bayes",
+   "val": 0.9898307520319584,
+   "calibration": 0.4532330687934761,
+   "cal_per_class": {
+    "Benign": -0.0095,
+    "httpflood": 0.0,
+    "icmpflood": 0.545,
+    "slowratedos": 0.9948,
+    "synscan": 0.7885,
+    "tcpconnectscan": 0.9982,
+    "udpflood": -0.1445
+   },
+   "gain_vs_flow": [
+    0.004033246193091866,
+    -0.20085580898017913
+   ],
+   "passes_rule": false
+  }
+ }
+}

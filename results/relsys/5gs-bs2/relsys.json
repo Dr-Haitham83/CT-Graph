@@ -1,0 +1,155 @@
+{
+ "flows": 728116,
+ "segments": 10,
+ "streaming_ns_per_flow_single_core": 5157.8371523218775,
+ "streaming_flows_per_s_single_core": 193879.71556058823,
+ "batch_library_us_per_flow": 3.0416279686203933,
+ "peak_flow_records_per_s": 41740,
+ "p99_flow_records_per_s": 1129.199999999997,
+ "headroom_single_core_vs_peak": 4.644938082429042,
+ "peak_flows_in_any_60s_window": 281429,
+ "peak_active_keys_60s": {
+  "src": 42,
+  "dst": 63,
+  "pair": 149
+ },
+ "max_live_first_seen_entries": 60805,
+ "state_bytes_estimate": 69051048,
+ "exactness_max_abs_diff_vs_batch": {
+  "src_flows_10s": 9.5367431640625e-07,
+  "src_newdport_frac_10s": 1.0,
+  "src_syn_frac_10s": 0.0,
+  "src_empty_frac_10s": 0.0,
+  "src_newpeer_10s": 0.6931471824645996,
+  "src_newsport_frac_10s": 1.0,
+  "src_flows_60s": 9.5367431640625e-07,
+  "src_newdport_frac_60s": 1.0,
+  "src_syn_frac_60s": 0.0,
+  "src_empty_frac_60s": 0.0,
+  "src_newpeer_60s": 0.6931471824645996,
+  "src_newsport_frac_60s": 1.0,
+  "dst_flows_10s": 9.5367431640625e-07,
+  "dst_newdport_frac_10s": 1.0,
+  "dst_syn_frac_10s": 0.0,
+  "dst_empty_frac_10s": 0.0,
+  "dst_newpeer_10s": 0.6931471824645996,
+  "dst_newsport_frac_10s": 0.0,
+  "dst_flows_60s": 9.5367431640625e-07,
+  "dst_newdport_frac_60s": 1.0,
+  "dst_syn_frac_60s": 0.0,
+  "dst_empty_frac_60s": 0.0,
+  "dst_newpeer_60s": 0.6931471824645996,
+  "dst_newsport_frac_60s": 0.0,
+  "pair_flows_10s": 9.5367431640625e-07,
+  "pair_newdport_frac_10s": 1.0,
+  "pair_syn_frac_10s": 0.0,
+  "pair_empty_frac_10s": 0.0,
+  "pair_flows_60s": 9.5367431640625e-07,
+  "pair_newdport_frac_60s": 1.0,
+  "pair_syn_frac_60s": 0.0,
+  "pair_empty_frac_60s": 0.0
+ },
+ "window_count_referee_integer_us": {
+  "src_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "src_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "dst_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "dst_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "pair_flows_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "pair_flows_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "src_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 4,
+   "rows": 728116
+  },
+  "src_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 11,
+   "rows": 728116
+  },
+  "src_newpeer_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 4,
+   "rows": 728116
+  },
+  "src_newpeer_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 11,
+   "rows": 728116
+  },
+  "src_newsport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 2,
+   "rows": 728116
+  },
+  "src_newsport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 2,
+   "rows": 728116
+  },
+  "dst_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 1,
+   "rows": 728116
+  },
+  "dst_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 1,
+   "rows": 728116
+  },
+  "dst_newpeer_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 5,
+   "rows": 728116
+  },
+  "dst_newpeer_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 20,
+   "rows": 728116
+  },
+  "dst_newsport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "dst_newsport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 0,
+   "rows": 728116
+  },
+  "pair_newdport_sum_10s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 3,
+   "rows": 728116
+  },
+  "pair_newdport_sum_60s": {
+   "streaming_mismatch_rows": 0,
+   "batch_mismatch_rows": 3,
+   "rows": 728116
+  }
+ },
+ "streaming_exact_vs_integer_referee": true
+}

@@ -1,0 +1,1656 @@
+{
+ "prepared": "nids-cic",
+ "classes": [
+  "Benign",
+  "bot",
+  "brute_force_-web",
+  "brute_force_-xss",
+  "ddos_attack-hoic",
+  "ddos_attack-loic-udp",
+  "ddos_attacks-loic-http",
+  "dos_attacks-goldeneye",
+  "dos_attacks-hulk",
+  "dos_attacks-slowhttptest",
+  "dos_attacks-slowloris",
+  "ftp-bruteforce",
+  "infilteration",
+  "sql_injection",
+  "ssh-bruteforce"
+ ],
+ "graph_runs": [
+  "/data/input/ctg-cic-v4bs42-train-full/nids-cic/evaluations/092446f0853cfc36de68c761/results.json",
+  "/data/input/ctg-cic-v4bs43-train-full/nids-cic/evaluations/54b89237ab99bd0f3c487415/results.json"
+ ],
+ "graph_seeds": 2,
+ "context_branch_seeds": 3,
+ "validation_rows": 2660294,
+ "block_units": 250,
+ "protocol": "validation predictions + train labels for the irreducible-entropy lookup; test never opened",
+ "deployed_fusion": {
+  "graph_weight": 0.6,
+  "rule": "bayes"
+ },
+ "C_label_shift": {
+  "train_prior": {
+   "Benign": 0.877862,
+   "bot": 0.01061,
+   "brute_force_-web": 8.9e-05,
+   "brute_force_-xss": 2.4e-05,
+   "ddos_attack-hoic": 0.048627,
+   "ddos_attack-loic-udp": 0.00013,
+   "ddos_attacks-loic-http": 0.013376,
+   "dos_attacks-goldeneye": 0.002643,
+   "dos_attacks-hulk": 0.00274,
+   "dos_attacks-slowhttptest": 0.004924,
+   "dos_attacks-slowloris": 0.001676,
+   "ftp-bruteforce": 0.018987,
+   "infilteration": 0.009166,
+   "sql_injection": 2e-05,
+   "ssh-bruteforce": 0.009126
+  },
+  "validation_prior": {
+   "Benign": 0.899226,
+   "bot": 0.011131,
+   "brute_force_-web": 5.5e-05,
+   "brute_force_-xss": 1.5e-05,
+   "ddos_attack-hoic": 0.035985,
+   "ddos_attack-loic-udp": 0.0,
+   "ddos_attacks-loic-http": 0.013439,
+   "dos_attacks-goldeneye": 0.0,
+   "dos_attacks-hulk": 0.0,
+   "dos_attacks-slowhttptest": 0.003718,
+   "dos_attacks-slowloris": 0.00051,
+   "ftp-bruteforce": 0.016419,
+   "infilteration": 0.010927,
+   "sql_injection": 2e-05,
+   "ssh-bruteforce": 0.008555
+  },
+  "em_estimated_validation_prior_from_graph": {
+   "Benign": 0.897919,
+   "bot": 0.011189,
+   "brute_force_-web": 0.001082,
+   "brute_force_-xss": 0.008005,
+   "ddos_attack-hoic": 0.03442,
+   "ddos_attack-loic-udp": 0.0,
+   "ddos_attacks-loic-http": 0.009482,
+   "dos_attacks-goldeneye": 0.0,
+   "dos_attacks-hulk": 0.0,
+   "dos_attacks-slowhttptest": 0.004175,
+   "dos_attacks-slowloris": 0.0,
+   "ftp-bruteforce": 0.015952,
+   "infilteration": 0.009368,
+   "sql_injection": 0.0,
+   "ssh-bruteforce": 0.008407
+  },
+  "kl_val_vs_train_bits": 0.012525189067256758
+ },
+ "D_branches": {
+  "macro_mcc": {
+   "graph": 0.7244485475787356,
+   "fusion": 0.7707899126067215,
+   "context_gbdt": 0.6894462317601278
+  },
+  "oracle_either_branch_accuracy": 0.9942788278288038,
+  "cross_fitted_oof_macro_mcc": {
+   "global_weight_fusion": 0.7555074313936806,
+   "class_conditional_gate": 0.7663480212747878,
+   "per_class_bias_head": 0.7537058990833896
+  },
+  "gate_weights_per_fold": [
+   [
+    0.7,
+    0.9,
+    0.8,
+    0.2,
+    1.0,
+    0.0,
+    0.9,
+    0.4,
+    0.7,
+    0.9,
+    0.2,
+    0.6,
+    1.0,
+    0.6,
+    0.0
+   ],
+   [
+    0.6,
+    1.0,
+    0.8,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    0.8,
+    0.7,
+    0.0,
+    0.6,
+    1.0,
+    0.9,
+    0.0
+   ],
+   [
+    0.6,
+    1.0,
+    0.5,
+    0.2,
+    1.0,
+    0.0,
+    1.0,
+    0.4,
+    0.8,
+    1.0,
+    0.1,
+    0.9,
+    1.0,
+    0.8,
+    0.0
+   ],
+   [
+    0.7,
+    0.9,
+    0.8,
+    0.0,
+    0.0,
+    0.0,
+    0.9,
+    0.4,
+    0.7,
+    0.9,
+    0.4,
+    0.6,
+    0.9,
+    0.6,
+    0.0
+   ],
+   [
+    0.6,
+    0.4,
+    0.7,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.5,
+    0.5,
+    0.9,
+    0.1,
+    0.6,
+    1.0,
+    0.7,
+    0.0
+   ]
+  ],
+  "deletion": {
+   "delete_context_branch (graph only)": 0.7244485475787356,
+   "delete_graph_branch (context only)": 0.6894462317601278,
+   "keep_both (deployed fusion)": 0.7707899126067215
+  }
+ },
+ "A_information": {
+  "H_Y_bits": 0.730405483466135,
+  "H_Y_given_X_flow_bits_on_seen": 0.08965196417502135,
+  "seen_fraction": 0.5146164296126668,
+  "fano_lower_bound_on_per_flow_error": 0.0,
+  "per_flow_bayes_error_on_seen": 0.019160659698032014,
+  "I_Y_Yhat_bits_graph": 0.6639549684292787,
+  "I_Y_Yhat_bits_fusion": 0.6611622371830621,
+  "I_Y_Yhat_bits_context_gbdt": 0.6058374859832039
+ },
+ "per_class": {
+  "Benign": {
+   "support": 2392206,
+   "seen_fraction": 0.5037225055032886,
+   "irreducible_entropy_bits": 0.059325925780037266,
+   "forced_error_rate": 0.010164475826911825,
+   "graph": {
+    "entropic_bleed": 0.005534564952316412,
+    "bleed_to": [
+     [
+      "infilteration",
+      0.0049
+     ],
+     [
+      "brute_force_-web",
+      0.0002
+     ],
+     [
+      "ddos_attack-hoic",
+      0.0001
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.022678141154839578,
+    "cross_entropy_bits": 0.011177205701032483,
+    "excess_cross_entropy_bits": -0.043808962163314064
+   },
+   "fusion": {
+    "entropic_bleed": 0.0036676464302179967,
+    "bleed_to": [
+     [
+      "infilteration",
+      0.0032
+     ],
+     [
+      "brute_force_-web",
+      0.0001
+     ],
+     [
+      "ddos_attack-hoic",
+      0.0001
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.0061854581264902415,
+    "cross_entropy_bits": 0.0062140754141252665,
+    "excess_cross_entropy_bits": -0.05055896967073121
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.0008672686470718727,
+    "bleed_to": [
+     [
+      "infilteration",
+      0.0006
+     ],
+     [
+      "brute_force_-web",
+      0.0001
+     ],
+     [
+      "ddos_attack-hoic",
+      0.0001
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.0022536642187367967,
+    "cross_entropy_bits": 0.0016385260013693068,
+    "excess_cross_entropy_bits": -0.057174322492118346
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     5.984826057821159,
+     8.114792945977829,
+     9.289748628488756
+    ],
+    "misclassified_fraction": 0.00044519577327370636,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.0014279706680779163,
+    "median_flip_displacement_log_odds": 0.1381004986601828,
+    "seed_bald_bits": 0.001424384817961184,
+    "seed_disagreement": 0.00129921921439876,
+    "epoch_f1_std_mean": 0.004186812433581849,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.9602695004430704,
+    "ovr_mcc_at_optimal_shift": 0.9704819230145182,
+    "optimal_log_odds_shift": -1.25,
+    "shift_ci95": [
+     -1.5,
+     -1.25
+    ],
+    "ece": 0.007624222624749696,
+    "prior_train": 0.8778619684200014,
+    "prior_val": 0.8992261757535069
+   },
+   "branch_f1": {
+    "graph": 0.9961,
+    "fusion": 0.9961,
+    "context_gbdt": 0.9926
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.9942,
+     0.998
+    ],
+    "fusion": [
+     0.9926,
+     0.9996
+    ],
+    "context_gbdt": [
+     0.9855,
+     0.9999
+    ]
+   }
+  },
+  "bot": {
+   "support": 29613,
+   "seen_fraction": 0.9773748016074022,
+   "irreducible_entropy_bits": 0.0,
+   "forced_error_rate": 0.0,
+   "graph": {
+    "entropic_bleed": 0.0024877290333537028,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0018
+     ],
+     [
+      "dos_attacks-slowloris",
+      0.0002
+     ],
+     [
+      "ddos_attack-loic-udp",
+      0.0002
+     ]
+    ],
+    "H_Yhat_given_Y_bits": -0.0,
+    "cross_entropy_bits": 0.0037148622934491627,
+    "excess_cross_entropy_bits": 0.0037268813768742796
+   },
+   "fusion": {
+    "entropic_bleed": 0.0020761836684813906,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0017
+     ],
+     [
+      "dos_attacks-slowloris",
+      0.0001
+     ],
+     [
+      "ddos_attack-loic-udp",
+      0.0001
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.0010330996085409461,
+    "cross_entropy_bits": 0.0031993266986647733,
+    "excess_cross_entropy_bits": 0.0028823391918072934
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.0014588656211730333,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0014
+     ],
+     [
+      "infilteration",
+      0.0
+     ],
+     [
+      "ddos_attack-hoic",
+      0.0
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.009837041783407373,
+    "cross_entropy_bits": 0.0036817975808449118,
+    "excess_cross_entropy_bits": 0.002416614645257671
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     8.953451445460617,
+     9.493181953810382,
+     9.741382046120233
+    ],
+    "misclassified_fraction": 6.753790564954581e-05,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.0006753790564954581,
+    "median_flip_displacement_log_odds": 0.46874589344645623,
+    "seed_bald_bits": 0.0013901948341901904,
+    "seed_disagreement": 0.00020261371694863743,
+    "epoch_f1_std_mean": 0.0024271857656915346,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.9999658503603306,
+    "ovr_mcc_at_optimal_shift": 1.0,
+    "optimal_log_odds_shift": 0.5,
+    "shift_ci95": [
+     -1.0,
+     0.5
+    ],
+    "ece": 8.609264026694556e-05,
+    "prior_train": 0.010610059356172838,
+    "prior_val": 0.011131476445836438
+   },
+   "branch_f1": {
+    "graph": 1.0,
+    "fusion": 1.0,
+    "context_gbdt": 0.9996
+   },
+   "branch_precision_recall": {
+    "graph": [
+     1.0,
+     1.0
+    ],
+    "fusion": [
+     1.0,
+     0.9999
+    ],
+    "context_gbdt": [
+     1.0,
+     0.9992
+    ]
+   }
+  },
+  "brute_force_-web": {
+   "support": 145,
+   "seen_fraction": 0.3310344827586207,
+   "irreducible_entropy_bits": 0.34447126284936985,
+   "forced_error_rate": 0.8842001529705662,
+   "graph": {
+    "entropic_bleed": 0.28910229045652847,
+    "bleed_to": [
+     [
+      "Benign",
+      0.1368
+     ],
+     [
+      "brute_force_-xss",
+      0.0671
+     ],
+     [
+      "sql_injection",
+      0.0638
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.1110313377405285,
+    "cross_entropy_bits": 1.0289672489807402,
+    "excess_cross_entropy_bits": 0.6601180496482688
+   },
+   "fusion": {
+    "entropic_bleed": 0.5428162043842294,
+    "bleed_to": [
+     [
+      "Benign",
+      0.4193
+     ],
+     [
+      "brute_force_-xss",
+      0.0403
+     ],
+     [
+      "sql_injection",
+      0.0383
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.9159798091406801,
+    "cross_entropy_bits": 1.6735878010060619,
+    "excess_cross_entropy_bits": 1.2216758032628696
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.9233870752757809,
+    "bleed_to": [
+     [
+      "Benign",
+      0.843
+     ],
+     [
+      "ssh-bruteforce",
+      0.0779
+     ],
+     [
+      "infilteration",
+      0.0019
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.14529544538163575,
+    "cross_entropy_bits": 8.949104904322883,
+    "excess_cross_entropy_bits": 5.729746959323677
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     -2.241407947185987,
+     0.3921781889741832,
+     0.8046790575306535
+    ],
+    "misclassified_fraction": 0.3310344827586207,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.3448275862068966,
+    "median_flip_displacement_log_odds": 1.3946601034498762,
+    "seed_bald_bits": 0.11973463943745437,
+    "seed_disagreement": 0.21379310344827587,
+    "epoch_f1_std_mean": 0.011034337876774276,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.373505981298627,
+    "ovr_mcc_at_optimal_shift": 0.40025486909029273,
+    "optimal_log_odds_shift": 2.5,
+    "shift_ci95": [
+     -0.25,
+     2.5
+    ],
+    "ece": 0.00015715383322706316,
+    "prior_train": 8.924581122815083e-05,
+    "prior_val": 5.4505253930580604e-05
+   },
+   "branch_f1": {
+    "graph": 0.3803,
+    "fusion": 0.318,
+    "context_gbdt": 0.0142
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.2523,
+     0.7724
+    ],
+    "fusion": [
+     0.2086,
+     0.669
+    ],
+    "context_gbdt": [
+     0.0108,
+     0.0207
+    ]
+   }
+  },
+  "brute_force_-xss": {
+   "support": 41,
+   "seen_fraction": 0.7073170731707317,
+   "irreducible_entropy_bits": 1.3182826052886532,
+   "forced_error_rate": 0.8524653601384465,
+   "graph": {
+    "entropic_bleed": 0.521181031452526,
+    "bleed_to": [
+     [
+      "sql_injection",
+      0.2796
+     ],
+     [
+      "brute_force_-web",
+      0.1494
+     ],
+     [
+      "Benign",
+      0.0524
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.5509526583886883,
+    "cross_entropy_bits": 1.2909708650399754,
+    "excess_cross_entropy_bits": -0.2677627444223867
+   },
+   "fusion": {
+    "entropic_bleed": 0.5359911774809369,
+    "bleed_to": [
+     [
+      "brute_force_-web",
+      0.1809
+     ],
+     [
+      "sql_injection",
+      0.1724
+     ],
+     [
+      "Benign",
+      0.1586
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.1902787772361623,
+    "cross_entropy_bits": 1.254355539029094,
+    "excess_cross_entropy_bits": -0.28117022119702084
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.5582063965235533,
+    "bleed_to": [
+     [
+      "Benign",
+      0.3179
+     ],
+     [
+      "brute_force_-web",
+      0.2282
+     ],
+     [
+      "sql_injection",
+      0.0116
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.4497374251118624,
+    "cross_entropy_bits": 1.6495885471418448,
+    "excess_cross_entropy_bits": 0.14634502244045633
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     -0.5539191684881087,
+     0.5448915453388383,
+     1.191741567126944
+    ],
+    "misclassified_fraction": 0.2682926829268293,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.34146341463414637,
+    "median_flip_displacement_log_odds": 0.5157537350495583,
+    "seed_bald_bits": 0.1533055375738897,
+    "seed_disagreement": 0.4634146341463415,
+    "epoch_f1_std_mean": 0.017034680430583465,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.502297176941267,
+    "ovr_mcc_at_optimal_shift": 0.502297176941267,
+    "optimal_log_odds_shift": 0.0,
+    "shift_ci95": [
+     -0.5,
+     0.0
+    ],
+    "ece": 5.733910452884894e-05,
+    "prior_train": 2.4495491373561555e-05,
+    "prior_val": 1.541183042175038e-05
+   },
+   "branch_f1": {
+    "graph": 0.1832,
+    "fusion": 0.4688,
+    "context_gbdt": 0.4691
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.1078,
+     0.6098
+    ],
+    "fusion": [
+     0.3448,
+     0.7317
+    ],
+    "context_gbdt": [
+     0.475,
+     0.4634
+    ]
+   }
+  },
+  "ddos_attack-hoic": {
+   "support": 95730,
+   "seen_fraction": 0.5885511333960096,
+   "irreducible_entropy_bits": 0.0,
+   "forced_error_rate": 0.0,
+   "graph": {
+    "entropic_bleed": 0.018342011678480707,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0168
+     ],
+     [
+      "ddos_attacks-loic-http",
+      0.0009
+     ],
+     [
+      "sql_injection",
+      0.0002
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.017923502513776376,
+    "cross_entropy_bits": 0.03205629016686424,
+    "excess_cross_entropy_bits": 0.001032519095995923
+   },
+   "fusion": {
+    "entropic_bleed": 0.01704150525916548,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0161
+     ],
+     [
+      "ddos_attacks-loic-http",
+      0.0005
+     ],
+     [
+      "sql_injection",
+      0.0001
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.018307730361164332,
+    "cross_entropy_bits": 0.028682020055806157,
+    "excess_cross_entropy_bits": 0.0008665672122921888
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.015090745630192748,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0149
+     ],
+     [
+      "infilteration",
+      0.0
+     ],
+     [
+      "ftp-bruteforce",
+      0.0
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.14902188100949043,
+    "cross_entropy_bits": 0.03311358773901399,
+    "excess_cross_entropy_bits": 0.0006269983965353277
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     4.323665858565809,
+     8.698041808234478,
+     8.833282382127017
+    ],
+    "misclassified_fraction": 0.0017235976183014728,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.004888749608273269,
+    "median_flip_displacement_log_odds": 0.19545814093088865,
+    "seed_bald_bits": 0.016186660678096758,
+    "seed_disagreement": 0.02940561997284028,
+    "epoch_f1_std_mean": 0.0103881205414398,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.9989701449172819,
+    "ovr_mcc_at_optimal_shift": 0.9996316246650954,
+    "optimal_log_odds_shift": 0.75,
+    "shift_ci95": [
+     -4.0,
+     0.75
+    ],
+    "ece": 0.0006797939159178576,
+    "prior_train": 0.048626890670797895,
+    "prior_val": 0.03598474454327229
+   },
+   "branch_f1": {
+    "graph": 0.9985,
+    "fusion": 0.999,
+    "context_gbdt": 0.9892
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.9987,
+     0.9983
+    ],
+    "fusion": [
+     0.9997,
+     0.9983
+    ],
+    "context_gbdt": [
+     1.0,
+     0.9786
+    ]
+   }
+  },
+  "ddos_attacks-loic-http": {
+   "support": 35752,
+   "seen_fraction": 0.017006041620049227,
+   "irreducible_entropy_bits": 0.4297792293287954,
+   "forced_error_rate": 0.09444844989185293,
+   "graph": {
+    "entropic_bleed": 0.02736106561684737,
+    "bleed_to": [
+     [
+      "Benign",
+      0.019
+     ],
+     [
+      "dos_attacks-goldeneye",
+      0.0042
+     ],
+     [
+      "brute_force_-xss",
+      0.0017
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.03695135361244628,
+    "cross_entropy_bits": 0.044179877275615655,
+    "excess_cross_entropy_bits": -0.07323805039896075
+   },
+   "fusion": {
+    "entropic_bleed": 0.11119142781831581,
+    "bleed_to": [
+     [
+      "Benign",
+      0.103
+     ],
+     [
+      "dos_attacks-goldeneye",
+      0.005
+     ],
+     [
+      "brute_force_-xss",
+      0.001
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.0404917436349624,
+    "cross_entropy_bits": 0.20560366200140298,
+    "excess_cross_entropy_bits": 0.15533614243927818
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.2369369711205188,
+    "bleed_to": [
+     [
+      "Benign",
+      0.2291
+     ],
+     [
+      "dos_attacks-goldeneye",
+      0.0061
+     ],
+     [
+      "infilteration",
+      0.0007
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.7951614411761021,
+    "cross_entropy_bits": 1.4330785674290434,
+    "excess_cross_entropy_bits": 3.940824037311034
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     0.46126161425083473,
+     6.72863122498836,
+     8.58260753336236
+    ],
+    "misclassified_fraction": 0.004363392257775788,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.10452562094428283,
+    "median_flip_displacement_log_odds": 1.2845486674484081,
+    "seed_bald_bits": 0.025135595083425753,
+    "seed_disagreement": 0.00825128664130678,
+    "epoch_f1_std_mean": 0.019768790400233677,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.9977578523342907,
+    "ovr_mcc_at_optimal_shift": 0.9998157305876576,
+    "optimal_log_odds_shift": 1.5,
+    "shift_ci95": [
+     -4.0,
+     2.0
+    ],
+    "ece": 0.001603891621958964,
+    "prior_train": 0.01337633690996057,
+    "prior_val": 0.01343911612776633
+   },
+   "branch_f1": {
+    "graph": 0.998,
+    "fusion": 0.9978,
+    "context_gbdt": 0.8647
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.9999,
+     0.9961
+    ],
+    "fusion": [
+     0.9999,
+     0.9956
+    ],
+    "context_gbdt": [
+     1.0,
+     0.7616
+    ]
+   }
+  },
+  "dos_attacks-slowhttptest": {
+   "support": 9890,
+   "seen_fraction": 1.0,
+   "irreducible_entropy_bits": 0.736488893871066,
+   "forced_error_rate": 0.7940266676365244,
+   "graph": {
+    "entropic_bleed": 0.5279244689919201,
+    "bleed_to": [
+     [
+      "ftp-bruteforce",
+      0.5153
+     ],
+     [
+      "Benign",
+      0.0048
+     ],
+     [
+      "ssh-bruteforce",
+      0.002
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.9704157830286645,
+    "cross_entropy_bits": 1.0933457313282369,
+    "excess_cross_entropy_bits": 0.3568568374571709
+   },
+   "fusion": {
+    "entropic_bleed": 0.4658682556690825,
+    "bleed_to": [
+     [
+      "ftp-bruteforce",
+      0.4493
+     ],
+     [
+      "Benign",
+      0.0093
+     ],
+     [
+      "ssh-bruteforce",
+      0.0021
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.9876925088958034,
+    "cross_entropy_bits": 0.9477235548295643,
+    "excess_cross_entropy_bits": 0.2112346609584983
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.37278393568482615,
+    "bleed_to": [
+     [
+      "ftp-bruteforce",
+      0.3502
+     ],
+     [
+      "Benign",
+      0.0161
+     ],
+     [
+      "infilteration",
+      0.0034
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.9876925088958034,
+    "cross_entropy_bits": 0.8552459309885951,
+    "excess_cross_entropy_bits": 0.11875703711752916
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     -0.39254151219596256,
+     0.3845985981207882,
+     0.9741676617713435
+    ],
+    "misclassified_fraction": 0.43478260869565216,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.6964610717896865,
+    "median_flip_displacement_log_odds": 0.39254151219596256,
+    "seed_bald_bits": 0.30934300040298124,
+    "seed_disagreement": 1.0,
+    "epoch_f1_std_mean": 0.19007869469395558,
+    "epoch_collapses": 1
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.7147061903754819,
+    "ovr_mcc_at_optimal_shift": 0.7206019623956487,
+    "optimal_log_odds_shift": -0.25,
+    "shift_ci95": [
+     -4.0,
+     1.0
+    ],
+    "ece": 0.0016270112008316654,
+    "prior_train": 0.004923936360370817,
+    "prior_val": 0.0037176342163685668
+   },
+   "branch_f1": {
+    "graph": 0.5658,
+    "fusion": 0.6961,
+    "context_gbdt": 0.6735
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.9719,
+     0.3991
+    ],
+    "fusion": [
+     0.9057,
+     0.5652
+    ],
+    "context_gbdt": [
+     0.8331,
+     0.5652
+    ]
+   }
+  },
+  "dos_attacks-slowloris": {
+   "support": 1356,
+   "seen_fraction": 0.7300884955752213,
+   "irreducible_entropy_bits": 0.0,
+   "forced_error_rate": 0.0,
+   "graph": {
+    "entropic_bleed": 0.6269672193446343,
+    "bleed_to": [
+     [
+      "Benign",
+      0.5212
+     ],
+     [
+      "ddos_attacks-loic-http",
+      0.0665
+     ],
+     [
+      "bot",
+      0.008
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.8617239665672182,
+    "cross_entropy_bits": 1.7798161369340675,
+    "excess_cross_entropy_bits": 2.2889369152593533
+   },
+   "fusion": {
+    "entropic_bleed": 0.39411714290996325,
+    "bleed_to": [
+     [
+      "Benign",
+      0.3306
+     ],
+     [
+      "ddos_attacks-loic-http",
+      0.0399
+     ],
+     [
+      "bot",
+      0.0048
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.18438134454381555,
+    "cross_entropy_bits": 0.7655779181221455,
+    "excess_cross_entropy_bits": 0.945150681659174
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.0448420282579568,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0447
+     ],
+     [
+      "infilteration",
+      0.0
+     ],
+     [
+      "ddos_attack-hoic",
+      0.0
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.11967996424972367,
+    "cross_entropy_bits": 0.08311259038173444,
+    "excess_cross_entropy_bits": 0.06202080571687576
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     0.08341292929648014,
+     0.5181172824178064,
+     1.781366207340222
+    ],
+    "misclassified_fraction": 0.028023598820058997,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.42330383480825956,
+    "median_flip_displacement_log_odds": 0.18684766977800094,
+    "seed_bald_bits": 0.14176523592080767,
+    "seed_disagreement": 0.336283185840708,
+    "epoch_f1_std_mean": 0.2570423559243528,
+    "epoch_collapses": 3
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.9858815904840573,
+    "ovr_mcc_at_optimal_shift": 0.9985275777834024,
+    "optimal_log_odds_shift": 0.25,
+    "shift_ci95": [
+     -4.0,
+     0.25
+    ],
+    "ece": 0.00023693660914635934,
+    "prior_train": 0.0016764851333779505,
+    "prior_val": 0.0005097180988266711
+   },
+   "branch_f1": {
+    "graph": 0.4409,
+    "fusion": 0.9858,
+    "context_gbdt": 0.9798
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.9772,
+     0.2847
+    ],
+    "fusion": [
+     1.0,
+     0.972
+    ],
+    "context_gbdt": [
+     0.9759,
+     0.9838
+    ]
+   }
+  },
+  "ftp-bruteforce": {
+   "support": 43680,
+   "seen_fraction": 1.0,
+   "irreducible_entropy_bits": 0.7363578711442273,
+   "forced_error_rate": 0.20610758298788537,
+   "graph": {
+    "entropic_bleed": 0.14830927143808137,
+    "bleed_to": [
+     [
+      "dos_attacks-slowhttptest",
+      0.1418
+     ],
+     [
+      "Benign",
+      0.0023
+     ],
+     [
+      "ssh-bruteforce",
+      0.0012
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.026157900235069337,
+    "cross_entropy_bits": 0.2732110427104558,
+    "excess_cross_entropy_bits": -0.46314682843377153
+   },
+   "fusion": {
+    "entropic_bleed": 0.12672682931710366,
+    "bleed_to": [
+     [
+      "dos_attacks-slowhttptest",
+      0.1215
+     ],
+     [
+      "Benign",
+      0.0021
+     ],
+     [
+      "ssh-bruteforce",
+      0.0011
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.10210116868332918,
+    "cross_entropy_bits": 0.2326796241590933,
+    "excess_cross_entropy_bits": -0.5036782469851341
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.0943531661356366,
+    "bleed_to": [
+     [
+      "dos_attacks-slowhttptest",
+      0.0911
+     ],
+     [
+      "Benign",
+      0.0018
+     ],
+     [
+      "ssh-bruteforce",
+      0.0009
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.17203694935311378,
+    "cross_entropy_bits": 0.2679908876334953,
+    "excess_cross_entropy_bits": -0.468366983510732
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     0.39254151219596256,
+     4.313715300157493,
+     5.966241473636685
+    ],
+    "misclassified_fraction": 0.013324175824175824,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.20233516483516484,
+    "median_flip_displacement_log_odds": 0.77717288378231,
+    "seed_bald_bits": 0.05833797894932042,
+    "seed_disagreement": 0.22655677655677656,
+    "epoch_f1_std_mean": 0.10886910836807706,
+    "epoch_collapses": 1
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.9462312630726814,
+    "ovr_mcc_at_optimal_shift": 0.9474497839578343,
+    "optimal_log_odds_shift": 0.25,
+    "shift_ci95": [
+     -4.0,
+     1.0
+    ],
+    "ece": 0.0016407314329731119,
+    "prior_train": 0.01898657527164729,
+    "prior_val": 0.016419237873708695
+   },
+   "branch_f1": {
+    "graph": 0.9344,
+    "fusion": 0.9463,
+    "context_gbdt": 0.9401
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.879,
+     0.9974
+    ],
+    "fusion": [
+     0.9092,
+     0.9867
+    ],
+    "context_gbdt": [
+     0.9082,
+     0.9744
+    ]
+   }
+  },
+  "infilteration": {
+   "support": 29069,
+   "seen_fraction": 0.8058412742096391,
+   "irreducible_entropy_bits": 0.4879149099740229,
+   "forced_error_rate": 0.6008440374303324,
+   "graph": {
+    "entropic_bleed": 0.4871937720519781,
+    "bleed_to": [
+     [
+      "Benign",
+      0.4451
+     ],
+     [
+      "dos_attacks-slowhttptest",
+      0.0116
+     ],
+     [
+      "ftp-bruteforce",
+      0.0092
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.0157014671818654,
+    "cross_entropy_bits": 1.7354351195897975,
+    "excess_cross_entropy_bits": 1.1964636623198575
+   },
+   "fusion": {
+    "entropic_bleed": 0.6278000848403674,
+    "bleed_to": [
+     [
+      "Benign",
+      0.5922
+     ],
+     [
+      "dos_attacks-goldeneye",
+      0.0096
+     ],
+     [
+      "dos_attacks-slowhttptest",
+      0.0071
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.9795544359227667,
+    "cross_entropy_bits": 2.2043539823556118,
+    "excess_cross_entropy_bits": 1.6684762633359005
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.8387095540229512,
+    "bleed_to": [
+     [
+      "Benign",
+      0.8128
+     ],
+     [
+      "dos_attacks-goldeneye",
+      0.0236
+     ],
+     [
+      "ddos_attack-hoic",
+      0.0006
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 0.6426350033704302,
+    "cross_entropy_bits": 7.1857687352312665,
+    "excess_cross_entropy_bits": 6.371188882586298
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     -3.686492623439869,
+     -0.09823462008166794,
+     0.4791615908012576
+    ],
+    "misclassified_fraction": 0.6000894423612784,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.5149471946059376,
+    "median_flip_displacement_log_odds": 1.1599900567001697,
+    "seed_bald_bits": 0.11113215186409107,
+    "seed_disagreement": 0.18270322336509684,
+    "epoch_f1_std_mean": 0.07538729699455876,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.6130547107398235,
+    "ovr_mcc_at_optimal_shift": 0.7585074202991451,
+    "optimal_log_odds_shift": 1.5,
+    "shift_ci95": [
+     1.25,
+     1.5
+    ],
+    "ece": 0.003962846602717824,
+    "prior_train": 0.009165767499416305,
+    "prior_val": 0.010926987769021018
+   },
+   "branch_f1": {
+    "graph": 0.6588,
+    "fusion": 0.5623,
+    "context_gbdt": 0.2806
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.7975,
+     0.5611
+    ],
+    "fusion": [
+     0.947,
+     0.3999
+    ],
+    "context_gbdt": [
+     0.9881,
+     0.1635
+    ]
+   }
+  },
+  "sql_injection": {
+   "support": 52,
+   "seen_fraction": 0.7692307692307693,
+   "irreducible_entropy_bits": 1.3659667108551843,
+   "forced_error_rate": 0.8919104020476885,
+   "graph": {
+    "entropic_bleed": 0.6909209269247185,
+    "bleed_to": [
+     [
+      "brute_force_-xss",
+      0.4103
+     ],
+     [
+      "brute_force_-web",
+      0.1872
+     ],
+     [
+      "Benign",
+      0.0698
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.8005553427666459,
+    "cross_entropy_bits": 2.24609588566703,
+    "excess_cross_entropy_bits": 1.013908834276751
+   },
+   "fusion": {
+    "entropic_bleed": 0.8109028222533207,
+    "bleed_to": [
+     [
+      "brute_force_-xss",
+      0.3857
+     ],
+     [
+      "brute_force_-web",
+      0.2673
+     ],
+     [
+      "Benign",
+      0.1436
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.5728889521127052,
+    "cross_entropy_bits": 2.904030661376169,
+    "excess_cross_entropy_bits": 1.7465906933593476
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.990875665246224,
+    "bleed_to": [
+     [
+      "brute_force_-web",
+      0.3873
+     ],
+     [
+      "brute_force_-xss",
+      0.3489
+     ],
+     [
+      "Benign",
+      0.2543
+     ]
+    ],
+    "H_Yhat_given_Y_bits": 1.581257197820248,
+    "cross_entropy_bits": 23.243420468530687,
+    "excess_cross_entropy_bits": 27.068353110050563
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     -2.840027209661674,
+     -1.3588396593634773,
+     -0.040332085224385465
+    ],
+    "misclassified_fraction": 0.9423076923076923,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.23076923076923078,
+    "median_flip_displacement_log_odds": 1.411326703533696,
+    "seed_bald_bits": 0.16483090593887006,
+    "seed_disagreement": 0.4423076923076923,
+    "epoch_f1_std_mean": 0.07203432718775142,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.1572372974357541,
+    "ovr_mcc_at_optimal_shift": 0.34072579648147566,
+    "optimal_log_odds_shift": 1.75,
+    "shift_ci95": [
+     0.25,
+     3.25
+    ],
+    "ece": 1.6860842051109363e-05,
+    "prior_train": 1.9956117098041404e-05,
+    "prior_val": 1.9546711754415113e-05
+   },
+   "branch_f1": {
+    "graph": 0.2883,
+    "fusion": 0.1017,
+    "context_gbdt": 0.0
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.2712,
+     0.3077
+    ],
+    "fusion": [
+     0.4286,
+     0.0577
+    ],
+    "context_gbdt": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "ssh-bruteforce": {
+   "support": 22760,
+   "seen_fraction": 0.0012302284710017574,
+   "irreducible_entropy_bits": 0.0,
+   "forced_error_rate": 0.0,
+   "graph": {
+    "entropic_bleed": 0.012536322055728188,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0057
+     ],
+     [
+      "ftp-bruteforce",
+      0.0027
+     ],
+     [
+      "ddos_attack-loic-udp",
+      0.0015
+     ]
+    ],
+    "H_Yhat_given_Y_bits": -0.0,
+    "cross_entropy_bits": 0.01849850396230409,
+    "excess_cross_entropy_bits": 0.017437356981893713
+   },
+   "fusion": {
+    "entropic_bleed": 0.009216916225042948,
+    "bleed_to": [
+     [
+      "Benign",
+      0.0034
+     ],
+     [
+      "dos_attacks-hulk",
+      0.0019
+     ],
+     [
+      "ftp-bruteforce",
+      0.0016
+     ]
+    ],
+    "H_Yhat_given_Y_bits": -0.0,
+    "cross_entropy_bits": 0.013730129727905166,
+    "excess_cross_entropy_bits": 0.010419307785283188
+   },
+   "context_gbdt": {
+    "entropic_bleed": 0.004237807479015254,
+    "bleed_to": [
+     [
+      "dos_attacks-hulk",
+      0.0042
+     ],
+     [
+      "Benign",
+      0.0
+     ],
+     [
+      "infilteration",
+      0.0
+     ]
+    ],
+    "H_Yhat_given_Y_bits": -0.0,
+    "cross_entropy_bits": 0.007286956680125343,
+    "excess_cross_entropy_bits": 5.960918386611811e-05
+   },
+   "boundary": {
+    "margin_q10_q50_q90": [
+     3.9547273520239083,
+     7.363141432668063,
+     7.901886034831991
+    ],
+    "misclassified_fraction": 0.0,
+    "boundary_proximal_fraction_abs_margin_lt_0.5": 0.0,
+    "median_flip_displacement_log_odds": 0.0,
+    "seed_bald_bits": 0.005019147524501164,
+    "seed_disagreement": 0.0,
+    "epoch_f1_std_mean": 0.02066116433533856,
+    "epoch_collapses": 0
+   },
+   "bayes_decision": {
+    "ovr_mcc_at_zero_shift": 0.999601392877991,
+    "ovr_mcc_at_optimal_shift": 1.0,
+    "optimal_log_odds_shift": -1.75,
+    "shift_ci95": [
+     -4.0,
+     -1.75
+    ],
+    "ece": 0.0001417827713317506,
+    "prior_train": 0.009125683968077749,
+    "prior_val": 0.008555445375586307
+   },
+   "branch_f1": {
+    "graph": 0.9993,
+    "fusion": 0.9996,
+    "context_gbdt": 1.0
+   },
+   "branch_precision_recall": {
+    "graph": [
+     0.9986,
+     1.0
+    ],
+    "fusion": [
+     0.9992,
+     1.0
+    ],
+    "context_gbdt": [
+     1.0,
+     1.0
+    ]
+   }
+  }
+ },
+ "E_diagnosis": {
+  "Benign": {
+   "mechanisms": [],
+   "remedies": [],
+   "fusion_f1": 0.9961
+  },
+  "bot": {
+   "mechanisms": [],
+   "remedies": [],
+   "fusion_f1": 1.0
+  },
+  "brute_force_-web": {
+   "mechanisms": [
+    "irreducible",
+    "branch_selection",
+    "variance",
+    "context_needed"
+   ],
+   "remedies": [
+    "per-flow Bayes-limited: only context separates it -> graph/context branch, never a per-flow fix",
+    "a branch is better than the fusion for this class -> class-conditional gate between branches",
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay",
+    "graph succeeds where per-flow trees fail -> raise graph weight for this class"
+   ],
+   "fusion_f1": 0.318
+  },
+  "brute_force_-xss": {
+   "mechanisms": [
+    "irreducible",
+    "variance"
+   ],
+   "remedies": [
+    "per-flow Bayes-limited: only context separates it -> graph/context branch, never a per-flow fix",
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay"
+   ],
+   "fusion_f1": 0.4688
+  },
+  "ddos_attack-hoic": {
+   "mechanisms": [],
+   "remedies": [],
+   "fusion_f1": 0.999
+  },
+  "ddos_attacks-loic-http": {
+   "mechanisms": [],
+   "remedies": [],
+   "fusion_f1": 0.9978
+  },
+  "dos_attacks-slowhttptest": {
+   "mechanisms": [
+    "irreducible",
+    "variance"
+   ],
+   "remedies": [
+    "per-flow Bayes-limited: only context separates it -> graph/context branch, never a per-flow fix",
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay"
+   ],
+   "fusion_f1": 0.6961
+  },
+  "dos_attacks-slowloris": {
+   "mechanisms": [
+    "variance",
+    "capacity"
+   ],
+   "remedies": [
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay",
+    "per-flow learnable (trees succeed) but the graph fails -> numeric embeddings (PLE) / distillation"
+   ],
+   "fusion_f1": 0.9858
+  },
+  "ftp-bruteforce": {
+   "mechanisms": [
+    "irreducible",
+    "variance"
+   ],
+   "remedies": [
+    "per-flow Bayes-limited: only context separates it -> graph/context branch, never a per-flow fix",
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay"
+   ],
+   "fusion_f1": 0.9463
+  },
+  "infilteration": {
+   "mechanisms": [
+    "irreducible",
+    "threshold",
+    "branch_selection",
+    "variance",
+    "context_needed"
+   ],
+   "remedies": [
+    "per-flow Bayes-limited: only context separates it -> graph/context branch, never a per-flow fix",
+    "decision threshold misplaced (significant optimal log-odds shift) -> cross-fitted per-class bias head",
+    "a branch is better than the fusion for this class -> class-conditional gate between branches",
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay",
+    "graph succeeds where per-flow trees fail -> raise graph weight for this class"
+   ],
+   "fusion_f1": 0.5623
+  },
+  "sql_injection": {
+   "mechanisms": [
+    "irreducible",
+    "threshold",
+    "branch_selection",
+    "variance",
+    "context_needed"
+   ],
+   "remedies": [
+    "per-flow Bayes-limited: only context separates it -> graph/context branch, never a per-flow fix",
+    "decision threshold misplaced (significant optimal log-odds shift) -> cross-fitted per-class bias head",
+    "a branch is better than the fusion for this class -> class-conditional gate between branches",
+    "unstable across seeds/epochs -> more seeds, weight averaging, class-balanced replay",
+    "graph succeeds where per-flow trees fail -> raise graph weight for this class"
+   ],
+   "fusion_f1": 0.1017
+  },
+  "ssh-bruteforce": {
+   "mechanisms": [],
+   "remedies": [],
+   "fusion_f1": 0.9996
+  }
+ }
+}

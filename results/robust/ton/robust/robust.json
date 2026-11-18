@@ -1,0 +1,396 @@
+{
+ "prepared": "nids-ton",
+ "protocol": "train/validation/calibration only; test never opened",
+ "ewma_window_flows": 50000,
+ "fit_seeds": [
+  7,
+  8,
+  9
+ ],
+ "configs": {
+  "flow": {
+   "features": 62,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.7805556890064084,
+     "calibration": 0.840056642140526
+    },
+    {
+     "rule": "bayes",
+     "val": 0.7779376791081175,
+     "calibration": 0.7998069772626256
+    },
+    {
+     "rule": "bayes",
+     "val": 0.7890096639642368,
+     "calibration": 0.8340372573936736
+    }
+   ],
+   "val_mean": 0.7825010106929208,
+   "val_sd": 0.00472478708596451,
+   "cal_mean": 0.8246336255989416,
+   "cal_sd": 0.017726253578501223,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.7899332128331029,
+    "calibration": 0.8453903898093953,
+    "val_per_class": {
+     "Benign": 0.9165,
+     "backdoor": 0.999,
+     "ddos": 0.9801,
+     "dos": 0.8153,
+     "injection": 0.9567,
+     "mitm": 0.3374,
+     "password": 0.9744,
+     "ransomware": 0.8503,
+     "scanning": 0.0874,
+     "xss": 0.9823
+    },
+    "cal_per_class": {
+     "Benign": 0.9128,
+     "backdoor": 0.9987,
+     "ddos": 0.9863,
+     "dos": 0.8195,
+     "injection": 0.9526,
+     "mitm": 0.6177,
+     "password": 0.9855,
+     "ransomware": 0.9747,
+     "scanning": 0.2285,
+     "xss": 0.9777
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.8302045921654656,
+     "rest": 0.777306407607992,
+     "head_rows": 44512
+    },
+    "calibration": {
+     "head": 0.8494119260741018,
+     "rest": 0.8213079370941085,
+     "head_rows": 45505
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.0,
+    0.0
+   ],
+   "gain_vs_flow_ensemble": [
+    0.0,
+    0.0
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z0_segment_reset": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.7820870543294421,
+     "calibration": 0.8525064435176141
+    },
+    {
+     "rule": "balanced",
+     "val": 0.7713018841825764,
+     "calibration": 0.8202249295353168
+    },
+    {
+     "rule": "bayes",
+     "val": 0.8701930199692212,
+     "calibration": 0.8208472750758371
+    }
+   ],
+   "val_mean": 0.8078606528270799,
+   "val_sd": 0.044295018297254976,
+   "cal_mean": 0.8311928827095892,
+   "cal_sd": 0.015073104838994471,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.8182883687097142,
+    "calibration": 0.8044695464828691,
+    "val_per_class": {
+     "Benign": 0.8752,
+     "backdoor": 0.9985,
+     "ddos": 0.9801,
+     "dos": 0.9969,
+     "injection": 0.9685,
+     "mitm": 0.2759,
+     "password": 0.9645,
+     "ransomware": 0.9094,
+     "scanning": 0.2282,
+     "xss": 0.9857
+    },
+    "cal_per_class": {
+     "Benign": 0.9044,
+     "backdoor": 0.9995,
+     "ddos": 0.9867,
+     "dos": 0.9971,
+     "injection": 0.9624,
+     "mitm": 0.0806,
+     "password": 0.9747,
+     "ransomware": 0.885,
+     "scanning": 0.2766,
+     "xss": 0.9776
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.747297241740943,
+     "rest": 0.8131545706244937,
+     "head_rows": 44512
+    },
+    "calibration": {
+     "head": 0.7339472341145252,
+     "rest": 0.7932583215851392,
+     "head_rows": 45505
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.02535964213415909,
+    0.006559257110647643
+   ],
+   "gain_vs_flow_ensemble": [
+    0.028355155876611304,
+    -0.040920843326526235
+   ],
+   "passes_rule_seedmean": true
+  },
+  "P10_Z1_continuous": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.6173263495071392,
+     "calibration": 0.39238738436752035
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6789690125662625,
+     "calibration": 0.4185868394435962
+    },
+    {
+     "rule": "balanced",
+     "val": 0.6695243398138735,
+     "calibration": 0.41572187660396703
+    }
+   ],
+   "val_mean": 0.6552732339624251,
+   "val_sd": 0.02710811675183952,
+   "cal_mean": 0.4088987001383612,
+   "cal_sd": 0.011733702580783474,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.669431227217948,
+    "calibration": 0.3999989980366562,
+    "val_per_class": {
+     "Benign": 0.8141,
+     "backdoor": 0.9991,
+     "ddos": 0.9547,
+     "dos": 0.4211,
+     "injection": 0.5513,
+     "mitm": 0.421,
+     "password": 0.9572,
+     "ransomware": 0.6074,
+     "scanning": -0.0252,
+     "xss": 0.9936
+    },
+    "cal_per_class": {
+     "Benign": 0.5007,
+     "backdoor": 0.9994,
+     "ddos": 0.5227,
+     "dos": 0.0533,
+     "injection": 0.0045,
+     "mitm": 0.354,
+     "password": 0.3556,
+     "ransomware": 0.8698,
+     "scanning": 0.01,
+     "xss": 0.3299
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.6223875491449629,
+     "rest": 0.6850589180561943,
+     "head_rows": 44512
+    },
+    "calibration": {
+     "head": 0.5114149411265091,
+     "rest": 0.37078335837288806,
+     "head_rows": 45505
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.12722777673049568,
+    -0.4157349254605804
+   ],
+   "gain_vs_flow_ensemble": [
+    -0.1205019856151549,
+    -0.4453913917727391
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z2_ewma_50k": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "balanced",
+     "val": 0.7203124742720367,
+     "calibration": 0.7928129852494167
+    },
+    {
+     "rule": "balanced",
+     "val": 0.7045059281699662,
+     "calibration": 0.7800736501470616
+    },
+    {
+     "rule": "bayes",
+     "val": 0.7367077827429915,
+     "calibration": 0.7896159291085357
+    }
+   ],
+   "val_mean": 0.7205087283949982,
+   "val_sd": 0.013147084499263285,
+   "cal_mean": 0.7875008548350046,
+   "cal_sd": 0.005411581352336759,
+   "seed_ensemble": {
+    "rule": "balanced",
+    "val": 0.7167525656534788,
+    "calibration": 0.7903440264917265,
+    "val_per_class": {
+     "Benign": 0.8835,
+     "backdoor": 0.9921,
+     "ddos": 0.9631,
+     "dos": 0.9701,
+     "injection": 0.8711,
+     "mitm": 0.2762,
+     "password": 0.9717,
+     "ransomware": 0.2011,
+     "scanning": 0.0484,
+     "xss": 0.9901
+    },
+    "cal_per_class": {
+     "Benign": 0.9269,
+     "backdoor": 0.9984,
+     "ddos": 0.9626,
+     "dos": 0.9887,
+     "injection": 0.8245,
+     "mitm": 0.2713,
+     "password": 0.9896,
+     "ransomware": 0.2624,
+     "scanning": 0.6953,
+     "xss": 0.9837
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.6555866333334974,
+     "rest": 0.7897760434868901,
+     "head_rows": 44512
+    },
+    "calibration": {
+     "head": 0.7460663796384562,
+     "rest": 0.852531511463003,
+     "head_rows": 45505
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.06199228229792253,
+    -0.03713277076393695
+   ],
+   "gain_vs_flow_ensemble": [
+    -0.07318064717962414,
+    -0.05504636331766877
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z3_raw_counts": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.770381254194051,
+     "calibration": 0.808438558101909
+    },
+    {
+     "rule": "bayes",
+     "val": 0.7789219009534442,
+     "calibration": 0.8109681356612339
+    },
+    {
+     "rule": "bayes",
+     "val": 0.7931881616875975,
+     "calibration": 0.8254634871013456
+    }
+   ],
+   "val_mean": 0.7808304389450309,
+   "val_sd": 0.009408175356351682,
+   "cal_mean": 0.8149567269548296,
+   "cal_sd": 0.007500830942390077,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.7893646647149628,
+    "calibration": 0.8154436530328952,
+    "val_per_class": {
+     "Benign": 0.9186,
+     "backdoor": 0.999,
+     "ddos": 0.981,
+     "dos": 0.9953,
+     "injection": 0.9625,
+     "mitm": 0.425,
+     "password": 0.9619,
+     "ransomware": 0.6559,
+     "scanning": 0.0022,
+     "xss": 0.9923
+    },
+    "cal_per_class": {
+     "Benign": 0.9154,
+     "backdoor": 0.999,
+     "ddos": 0.9873,
+     "dos": 0.9911,
+     "injection": 0.9578,
+     "mitm": 0.2842,
+     "password": 0.9797,
+     "ransomware": 0.7475,
+     "scanning": 0.3021,
+     "xss": 0.9903
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.7361988206138084,
+     "rest": 0.8419014289023153,
+     "head_rows": 44512
+    },
+    "calibration": {
+     "head": 0.7930584507065441,
+     "rest": 0.832674512693985,
+     "head_rows": 45505
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.0016705717478898707,
+    -0.00967689864411203
+   ],
+   "gain_vs_flow_ensemble": [
+    -0.0005685481181401109,
+    -0.02994673677650006
+   ],
+   "passes_rule_seedmean": false
+  }
+ },
+ "rank_correlation_with_segment_reset_z": {
+  "T_segz_cont": {
+   "median_spearman": 0.8298481361420118,
+   "min": 0.6757625704348473
+  },
+  "T_segz_ewma": {
+   "median_spearman": 0.9163347076287389,
+   "min": 0.7245555520772634
+  },
+  "T_segz_static": {
+   "median_spearman": 0.738251186767049,
+   "min": 0.548237649797447
+  }
+ }
+}

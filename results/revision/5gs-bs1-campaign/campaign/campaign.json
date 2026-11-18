@@ -1,0 +1,285 @@
+{
+ "prepared": "nids-5gs-bs1",
+ "time_basis": "capture_relative",
+ "classes": {
+  "Benign": {
+   "records": {
+    "train": 83403,
+    "val": 22843,
+    "calibration": 295700,
+    "test": 70764
+   },
+   "segments": {
+    "train": 16,
+    "val": 12,
+    "calibration": 12,
+    "test": 10
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 20,
+    "multi_split_episodes": 10,
+    "test_only_episodes": 10,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 70764,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 20,
+    "multi_split_episodes": 10,
+    "test_only_episodes": 10,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 70764,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "httpflood": {
+   "records": {
+    "train": 41714,
+    "val": 27047,
+    "calibration": 117,
+    "test": 64691
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 64691,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 64691,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "icmpflood": {
+   "records": {
+    "train": 421,
+    "val": 109,
+    "calibration": 61,
+    "test": 542
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 542,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 542,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "slowratedos": {
+   "records": {
+    "train": 26346,
+    "val": 4971,
+    "calibration": 3234,
+    "test": 37032
+   },
+   "segments": {
+    "train": 2,
+    "val": 1,
+    "calibration": 2,
+    "test": 2
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 4,
+    "multi_split_episodes": 2,
+    "test_only_episodes": 2,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 37032,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 4,
+    "multi_split_episodes": 2,
+    "test_only_episodes": 2,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 37032,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "synflood": {
+   "records": {
+    "train": 3475,
+    "val": 1046,
+    "calibration": 0,
+    "test": 4929
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 0,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 4929,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 4929,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "synscan": {
+   "records": {
+    "train": 8015,
+    "val": 0,
+    "calibration": 2004,
+    "test": 10024
+   },
+   "segments": {
+    "train": 1,
+    "val": 0,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 10024,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 10024,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "tcpconnectscan": {
+   "records": {
+    "train": 8017,
+    "val": 0,
+    "calibration": 2005,
+    "test": 10030
+   },
+   "segments": {
+    "train": 1,
+    "val": 0,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 10030,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 10030,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "udpflood": {
+   "records": {
+    "train": 175257,
+    "val": 0,
+    "calibration": 539,
+    "test": 281529
+   },
+   "segments": {
+    "train": 1,
+    "val": 0,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 281529,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 281529,
+    "test_records_shared_share": 0.0
+   }
+  },
+  "udpscan": {
+   "records": {
+    "train": 5885,
+    "val": 1968,
+    "calibration": 0,
+    "test": 8019
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 0,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 8019,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 8019,
+    "test_records_shared_share": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,1096 @@
+{
+ "prepared": "nids-cic",
+ "protocol": "train/validation/calibration only; test never opened",
+ "short_horizon_features": [
+  "src_n_1s",
+  "src_n_10s",
+  "src_n_60s",
+  "src_burst_1_10",
+  "src_burst_10_60",
+  "src_repeat_frac_10s",
+  "src_repeat_frac_60s",
+  "src_empty_frac_10s",
+  "src_empty_frac_60s",
+  "src_onepkt_frac_10s",
+  "src_onepkt_frac_60s",
+  "src_tcp_frac_10s",
+  "src_tcp_frac_60s",
+  "src_udp_frac_10s",
+  "src_udp_frac_60s",
+  "src_icmp_frac_10s",
+  "src_icmp_frac_60s",
+  "src_syn_frac_10s",
+  "src_syn_frac_60s",
+  "src_rst_frac_10s",
+  "src_rst_frac_60s",
+  "src_fin_frac_10s",
+  "src_fin_frac_60s",
+  "src_psh_frac_10s",
+  "src_psh_frac_60s",
+  "src_lib_mean_10s",
+  "src_lib_sd_10s",
+  "src_lib_mean_60s",
+  "src_lib_sd_60s",
+  "src_lob_mean_10s",
+  "src_lob_sd_10s",
+  "src_lob_mean_60s",
+  "src_lob_sd_60s",
+  "src_lip_mean_10s",
+  "src_lip_mean_60s",
+  "src_ldur_mean_10s",
+  "src_ldur_mean_60s",
+  "src_since_last",
+  "src_lgap_mean_10s",
+  "src_lgap_cv_10s",
+  "src_lgap_mean_60s",
+  "src_lgap_cv_60s",
+  "src_intensity_1",
+  "src_intensity_10",
+  "dst_n_1s",
+  "dst_n_10s",
+  "dst_n_60s",
+  "dst_burst_1_10",
+  "dst_burst_10_60",
+  "dst_repeat_frac_10s",
+  "dst_repeat_frac_60s",
+  "dst_empty_frac_10s",
+  "dst_empty_frac_60s",
+  "dst_onepkt_frac_10s",
+  "dst_onepkt_frac_60s",
+  "dst_tcp_frac_10s",
+  "dst_tcp_frac_60s",
+  "dst_udp_frac_10s",
+  "dst_udp_frac_60s",
+  "dst_icmp_frac_10s",
+  "dst_icmp_frac_60s",
+  "dst_syn_frac_10s",
+  "dst_syn_frac_60s",
+  "dst_rst_frac_10s",
+  "dst_rst_frac_60s",
+  "dst_fin_frac_10s",
+  "dst_fin_frac_60s",
+  "dst_psh_frac_10s",
+  "dst_psh_frac_60s",
+  "dst_lib_mean_10s",
+  "dst_lib_sd_10s",
+  "dst_lib_mean_60s",
+  "dst_lib_sd_60s",
+  "dst_lob_mean_10s",
+  "dst_lob_sd_10s",
+  "dst_lob_mean_60s",
+  "dst_lob_sd_60s",
+  "dst_lip_mean_10s",
+  "dst_lip_mean_60s",
+  "dst_ldur_mean_10s",
+  "dst_ldur_mean_60s",
+  "dst_since_last",
+  "dst_lgap_mean_10s",
+  "dst_lgap_cv_10s",
+  "dst_lgap_mean_60s",
+  "dst_lgap_cv_60s",
+  "dst_intensity_1",
+  "dst_intensity_10",
+  "pair_n_1s",
+  "pair_n_10s",
+  "pair_n_60s",
+  "pair_burst_1_10",
+  "pair_burst_10_60",
+  "pair_repeat_frac_10s",
+  "pair_repeat_frac_60s",
+  "pair_empty_frac_10s",
+  "pair_empty_frac_60s",
+  "pair_onepkt_frac_10s",
+  "pair_onepkt_frac_60s",
+  "pair_syn_frac_10s",
+  "pair_syn_frac_60s",
+  "pair_rst_frac_10s",
+  "pair_rst_frac_60s",
+  "pair_lib_mean_10s",
+  "pair_lib_sd_10s",
+  "pair_lib_mean_60s",
+  "pair_lib_sd_60s",
+  "pair_lob_mean_10s",
+  "pair_lob_sd_10s",
+  "pair_lob_mean_60s",
+  "pair_lob_sd_60s",
+  "pair_lip_mean_10s",
+  "pair_lip_mean_60s",
+  "pair_ldur_mean_10s",
+  "pair_ldur_mean_60s",
+  "pair_since_last",
+  "pair_lgap_mean_10s",
+  "pair_lgap_cv_10s",
+  "pair_lgap_mean_60s",
+  "pair_lgap_cv_60s",
+  "pair_intensity_1",
+  "pair_intensity_10",
+  "svc_n_1s",
+  "svc_n_10s",
+  "svc_n_60s",
+  "svc_burst_1_10",
+  "svc_burst_10_60",
+  "svc_repeat_frac_10s",
+  "svc_repeat_frac_60s",
+  "svc_empty_frac_10s",
+  "svc_empty_frac_60s",
+  "svc_onepkt_frac_10s",
+  "svc_onepkt_frac_60s",
+  "svc_syn_frac_10s",
+  "svc_syn_frac_60s",
+  "svc_rst_frac_10s",
+  "svc_rst_frac_60s",
+  "svc_lob_mean_10s",
+  "svc_lob_mean_60s",
+  "svc_since_last",
+  "svc_intensity_1",
+  "svc_intensity_10",
+  "scan_n_1s",
+  "scan_n_10s",
+  "scan_n_60s",
+  "scan_burst_1_10",
+  "scan_burst_10_60",
+  "scan_repeat_frac_10s",
+  "scan_repeat_frac_60s",
+  "scan_empty_frac_10s",
+  "scan_empty_frac_60s",
+  "scan_onepkt_frac_10s",
+  "scan_onepkt_frac_60s",
+  "scan_syn_frac_10s",
+  "scan_syn_frac_60s",
+  "scan_rst_frac_10s",
+  "scan_rst_frac_60s",
+  "scan_since_last",
+  "scan_intensity_1",
+  "scan_intensity_10"
+ ],
+ "configs": {
+  "flow": {
+   "rule": "bayes",
+   "val": 0.6674563456872905,
+   "calibration": 0.6197951766572775,
+   "val_per_class": {
+    "Benign": 0.9608,
+    "bot": 1.0,
+    "brute_force_-web": 0.0628,
+    "brute_force_-xss": 0.1803,
+    "ddos_attack-hoic": 0.9894,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9949,
+    "ftp-bruteforce": 0.9013,
+    "infilteration": 0.6803,
+    "sql_injection": 0.2402,
+    "ssh-bruteforce": 0.9999
+   },
+   "cal_per_class": {
+    "Benign": 0.9018,
+    "bot": 1.0,
+    "brute_force_-web": 0.1829,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.8873,
+    "ddos_attacks-loic-http": 0.9882,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9964,
+    "ftp-bruteforce": 0.9127,
+    "infilteration": 0.5683,
+    "sql_injection": -0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.0,
+    0.0
+   ],
+   "gain_vs_flowREL": [
+    -0.14001516643014966,
+    -0.257720990134106
+   ],
+   "passes_vs_flow": false
+  },
+  "flow+REL": {
+   "rule": "bayes",
+   "val": 0.8074715121174402,
+   "calibration": 0.8775161667913834,
+   "val_per_class": {
+    "Benign": 0.9522,
+    "bot": 0.9991,
+    "brute_force_-web": 0.1467,
+    "brute_force_-xss": 0.7829,
+    "ddos_attack-hoic": 0.9999,
+    "ddos_attacks-loic-http": 0.994,
+    "dos_attacks-slowhttptest": 0.9985,
+    "dos_attacks-slowloris": 0.9181,
+    "ftp-bruteforce": 0.9992,
+    "infilteration": 0.5395,
+    "sql_injection": 0.361,
+    "ssh-bruteforce": 0.9986
+   },
+   "cal_per_class": {
+    "Benign": 0.9505,
+    "bot": 0.9984,
+    "brute_force_-web": 0.5164,
+    "brute_force_-xss": 0.9122,
+    "ddos_attack-hoic": 0.9994,
+    "ddos_attacks-loic-http": 0.9877,
+    "dos_attacks-slowhttptest": 0.9968,
+    "dos_attacks-slowloris": 0.9078,
+    "ftp-bruteforce": 0.9985,
+    "infilteration": 0.681,
+    "sql_injection": 0.584,
+    "ssh-bruteforce": 0.9975
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.14001516643014966,
+    0.257720990134106
+   ],
+   "gain_vs_flowREL": [
+    0.0,
+    0.0
+   ],
+   "passes_vs_flow": true
+  },
+  "flow | CL-clean": {
+   "rule": "bayes",
+   "val": 0.6772164457783632,
+   "calibration": 0.6271753024999974,
+   "val_per_class": {
+    "Benign": 0.9619,
+    "bot": 0.9999,
+    "brute_force_-web": 0.0687,
+    "brute_force_-xss": 0.2599,
+    "ddos_attack-hoic": 0.9928,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.0291,
+    "dos_attacks-slowloris": 0.9949,
+    "ftp-bruteforce": 0.9001,
+    "infilteration": 0.6797,
+    "sql_injection": 0.2402,
+    "ssh-bruteforce": 0.9999
+   },
+   "cal_per_class": {
+    "Benign": 0.9102,
+    "bot": 0.9999,
+    "brute_force_-web": 0.2065,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.9124,
+    "ddos_attacks-loic-http": 0.9882,
+    "dos_attacks-slowhttptest": 0.026,
+    "dos_attacks-slowloris": 0.9915,
+    "ftp-bruteforce": 0.912,
+    "infilteration": 0.5794,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "train_rows": 711940,
+   "gain_vs_flow": [
+    0.009760100091072643,
+    0.0073801258427199645
+   ],
+   "gain_vs_flowREL": [
+    -0.13025506633907702,
+    -0.250340864291386
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+REL | CL-clean": {
+   "rule": "bayes",
+   "val": 0.8152959550038487,
+   "calibration": 0.8760535537148102,
+   "val_per_class": {
+    "Benign": 0.9475,
+    "bot": 0.999,
+    "brute_force_-web": 0.121,
+    "brute_force_-xss": 0.8711,
+    "ddos_attack-hoic": 0.993,
+    "ddos_attacks-loic-http": 0.9974,
+    "dos_attacks-slowhttptest": 0.9987,
+    "dos_attacks-slowloris": 0.9112,
+    "ftp-bruteforce": 0.9998,
+    "infilteration": 0.543,
+    "sql_injection": 0.4022,
+    "ssh-bruteforce": 0.9998
+   },
+   "cal_per_class": {
+    "Benign": 0.941,
+    "bot": 0.9981,
+    "brute_force_-web": 0.465,
+    "brute_force_-xss": 0.9411,
+    "ddos_attack-hoic": 0.9775,
+    "ddos_attacks-loic-http": 0.9966,
+    "dos_attacks-slowhttptest": 0.9969,
+    "dos_attacks-slowloris": 0.9031,
+    "ftp-bruteforce": 0.9995,
+    "infilteration": 0.6866,
+    "sql_injection": 0.6078,
+    "ssh-bruteforce": 0.9995
+   },
+   "train_rows": 733195,
+   "gain_vs_flow": [
+    0.14783960931655815,
+    0.25625837705753274
+   ],
+   "gain_vs_flowREL": [
+    0.00782444288640849,
+    -0.0014626130765732492
+   ],
+   "passes_vs_flow": true
+  },
+  "flow | balanced-weights": {
+   "rule": "bayes",
+   "val": 0.5872692298805732,
+   "calibration": 0.5741064649999773,
+   "val_per_class": {
+    "Benign": 0.4676,
+    "bot": 0.9999,
+    "brute_force_-web": 0.0682,
+    "brute_force_-xss": 0.1607,
+    "ddos_attack-hoic": 0.9998,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.0403,
+    "dos_attacks-slowloris": 1.0,
+    "ftp-bruteforce": 0.8996,
+    "infilteration": 0.1426,
+    "sql_injection": 0.2691,
+    "ssh-bruteforce": 1.0
+   },
+   "cal_per_class": {
+    "Benign": 0.3733,
+    "bot": 1.0,
+    "brute_force_-web": 0.1435,
+    "brute_force_-xss": 0.3535,
+    "ddos_attack-hoic": 0.9953,
+    "ddos_attacks-loic-http": 0.9879,
+    "dos_attacks-slowhttptest": 0.0315,
+    "dos_attacks-slowloris": 0.9832,
+    "ftp-bruteforce": 0.9113,
+    "infilteration": 0.1097,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    -0.08018711580671734,
+    -0.04568871165730015
+   ],
+   "gain_vs_flowREL": [
+    -0.220202282236867,
+    -0.30340970179140614
+   ],
+   "passes_vs_flow": false
+  },
+  "flow | CL-clean+balanced": {
+   "rule": "bayes",
+   "val": 0.5579090548782276,
+   "calibration": 0.5587546236367892,
+   "val_per_class": {
+    "Benign": 0.5717,
+    "bot": 0.9999,
+    "brute_force_-web": 0.1054,
+    "brute_force_-xss": 0.1714,
+    "ddos_attack-hoic": 1.0,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.4253,
+    "dos_attacks-slowloris": 1.0,
+    "ftp-bruteforce": 0.0266,
+    "infilteration": 0.1644,
+    "sql_injection": 0.2308,
+    "ssh-bruteforce": 1.0
+   },
+   "cal_per_class": {
+    "Benign": 0.4673,
+    "bot": 1.0,
+    "brute_force_-web": 0.3508,
+    "brute_force_-xss": 0.3587,
+    "ddos_attack-hoic": 0.9998,
+    "ddos_attacks-loic-http": 0.9879,
+    "dos_attacks-slowhttptest": 0.4035,
+    "dos_attacks-slowloris": 0.9832,
+    "ftp-bruteforce": 0.0348,
+    "infilteration": 0.1191,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "train_rows": 711940,
+   "gain_vs_flow": [
+    -0.10954729080906289,
+    -0.061040553020488275
+   ],
+   "gain_vs_flowREL": [
+    -0.24956245723921255,
+    -0.31876154315459426
+   ],
+   "passes_vs_flow": false
+  },
+  "flow+REL | balanced-weights": {
+   "rule": "bayes",
+   "val": 0.7828557499018909,
+   "calibration": 0.8336434072094647,
+   "val_per_class": {
+    "Benign": 0.9456,
+    "bot": 1.0,
+    "brute_force_-web": 0.1168,
+    "brute_force_-xss": 0.4746,
+    "ddos_attack-hoic": 1.0,
+    "ddos_attacks-loic-http": 0.9994,
+    "dos_attacks-slowhttptest": 0.9997,
+    "dos_attacks-slowloris": 0.9501,
+    "ftp-bruteforce": 0.9992,
+    "infilteration": 0.6699,
+    "sql_injection": 0.2406,
+    "ssh-bruteforce": 0.9985
+   },
+   "cal_per_class": {
+    "Benign": 0.8862,
+    "bot": 1.0,
+    "brute_force_-web": 0.4481,
+    "brute_force_-xss": 0.6715,
+    "ddos_attack-hoic": 0.9973,
+    "ddos_attacks-loic-http": 0.9986,
+    "dos_attacks-slowhttptest": 0.9994,
+    "dos_attacks-slowloris": 0.9469,
+    "ftp-bruteforce": 0.9985,
+    "infilteration": 0.5795,
+    "sql_injection": 0.4802,
+    "ssh-bruteforce": 0.9974
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.11539940421460038,
+    0.21384823055218727
+   ],
+   "gain_vs_flowREL": [
+    -0.024615762215549286,
+    -0.04387275958191872
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+REL | CL-clean+balanced": {
+   "rule": "bayes",
+   "val": 0.7892672223644285,
+   "calibration": 0.852740860993268,
+   "val_per_class": {
+    "Benign": 0.9562,
+    "bot": 1.0,
+    "brute_force_-web": 0.1355,
+    "brute_force_-xss": 0.497,
+    "ddos_attack-hoic": 0.9944,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.9997,
+    "dos_attacks-slowloris": 0.9419,
+    "ftp-bruteforce": 0.9998,
+    "infilteration": 0.708,
+    "sql_injection": 0.2397,
+    "ssh-bruteforce": 0.9997
+   },
+   "cal_per_class": {
+    "Benign": 0.9152,
+    "bot": 1.0,
+    "brute_force_-web": 0.5252,
+    "brute_force_-xss": 0.7262,
+    "ddos_attack-hoic": 0.9792,
+    "ddos_attacks-loic-http": 0.9987,
+    "dos_attacks-slowhttptest": 0.9994,
+    "dos_attacks-slowloris": 0.9496,
+    "ftp-bruteforce": 0.9995,
+    "infilteration": 0.6544,
+    "sql_injection": 0.4863,
+    "ssh-bruteforce": 0.9993
+   },
+   "train_rows": 733195,
+   "gain_vs_flow": [
+    0.12181087667713797,
+    0.2329456843359905
+   ],
+   "gain_vs_flowREL": [
+    -0.018204289753011693,
+    -0.024775305798115488
+   ],
+   "passes_vs_flow": true
+  },
+  "flow | groupDRO-1step": {
+   "rule": "bayes",
+   "val": 0.6682193510055875,
+   "calibration": 0.63007583710467,
+   "val_per_class": {
+    "Benign": 0.9645,
+    "bot": 0.9999,
+    "brute_force_-web": 0.0633,
+    "brute_force_-xss": 0.1998,
+    "ddos_attack-hoic": 0.9997,
+    "ddos_attacks-loic-http": 0.9992,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9915,
+    "ftp-bruteforce": 0.9013,
+    "infilteration": 0.6689,
+    "sql_injection": 0.2308,
+    "ssh-bruteforce": 0.9999
+   },
+   "cal_per_class": {
+    "Benign": 0.9329,
+    "bot": 0.9999,
+    "brute_force_-web": 0.1907,
+    "brute_force_-xss": -0.0,
+    "ddos_attack-hoic": 0.9915,
+    "ddos_attacks-loic-http": 0.9879,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9896,
+    "ftp-bruteforce": 0.9127,
+    "infilteration": 0.5558,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "train_rows": 738843,
+   "segments": 18,
+   "gain_vs_flow": [
+    0.0007630053182969831,
+    0.010280660447392509
+   ],
+   "gain_vs_flowREL": [
+    -0.13925216111185268,
+    -0.24744032968671348
+   ],
+   "passes_vs_flow": false
+  },
+  "flow+REL | groupDRO-1step": {
+   "rule": "bayes",
+   "val": 0.8093029457704187,
+   "calibration": 0.8140059877059079,
+   "val_per_class": {
+    "Benign": 0.9622,
+    "bot": 0.9993,
+    "brute_force_-web": 0.1345,
+    "brute_force_-xss": 0.692,
+    "ddos_attack-hoic": 0.9855,
+    "ddos_attacks-loic-http": 0.9426,
+    "dos_attacks-slowhttptest": 0.9997,
+    "dos_attacks-slowloris": 0.9145,
+    "ftp-bruteforce": 0.9992,
+    "infilteration": 0.6936,
+    "sql_injection": 0.39,
+    "ssh-bruteforce": 0.9984
+   },
+   "cal_per_class": {
+    "Benign": 0.9444,
+    "bot": 0.9983,
+    "brute_force_-web": 0.4515,
+    "brute_force_-xss": 0.7564,
+    "ddos_attack-hoic": 0.8584,
+    "ddos_attacks-loic-http": 0.5895,
+    "dos_attacks-slowhttptest": 0.9992,
+    "dos_attacks-slowloris": 0.9043,
+    "ftp-bruteforce": 0.9986,
+    "infilteration": 0.711,
+    "sql_injection": 0.5592,
+    "ssh-bruteforce": 0.9971
+   },
+   "train_rows": 738843,
+   "segments": 18,
+   "gain_vs_flow": [
+    0.14184660008312822,
+    0.19421081104863047
+   ],
+   "gain_vs_flowREL": [
+    0.0018314336529785535,
+    -0.06351017908547552
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+ST": {
+   "rule": "bayes",
+   "val": 0.7794964897692358,
+   "calibration": 0.8020246366852856,
+   "val_per_class": {
+    "Benign": 0.9553,
+    "bot": 0.9998,
+    "brute_force_-web": 0.2166,
+    "brute_force_-xss": 0.4878,
+    "ddos_attack-hoic": 0.9998,
+    "ddos_attacks-loic-http": 0.9985,
+    "dos_attacks-slowhttptest": 0.9976,
+    "dos_attacks-slowloris": 0.7968,
+    "ftp-bruteforce": 0.9991,
+    "infilteration": 0.5683,
+    "sql_injection": 0.3345,
+    "ssh-bruteforce": 0.9998
+   },
+   "cal_per_class": {
+    "Benign": 0.9478,
+    "bot": 0.9997,
+    "brute_force_-web": 0.508,
+    "brute_force_-xss": 0.1081,
+    "ddos_attack-hoic": 0.9977,
+    "ddos_attacks-loic-http": 0.9956,
+    "dos_attacks-slowhttptest": 0.9945,
+    "dos_attacks-slowloris": 0.8345,
+    "ftp-bruteforce": 0.9981,
+    "infilteration": 0.6625,
+    "sql_injection": 0.5835,
+    "ssh-bruteforce": 0.9943
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.11204014408194529,
+    0.1822294600280081
+   ],
+   "gain_vs_flowREL": [
+    -0.02797502234820437,
+    -0.07549153010609788
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+ST[merged]": {
+   "rule": "bayes",
+   "val": 0.803007162876412,
+   "calibration": 0.8524385258041187,
+   "val_per_class": {
+    "Benign": 0.9598,
+    "bot": 0.9998,
+    "brute_force_-web": 0.1759,
+    "brute_force_-xss": 0.834,
+    "ddos_attack-hoic": 0.9999,
+    "ddos_attacks-loic-http": 0.9989,
+    "dos_attacks-slowhttptest": 0.9985,
+    "dos_attacks-slowloris": 0.794,
+    "ftp-bruteforce": 0.9989,
+    "infilteration": 0.6162,
+    "sql_injection": 0.2604,
+    "ssh-bruteforce": 0.9997
+   },
+   "cal_per_class": {
+    "Benign": 0.9521,
+    "bot": 0.9997,
+    "brute_force_-web": 0.4381,
+    "brute_force_-xss": 0.7952,
+    "ddos_attack-hoic": 0.9985,
+    "ddos_attacks-loic-http": 0.9993,
+    "dos_attacks-slowhttptest": 0.9959,
+    "dos_attacks-slowloris": 0.8392,
+    "ftp-bruteforce": 0.9994,
+    "infilteration": 0.6847,
+    "sql_injection": 0.5275,
+    "ssh-bruteforce": 0.9997
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.13555081718912154,
+    0.23264334914684126
+   ],
+   "gain_vs_flowREL": [
+    -0.0044643492410281205,
+    -0.025077640987264727
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+REL+ST": {
+   "rule": "bayes",
+   "val": 0.8135591922344929,
+   "calibration": 0.8819819852172145,
+   "val_per_class": {
+    "Benign": 0.9614,
+    "bot": 0.9998,
+    "brute_force_-web": 0.2012,
+    "brute_force_-xss": 0.8574,
+    "ddos_attack-hoic": 0.9998,
+    "ddos_attacks-loic-http": 0.9987,
+    "dos_attacks-slowhttptest": 0.999,
+    "dos_attacks-slowloris": 0.7427,
+    "ftp-bruteforce": 0.9989,
+    "infilteration": 0.6695,
+    "sql_injection": 0.3349,
+    "ssh-bruteforce": 0.9995
+   },
+   "cal_per_class": {
+    "Benign": 0.9594,
+    "bot": 0.9996,
+    "brute_force_-web": 0.6116,
+    "brute_force_-xss": 0.8964,
+    "ddos_attack-hoic": 0.9977,
+    "ddos_attacks-loic-http": 0.9954,
+    "dos_attacks-slowhttptest": 0.9971,
+    "dos_attacks-slowloris": 0.7827,
+    "ftp-bruteforce": 0.9983,
+    "infilteration": 0.7578,
+    "sql_injection": 0.6007,
+    "ssh-bruteforce": 0.9871
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.1461028465472024,
+    0.26218680855993703
+   ],
+   "gain_vs_flowREL": [
+    0.006087680117052741,
+    0.004465818425831047
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+REL+ST[merged]": {
+   "rule": "bayes",
+   "val": 0.770414861953797,
+   "calibration": 0.8403578346196374,
+   "val_per_class": {
+    "Benign": 0.9472,
+    "bot": 0.9999,
+    "brute_force_-web": 0.1928,
+    "brute_force_-xss": 0.6626,
+    "ddos_attack-hoic": 0.9999,
+    "ddos_attacks-loic-http": 0.9981,
+    "dos_attacks-slowhttptest": 0.9992,
+    "dos_attacks-slowloris": 0.7472,
+    "ftp-bruteforce": 0.9986,
+    "infilteration": 0.472,
+    "sql_injection": 0.2279,
+    "ssh-bruteforce": 0.9997
+   },
+   "cal_per_class": {
+    "Benign": 0.9455,
+    "bot": 0.9997,
+    "brute_force_-web": 0.5803,
+    "brute_force_-xss": 0.7559,
+    "ddos_attack-hoic": 0.9982,
+    "ddos_attacks-loic-http": 0.9984,
+    "dos_attacks-slowhttptest": 0.9979,
+    "dos_attacks-slowloris": 0.7804,
+    "ftp-bruteforce": 0.9988,
+    "infilteration": 0.6378,
+    "sql_injection": 0.3914,
+    "ssh-bruteforce": 0.9999
+   },
+   "train_rows": 738843,
+   "gain_vs_flow": [
+    0.10295851626650654,
+    0.22056265796235996
+   ],
+   "gain_vs_flowREL": [
+    -0.03705665016364312,
+    -0.03715833217174602
+   ],
+   "passes_vs_flow": true
+  },
+  "flow | ExtraTrees": {
+   "rule": "bayes",
+   "val": 0.6517960854881596,
+   "calibration": 0.6119149078548166,
+   "val_per_class": {
+    "Benign": 0.9641,
+    "bot": 0.9999,
+    "brute_force_-web": 0.0,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.9998,
+    "ddos_attacks-loic-http": 0.9925,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9624,
+    "ftp-bruteforce": 0.9011,
+    "infilteration": 0.662,
+    "sql_injection": 0.3397,
+    "ssh-bruteforce": 1.0
+   },
+   "cal_per_class": {
+    "Benign": 0.9402,
+    "bot": 1.0,
+    "brute_force_-web": 0.0,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.995,
+    "ddos_attacks-loic-http": 0.9921,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9649,
+    "ftp-bruteforce": 0.9125,
+    "infilteration": 0.5381,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "gain_vs_flow": [
+    -0.015660260199130915,
+    -0.007880268802460844
+   ],
+   "gain_vs_flowREL": [
+    -0.15567542662928058,
+    -0.26560125893656683
+   ],
+   "passes_vs_flow": false
+  },
+  "flow | LightGBM+ExtraTrees": {
+   "rule": "bayes",
+   "val": 0.6659843723396888,
+   "calibration": 0.6175307234008601,
+   "val_per_class": {
+    "Benign": 0.9602,
+    "bot": 1.0,
+    "brute_force_-web": 0.0436,
+    "brute_force_-xss": 0.1975,
+    "ddos_attack-hoic": 0.9907,
+    "ddos_attacks-loic-http": 0.9925,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9963,
+    "ftp-bruteforce": 0.9012,
+    "infilteration": 0.6696,
+    "sql_injection": 0.2402,
+    "ssh-bruteforce": 1.0
+   },
+   "cal_per_class": {
+    "Benign": 0.9043,
+    "bot": 1.0,
+    "brute_force_-web": 0.1567,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.901,
+    "ddos_attacks-loic-http": 0.9921,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9982,
+    "ftp-bruteforce": 0.9126,
+    "infilteration": 0.5454,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   },
+   "gain_vs_flow": [
+    -0.0014719733476017405,
+    -0.0022644532564173314
+   ],
+   "gain_vs_flowREL": [
+    -0.1414871397777514,
+    -0.2599854433905233
+   ],
+   "passes_vs_flow": false
+  },
+  "flow+REL | ExtraTrees": {
+   "rule": "bayes",
+   "val": 0.8187860062453316,
+   "calibration": 0.8672676493895861,
+   "val_per_class": {
+    "Benign": 0.9686,
+    "bot": 0.9987,
+    "brute_force_-web": 0.1266,
+    "brute_force_-xss": 0.7809,
+    "ddos_attack-hoic": 0.9997,
+    "ddos_attacks-loic-http": 0.9961,
+    "dos_attacks-slowhttptest": 0.9993,
+    "dos_attacks-slowloris": 0.9501,
+    "ftp-bruteforce": 0.9998,
+    "infilteration": 0.7122,
+    "sql_injection": 0.2939,
+    "ssh-bruteforce": 0.9994
+   },
+   "cal_per_class": {
+    "Benign": 0.9624,
+    "bot": 0.9976,
+    "brute_force_-web": 0.4236,
+    "brute_force_-xss": 0.7928,
+    "ddos_attack-hoic": 0.9992,
+    "ddos_attacks-loic-http": 0.9818,
+    "dos_attacks-slowhttptest": 0.9983,
+    "dos_attacks-slowloris": 0.9601,
+    "ftp-bruteforce": 0.9996,
+    "infilteration": 0.7497,
+    "sql_injection": 0.5435,
+    "ssh-bruteforce": 0.9986
+   },
+   "gain_vs_flow": [
+    0.1513296605580411,
+    0.24747247273230866
+   ],
+   "gain_vs_flowREL": [
+    0.011314494127891428,
+    -0.01024851740179733
+   ],
+   "passes_vs_flow": true
+  },
+  "flow+REL | LightGBM+ExtraTrees": {
+   "rule": "bayes",
+   "val": 0.8201231017094073,
+   "calibration": 0.8946008374819477,
+   "val_per_class": {
+    "Benign": 0.9629,
+    "bot": 0.9991,
+    "brute_force_-web": 0.1431,
+    "brute_force_-xss": 0.8396,
+    "ddos_attack-hoic": 0.9999,
+    "ddos_attacks-loic-http": 0.996,
+    "dos_attacks-slowhttptest": 0.9996,
+    "dos_attacks-slowloris": 0.9181,
+    "ftp-bruteforce": 0.9992,
+    "infilteration": 0.6584,
+    "sql_injection": 0.3268,
+    "ssh-bruteforce": 0.9987
+   },
+   "cal_per_class": {
+    "Benign": 0.966,
+    "bot": 0.9984,
+    "brute_force_-web": 0.5138,
+    "brute_force_-xss": 0.9411,
+    "ddos_attack-hoic": 0.9994,
+    "ddos_attacks-loic-http": 0.9874,
+    "dos_attacks-slowhttptest": 0.9994,
+    "dos_attacks-slowloris": 0.9078,
+    "ftp-bruteforce": 0.9986,
+    "infilteration": 0.78,
+    "sql_injection": 0.6456,
+    "ssh-bruteforce": 0.9977
+   },
+   "gain_vs_flow": [
+    0.15266675602211677,
+    0.2748056608246703
+   ],
+   "gain_vs_flowREL": [
+    0.012651589591967105,
+    0.017084670690564296
+   ],
+   "passes_vs_flow": true
+  }
+ },
+ "cl_folds": "alternating availability-order blocks per segment",
+ "confident_learning": {
+  "flow": {
+   "flagged_fraction": 0.03641233658571578,
+   "flagged_by_class": {
+    "Benign": 0.0027,
+    "bot": 0.0,
+    "brute_force_-web": 0.1987,
+    "brute_force_-xss": 0.0524,
+    "ddos_attack-hoic": 0.0,
+    "ddos_attack-loic-udp": 0.0,
+    "ddos_attacks-loic-http": 0.0,
+    "dos_attacks-goldeneye": 0.0008,
+    "dos_attacks-hulk": 0.0001,
+    "dos_attacks-slowhttptest": 0.4979,
+    "dos_attacks-slowloris": 0.0025,
+    "ftp-bruteforce": 0.51,
+    "infilteration": 0.2408,
+    "sql_injection": 0.5494,
+    "ssh-bruteforce": 0.0004
+   },
+   "flagged_to": {
+    "Benign": {
+     "brute_force_-web": 129,
+     "brute_force_-xss": 48,
+     "ddos_attack-loic-udp": 4,
+     "dos_attacks-goldeneye": 2,
+     "dos_attacks-hulk": 3,
+     "dos_attacks-slowloris": 3,
+     "infilteration": 1217
+    },
+    "bot": {},
+    "brute_force_-web": {
+     "Benign": 82,
+     "brute_force_-xss": 90,
+     "infilteration": 9,
+     "sql_injection": 26
+    },
+    "brute_force_-xss": {
+     "Benign": 1,
+     "brute_force_-web": 8,
+     "sql_injection": 6
+    },
+    "ddos_attack-hoic": {},
+    "ddos_attack-loic-udp": {},
+    "ddos_attacks-loic-http": {},
+    "dos_attacks-goldeneye": {
+     "Benign": 5,
+     "dos_attacks-slowloris": 10
+    },
+    "dos_attacks-hulk": {
+     "Benign": 1
+    },
+    "dos_attacks-slowhttptest": {
+     "ftp-bruteforce": 9995
+    },
+    "dos_attacks-slowloris": {
+     "Benign": 42,
+     "dos_attacks-goldeneye": 6
+    },
+    "ftp-bruteforce": {
+     "dos_attacks-slowhttptest": 10218
+    },
+    "infilteration": {
+     "Benign": 4837,
+     "brute_force_-web": 25
+    },
+    "sql_injection": {
+     "brute_force_-web": 33,
+     "brute_force_-xss": 95
+    },
+    "ssh-bruteforce": {
+     "ftp-bruteforce": 8
+    }
+   }
+  },
+  "flow+REL": {
+   "flagged_fraction": 0.007644384530949065,
+   "flagged_by_class": {
+    "Benign": 0.0025,
+    "bot": 0.0,
+    "brute_force_-web": 0.1516,
+    "brute_force_-xss": 0.014,
+    "ddos_attack-hoic": 0.0023,
+    "ddos_attack-loic-udp": 0.0,
+    "ddos_attacks-loic-http": 0.0002,
+    "dos_attacks-goldeneye": 0.0216,
+    "dos_attacks-hulk": 0.029,
+    "dos_attacks-slowhttptest": 0.0017,
+    "dos_attacks-slowloris": 0.002,
+    "ftp-bruteforce": 0.0005,
+    "infilteration": 0.1434,
+    "sql_injection": 0.382,
+    "ssh-bruteforce": 0.0004
+   },
+   "flagged_to": {
+    "Benign": {
+     "brute_force_-web": 46,
+     "brute_force_-xss": 1,
+     "ddos_attack-loic-udp": 3,
+     "dos_attacks-slowloris": 4,
+     "infilteration": 1273,
+     "sql_injection": 4
+    },
+    "bot": {
+     "infilteration": 1
+    },
+    "brute_force_-web": {
+     "Benign": 61,
+     "sql_injection": 97
+    },
+    "brute_force_-xss": {
+     "Benign": 1,
+     "brute_force_-web": 3
+    },
+    "ddos_attack-hoic": {
+     "Benign": 67
+    },
+    "ddos_attack-loic-udp": {},
+    "ddos_attacks-loic-http": {
+     "dos_attacks-hulk": 3
+    },
+    "dos_attacks-goldeneye": {
+     "dos_attacks-slowloris": 1,
+     "infilteration": 429
+    },
+    "dos_attacks-hulk": {
+     "Benign": 578
+    },
+    "dos_attacks-slowhttptest": {
+     "Benign": 34
+    },
+    "dos_attacks-slowloris": {
+     "Benign": 5,
+     "infilteration": 34
+    },
+    "ftp-bruteforce": {
+     "ssh-bruteforce": 11
+    },
+    "infilteration": {
+     "Benign": 2888,
+     "brute_force_-web": 3,
+     "brute_force_-xss": 1,
+     "dos_attacks-goldeneye": 3
+    },
+    "sql_injection": {
+     "brute_force_-web": 89
+    },
+    "ssh-bruteforce": {
+     "ftp-bruteforce": 6,
+     "infilteration": 2
+    }
+   }
+  }
+ },
+ "best_maximin_vs_flow": "flow+REL | LightGBM+ExtraTrees"
+}

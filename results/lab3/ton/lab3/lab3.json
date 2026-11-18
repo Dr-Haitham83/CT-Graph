@@ -1,0 +1,510 @@
+{
+ "prepared": "nids-ton",
+ "protocol": "transductive self-training; targets = validation / calibration (labels only for scoring); test never opened",
+ "rounds": 2,
+ "cap_per_class": 20000,
+ "results": {
+  "flow": {
+   "val": {
+    "rule": "bayes",
+    "base": 0.7880308292414848,
+    "base_per_class": {
+     "Benign": 0.9159,
+     "backdoor": 0.9991,
+     "ddos": 0.9802,
+     "dos": 0.8116,
+     "injection": 0.9557,
+     "mitm": 0.3928,
+     "password": 0.9757,
+     "ransomware": 0.7971,
+     "scanning": 0.071,
+     "xss": 0.9811
+    },
+    "ST-thr": {
+     "final": 0.7264335545554395,
+     "gain": -0.06159727468604537,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 141857,
+       "pseudo_label_accuracy": 0.9851963597143603,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 20000,
+        "ddos": 20000,
+        "dos": 18858,
+        "injection": 20000,
+        "mitm": 146,
+        "password": 20000,
+        "ransomware": 421,
+        "scanning": 2432,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7571476170869373
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 146107,
+       "pseudo_label_accuracy": 0.9648134586296344,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 20000,
+        "ddos": 20000,
+        "dos": 19158,
+        "injection": 20000,
+        "mitm": 508,
+        "password": 20000,
+        "ransomware": 861,
+        "scanning": 5580,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7264335545554395
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9121,
+      "backdoor": 0.9993,
+      "ddos": 0.9803,
+      "dos": 0.8135,
+      "injection": 0.9503,
+      "mitm": 0.2139,
+      "password": 0.9762,
+      "ransomware": 0.3458,
+      "scanning": 0.0917,
+      "xss": 0.9813
+     }
+    },
+    "ST-bal": {
+     "final": 0.7886825843326071,
+     "gain": 0.0006517550911222525,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 101348,
+       "pseudo_label_accuracy": 0.9752634487113707,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 5968,
+        "ddos": 20000,
+        "dos": 4199,
+        "injection": 7552,
+        "mitm": 61,
+        "password": 20000,
+        "ransomware": 95,
+        "scanning": 3473,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7936562642433442
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 102426,
+       "pseudo_label_accuracy": 0.9685333801964345,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 5969,
+        "ddos": 20000,
+        "dos": 4197,
+        "injection": 7544,
+        "mitm": 57,
+        "password": 20000,
+        "ransomware": 87,
+        "scanning": 4572,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7886825843326071
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9143,
+      "backdoor": 0.9992,
+      "ddos": 0.9803,
+      "dos": 0.8138,
+      "injection": 0.9576,
+      "mitm": 0.3628,
+      "password": 0.976,
+      "ransomware": 0.8109,
+      "scanning": 0.0904,
+      "xss": 0.9816
+     }
+    }
+   },
+   "calibration": {
+    "rule": "bayes",
+    "base": 0.8396201579264501,
+    "base_per_class": {
+     "Benign": 0.9117,
+     "backdoor": 0.9989,
+     "ddos": 0.9861,
+     "dos": 0.8174,
+     "injection": 0.9525,
+     "mitm": 0.6074,
+     "password": 0.9848,
+     "ransomware": 0.945,
+     "scanning": 0.2155,
+     "xss": 0.977
+    },
+    "ST-thr": {
+     "final": 0.7961729680424758,
+     "gain": -0.043447189883974224,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 132791,
+       "pseudo_label_accuracy": 0.998192648598173,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 18609,
+        "ddos": 20000,
+        "dos": 13228,
+        "injection": 20000,
+        "mitm": 165,
+        "password": 20000,
+        "ransomware": 397,
+        "scanning": 392,
+        "xss": 20000
+       },
+       "macro_mcc": 0.8233814929839409
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 134239,
+       "pseudo_label_accuracy": 0.994748173034662,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 18616,
+        "ddos": 20000,
+        "dos": 13422,
+        "injection": 20000,
+        "mitm": 669,
+        "password": 20000,
+        "ransomware": 462,
+        "scanning": 1070,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7961729680424758
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9064,
+      "backdoor": 0.9985,
+      "ddos": 0.9862,
+      "dos": 0.8169,
+      "injection": 0.9458,
+      "mitm": 0.2563,
+      "password": 0.985,
+      "ransomware": 0.8282,
+      "scanning": 0.2615,
+      "xss": 0.9768
+     }
+    },
+    "ST-bal": {
+     "final": 0.8336798118966696,
+     "gain": -0.005940346029780441,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 95539,
+       "pseudo_label_accuracy": 0.9991940464103665,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 3727,
+        "ddos": 20000,
+        "dos": 2868,
+        "injection": 8222,
+        "mitm": 98,
+        "password": 20000,
+        "ransomware": 83,
+        "scanning": 541,
+        "xss": 20000
+       },
+       "macro_mcc": 0.8241545778336086
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 95752,
+       "pseudo_label_accuracy": 0.9994255994652853,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 3727,
+        "ddos": 20000,
+        "dos": 2867,
+        "injection": 8124,
+        "mitm": 215,
+        "password": 20000,
+        "ransomware": 86,
+        "scanning": 733,
+        "xss": 20000
+       },
+       "macro_mcc": 0.8336798118966696
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9122,
+      "backdoor": 0.9987,
+      "ddos": 0.9861,
+      "dos": 0.8197,
+      "injection": 0.9502,
+      "mitm": 0.5201,
+      "password": 0.9847,
+      "ransomware": 0.9378,
+      "scanning": 0.2504,
+      "xss": 0.9768
+     }
+    }
+   },
+   "ST-thr_passes": false,
+   "ST-bal_passes": false
+  },
+  "flow+REL": {
+   "val": {
+    "rule": "bayes",
+    "base": 0.7987284547013218,
+    "base_per_class": {
+     "Benign": 0.9218,
+     "backdoor": 0.9991,
+     "ddos": 0.9814,
+     "dos": 0.9973,
+     "injection": 0.9834,
+     "mitm": 0.4319,
+     "password": 0.9572,
+     "ransomware": 0.7183,
+     "scanning": 0.0026,
+     "xss": 0.9943
+    },
+    "ST-thr": {
+     "final": 0.7595317473763364,
+     "gain": -0.03919670732498537,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 140887,
+       "pseudo_label_accuracy": 0.9964155670856786,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 20000,
+        "ddos": 20000,
+        "dos": 20000,
+        "injection": 20000,
+        "mitm": 161,
+        "password": 20000,
+        "ransomware": 572,
+        "scanning": 154,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7654803938920123
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 145671,
+       "pseudo_label_accuracy": 0.9650719772638342,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 20000,
+        "ddos": 20000,
+        "dos": 20000,
+        "injection": 20000,
+        "mitm": 1175,
+        "password": 20000,
+        "ransomware": 1430,
+        "scanning": 3066,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7595317473763364
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9076,
+      "backdoor": 0.9995,
+      "ddos": 0.9815,
+      "dos": 0.9985,
+      "injection": 0.9827,
+      "mitm": 0.3396,
+      "password": 0.9603,
+      "ransomware": 0.3889,
+      "scanning": 0.0414,
+      "xss": 0.9954
+     }
+    },
+    "ST-bal": {
+     "final": 0.7825033354371768,
+     "gain": -0.01622511926414505,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 99965,
+       "pseudo_label_accuracy": 0.9956184664632621,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 5969,
+        "ddos": 20000,
+        "dos": 5446,
+        "injection": 7990,
+        "mitm": 45,
+        "password": 20000,
+        "ransomware": 121,
+        "scanning": 394,
+        "xss": 20000
+       },
+       "macro_mcc": 0.791266857128554
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 102174,
+       "pseudo_label_accuracy": 0.9737212989605967,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 5971,
+        "ddos": 20000,
+        "dos": 5440,
+        "injection": 7941,
+        "mitm": 59,
+        "password": 20000,
+        "ransomware": 132,
+        "scanning": 2631,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7825033354371768
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9091,
+      "backdoor": 0.9997,
+      "ddos": 0.9814,
+      "dos": 0.9976,
+      "injection": 0.9818,
+      "mitm": 0.3816,
+      "password": 0.9605,
+      "ransomware": 0.6242,
+      "scanning": -0.0061,
+      "xss": 0.9952
+     }
+    }
+   },
+   "calibration": {
+    "rule": "bayes",
+    "base": 0.755177755816317,
+    "base_per_class": {
+     "Benign": 0.9048,
+     "backdoor": 0.9992,
+     "ddos": 0.987,
+     "dos": 0.9979,
+     "injection": 0.9766,
+     "mitm": 0.0057,
+     "password": 0.9761,
+     "ransomware": 0.6971,
+     "scanning": 0.0146,
+     "xss": 0.9928
+    },
+    "ST-thr": {
+     "final": 0.7240712221847193,
+     "gain": -0.031106533631597655,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 142404,
+       "pseudo_label_accuracy": 0.9687508777843319,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 18616,
+        "ddos": 20000,
+        "dos": 19063,
+        "injection": 20000,
+        "mitm": 4166,
+        "password": 20000,
+        "ransomware": 559,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7409960903188129
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 143249,
+       "pseudo_label_accuracy": 0.9638322082527627,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 18634,
+        "ddos": 20000,
+        "dos": 19133,
+        "injection": 20000,
+        "mitm": 4401,
+        "password": 20000,
+        "ransomware": 1081,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7240712221847193
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9054,
+      "backdoor": 0.9978,
+      "ddos": 0.987,
+      "dos": 0.9984,
+      "injection": 0.9666,
+      "mitm": 0.0019,
+      "password": 0.9783,
+      "ransomware": 0.4119,
+      "scanning": 0.0005,
+      "xss": 0.993
+     }
+    },
+    "ST-bal": {
+     "final": 0.7379368524384122,
+     "gain": -0.017240903377904737,
+     "trace": [
+      {
+       "round": 1,
+       "pseudo_rows": 97501,
+       "pseudo_label_accuracy": 0.9912923970010564,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 3726,
+        "ddos": 20000,
+        "dos": 3827,
+        "injection": 8984,
+        "mitm": 837,
+        "password": 20000,
+        "ransomware": 119,
+        "scanning": 8,
+        "xss": 20000
+       },
+       "macro_mcc": 0.755708450318901
+      },
+      {
+       "round": 2,
+       "pseudo_rows": 97509,
+       "pseudo_label_accuracy": 0.9914264324318781,
+       "pseudo_by_class": {
+        "Benign": 20000,
+        "backdoor": 3724,
+        "ddos": 20000,
+        "dos": 3829,
+        "injection": 8955,
+        "mitm": 738,
+        "password": 20000,
+        "ransomware": 181,
+        "scanning": 82,
+        "xss": 20000
+       },
+       "macro_mcc": 0.7379368524384122
+      }
+     ],
+     "final_per_class": {
+      "Benign": 0.9077,
+      "backdoor": 0.9997,
+      "ddos": 0.987,
+      "dos": 0.9985,
+      "injection": 0.9746,
+      "mitm": 0.0417,
+      "password": 0.9791,
+      "ransomware": 0.4107,
+      "scanning": 0.0874,
+      "xss": 0.993
+     }
+    }
+   },
+   "ST-thr_passes": false,
+   "ST-bal_passes": false
+  }
+ }
+}

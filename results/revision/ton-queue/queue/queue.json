@@ -1,0 +1,31 @@
+{
+ "prepared": "nids-ton",
+ "records": 2603416,
+ "streams": 11,
+ "rates": {
+  "amortised": {
+   "mu_records_per_s": 1630.8,
+   "seconds_with_backlog_share": 0.005329332022559114,
+   "peak_backlog_records": 140795.2,
+   "max_wait_s": 86.33505028207016,
+   "record_wait_p50_s": 0.0,
+   "record_wait_p99_s": 80.72639195486876,
+   "record_wait_p999_s": 86.31039980377729,
+   "records_waiting_over_1s_share": 0.11983524722902525,
+   "records_waiting_over_10s_share": 0.10939396546690963,
+   "records_waiting_over_60s_share": 0.02620211291626079
+  },
+  "batch": {
+   "mu_records_per_s": 1041.0,
+   "seconds_with_backlog_share": 0.013271588968800124,
+   "peak_backlog_records": 154373.0,
+   "max_wait_s": 148.2929875120077,
+   "record_wait_p50_s": 0.0,
+   "record_wait_p99_s": 136.66186359269932,
+   "record_wait_p999_s": 147.30355427473583,
+   "records_waiting_over_1s_share": 0.18792348207124793,
+   "records_waiting_over_10s_share": 0.16847634031595413,
+   "records_waiting_over_60s_share": 0.1418340365120288
+  }
+ }
+}

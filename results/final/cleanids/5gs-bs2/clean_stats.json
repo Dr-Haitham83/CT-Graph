@@ -1,0 +1,159 @@
+{
+ "colliding_vectors": 33711,
+ "test_rows": 728116,
+ "rules": {
+  "C1": {
+   "dropped": 367235,
+   "dropped_fraction": 0.5043633157354048,
+   "by_class": {
+    "Benign": {
+     "dropped": 281543,
+     "of": 406759,
+     "fraction": 0.6922
+    },
+    "httpflood": {
+     "dropped": 4,
+     "of": 76121,
+     "fraction": 0.0001
+    },
+    "icmpflood": {
+     "dropped": 0,
+     "of": 613,
+     "fraction": 0.0
+    },
+    "slowratedos": {
+     "dropped": 0,
+     "of": 36092,
+     "fraction": 0.0
+    },
+    "synflood": {
+     "dropped": 0,
+     "of": 4792,
+     "fraction": 0.0
+    },
+    "synscan": {
+     "dropped": 0,
+     "of": 10019,
+     "fraction": 0.0
+    },
+    "tcpconnectscan": {
+     "dropped": 8683,
+     "of": 10022,
+     "fraction": 0.8664
+    },
+    "udpflood": {
+     "dropped": 69324,
+     "of": 175811,
+     "fraction": 0.3943
+    },
+    "udpscan": {
+     "dropped": 7681,
+     "of": 7887,
+     "fraction": 0.9739
+    }
+   }
+  },
+  "C2": {
+   "dropped": 10289,
+   "dropped_fraction": 0.014130990116959386,
+   "by_class": {
+    "Benign": {
+     "dropped": 10289,
+     "of": 406759,
+     "fraction": 0.0253
+    },
+    "httpflood": {
+     "dropped": 0,
+     "of": 76121,
+     "fraction": 0.0
+    },
+    "icmpflood": {
+     "dropped": 0,
+     "of": 613,
+     "fraction": 0.0
+    },
+    "slowratedos": {
+     "dropped": 0,
+     "of": 36092,
+     "fraction": 0.0
+    },
+    "synflood": {
+     "dropped": 0,
+     "of": 4792,
+     "fraction": 0.0
+    },
+    "synscan": {
+     "dropped": 0,
+     "of": 10019,
+     "fraction": 0.0
+    },
+    "tcpconnectscan": {
+     "dropped": 0,
+     "of": 10022,
+     "fraction": 0.0
+    },
+    "udpflood": {
+     "dropped": 0,
+     "of": 175811,
+     "fraction": 0.0
+    },
+    "udpscan": {
+     "dropped": 0,
+     "of": 7887,
+     "fraction": 0.0
+    }
+   }
+  },
+  "C1C2": {
+   "dropped": 377522,
+   "dropped_fraction": 0.5184915590372963,
+   "by_class": {
+    "Benign": {
+     "dropped": 291830,
+     "of": 406759,
+     "fraction": 0.7175
+    },
+    "httpflood": {
+     "dropped": 4,
+     "of": 76121,
+     "fraction": 0.0001
+    },
+    "icmpflood": {
+     "dropped": 0,
+     "of": 613,
+     "fraction": 0.0
+    },
+    "slowratedos": {
+     "dropped": 0,
+     "of": 36092,
+     "fraction": 0.0
+    },
+    "synflood": {
+     "dropped": 0,
+     "of": 4792,
+     "fraction": 0.0
+    },
+    "synscan": {
+     "dropped": 0,
+     "of": 10019,
+     "fraction": 0.0
+    },
+    "tcpconnectscan": {
+     "dropped": 8683,
+     "of": 10022,
+     "fraction": 0.8664
+    },
+    "udpflood": {
+     "dropped": 69324,
+     "of": 175811,
+     "fraction": 0.3943
+    },
+    "udpscan": {
+     "dropped": 7681,
+     "of": 7887,
+     "fraction": 0.9739
+    }
+   }
+  }
+ }
+}

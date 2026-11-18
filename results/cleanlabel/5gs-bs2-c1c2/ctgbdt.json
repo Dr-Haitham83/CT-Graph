@@ -1,0 +1,369 @@
+{
+ "model": "CT-GBDT (flow + causal graph context, feature set chosen on validation)",
+ "context_features": [],
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "feature_set_selection": {
+  "flow": {
+   "validation_macro_mcc": {
+    "bayes": 0.8555924110240779,
+    "balanced": 0.9960637881038475
+   },
+   "best": 0.9960637881038475,
+   "trees": 55,
+   "fit_seconds": 18.725632429122925
+  }
+ },
+ "chosen_feature_set": "flow",
+ "seed42": {
+  "rule": "balanced",
+  "validation_macro_mcc": {
+   "bayes": 0.8555924110240779,
+   "balanced": 0.9960637881038475
+  },
+  "test": {
+   "macro_mcc": 0.6591206069754523,
+   "macro_f1": 0.6534556563291569,
+   "accuracy": 0.5679616984106928,
+   "mcc": 0.5141592592247181,
+   "per_class_f1": {
+    "Benign": 0.46978183546813024,
+    "httpflood": 0.9926530075311606,
+    "icmpflood": 0.9878934624697336,
+    "slowratedos": 0.9817728531855956,
+    "synflood": 0.8268414027423856,
+    "synscan": 0.660831217426166,
+    "tcpconnectscan": 0.194964608906012,
+    "udpflood": 0.5317171550589747,
+    "udpscan": 0.2346453641742552
+   }
+  },
+  "trees": 55,
+  "fit_seconds": 4.179092645645142,
+  "top_features_gain": [
+   [
+    "sMeanPktSz",
+    1211896.6797912861
+   ],
+   [
+    "SrcWin",
+    994126.006942302
+   ],
+   [
+    "AckDat",
+    525343.5522873761
+   ],
+   [
+    "DstWin",
+    427072.2624642938
+   ],
+   [
+    "Flgs",
+    211531.1730984263
+   ],
+   [
+    "SrcBytes",
+    97159.28760214406
+   ],
+   [
+    "DstBytes",
+    75765.99210196575
+   ],
+   [
+    "TcpRtt",
+    65479.44864557148
+   ],
+   [
+    "SynAck",
+    61842.46076083074
+   ],
+   [
+    "Dir",
+    57762.230160163715
+   ],
+   [
+    "Cause",
+    52023.28669242561
+   ],
+   [
+    "TotBytes",
+    51047.12354390626
+   ],
+   [
+    "dTos",
+    49315.96993368864
+   ],
+   [
+    "Proto",
+    31063.476612094324
+   ],
+   [
+    "byte_asymmetry",
+    29706.381451817404
+   ],
+   [
+    "Rate",
+    27384.890212386847
+   ],
+   [
+    "State",
+    23619.03008370474
+   ],
+   [
+    "packet_asymmetry",
+    22848.02304085344
+   ],
+   [
+    "TcpOpt",
+    17686.073150587967
+   ],
+   [
+    "Dur",
+    16516.99745614401
+   ]
+  ]
+ },
+ "seed43": {
+  "rule": "balanced",
+  "validation_macro_mcc": {
+   "bayes": 0.8555680932175637,
+   "balanced": 0.996190313956161
+  },
+  "test": {
+   "macro_mcc": 0.7610331015855835,
+   "macro_f1": 0.7729407379328656,
+   "accuracy": 0.5802179872437908,
+   "mcc": 0.5337019563484448,
+   "per_class_f1": {
+    "Benign": 0.46986719992181597,
+    "httpflood": 0.9927086004326187,
+    "icmpflood": 0.9878934624697336,
+    "slowratedos": 0.9818156618156618,
+    "synflood": 0.8268414027423856,
+    "synscan": 0.9337107808445388,
+    "tcpconnectscan": 0.9971095385228745,
+    "udpflood": 0.5317171550589747,
+    "udpscan": 0.23480283958718606
+   }
+  },
+  "trees": 49,
+  "fit_seconds": 20.79581117630005,
+  "top_features_gain": [
+   [
+    "sMeanPktSz",
+    1069417.9990468137
+   ],
+   [
+    "SrcWin",
+    841441.9352066753
+   ],
+   [
+    "AckDat",
+    581732.8054102659
+   ],
+   [
+    "DstWin",
+    393113.76545439335
+   ],
+   [
+    "Flgs",
+    303414.41007744754
+   ],
+   [
+    "Cause",
+    128285.86727446318
+   ],
+   [
+    "SrcBytes",
+    115025.27524766052
+   ],
+   [
+    "TotBytes",
+    102942.50613377814
+   ],
+   [
+    "State",
+    97133.37298991345
+   ],
+   [
+    "Dir",
+    79879.91643020418
+   ],
+   [
+    "dTos",
+    70967.92757555842
+   ],
+   [
+    "byte_asymmetry",
+    69997.9321215013
+   ],
+   [
+    "TcpRtt",
+    57230.5657182564
+   ],
+   [
+    "Proto",
+    41703.90342872217
+   ],
+   [
+    "DstBytes",
+    40163.372307752725
+   ],
+   [
+    "Rate",
+    29899.99026461551
+   ],
+   [
+    "packet_asymmetry",
+    19420.074092566967
+   ],
+   [
+    "DstPkts",
+    18330.406606137753
+   ],
+   [
+    "TcpOpt",
+    15757.364435657859
+   ],
+   [
+    "Dur",
+    15071.339181786403
+   ]
+  ]
+ },
+ "seed44": {
+  "rule": "balanced",
+  "validation_macro_mcc": {
+   "bayes": 0.855621434813231,
+   "balanced": 0.9961859284780948
+  },
+  "test": {
+   "macro_mcc": 0.6596010624338233,
+   "macro_f1": 0.653829771700055,
+   "accuracy": 0.5679273632223437,
+   "mcc": 0.5140554595091397,
+   "per_class_f1": {
+    "Benign": 0.4697262047236402,
+    "httpflood": 0.9925008880527306,
+    "icmpflood": 0.9878934624697336,
+    "slowratedos": 0.9809012400354296,
+    "synflood": 0.8301656920077972,
+    "synscan": 0.6618502909893639,
+    "tcpconnectscan": 0.19505198996055934,
+    "udpflood": 0.5317171550589747,
+    "udpscan": 0.23466102200226582
+   }
+  },
+  "trees": 52,
+  "fit_seconds": 20.9528386592865,
+  "top_features_gain": [
+   [
+    "sMeanPktSz",
+    1234361.324817517
+   ],
+   [
+    "SrcWin",
+    1053481.7558857223
+   ],
+   [
+    "AckDat",
+    622870.1863745125
+   ],
+   [
+    "DstWin",
+    383663.1791937249
+   ],
+   [
+    "Flgs",
+    222528.6491068676
+   ],
+   [
+    "SrcBytes",
+    129458.17631986208
+   ],
+   [
+    "DstBytes",
+    67445.59855187824
+   ],
+   [
+    "Dir",
+    59268.571950331796
+   ],
+   [
+    "Cause",
+    52298.39043468237
+   ],
+   [
+    "byte_asymmetry",
+    33972.87700834079
+   ],
+   [
+    "Proto",
+    31264.9670384489
+   ],
+   [
+    "Rate",
+    27886.121922592632
+   ],
+   [
+    "dTos",
+    27785.26378647983
+   ],
+   [
+    "packet_asymmetry",
+    22956.34042274952
+   ],
+   [
+    "State",
+    21843.72680489067
+   ],
+   [
+    "TcpOpt",
+    15768.812784343958
+   ],
+   [
+    "TcpRtt",
+    14932.771940963372
+   ],
+   [
+    "Dur",
+    14497.843062297965
+   ],
+   [
+    "forward_byte_fraction",
+    11939.316583834589
+   ],
+   [
+    "DstPkts",
+    9189.737635869998
+   ]
+  ]
+ },
+ "cleaned_label_gate": {
+  "standard_files": [
+   "/data/input/ctg-5gs-bs2-ctgbdt4-full/context_gbdt/ctgbdt_seed42.npz",
+   "/data/input/ctg-5gs-bs2-ctgbdt4-full/context_gbdt/ctgbdt_seed43.npz",
+   "/data/input/ctg-5gs-bs2-ctgbdt4-full/context_gbdt/ctgbdt_seed44.npz"
+  ],
+  "cleaned_validation_rows": 22228,
+  "standard_branch": {
+   "bayes": 0.8560114279203735,
+   "balanced": 0.9963431220001073
+  },
+  "cleaned_label_branch": {
+   "bayes": 0.855520990787283,
+   "balanced": 0.9963443235453391
+  },
+  "gain": 1.2015452317548636e-06,
+  "helps": false
+ }
+}

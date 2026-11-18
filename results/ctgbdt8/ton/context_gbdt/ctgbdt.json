@@ -1,0 +1,102 @@
+{
+ "model": "CT-GBDT v8 (multi-view random-subspace context ensemble; double held-out maximin rule)",
+ "views": {
+  "flow+REL": [
+   "flow",
+   "REL"
+  ],
+  "flow+T_segz": [
+   "flow",
+   "T_segz"
+  ],
+  "all": [
+   "flow",
+   "REL",
+   "T_count",
+   "T_novelty",
+   "T_flags",
+   "T_volume",
+   "T_timing",
+   "T_segz"
+  ]
+ },
+ "classes": [
+  "Benign",
+  "backdoor",
+  "ddos",
+  "dos",
+  "injection",
+  "mitm",
+  "password",
+  "ransomware",
+  "scanning",
+  "xss"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.7932803137192519,
+    "balanced": 0.7141467158411166
+   },
+   "calibration": {
+    "bayes": 0.8449510705442176,
+    "balanced": 0.7892406706307982
+   },
+   "rule_on_val": "bayes"
+  },
+  "flow+REL": {
+   "validation": {
+    "bayes": 0.810681169407361,
+    "balanced": 0.8057624391303785
+   },
+   "calibration": {
+    "bayes": 0.7849392806970232,
+    "balanced": 0.7894774916360284
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.017400855688109118,
+   "gain_calibration": -0.06001178984719435
+  },
+  "flow+T_segz": {
+   "validation": {
+    "bayes": 0.8544795797437981,
+    "balanced": 0.7740718045457218
+   },
+   "calibration": {
+    "bayes": 0.8070368891713571,
+    "balanced": 0.8077023080921505
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.06119926602454617,
+   "gain_calibration": -0.03791418137286051
+  },
+  "all": {
+   "validation": {
+    "bayes": 0.7865079564368525,
+    "balanced": 0.783048238423226
+   },
+   "calibration": {
+    "bayes": 0.7240081418058346,
+    "balanced": 0.7263166576235849
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": -0.006772357282399444,
+   "gain_calibration": -0.12094292873838297
+  },
+  "multiview": {
+   "validation": {
+    "bayes": 0.8055975336164248,
+    "balanced": 0.7912735415864928
+   },
+   "calibration": {
+    "bayes": 0.780023716313767,
+    "balanced": 0.8029820777706969
+   },
+   "rule_on_val": "bayes",
+   "gain_validation": 0.012317219897172937,
+   "gain_calibration": -0.0649273542304506
+  }
+ },
+ "chosen_feature_set": "flow",
+ "rule": "maximin of (gain_val, gain_cal) over candidates with both >= 0.002 vs flow"
+}

@@ -1,0 +1,174 @@
+{
+ "colliding_vectors": 34337,
+ "test_rows": 2603416,
+ "rules": {
+  "C1": {
+   "dropped": 1229031,
+   "dropped_fraction": 0.47208398504119203,
+   "by_class": {
+    "Benign": {
+     "dropped": 200750,
+     "of": 923308,
+     "fraction": 0.2174
+    },
+    "backdoor": {
+     "dropped": 422,
+     "of": 30780,
+     "fraction": 0.0137
+    },
+    "ddos": {
+     "dropped": 527588,
+     "of": 629754,
+     "fraction": 0.8378
+    },
+    "dos": {
+     "dropped": 7780,
+     "of": 31384,
+     "fraction": 0.2479
+    },
+    "injection": {
+     "dropped": 3341,
+     "of": 48947,
+     "fraction": 0.0683
+    },
+    "mitm": {
+     "dropped": 11,
+     "of": 782,
+     "fraction": 0.0141
+    },
+    "password": {
+     "dropped": 70346,
+     "of": 225125,
+     "fraction": 0.3125
+    },
+    "ransomware": {
+     "dropped": 43,
+     "of": 543,
+     "fraction": 0.0792
+    },
+    "scanning": {
+     "dropped": 283005,
+     "of": 289426,
+     "fraction": 0.9778
+    },
+    "xss": {
+     "dropped": 135745,
+     "of": 423367,
+     "fraction": 0.3206
+    }
+   }
+  },
+  "C2": {
+   "dropped": 471627,
+   "dropped_fraction": 0.18115698758861434,
+   "by_class": {
+    "Benign": {
+     "dropped": 471627,
+     "of": 923308,
+     "fraction": 0.5108
+    },
+    "backdoor": {
+     "dropped": 0,
+     "of": 30780,
+     "fraction": 0.0
+    },
+    "ddos": {
+     "dropped": 0,
+     "of": 629754,
+     "fraction": 0.0
+    },
+    "dos": {
+     "dropped": 0,
+     "of": 31384,
+     "fraction": 0.0
+    },
+    "injection": {
+     "dropped": 0,
+     "of": 48947,
+     "fraction": 0.0
+    },
+    "mitm": {
+     "dropped": 0,
+     "of": 782,
+     "fraction": 0.0
+    },
+    "password": {
+     "dropped": 0,
+     "of": 225125,
+     "fraction": 0.0
+    },
+    "ransomware": {
+     "dropped": 0,
+     "of": 543,
+     "fraction": 0.0
+    },
+    "scanning": {
+     "dropped": 0,
+     "of": 289426,
+     "fraction": 0.0
+    },
+    "xss": {
+     "dropped": 0,
+     "of": 423367,
+     "fraction": 0.0
+    }
+   }
+  },
+  "C1C2": {
+   "dropped": 1508502,
+   "dropped_fraction": 0.5794317926908339,
+   "by_class": {
+    "Benign": {
+     "dropped": 480221,
+     "of": 923308,
+     "fraction": 0.5201
+    },
+    "backdoor": {
+     "dropped": 422,
+     "of": 30780,
+     "fraction": 0.0137
+    },
+    "ddos": {
+     "dropped": 527588,
+     "of": 629754,
+     "fraction": 0.8378
+    },
+    "dos": {
+     "dropped": 7780,
+     "of": 31384,
+     "fraction": 0.2479
+    },
+    "injection": {
+     "dropped": 3341,
+     "of": 48947,
+     "fraction": 0.0683
+    },
+    "mitm": {
+     "dropped": 11,
+     "of": 782,
+     "fraction": 0.0141
+    },
+    "password": {
+     "dropped": 70346,
+     "of": 225125,
+     "fraction": 0.3125
+    },
+    "ransomware": {
+     "dropped": 43,
+     "of": 543,
+     "fraction": 0.0792
+    },
+    "scanning": {
+     "dropped": 283005,
+     "of": 289426,
+     "fraction": 0.9778
+    },
+    "xss": {
+     "dropped": 135745,
+     "of": 423367,
+     "fraction": 0.3206
+    }
+   }
+  }
+ }
+}

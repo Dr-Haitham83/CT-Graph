@@ -1,0 +1,39 @@
+{
+ "rel_mode": "seg",
+ "smoothing_key": "pair",
+ "features": 135,
+ "relational": 59,
+ "train_rows": 352533,
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "iterations": [
+  119,
+  95,
+  117
+ ],
+ "protocol": "context-branch parameters and training rows; smoothing fixed; rule chosen on validation only",
+ "scores": {
+  "bayes": {
+   "val": 0.9925891256691918,
+   "calibration": 0.5504887969415585,
+   "test": 0.9970818357350767,
+   "val_cvar": 0.9363602230795383
+  },
+  "balanced": {
+   "val": 0.9913421055219013,
+   "calibration": 0.5410320594692568,
+   "test": 0.9919558710082796,
+   "val_cvar": 0.9299188586859878
+  }
+ },
+ "selected": {
+  "by_val_macro_mcc": "bayes",
+  "by_val_cvar": "bayes"
+ },
+ "test_by_val_macro_mcc": 0.9970818357350767,
+ "test_by_val_cvar": 0.9970818357350767,
+ "elapsed_s": 141.42640161514282
+}

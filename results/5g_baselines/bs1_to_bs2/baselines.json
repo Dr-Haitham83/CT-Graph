@@ -1,0 +1,509 @@
+{
+ "protocol": "site",
+ "block_s": 120.0,
+ "sizes": {
+  "train": 352533,
+  "val": 57984,
+  "calibration": 303660,
+  "test": 487560
+ },
+ "classes": [
+  "Benign",
+  "httpflood",
+  "icmpflood",
+  "slowratedos",
+  "synflood",
+  "synscan",
+  "tcpconnectscan",
+  "udpflood",
+  "udpscan"
+ ],
+ "features_used": 53,
+ "test_novel_fraction": 0.5461666256460743,
+ "protocol_note": "fit on train; early stopping and decision rule on validation; threshold on calibration; test once",
+ "LightGBM": {
+  "macro_mcc": 0.9943838657029962,
+  "macro_f1": 0.994788387442164,
+  "accuracy": 0.9966342603987202,
+  "mcc": 0.994585224936133,
+  "weighted_f1": 0.996641991311588,
+  "balanced_accuracy": 0.9957612949654996,
+  "detection_rate": 0.9999976007447289,
+  "false_alarm_rate": 0.0001978407099655192,
+  "per_class": {
+   "Benign": {
+    "precision": 0.9999858659241565,
+    "recall": 0.9998021592900345,
+    "f1": 0.9998940041691693,
+    "mcc": 0.9998760158083263,
+    "support": 70764
+   },
+   "httpflood": {
+    "precision": 0.994360990585987,
+    "recall": 0.9812956980105424,
+    "f1": 0.9877851429994087,
+    "mcc": 0.9859593367412135,
+    "support": 64691
+   },
+   "icmpflood": {
+    "precision": 0.989010989010989,
+    "recall": 0.996309963099631,
+    "f1": 0.9926470588235294,
+    "mcc": 0.9926455691851402,
+    "support": 542
+   },
+   "slowratedos": {
+    "precision": 0.9680076021539437,
+    "recall": 0.9902786779001944,
+    "f1": 0.9790164984782956,
+    "mcc": 0.9773446356049997,
+    "support": 37032
+   },
+   "synflood": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "mcc": 1.0,
+    "support": 4929
+   },
+   "synscan": {
+    "precision": 0.9979050279329609,
+    "recall": 0.9979050279329609,
+    "f1": 0.9979050279329609,
+    "mcc": 0.9978610521908179,
+    "support": 10024
+   },
+   "tcpconnectscan": {
+    "precision": 0.998304577640371,
+    "recall": 0.9980059820538385,
+    "f1": 0.9981552575160791,
+    "mcc": 0.9981165282561018,
+    "support": 10030
+   },
+   "udpflood": {
+    "precision": 0.999996447980677,
+    "recall": 1.0,
+    "f1": 0.9999982239871843,
+    "mcc": 0.9999957971708616,
+    "support": 281529
+   },
+   "udpscan": {
+    "precision": 0.9971350274040857,
+    "recall": 0.9982541464022946,
+    "f1": 0.9976942730728485,
+    "mcc": 0.9976558563695058,
+    "support": 8019
+   }
+  },
+  "binary_roc_auc": 0.9999937229590767,
+  "binary_pr_auc": 0.9999989318766072,
+  "decision_rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.9875492288764058,
+   "balanced": 0.9837347517610732
+  },
+  "ci95_segment_bootstrap": {
+   "macro_mcc": [
+    0.9744025098408825,
+    0.9988543610669285
+   ],
+   "macro_f1": [
+    0.974438050301252,
+    0.998934732397557
+   ],
+   "accuracy": [
+    0.9890487604501148,
+    0.9997528768179732
+   ],
+   "mcc": [
+    0.9826864529881079,
+    0.9993203075315309
+   ]
+  },
+  "test_segments": 10,
+  "operating_point": {
+   "alpha": 0.001,
+   "threshold": 0.9999709725678545,
+   "fpr": 0.0,
+   "tpr": 0.05150721216134512
+  },
+  "alternative_rule": {
+   "macro_mcc": 0.9924745748937129,
+   "macro_f1": 0.9929475315377653,
+   "accuracy": 0.995938961358602,
+   "mcc": 0.9934719774155225
+  },
+  "novel_feature_vector_subset": {
+   "macro_mcc": 0.9518384484820083,
+   "macro_f1": 0.9526210587213205,
+   "accuracy": 0.993860054301905,
+   "mcc": 0.9904282226482954,
+   "weighted_f1": 0.9938752776695253,
+   "balanced_accuracy": 0.9555752351672395,
+   "detection_rate": 0.9999959567861302,
+   "false_alarm_rate": 0.0007383576815568799,
+   "rows": 266289
+  },
+  "confusion_matrix": [
+   [
+    70750,
+    0,
+    0,
+    5,
+    0,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    63481,
+    0,
+    1207,
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    540,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    360,
+    0,
+    36672,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    4929,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0,
+    10003,
+    4,
+    0,
+    14
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    11,
+    10010,
+    0,
+    9
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    281529,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0,
+    10,
+    1,
+    0,
+    8005
+   ]
+  ],
+  "trees_per_class": 52,
+  "fit_seconds": 16.96056342124939,
+  "test_inference_seconds": 2.7668237686157227,
+  "train_rows": 352533,
+  "params": {
+   "objective": "multiclass",
+   "num_class": 9,
+   "learning_rate": 0.1,
+   "num_leaves": 127,
+   "min_data_in_leaf": 200,
+   "feature_fraction": 0.9,
+   "bagging_fraction": 0.8,
+   "bagging_freq": 1,
+   "lambda_l2": 1.0,
+   "num_threads": 4,
+   "verbose": -1,
+   "seed": 42,
+   "max_bin": 255
+  }
+ },
+ "XGBoost": {
+  "macro_mcc": 0.9937035337573678,
+  "macro_f1": 0.994162698454764,
+  "accuracy": 0.9961358602018213,
+  "mcc": 0.9937845841636797,
+  "weighted_f1": 0.9961463751899097,
+  "balanced_accuracy": 0.9955549928882296,
+  "detection_rate": 1.0,
+  "false_alarm_rate": 0.0027132440223842634,
+  "per_class": {
+   "Benign": {
+    "precision": 1.0,
+    "recall": 0.9972867559776157,
+    "f1": 0.9986415350653761,
+    "mcc": 0.998412520139903,
+    "support": 70764
+   },
+   "httpflood": {
+    "precision": 0.9945725490196078,
+    "recall": 0.980105424247577,
+    "f1": 0.9872859912333289,
+    "mcc": 0.9853924760367039,
+    "support": 64691
+   },
+   "icmpflood": {
+    "precision": 1.0,
+    "recall": 0.9981549815498155,
+    "f1": 0.9990766389658357,
+    "mcc": 0.9990760391632986,
+    "support": 542
+   },
+   "slowratedos": {
+    "precision": 0.9660311775858437,
+    "recall": 0.9906567293151869,
+    "f1": 0.9781889931740614,
+    "mcc": 0.9764625117044604,
+    "support": 37032
+   },
+   "synflood": {
+    "precision": 0.9995944027580612,
+    "recall": 1.0,
+    "f1": 0.9997971602434077,
+    "mcc": 0.9997951092529963,
+    "support": 4929
+   },
+   "synscan": {
+    "precision": 0.9974075181972281,
+    "recall": 0.9979050279329609,
+    "f1": 0.997656211040742,
+    "mcc": 0.9976070321632367,
+    "support": 10024
+   },
+   "tcpconnectscan": {
+    "precision": 0.9808917197452229,
+    "recall": 0.9980059820538385,
+    "f1": 0.9893748455646157,
+    "mcc": 0.9891882827601951,
+    "support": 10030
+   },
+   "udpflood": {
+    "precision": 0.999996447980677,
+    "recall": 1.0,
+    "f1": 0.9999982239871843,
+    "mcc": 0.9999957971708616,
+    "support": 281529
+   },
+   "udpscan": {
+    "precision": 0.9970097184151507,
+    "recall": 0.997880034917072,
+    "f1": 0.9974446868183234,
+    "mcc": 0.9974020354246552,
+    "support": 8019
+   }
+  },
+  "binary_roc_auc": 0.99999684078052,
+  "binary_pr_auc": 0.9999994626045816,
+  "decision_rule": "bayes",
+  "validation_macro_mcc": {
+   "bayes": 0.9870656221766992,
+   "balanced": 0.9836229500523789
+  },
+  "ci95_segment_bootstrap": {
+   "macro_mcc": [
+    0.9722828561962642,
+    0.9990870368198237
+   ],
+   "macro_f1": [
+    0.9723524832510994,
+    0.9991435103611827
+   ],
+   "accuracy": [
+    0.9872517301818842,
+    0.9997530232326378
+   ],
+   "mcc": [
+    0.9797599381749591,
+    0.9992707397786198
+   ]
+  },
+  "test_segments": 10,
+  "operating_point": {
+   "alpha": 0.001,
+   "threshold": 0.9999938607215881,
+   "fpr": 0.0,
+   "tpr": 0.0
+  },
+  "alternative_rule": {
+   "macro_mcc": 0.9914750978131058,
+   "macro_f1": 0.9919794221586896,
+   "accuracy": 0.9955738780867995,
+   "mcc": 0.992885641068626
+  },
+  "novel_feature_vector_subset": {
+   "macro_mcc": 0.9155824849350575,
+   "macro_f1": 0.911352234593787,
+   "accuracy": 0.9929475119137479,
+   "mcc": 0.989009032499472,
+   "weighted_f1": 0.9931210448529153,
+   "balanced_accuracy": 0.9526681611859201,
+   "detection_rate": 1.0,
+   "false_alarm_rate": 0.010126048204208638,
+   "rows": 266289
+  },
+  "confusion_matrix": [
+   [
+    70572,
+    0,
+    0,
+    6,
+    0,
+    0,
+    186,
+    0,
+    0
+   ],
+   [
+    0,
+    63404,
+    0,
+    1284,
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    541,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    346,
+    0,
+    36686,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    4929,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    2,
+    10003,
+    3,
+    0,
+    16
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    12,
+    10010,
+    0,
+    8
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    281529,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    14,
+    3,
+    0,
+    8002
+   ]
+  ],
+  "rounds": 122,
+  "fit_seconds": 43.886308431625366,
+  "test_inference_seconds": 4.930243492126465,
+  "params": {
+   "objective": "multi:softprob",
+   "num_class": 9,
+   "tree_method": "hist",
+   "max_depth": 8,
+   "eta": 0.1,
+   "subsample": 0.8,
+   "colsample_bytree": 0.9,
+   "min_child_weight": 5,
+   "eval_metric": "mlogloss",
+   "nthread": 4,
+   "seed": 42
+  }
+ }
+}

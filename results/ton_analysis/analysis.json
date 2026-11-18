@@ -1,0 +1,2668 @@
+{
+  "input": "/data/input/nf-ton-iot-v3/NF-ToN-IoT-v3.csv",
+  "bytes": 5302886266,
+  "features": [
+    "IN_BYTES",
+    "OUT_BYTES",
+    "IN_PKTS",
+    "OUT_PKTS",
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "DURATION_OUT",
+    "MIN_TTL",
+    "MAX_TTL",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "RETRANSMITTED_IN_BYTES",
+    "RETRANSMITTED_OUT_BYTES",
+    "RETRANSMITTED_IN_PKTS",
+    "RETRANSMITTED_OUT_PKTS",
+    "TCP_WIN_MAX_IN",
+    "TCP_WIN_MAX_OUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "DST_TO_SRC_IAT_MIN",
+    "DST_TO_SRC_IAT_MAX",
+    "DST_TO_SRC_IAT_AVG",
+    "DST_TO_SRC_IAT_STDDEV",
+    "TCP_FLAGS",
+    "CLIENT_TCP_FLAGS",
+    "SERVER_TCP_FLAGS",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_TYPE",
+    "DNS_TTL_ANSWER",
+    "FTP_COMMAND_RET_CODE",
+    "PROTOCOL",
+    "L7_PROTO"
+  ],
+  "classes": [
+    "Benign",
+    "scanning",
+    "dos",
+    "injection",
+    "ddos",
+    "password",
+    "xss",
+    "ransomware",
+    "backdoor",
+    "mitm"
+  ],
+  "replay_guard_s": 72.00400002098085,
+  "apply_after_s": 1556028754.6590002,
+  "fractions": [
+    0.6,
+    0.15,
+    0.1,
+    0.15
+  ],
+  "structure": {
+    "rows": 27520260,
+    "time_first_utc": "2019-04-23T14:09:50.618000031+00:00",
+    "time_last_utc": "2019-04-29T14:45:55.177000046+00:00",
+    "span_hours": 144.60126638889312,
+    "row_order": {
+      "start_backward_steps": 0,
+      "max_backward_jump_s": 0.0,
+      "start_sorted": true
+    },
+    "duration_s_quantiles": {
+      "0.5": 0.0,
+      "0.9": 0.3599998950958252,
+      "0.99": 1.679999828338623,
+      "0.999": 31.41599988937378,
+      "1.0": 120.99900007247925
+    },
+    "active_minutes_total": 5639,
+    "classes": {
+      "Benign": {
+        "rows": 16792214,
+        "share": 0.6101764300191931,
+        "first_utc": "2019-04-23T14:09:50.618000031+00:00",
+        "last_utc": "2019-04-29T14:45:55.177000046+00:00",
+        "span_hours": 144.60126638889312,
+        "active_minutes": 5639,
+        "episodes_gap10min": 15,
+        "active_blocks": {
+          "5": 1148,
+          "10": 581,
+          "15": 394,
+          "20": 298,
+          "30": 200,
+          "45": 138,
+          "60": 105,
+          "90": 75,
+          "120": 58
+        },
+        "distinct_src": 15268,
+        "distinct_dst": 8612
+      },
+      "scanning": {
+        "rows": 1358977,
+        "share": 0.04938096515076529,
+        "first_utc": "2019-04-23T14:09:50.618000031+00:00",
+        "last_utc": "2019-04-24T07:06:37.647000074+00:00",
+        "span_hours": 16.94639694445663,
+        "active_minutes": 749,
+        "episodes_gap10min": 4,
+        "active_blocks": {
+          "5": 181,
+          "10": 93,
+          "15": 64,
+          "20": 48,
+          "30": 32,
+          "45": 22,
+          "60": 16,
+          "90": 12,
+          "120": 9
+        },
+        "distinct_src": 17,
+        "distinct_dst": 253
+      },
+      "dos": {
+        "rows": 203456,
+        "share": 0.007392953409597148,
+        "first_utc": "2019-04-24T18:13:42.296999931+00:00",
+        "last_utc": "2019-04-25T02:50:20.575999975+00:00",
+        "span_hours": 8.61063305556774,
+        "active_minutes": 518,
+        "episodes_gap10min": 1,
+        "active_blocks": {
+          "5": 105,
+          "10": 53,
+          "15": 35,
+          "20": 27,
+          "30": 18,
+          "45": 12,
+          "60": 9,
+          "90": 7,
+          "120": 5
+        },
+        "distinct_src": 7,
+        "distinct_dst": 120
+      },
+      "injection": {
+        "rows": 381777,
+        "share": 0.013872579692197675,
+        "first_utc": "2019-04-25T05:49:22.186000109+00:00",
+        "last_utc": "2019-04-25T10:14:18.788000107+00:00",
+        "span_hours": 4.415722777777248,
+        "active_minutes": 224,
+        "episodes_gap10min": 2,
+        "active_blocks": {
+          "5": 47,
+          "10": 25,
+          "15": 17,
+          "20": 14,
+          "30": 9,
+          "45": 7,
+          "60": 6,
+          "90": 4,
+          "120": 4
+        },
+        "distinct_src": 8,
+        "distinct_dst": 28
+      },
+      "ddos": {
+        "rows": 4141256,
+        "share": 0.15048026435796755,
+        "first_utc": "2019-04-25T14:48:47.369999886+00:00",
+        "last_utc": "2019-04-26T05:01:10.994999886+00:00",
+        "span_hours": 14.2065625,
+        "active_minutes": 782,
+        "episodes_gap10min": 2,
+        "active_blocks": {
+          "5": 159,
+          "10": 81,
+          "15": 54,
+          "20": 42,
+          "30": 27,
+          "45": 19,
+          "60": 15,
+          "90": 10,
+          "120": 8
+        },
+        "distinct_src": 6,
+        "distinct_dst": 32
+      },
+      "password": {
+        "rows": 1594777,
+        "share": 0.0579491981543779,
+        "first_utc": "2019-04-26T13:45:49.634999990+00:00",
+        "last_utc": "2019-04-27T03:47:44.674999952+00:00",
+        "span_hours": 14.03195555554496,
+        "active_minutes": 843,
+        "episodes_gap10min": 1,
+        "active_blocks": {
+          "5": 169,
+          "10": 85,
+          "15": 57,
+          "20": 43,
+          "30": 29,
+          "45": 20,
+          "60": 15,
+          "90": 11,
+          "120": 8
+        },
+        "distinct_src": 7,
+        "distinct_dst": 52
+      },
+      "xss": {
+        "rows": 2834435,
+        "share": 0.102994484790478,
+        "first_utc": "2019-04-27T04:54:22.395999908+00:00",
+        "last_utc": "2019-04-27T12:40:52.963999987+00:00",
+        "span_hours": 7.7751577777995005,
+        "active_minutes": 468,
+        "episodes_gap10min": 1,
+        "active_blocks": {
+          "5": 95,
+          "10": 48,
+          "15": 33,
+          "20": 24,
+          "30": 17,
+          "45": 12,
+          "60": 9,
+          "90": 7,
+          "120": 5
+        },
+        "distinct_src": 5,
+        "distinct_dst": 48
+      },
+      "ransomware": {
+        "rows": 3971,
+        "share": 0.00014429369489968481,
+        "first_utc": "2019-04-28T03:49:53.081000090+00:00",
+        "last_utc": "2019-04-28T06:05:23.072999954+00:00",
+        "span_hours": 2.258331111073494,
+        "active_minutes": 88,
+        "episodes_gap10min": 2,
+        "active_blocks": {
+          "5": 22,
+          "10": 12,
+          "15": 9,
+          "20": 7,
+          "30": 5,
+          "45": 4,
+          "60": 3,
+          "90": 2,
+          "120": 2
+        },
+        "distinct_src": 3,
+        "distinct_dst": 4
+      },
+      "backdoor": {
+        "rows": 203384,
+        "share": 0.0073903371552449,
+        "first_utc": "2019-04-28T07:29:59.094000101+00:00",
+        "last_utc": "2019-04-29T09:45:32.443000078+00:00",
+        "span_hours": 26.259263611104753,
+        "active_minutes": 1563,
+        "episodes_gap10min": 1,
+        "active_blocks": {
+          "5": 316,
+          "10": 158,
+          "15": 106,
+          "20": 79,
+          "30": 54,
+          "45": 36,
+          "60": 27,
+          "90": 19,
+          "120": 14
+        },
+        "distinct_src": 4,
+        "distinct_dst": 9
+      },
+      "mitm": {
+        "rows": 6013,
+        "share": 0.00021849357527872193,
+        "first_utc": "2019-04-29T12:20:42.075999975+00:00",
+        "last_utc": "2019-04-29T14:43:05.358000040+00:00",
+        "span_hours": 2.373133888906903,
+        "active_minutes": 113,
+        "episodes_gap10min": 2,
+        "active_blocks": {
+          "5": 28,
+          "10": 15,
+          "15": 11,
+          "20": 8,
+          "30": 6,
+          "45": 4,
+          "60": 3,
+          "90": 3,
+          "120": 2
+        },
+        "distinct_src": 2,
+        "distinct_dst": 106
+      }
+    }
+  },
+  "duplicates": {
+    "unique_feature_vectors": 4087189,
+    "rows_with_duplicate_feature_vector": 0.8644262808563582,
+    "rows_with_label_conflicting_feature_vector": 0.6072970240833481,
+    "rows_with_duplicate_record_excluding_time": 0.3795935067473927,
+    "per_class": {
+      "Benign": {
+        "duplicate_feature_vector": 0.9520469427080908,
+        "label_conflicting_feature_vector": 0.6161244729253689,
+        "duplicate_record_excluding_time": 0.4034082700470587
+      },
+      "scanning": {
+        "duplicate_feature_vector": 0.9749098034771744,
+        "label_conflicting_feature_vector": 0.9712511690779166,
+        "duplicate_record_excluding_time": 0.011266563010264338
+      },
+      "dos": {
+        "duplicate_feature_vector": 0.875727430009437,
+        "label_conflicting_feature_vector": 0.44137798836111986,
+        "duplicate_record_excluding_time": 0.020377870399496695
+      },
+      "injection": {
+        "duplicate_feature_vector": 0.13340248364883164,
+        "label_conflicting_feature_vector": 0.10611954098858759,
+        "duplicate_record_excluding_time": 0.005804435573646395
+      },
+      "ddos": {
+        "duplicate_feature_vector": 0.8999405011426486,
+        "label_conflicting_feature_vector": 0.7765781685556266,
+        "duplicate_record_excluding_time": 0.7527339531774901
+      },
+      "password": {
+        "duplicate_feature_vector": 0.6111073836655533,
+        "label_conflicting_feature_vector": 0.3342649160352827,
+        "duplicate_record_excluding_time": 0.05389154721945451
+      },
+      "xss": {
+        "duplicate_feature_vector": 0.4727418339104619,
+        "label_conflicting_feature_vector": 0.410641979794915,
+        "duplicate_record_excluding_time": 0.08526390621058517
+      },
+      "ransomware": {
+        "duplicate_feature_vector": 0.3580961974313775,
+        "label_conflicting_feature_vector": 0.09242004532863259,
+        "duplicate_record_excluding_time": 0.16670863762276505
+      },
+      "backdoor": {
+        "duplicate_feature_vector": 1.0,
+        "label_conflicting_feature_vector": 0.013255713330448806,
+        "duplicate_record_excluding_time": 1.0
+      },
+      "mitm": {
+        "duplicate_feature_vector": 0.3412606020289373,
+        "label_conflicting_feature_vector": 0.09429569266589057,
+        "duplicate_record_excluding_time": 0.2978546482620988
+      }
+    },
+    "max_accuracy_given_exact_feature_conflicts": 0.9529567307867004
+  },
+  "protocols": {
+    "GF": {
+      "rows_kept": 27371616,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.0028169759129851976,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 12036965,
+            "val": 2056543,
+            "calibration": 335217,
+            "test": 2270839
+          },
+          "shares": {
+            "train": 0.7168182230169291,
+            "val": 0.12247003283783782,
+            "calibration": 0.01996264459230927,
+            "test": 0.13523166153075467
+          },
+          "purged": 0.0015708629965207124,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8221551593926297
+        },
+        "scanning": {
+          "counts": {
+            "train": 1354032,
+            "val": 0,
+            "calibration": 0,
+            "test": 0
+          },
+          "shares": {
+            "train": 0.9963612334866595,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": null
+        },
+        "dos": {
+          "counts": {
+            "train": 203456,
+            "val": 0,
+            "calibration": 0,
+            "test": 0
+          },
+          "shares": {
+            "train": 1.0,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": null
+        },
+        "injection": {
+          "counts": {
+            "train": 381777,
+            "val": 0,
+            "calibration": 0,
+            "test": 0
+          },
+          "shares": {
+            "train": 1.0,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": null
+        },
+        "ddos": {
+          "counts": {
+            "train": 2471003,
+            "val": 1650507,
+            "calibration": 0,
+            "test": 0
+          },
+          "shares": {
+            "train": 0.5966796063802866,
+            "val": 0.3985522749619922,
+            "calibration": 0.0,
+            "test": 0.0
+          },
+          "purged": 0.0047681186577212325,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": null
+        },
+        "password": {
+          "counts": {
+            "train": 0,
+            "val": 385725,
+            "calibration": 1202238,
+            "test": 0
+          },
+          "shares": {
+            "train": 0.0,
+            "val": 0.24186767178107033,
+            "calibration": 0.753859630531416,
+            "test": 0.0
+          },
+          "purged": 0.004272697687513678,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": null
+        },
+        "xss": {
+          "counts": {
+            "train": 0,
+            "val": 0,
+            "calibration": 1194305,
+            "test": 1615641
+          },
+          "shares": {
+            "train": 0.0,
+            "val": 0.0,
+            "calibration": 0.421355578801419,
+            "test": 0.5700046040921736
+          },
+          "purged": 0.00863981710640745,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": 0.34948172273419653
+        },
+        "ransomware": {
+          "counts": {
+            "train": 0,
+            "val": 0,
+            "calibration": 0,
+            "test": 3971
+          },
+          "shares": {
+            "train": 0.0,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 1.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": 0.02140518761017376
+        },
+        "backdoor": {
+          "counts": {
+            "train": 0,
+            "val": 0,
+            "calibration": 0,
+            "test": 203384
+          },
+          "shares": {
+            "train": 0.0,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 1.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": 0.013196711639066987
+        },
+        "mitm": {
+          "counts": {
+            "train": 0,
+            "val": 0,
+            "calibration": 0,
+            "test": 6013
+          },
+          "shares": {
+            "train": 0.0,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 1.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": 0.08731082654249127
+        }
+      },
+      "per_split_rows": {
+        "train": 16447233,
+        "val": 4092775,
+        "calibration": 2731760,
+        "test": 4099848
+      },
+      "test_rows_with_feature_vector_in_train": 0.593903237388313,
+      "test_rows_with_record_in_train_excluding_time": 0.005602158909305906,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [
+        "xss",
+        "ransomware",
+        "backdoor",
+        "mitm"
+      ],
+      "segments": null
+    },
+    "RS": {
+      "rows_kept": 27448939,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.0,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 10037776,
+            "val": 2506480,
+            "calibration": 1674542,
+            "test": 2507040
+          },
+          "shares": {
+            "train": 0.597763701677456,
+            "val": 0.1492644150437816,
+            "calibration": 0.09972133513782042,
+            "test": 0.14929776383269056
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.9472042727678857
+        },
+        "scanning": {
+          "counts": {
+            "train": 812112,
+            "val": 202834,
+            "calibration": 135716,
+            "test": 203370
+          },
+          "shares": {
+            "train": 0.5975906877011163,
+            "val": 0.1492549174857264,
+            "calibration": 0.099866296486254,
+            "test": 0.1496493318135627
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.9734031568077888
+        },
+        "dos": {
+          "counts": {
+            "train": 122148,
+            "val": 30408,
+            "calibration": 20320,
+            "test": 30580
+          },
+          "shares": {
+            "train": 0.600365681031771,
+            "val": 0.1494573765335011,
+            "calibration": 0.09987417426863794,
+            "test": 0.15030276816608998
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 0.9999672988881622,
+          "test_feature_vector_in_train": 0.8539241334205363
+        },
+        "injection": {
+          "counts": {
+            "train": 228957,
+            "val": 57203,
+            "calibration": 38084,
+            "test": 57533
+          },
+          "shares": {
+            "train": 0.5997139691495297,
+            "val": 0.14983354157007886,
+            "calibration": 0.09975456876658363,
+            "test": 0.1506979205138078
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 0.9999826186710236,
+          "test_feature_vector_in_train": 0.12693584551474807
+        },
+        "ddos": {
+          "counts": {
+            "train": 2482905,
+            "val": 622409,
+            "calibration": 414474,
+            "test": 621468
+          },
+          "shares": {
+            "train": 0.5995536136862826,
+            "val": 0.1502947414987144,
+            "calibration": 0.10008412906615771,
+            "test": 0.15006751574884528
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.8958562629129738
+        },
+        "password": {
+          "counts": {
+            "train": 957432,
+            "val": 239159,
+            "calibration": 159185,
+            "test": 239001
+          },
+          "shares": {
+            "train": 0.6003547831452297,
+            "val": 0.14996391344996823,
+            "calibration": 0.09981646336760563,
+            "test": 0.1498648400371964
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.587286245664244
+        },
+        "xss": {
+          "counts": {
+            "train": 1700510,
+            "val": 426220,
+            "calibration": 282805,
+            "test": 424900
+          },
+          "shares": {
+            "train": 0.5999467265963058,
+            "val": 0.15037212001686404,
+            "calibration": 0.09977473464729303,
+            "test": 0.14990641873953717
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.46440574252765354
+        },
+        "ransomware": {
+          "counts": {
+            "train": 2397,
+            "val": 586,
+            "calibration": 376,
+            "test": 612
+          },
+          "shares": {
+            "train": 0.6036262906069,
+            "val": 0.1475698816419038,
+            "calibration": 0.0946864769579451,
+            "test": 0.15411735079325106
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.35784313725490197
+        },
+        "backdoor": {
+          "counts": {
+            "train": 121645,
+            "val": 30709,
+            "calibration": 20574,
+            "test": 30456
+          },
+          "shares": {
+            "train": 0.5981050623451205,
+            "val": 0.15099024505369155,
+            "calibration": 0.10115839987412972,
+            "test": 0.14974629272705817
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.9357762017336485
+        },
+        "mitm": {
+          "counts": {
+            "train": 3596,
+            "val": 896,
+            "calibration": 601,
+            "test": 920
+          },
+          "shares": {
+            "train": 0.5980375852319973,
+            "val": 0.1490104772991851,
+            "calibration": 0.09995010809911857,
+            "test": 0.15300182936969897
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.24456521739130435
+        }
+      },
+      "per_split_rows": {
+        "train": 16469478,
+        "val": 4116904,
+        "calibration": 2746677,
+        "test": 4115880
+      },
+      "test_rows_with_feature_vector_in_train": 0.8575162541181959,
+      "test_rows_with_record_in_train_excluding_time": 0.3596752091897723,
+      "min_share_over_target": 0.946864769579451,
+      "unseen_test_classes": [],
+      "segments": null
+    },
+    "PCC": {
+      "rows_kept": 26826036,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.022693154004969008,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 10012658,
+            "val": 2476580,
+            "calibration": 1655478,
+            "test": 2501151
+          },
+          "shares": {
+            "train": 0.5962678893920719,
+            "val": 0.14748382792167847,
+            "calibration": 0.09858604708110556,
+            "test": 0.14894706558646764
+          },
+          "purged": 0.004781285099138231,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.7704652777861073
+        },
+        "scanning": {
+          "counts": {
+            "train": 812246,
+            "val": 87890,
+            "calibration": 44138,
+            "test": 54617
+          },
+          "shares": {
+            "train": 0.5976892912830755,
+            "val": 0.06467364789838238,
+            "calibration": 0.032478842541117325,
+            "test": 0.04018978981984243
+          },
+          "purged": 0.2622840523709927,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9504549865426516
+        },
+        "dos": {
+          "counts": {
+            "train": 121030,
+            "val": 29153,
+            "calibration": 19011,
+            "test": 30008
+          },
+          "shares": {
+            "train": 0.5948706354199433,
+            "val": 0.14328896665618118,
+            "calibration": 0.09344035073922617,
+            "test": 0.14749134948096887
+          },
+          "purged": 0.020908697703680403,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8989602772593975
+        },
+        "injection": {
+          "counts": {
+            "train": 219152,
+            "val": 52589,
+            "calibration": 33606,
+            "test": 54539
+          },
+          "shares": {
+            "train": 0.5740314372002504,
+            "val": 0.1377479523386689,
+            "calibration": 0.08802520843319529,
+            "test": 0.14285564609706713
+          },
+          "purged": 0.057339755930818255,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.12902693485395772
+        },
+        "ddos": {
+          "counts": {
+            "train": 2471185,
+            "val": 601768,
+            "calibration": 395240,
+            "test": 611125
+          },
+          "shares": {
+            "train": 0.5967235543999212,
+            "val": 0.1453105048323504,
+            "calibration": 0.09543964439773828,
+            "test": 0.1475699642813678
+          },
+          "purged": 0.014956332088622388,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9714117406422581
+        },
+        "password": {
+          "counts": {
+            "train": 952315,
+            "val": 231076,
+            "calibration": 151454,
+            "test": 236430
+          },
+          "shares": {
+            "train": 0.5971461840746386,
+            "val": 0.14489549322569864,
+            "calibration": 0.09496876365786565,
+            "test": 0.1482527024154474
+          },
+          "purged": 0.01473685662634964,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5663875142748382
+        },
+        "xss": {
+          "counts": {
+            "train": 1685080,
+            "val": 400462,
+            "calibration": 260340,
+            "test": 417341
+          },
+          "shares": {
+            "train": 0.5945029609075531,
+            "val": 0.14128459463702642,
+            "calibration": 0.09184899283278677,
+            "test": 0.14723957331884485
+          },
+          "purged": 0.025123878303788937,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.4418401259401784
+        },
+        "ransomware": {
+          "counts": {
+            "train": 2318,
+            "val": 89,
+            "calibration": 101,
+            "test": 593
+          },
+          "shares": {
+            "train": 0.583732057416268,
+            "val": 0.022412490556534877,
+            "calibration": 0.025434399395618233,
+            "test": 0.14933266179803575
+          },
+          "purged": 0.2190883908335432,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11298482293423272
+        },
+        "backdoor": {
+          "counts": {
+            "train": 121648,
+            "val": 29930,
+            "calibration": 19760,
+            "test": 30316
+          },
+          "shares": {
+            "train": 0.598119812767966,
+            "val": 0.14716005192148843,
+            "calibration": 0.09715611847539629,
+            "test": 0.14905793966093694
+          },
+          "purged": 0.008506077174212328,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8496503496503497
+        },
+        "mitm": {
+          "counts": {
+            "train": 2135,
+            "val": 467,
+            "calibration": 197,
+            "test": 820
+          },
+          "shares": {
+            "train": 0.3550640279394645,
+            "val": 0.07766505903874937,
+            "calibration": 0.03276234824546815,
+            "test": 0.1363711957425578
+          },
+          "purged": 0.3981373690337602,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.03414634146341464
+        }
+      },
+      "per_split_rows": {
+        "train": 16399767,
+        "val": 3910004,
+        "calibration": 2579325,
+        "test": 3936940
+      },
+      "test_rows_with_feature_vector_in_train": 0.749513581614147,
+      "test_rows_with_record_in_train_excluding_time": 0.0314734286019091,
+      "min_share_over_target": 0.14941660371023252,
+      "unseen_test_classes": [],
+      "segments": null
+    },
+    "CFB-5": {
+      "rows_kept": 26828205,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.02261413455725921,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13319298,
+            "val": 1529128,
+            "calibration": 555829,
+            "test": 898936
+          },
+          "shares": {
+            "train": 0.793182959674049,
+            "val": 0.09106172658352257,
+            "calibration": 0.03310039998299212,
+            "test": 0.05353290519046506
+          },
+          "purged": 0.025269107592695805,
+          "test_rows_earlier_than_last_train_row": 0.9870958555447774,
+          "test_feature_vector_in_train": 0.8852576824156558
+        },
+        "scanning": {
+          "counts": {
+            "train": 812261,
+            "val": 208947,
+            "calibration": 42460,
+            "test": 289425
+          },
+          "shares": {
+            "train": 0.5977003289974738,
+            "val": 0.15375315402688935,
+            "calibration": 0.031244090223749188,
+            "test": 0.212972699317207
+          },
+          "purged": 0.0006934843489666419,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774311134145288
+        },
+        "dos": {
+          "counts": {
+            "train": 121046,
+            "val": 29314,
+            "calibration": 19236,
+            "test": 29369
+          },
+          "shares": {
+            "train": 0.5949492765020447,
+            "val": 0.1440802925448254,
+            "calibration": 0.09454624095627556,
+            "test": 0.1443506212645486
+          },
+          "purged": 0.022073568732305756,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8996220504613708
+        },
+        "injection": {
+          "counts": {
+            "train": 229871,
+            "val": 40829,
+            "calibration": 30368,
+            "test": 55847
+          },
+          "shares": {
+            "train": 0.6021080368906456,
+            "val": 0.10694462998032883,
+            "calibration": 0.07954381746412173,
+            "test": 0.1462817299103927
+          },
+          "purged": 0.06512178575451114,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.12754489945744624
+        },
+        "ddos": {
+          "counts": {
+            "train": 2461432,
+            "val": 609082,
+            "calibration": 403213,
+            "test": 602133
+          },
+          "shares": {
+            "train": 0.5943684717873031,
+            "val": 0.14707663568733736,
+            "calibration": 0.09736490571942426,
+            "test": 0.14539864234425498
+          },
+          "purged": 0.015791344461680224,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.971967987139054
+        },
+        "password": {
+          "counts": {
+            "train": 948597,
+            "val": 236889,
+            "calibration": 149132,
+            "test": 237049
+          },
+          "shares": {
+            "train": 0.5948148236399196,
+            "val": 0.14854051695001871,
+            "calibration": 0.09351276071826971,
+            "test": 0.1486408444566231
+          },
+          "purged": 0.01449105423516893,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5701184143362764
+        },
+        "xss": {
+          "counts": {
+            "train": 1692372,
+            "val": 402914,
+            "calibration": 239238,
+            "test": 423382
+          },
+          "shares": {
+            "train": 0.597075607660786,
+            "val": 0.1421496700400609,
+            "calibration": 0.08440412286752033,
+            "test": 0.14937086227061125
+          },
+          "purged": 0.026999737161021508,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.44447331251682876
+        },
+        "ransomware": {
+          "counts": {
+            "train": 2185,
+            "val": 107,
+            "calibration": 390,
+            "test": 541
+          },
+          "shares": {
+            "train": 0.5502392344497608,
+            "val": 0.02694535381515991,
+            "calibration": 0.09821203727020901,
+            "test": 0.13623772349534122
+          },
+          "purged": 0.1883656509695291,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11645101663585952
+        },
+        "backdoor": {
+          "counts": {
+            "train": 121582,
+            "val": 29866,
+            "calibration": 20220,
+            "test": 29912
+          },
+          "shares": {
+            "train": 0.597795303465366,
+            "val": 0.14684537623411872,
+            "calibration": 0.09941784997836604,
+            "test": 0.1470715493844157
+          },
+          "purged": 0.008869920937733549,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8496255683337791
+        },
+        "mitm": {
+          "counts": {
+            "train": 3681,
+            "val": 819,
+            "calibration": 518,
+            "test": 787
+          },
+          "shares": {
+            "train": 0.6121736238150673,
+            "val": 0.1362048894062864,
+            "calibration": 0.08614668218859138,
+            "test": 0.1308830866456012
+          },
+          "purged": 0.03459171794445368,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.025412960609911054
+        }
+      },
+      "per_split_rows": {
+        "train": 19712325,
+        "val": 3087895,
+        "calibration": 1460604,
+        "test": 2567381
+      },
+      "test_rows_with_feature_vector_in_train": 0.7970402523038069,
+      "test_rows_with_record_in_train_excluding_time": 0.07522958220848405,
+      "min_share_over_target": 0.17963569210106609,
+      "unseen_test_classes": [],
+      "segments": 47
+    },
+    "CFB-10": {
+      "rows_kept": 26982962,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.01697613885913769,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13316675,
+            "val": 1866856,
+            "calibration": 486543,
+            "test": 923266
+          },
+          "shares": {
+            "train": 0.7930267563288558,
+            "val": 0.11117390476324325,
+            "calibration": 0.02897432107523165,
+            "test": 0.05498179096574162
+          },
+          "purged": 0.007921755549706986,
+          "test_rows_earlier_than_last_train_row": 0.9883652165248151,
+          "test_feature_vector_in_train": 0.8914061603048309
+        },
+        "scanning": {
+          "counts": {
+            "train": 812050,
+            "val": 88440,
+            "calibration": 42568,
+            "test": 289426
+          },
+          "shares": {
+            "train": 0.5975450651482697,
+            "val": 0.06507836409299053,
+            "calibration": 0.0313235617674177,
+            "test": 0.21297343516483355
+          },
+          "purged": 0.08976745010457655,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774139158195877
+        },
+        "dos": {
+          "counts": {
+            "train": 121046,
+            "val": 27144,
+            "calibration": 19103,
+            "test": 31384
+          },
+          "shares": {
+            "train": 0.5949492765020447,
+            "val": 0.133414595784838,
+            "calibration": 0.09389253696130859,
+            "test": 0.15425448254167978
+          },
+          "purged": 0.02348910821012897,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.899184297731328
+        },
+        "injection": {
+          "counts": {
+            "train": 229871,
+            "val": 38764,
+            "calibration": 43652,
+            "test": 48917
+          },
+          "shares": {
+            "train": 0.6021080368906456,
+            "val": 0.10153571325669174,
+            "calibration": 0.11433899894440995,
+            "test": 0.12812977209208518
+          },
+          "purged": 0.05388747881616755,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.1361694298505632
+        },
+        "ddos": {
+          "counts": {
+            "train": 2488251,
+            "val": 606663,
+            "calibration": 333438,
+            "test": 629786
+          },
+          "shares": {
+            "train": 0.6008445263948908,
+            "val": 0.14649251338241345,
+            "calibration": 0.08051615258752418,
+            "test": 0.15207608512972876
+          },
+          "purged": 0.020070722505442794,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9714061601877463
+        },
+        "password": {
+          "counts": {
+            "train": 948597,
+            "val": 225886,
+            "calibration": 172160,
+            "test": 225109
+          },
+          "shares": {
+            "train": 0.5948148236399196,
+            "val": 0.14164111973021934,
+            "calibration": 0.10795239710630389,
+            "test": 0.14115390427627186
+          },
+          "purged": 0.014437755247285357,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.56728962413764
+        },
+        "xss": {
+          "counts": {
+            "train": 1658633,
+            "val": 435640,
+            "calibration": 239238,
+            "test": 423382
+          },
+          "shares": {
+            "train": 0.5851723535731107,
+            "val": 0.15369553367778763,
+            "calibration": 0.08440412286752033,
+            "test": 0.14937086227061125
+          },
+          "purged": 0.02735712761097009,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.44405052647490917
+        },
+        "ransomware": {
+          "counts": {
+            "train": 1946,
+            "val": 326,
+            "calibration": 390,
+            "test": 542
+          },
+          "shares": {
+            "train": 0.49005288340468395,
+            "val": 0.08209519012843113,
+            "calibration": 0.09821203727020901,
+            "test": 0.1364895492319315
+          },
+          "purged": 0.1931503399647444,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11254612546125461
+        },
+        "backdoor": {
+          "counts": {
+            "train": 122382,
+            "val": 29864,
+            "calibration": 18618,
+            "test": 30780
+          },
+          "shares": {
+            "train": 0.6017287495574873,
+            "val": 0.1468355426188884,
+            "calibration": 0.09154112417889312,
+            "test": 0.1513393383943673
+          },
+          "purged": 0.008555245250363844,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8503573749187784
+        },
+        "mitm": {
+          "counts": {
+            "train": 3681,
+            "val": 447,
+            "calibration": 716,
+            "test": 782
+          },
+          "shares": {
+            "train": 0.6121736238150673,
+            "val": 0.07433893231332114,
+            "calibration": 0.11907533677033096,
+            "test": 0.13005155496424414
+          },
+          "purged": 0.06436055213703643,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.020460358056265986
+        }
+      },
+      "per_split_rows": {
+        "train": 19703132,
+        "val": 3320030,
+        "calibration": 1356426,
+        "test": 2603374
+      },
+      "test_rows_with_feature_vector_in_train": 0.8045363439905292,
+      "test_rows_with_record_in_train_excluding_time": 0.09213428420196253,
+      "min_share_over_target": 0.2897432107523165,
+      "unseen_test_classes": [],
+      "segments": 43
+    },
+    "CFB-15": {
+      "rows_kept": 27019764,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.015635394868996576,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13287293,
+            "val": 1820348,
+            "calibration": 604985,
+            "test": 901633
+          },
+          "shares": {
+            "train": 0.7912770168364934,
+            "val": 0.10840428784435453,
+            "calibration": 0.03602770903229318,
+            "test": 0.05369351533990693
+          },
+          "purged": 0.006671055883717156,
+          "test_rows_earlier_than_last_train_row": 0.9830452079726452,
+          "test_feature_vector_in_train": 0.8845616786430843
+        },
+        "scanning": {
+          "counts": {
+            "train": 812054,
+            "val": 88440,
+            "calibration": 42460,
+            "test": 289426
+          },
+          "shares": {
+            "train": 0.5975480085387759,
+            "val": 0.06507836409299053,
+            "calibration": 0.031244090223749188,
+            "test": 0.21297343516483355
+          },
+          "purged": 0.08984425774280076,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774139158195877
+        },
+        "dos": {
+          "counts": {
+            "train": 119064,
+            "val": 29260,
+            "calibration": 23313,
+            "test": 27459
+          },
+          "shares": {
+            "train": 0.5852076124567474,
+            "val": 0.14381487889273356,
+            "calibration": 0.11458497168921045,
+            "test": 0.13496284208870715
+          },
+          "purged": 0.02142969487260145,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8983939691904294
+        },
+        "injection": {
+          "counts": {
+            "train": 229871,
+            "val": 38764,
+            "calibration": 27410,
+            "test": 64302
+          },
+          "shares": {
+            "train": 0.6021080368906456,
+            "val": 0.10153571325669174,
+            "calibration": 0.0717958389321515,
+            "test": 0.16842816618078094
+          },
+          "purged": 0.05613224473973026,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11844110603091661
+        },
+        "ddos": {
+          "counts": {
+            "train": 2461432,
+            "val": 572795,
+            "calibration": 433274,
+            "test": 606426
+          },
+          "shares": {
+            "train": 0.5943684717873031,
+            "val": 0.1383143181682079,
+            "calibration": 0.10462381461083305,
+            "test": 0.1464352843678343
+          },
+          "purged": 0.016258111065821576,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9720955236088162
+        },
+        "password": {
+          "counts": {
+            "train": 957838,
+            "val": 238256,
+            "calibration": 126444,
+            "test": 248191
+          },
+          "shares": {
+            "train": 0.6006093641932383,
+            "val": 0.14939769008456982,
+            "calibration": 0.0792863202817698,
+            "test": 0.155627401197785
+          },
+          "purged": 0.015079224242637058,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5724945707136843
+        },
+        "xss": {
+          "counts": {
+            "train": 1658633,
+            "val": 470329,
+            "calibration": 172157,
+            "test": 457028
+          },
+          "shares": {
+            "train": 0.5851723535731107,
+            "val": 0.16593395156353913,
+            "calibration": 0.06073767787936573,
+            "test": 0.1612413055864749
+          },
+          "purged": 0.026914711397509557,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.44383057493195166
+        },
+        "ransomware": {
+          "counts": {
+            "train": 2185,
+            "val": 995,
+            "calibration": 0,
+            "test": 543
+          },
+          "shares": {
+            "train": 0.5502392344497608,
+            "val": 0.25056660790732815,
+            "calibration": 0.0,
+            "test": 0.1367413749685218
+          },
+          "purged": 0.06245278267438932,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11970534069981584
+        },
+        "backdoor": {
+          "counts": {
+            "train": 120780,
+            "val": 30666,
+            "calibration": 21020,
+            "test": 29178
+          },
+          "shares": {
+            "train": 0.5938520237580144,
+            "val": 0.15077882232624001,
+            "calibration": 0.10335129607048735,
+            "test": 0.14346261259489437
+          },
+          "purged": 0.008555245250363844,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8493385427376791
+        },
+        "mitm": {
+          "counts": {
+            "train": 3770,
+            "val": 718,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.626974887743223,
+            "val": 0.11940794944287378,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.08331947447197738,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.041015625
+        }
+      },
+      "per_split_rows": {
+        "train": 19652920,
+        "val": 3290571,
+        "calibration": 1451063,
+        "test": 2625210
+      },
+      "test_rows_with_feature_vector_in_train": 0.7892884759695414,
+      "test_rows_with_record_in_train_excluding_time": 0.0740039844431493,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 40
+    },
+    "CFB-20": {
+      "rows_kept": 27004547,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.016189769666506964,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13244201,
+            "val": 1951700,
+            "calibration": 473172,
+            "test": 933333
+          },
+          "shares": {
+            "train": 0.7887108275299493,
+            "val": 0.11622648448858501,
+            "calibration": 0.028178059188621585,
+            "test": 0.055581294997788855
+          },
+          "purged": 0.007379719927934254,
+          "test_rows_earlier_than_last_train_row": 0.983621065578952,
+          "test_feature_vector_in_train": 0.887654245590802
+        },
+        "scanning": {
+          "counts": {
+            "train": 812054,
+            "val": 88440,
+            "calibration": 42568,
+            "test": 289426
+          },
+          "shares": {
+            "train": 0.5975480085387759,
+            "val": 0.06507836409299053,
+            "calibration": 0.0313235617674177,
+            "test": 0.21297343516483355
+          },
+          "purged": 0.08976449596464485,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774139158195877
+        },
+        "dos": {
+          "counts": {
+            "train": 121046,
+            "val": 31328,
+            "calibration": 14972,
+            "test": 31384
+          },
+          "shares": {
+            "train": 0.5949492765020447,
+            "val": 0.15397923875432526,
+            "calibration": 0.07358839257628184,
+            "test": 0.15425448254167978
+          },
+          "purged": 0.02322860962566845,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.899502931430028
+        },
+        "injection": {
+          "counts": {
+            "train": 201083,
+            "val": 70237,
+            "calibration": 43652,
+            "test": 48917
+          },
+          "shares": {
+            "train": 0.5267027610358926,
+            "val": 0.1839738905172391,
+            "calibration": 0.11433899894440995,
+            "test": 0.12812977209208518
+          },
+          "purged": 0.04685457741037307,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.1355765889159188
+        },
+        "ddos": {
+          "counts": {
+            "train": 2431711,
+            "val": 664158,
+            "calibration": 333438,
+            "test": 634079
+          },
+          "shares": {
+            "train": 0.5871916635919151,
+            "val": 0.16037598255215327,
+            "calibration": 0.08051615258752418,
+            "test": 0.15311272715330806
+          },
+          "purged": 0.018803474115099382,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9715240529965509
+        },
+        "password": {
+          "counts": {
+            "train": 968203,
+            "val": 227154,
+            "calibration": 126444,
+            "test": 248191
+          },
+          "shares": {
+            "train": 0.6071087054804527,
+            "val": 0.14243621522005898,
+            "calibration": 0.0792863202817698,
+            "test": 0.155627401197785
+          },
+          "purged": 0.015541357819933444,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5733165183266113
+        },
+        "xss": {
+          "counts": {
+            "train": 1724872,
+            "val": 370697,
+            "calibration": 239238,
+            "test": 427989
+          },
+          "shares": {
+            "train": 0.6085417375949704,
+            "val": 0.13078338363730338,
+            "calibration": 0.08440412286752033,
+            "test": 0.15099623028928164
+          },
+          "purged": 0.025274525610924223,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.443857201937433
+        },
+        "ransomware": {
+          "counts": {
+            "train": 1946,
+            "val": 1214,
+            "calibration": 0,
+            "test": 542
+          },
+          "shares": {
+            "train": 0.49005288340468395,
+            "val": 0.30571644422059935,
+            "calibration": 0.0,
+            "test": 0.1364895492319315
+          },
+          "purged": 0.06774112314278519,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.14760147601476015
+        },
+        "backdoor": {
+          "counts": {
+            "train": 120780,
+            "val": 31468,
+            "calibration": 18618,
+            "test": 30780
+          },
+          "shares": {
+            "train": 0.5938520237580144,
+            "val": 0.15472210203359163,
+            "calibration": 0.09154112417889312,
+            "test": 0.1513393383943673
+          },
+          "purged": 0.00854541163513354,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8499025341130604
+        },
+        "mitm": {
+          "counts": {
+            "train": 3770,
+            "val": 718,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.626974887743223,
+            "val": 0.11940794944287378,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.08331947447197738,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.041015625
+        }
+      },
+      "per_split_rows": {
+        "train": 19629666,
+        "val": 3437114,
+        "calibration": 1292102,
+        "test": 2645665
+      },
+      "test_rows_with_feature_vector_in_train": 0.8016098032063772,
+      "test_rows_with_record_in_train_excluding_time": 0.09149268709379306,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 39
+    },
+    "CFB-30": {
+      "rows_kept": 27036037,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.015042548639129549,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13415318,
+            "val": 1702978,
+            "calibration": 509803,
+            "test": 997759
+          },
+          "shares": {
+            "train": 0.7989010859437594,
+            "val": 0.10141473899749015,
+            "calibration": 0.030359486843128607,
+            "test": 0.05941795405894661
+          },
+          "purged": 0.0059775779246456886,
+          "test_rows_earlier_than_last_train_row": 0.984678664888014,
+          "test_feature_vector_in_train": 0.8945105982506798
+        },
+        "scanning": {
+          "counts": {
+            "train": 812054,
+            "val": 88440,
+            "calibration": 42568,
+            "test": 289426
+          },
+          "shares": {
+            "train": 0.5975480085387759,
+            "val": 0.06507836409299053,
+            "calibration": 0.0313235617674177,
+            "test": 0.21297343516483355
+          },
+          "purged": 0.08976449596464485,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774139158195877
+        },
+        "dos": {
+          "counts": {
+            "train": 125225,
+            "val": 23087,
+            "calibration": 23313,
+            "test": 27459
+          },
+          "shares": {
+            "train": 0.6154893441333753,
+            "val": 0.11347416640452973,
+            "calibration": 0.11458497168921045,
+            "test": 0.13496284208870715
+          },
+          "purged": 0.021488675684177415,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9006154630540077
+        },
+        "injection": {
+          "counts": {
+            "train": 229871,
+            "val": 38764,
+            "calibration": 27410,
+            "test": 64302
+          },
+          "shares": {
+            "train": 0.6021080368906456,
+            "val": 0.10153571325669174,
+            "calibration": 0.0717958389321515,
+            "test": 0.16842816618078094
+          },
+          "purged": 0.05613224473973026,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11847220926254237
+        },
+        "ddos": {
+          "counts": {
+            "train": 2549691,
+            "val": 493200,
+            "calibration": 334647,
+            "test": 700031
+          },
+          "shares": {
+            "train": 0.6156806051111063,
+            "val": 0.11909430375712103,
+            "calibration": 0.08080809300366845,
+            "test": 0.1690383304002457
+          },
+          "purged": 0.015378667727858408,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9702513174416562
+        },
+        "password": {
+          "counts": {
+            "train": 931687,
+            "val": 265735,
+            "calibration": 126444,
+            "test": 248191
+          },
+          "shares": {
+            "train": 0.5842114602856701,
+            "val": 0.16662831229695438,
+            "calibration": 0.0792863202817698,
+            "test": 0.155627401197785
+          },
+          "purged": 0.014246505937820774,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5710803373208537
+        },
+        "xss": {
+          "counts": {
+            "train": 1658633,
+            "val": 371289,
+            "calibration": 370364,
+            "test": 357391
+          },
+          "shares": {
+            "train": 0.5851723535731107,
+            "val": 0.13099224360410452,
+            "calibration": 0.13066589990597774,
+            "test": 0.1260889736402493
+          },
+          "purged": 0.027080529276557762,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.4426748295284436
+        },
+        "ransomware": {
+          "counts": {
+            "train": 1685,
+            "val": 1575,
+            "calibration": 0,
+            "test": 543
+          },
+          "shares": {
+            "train": 0.424326366154621,
+            "val": 0.39662553512969023,
+            "calibration": 0.0,
+            "test": 0.1367413749685218
+          },
+          "purged": 0.04230672374716696,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.14732965009208104
+        },
+        "backdoor": {
+          "counts": {
+            "train": 120780,
+            "val": 33066,
+            "calibration": 18618,
+            "test": 29178
+          },
+          "shares": {
+            "train": 0.5938520237580144,
+            "val": 0.16257916060260394,
+            "calibration": 0.09154112417889312,
+            "test": 0.14346261259489437
+          },
+          "purged": 0.008565078865594147,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8493385427376791
+        },
+        "mitm": {
+          "counts": {
+            "train": 3770,
+            "val": 718,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.626974887743223,
+            "val": 0.11940794944287378,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.08331947447197738,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.041015625
+        }
+      },
+      "per_split_rows": {
+        "train": 19848714,
+        "val": 3018852,
+        "calibration": 1453167,
+        "test": 2715304
+      },
+      "test_rows_with_feature_vector_in_train": 0.814567355994025,
+      "test_rows_with_record_in_train_excluding_time": 0.12861285513518927,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 37
+    },
+    "CFB-45": {
+      "rows_kept": 27188373,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.0094927530714393,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13292596,
+            "val": 1716126,
+            "calibration": 703077,
+            "test": 911374
+          },
+          "shares": {
+            "train": 0.7915928179571794,
+            "val": 0.1021977209199454,
+            "calibration": 0.04186922582096679,
+            "test": 0.05427360561269646
+          },
+          "purged": 0.006138107997937084,
+          "test_rows_earlier_than_last_train_row": 0.9832264251558636,
+          "test_feature_vector_in_train": 0.8830820277953947
+        },
+        "scanning": {
+          "counts": {
+            "train": 812054,
+            "val": 252386,
+            "calibration": 0,
+            "test": 289426
+          },
+          "shares": {
+            "train": 0.5975480085387759,
+            "val": 0.18571763907704103,
+            "calibration": 0.0,
+            "test": 0.21297343516483355
+          },
+          "purged": 0.0001225968071655618,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774139158195877
+        },
+        "dos": {
+          "counts": {
+            "train": 112872,
+            "val": 35425,
+            "calibration": 17156,
+            "test": 33635
+          },
+          "shares": {
+            "train": 0.5547735136835483,
+            "val": 0.17411627083988676,
+            "calibration": 0.08432290028310789,
+            "test": 0.16531829977980497
+          },
+          "purged": 0.021469015413652093,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8957336108220604
+        },
+        "injection": {
+          "counts": {
+            "train": 261922,
+            "val": 0,
+            "calibration": 44683,
+            "test": 64302
+          },
+          "shares": {
+            "train": 0.6860601869677848,
+            "val": 0.0,
+            "calibration": 0.11703952831102973,
+            "test": 0.16842816618078094
+          },
+          "purged": 0.028472118540404476,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11966968368013436
+        },
+        "ddos": {
+          "counts": {
+            "train": 2461432,
+            "val": 481948,
+            "calibration": 526586,
+            "test": 606426
+          },
+          "shares": {
+            "train": 0.5943684717873031,
+            "val": 0.11637725366410577,
+            "calibration": 0.12715610916108544,
+            "test": 0.1464352843678343
+          },
+          "purged": 0.015662881019671327,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9720955236088162
+        },
+        "password": {
+          "counts": {
+            "train": 931687,
+            "val": 299783,
+            "calibration": 92620,
+            "test": 248191
+          },
+          "shares": {
+            "train": 0.5842114602856701,
+            "val": 0.18797800570236467,
+            "calibration": 0.05807708538560564,
+            "test": 0.155627401197785
+          },
+          "purged": 0.014106047428574653,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5710843664758191
+        },
+        "xss": {
+          "counts": {
+            "train": 1658633,
+            "val": 567520,
+            "calibration": 0,
+            "test": 555448
+          },
+          "shares": {
+            "train": 0.5851723535731107,
+            "val": 0.20022332493071812,
+            "calibration": 0.0,
+            "test": 0.19596427506716507
+          },
+          "purged": 0.018640046429006133,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.4465170457000475
+        },
+        "ransomware": {
+          "counts": {
+            "train": 3369,
+            "val": 0,
+            "calibration": 0,
+            "test": 543
+          },
+          "shares": {
+            "train": 0.8484009065726518,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.1367413749685218
+          },
+          "purged": 0.014857718458826491,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.13627992633517497
+        },
+        "backdoor": {
+          "counts": {
+            "train": 123184,
+            "val": 28238,
+            "calibration": 21020,
+            "test": 29178
+          },
+          "shares": {
+            "train": 0.6056720292648389,
+            "val": 0.13884081343665186,
+            "calibration": 0.10335129607048735,
+            "test": 0.14346261259489437
+          },
+          "purged": 0.008673248633127482,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8502296250599767
+        },
+        "mitm": {
+          "counts": {
+            "train": 3942,
+            "val": 567,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.6555795775819059,
+            "val": 0.09429569266589057,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.07982704141027773,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.041015625
+        }
+      },
+      "per_split_rows": {
+        "train": 19661691,
+        "val": 3381993,
+        "calibration": 1405142,
+        "test": 2739547
+      },
+      "test_rows_with_feature_vector_in_train": 0.7773960439444916,
+      "test_rows_with_record_in_train_excluding_time": 0.07331540579519169,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 32
+    },
+    "CFB-60": {
+      "rows_kept": 27080886,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.013408642133672271,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13434657,
+            "val": 1957465,
+            "calibration": 405299,
+            "test": 836118
+          },
+          "shares": {
+            "train": 0.800052750637885,
+            "val": 0.11656979836012095,
+            "calibration": 0.024136126421447465,
+            "test": 0.04979200479460302
+          },
+          "purged": 0.005518348318332391,
+          "test_rows_earlier_than_last_train_row": 0.9817166954903495,
+          "test_feature_vector_in_train": 0.8697743619919677
+        },
+        "scanning": {
+          "counts": {
+            "train": 812054,
+            "val": 88440,
+            "calibration": 0,
+            "test": 331994
+          },
+          "shares": {
+            "train": 0.5975480085387759,
+            "val": 0.06507836409299053,
+            "calibration": 0.0,
+            "test": 0.24429699693225124
+          },
+          "purged": 0.08976449596464485,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9595595101116285
+        },
+        "dos": {
+          "counts": {
+            "train": 112857,
+            "val": 47865,
+            "calibration": 0,
+            "test": 39888
+          },
+          "shares": {
+            "train": 0.5546997876690783,
+            "val": 0.2352597121736395,
+            "calibration": 0.0,
+            "test": 0.19605221767851524
+          },
+          "purged": 0.013988282478766908,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8960088247091857
+        },
+        "injection": {
+          "counts": {
+            "train": 282991,
+            "val": 0,
+            "calibration": 0,
+            "test": 97260
+          },
+          "shares": {
+            "train": 0.7412468535296783,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.2547560486881085
+          },
+          "purged": 0.003997097782213177,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.10544931112482007
+        },
+        "ddos": {
+          "counts": {
+            "train": 2549691,
+            "val": 678128,
+            "calibration": 341251,
+            "test": 494861
+          },
+          "shares": {
+            "train": 0.6156806051111063,
+            "val": 0.1637493552680636,
+            "calibration": 0.08240277828755334,
+            "test": 0.1194953898044458
+          },
+          "purged": 0.018671871528830868,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9750879539911207
+        },
+        "password": {
+          "counts": {
+            "train": 931687,
+            "val": 265735,
+            "calibration": 126444,
+            "test": 248191
+          },
+          "shares": {
+            "train": 0.5842114602856701,
+            "val": 0.16662831229695438,
+            "calibration": 0.0792863202817698,
+            "test": 0.155627401197785
+          },
+          "purged": 0.014246505937820774,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5710843664758191
+        },
+        "xss": {
+          "counts": {
+            "train": 1855832,
+            "val": 371059,
+            "calibration": 0,
+            "test": 560055
+          },
+          "shares": {
+            "train": 0.654744949169764,
+            "val": 0.1309110986845703,
+            "calibration": 0.0,
+            "test": 0.19758964308583546
+          },
+          "purged": 0.016754309059830268,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.4477328119559686
+        },
+        "ransomware": {
+          "counts": {
+            "train": 3369,
+            "val": 0,
+            "calibration": 0,
+            "test": 543
+          },
+          "shares": {
+            "train": 0.8484009065726518,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.1367413749685218
+          },
+          "purged": 0.014857718458826491,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.16758747697974216
+        },
+        "backdoor": {
+          "counts": {
+            "train": 120780,
+            "val": 28266,
+            "calibration": 18608,
+            "test": 33986
+          },
+          "shares": {
+            "train": 0.5938520237580144,
+            "val": 0.1389784840498761,
+            "calibration": 0.0914919561027416,
+            "test": 0.16710262360854344
+          },
+          "purged": 0.00857491248082445,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8510563173071265
+        },
+        "mitm": {
+          "counts": {
+            "train": 3770,
+            "val": 718,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.626974887743223,
+            "val": 0.11940794944287378,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.08331947447197738,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.041015625
+        }
+      },
+      "per_split_rows": {
+        "train": 20107688,
+        "val": 3437676,
+        "calibration": 891602,
+        "test": 2643920
+      },
+      "test_rows_with_feature_vector_in_train": 0.7548946261611547,
+      "test_rows_with_record_in_train_excluding_time": 0.025982253623407666,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 30
+    },
+    "CFB-90": {
+      "rows_kept": 27215242,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.00851388099190282,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13616536,
+            "val": 1792389,
+            "calibration": 34619,
+            "test": 1200128
+          },
+          "shares": {
+            "train": 0.8108839013128346,
+            "val": 0.10673929000666618,
+            "calibration": 0.0020616102200698492,
+            "test": 0.07146931309951148
+          },
+          "purged": 0.004912519181400657,
+          "test_rows_earlier_than_last_train_row": 0.9872621920328498,
+          "test_feature_vector_in_train": 0.9097821232401877
+        },
+        "scanning": {
+          "counts": {
+            "train": 812054,
+            "val": 252386,
+            "calibration": 0,
+            "test": 289426
+          },
+          "shares": {
+            "train": 0.5975480085387759,
+            "val": 0.18571763907704103,
+            "calibration": 0.0,
+            "test": 0.21297343516483355
+          },
+          "purged": 0.0001225968071655618,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9774139158195877
+        },
+        "dos": {
+          "counts": {
+            "train": 112872,
+            "val": 35425,
+            "calibration": 35624,
+            "test": 14957
+          },
+          "shares": {
+            "train": 0.5547735136835483,
+            "val": 0.17411627083988676,
+            "calibration": 0.17509436929852154,
+            "test": 0.0735146665618119
+          },
+          "purged": 0.02250117961623152,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8922243765460988
+        },
+        "injection": {
+          "counts": {
+            "train": 154896,
+            "val": 150986,
+            "calibration": 0,
+            "test": 64302
+          },
+          "shares": {
+            "train": 0.40572376020556505,
+            "val": 0.39548217938744346,
+            "calibration": 0.0,
+            "test": 0.16842816618078094
+          },
+          "purged": 0.03036589422621059,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.11568847003203633
+        },
+        "ddos": {
+          "counts": {
+            "train": 2710656,
+            "val": 508289,
+            "calibration": 0,
+            "test": 874407
+          },
+          "shares": {
+            "train": 0.6545492478610354,
+            "val": 0.12273788435199369,
+            "calibration": 0.0,
+            "test": 0.21114536266292158
+          },
+          "purged": 0.011567505124049322,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9635032656417435
+        },
+        "password": {
+          "counts": {
+            "train": 940959,
+            "val": 196164,
+            "calibration": 194822,
+            "test": 230635
+          },
+          "shares": {
+            "train": 0.5900254392933934,
+            "val": 0.12300403128462474,
+            "calibration": 0.12216253432298058,
+            "test": 0.14461896553562034
+          },
+          "purged": 0.02018902956338096,
+          "test_rows_earlier_than_last_train_row": 1.0,
+          "test_feature_vector_in_train": 0.5713269885316626
+        },
+        "xss": {
+          "counts": {
+            "train": 1658633,
+            "val": 567520,
+            "calibration": 0,
+            "test": 555448
+          },
+          "shares": {
+            "train": 0.5851723535731107,
+            "val": 0.20022332493071812,
+            "calibration": 0.0,
+            "test": 0.19596427506716507
+          },
+          "purged": 0.018640046429006133,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.4463568146793219
+        },
+        "ransomware": {
+          "counts": {
+            "train": 3369,
+            "val": 0,
+            "calibration": 0,
+            "test": 543
+          },
+          "shares": {
+            "train": 0.8484009065726518,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.1367413749685218
+          },
+          "purged": 0.014857718458826491,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.17679558011049723
+        },
+        "backdoor": {
+          "counts": {
+            "train": 115978,
+            "val": 42676,
+            "calibration": 13814,
+            "test": 29178
+          },
+          "shares": {
+            "train": 0.5702415135900563,
+            "val": 0.20982968178421116,
+            "calibration": 0.06792078039570468,
+            "test": 0.14346261259489437
+          },
+          "purged": 0.00854541163513354,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8476249228871067
+        },
+        "mitm": {
+          "counts": {
+            "train": 4527,
+            "val": 0,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.7528687843006818,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.07683352735739232,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.0419921875
+        }
+      },
+      "per_split_rows": {
+        "train": 20130480,
+        "val": 3545835,
+        "calibration": 278879,
+        "test": 3260048
+      },
+      "test_rows_with_feature_vector_in_train": 0.8105981875113495,
+      "test_rows_with_record_in_train_excluding_time": 0.20648438305202868,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 29
+    },
+    "CFB-120": {
+      "rows_kept": 27082752,
+      "reserved_prefix_rows": 71321,
+      "purged_fraction": 0.01334066136399662,
+      "per_class": {
+        "Benign": {
+          "counts": {
+            "train": 13245145,
+            "val": 2101696,
+            "calibration": 90646,
+            "test": 1172259
+          },
+          "shares": {
+            "train": 0.7887670440598243,
+            "val": 0.12515895759784862,
+            "calibration": 0.005398096999002037,
+            "test": 0.06980967488861206
+          },
+          "purged": 0.006940877939867647,
+          "test_rows_earlier_than_last_train_row": 0.9869593664881225,
+          "test_feature_vector_in_train": 0.9207547137620611
+        },
+        "scanning": {
+          "counts": {
+            "train": 800825,
+            "val": 92106,
+            "calibration": 0,
+            "test": 331994
+          },
+          "shares": {
+            "train": 0.5892851755401306,
+            "val": 0.0677759814919605,
+            "calibration": 0.0,
+            "test": 0.24429699693225124
+          },
+          "purged": 0.09535003604050717,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9594932438538046
+        },
+        "dos": {
+          "counts": {
+            "train": 137492,
+            "val": 0,
+            "calibration": 47885,
+            "test": 14957
+          },
+          "shares": {
+            "train": 0.6757824787669078,
+            "val": 0.0,
+            "calibration": 0.23535801352626612,
+            "test": 0.0735146665618119
+          },
+          "purged": 0.015344841145014155,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9020525506451829
+        },
+        "injection": {
+          "counts": {
+            "train": 154896,
+            "val": 213391,
+            "calibration": 0,
+            "test": 211
+          },
+          "shares": {
+            "train": 0.40572376020556505,
+            "val": 0.5589414763068493,
+            "calibration": 0.0,
+            "test": 0.0005526786579600133
+          },
+          "purged": 0.03478208482962567,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.061611374407582936
+        },
+        "ddos": {
+          "counts": {
+            "train": 2549691,
+            "val": 678128,
+            "calibration": 0,
+            "test": 874407
+          },
+          "shares": {
+            "train": 0.6156806051111063,
+            "val": 0.1637493552680636,
+            "calibration": 0.0,
+            "test": 0.21114536266292158
+          },
+          "purged": 0.009424676957908423,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.9633603116169015
+        },
+        "password": {
+          "counts": {
+            "train": 1054767,
+            "val": 0,
+            "calibration": 275407,
+            "test": 248191
+          },
+          "shares": {
+            "train": 0.6613883947410829,
+            "val": 0.0,
+            "calibration": 0.17269311007118865,
+            "test": 0.155627401197785
+          },
+          "purged": 0.010291093989943422,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.5802063733173242
+        },
+        "xss": {
+          "counts": {
+            "train": 1855832,
+            "val": 0,
+            "calibration": 763056,
+            "test": 168612
+          },
+          "shares": {
+            "train": 0.654744949169764,
+            "val": 0.0,
+            "calibration": 0.26920920747873917,
+            "test": 0.05948698770654469
+          },
+          "purged": 0.01655885564495217,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.44493867577633855
+        },
+        "ransomware": {
+          "counts": {
+            "train": 3971,
+            "val": 0,
+            "calibration": 0,
+            "test": 0
+          },
+          "shares": {
+            "train": 1.0,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.0
+          },
+          "purged": 0.0,
+          "test_rows_earlier_than_last_train_row": null,
+          "test_feature_vector_in_train": null
+        },
+        "backdoor": {
+          "counts": {
+            "train": 130418,
+            "val": 18624,
+            "calibration": 18608,
+            "test": 33986
+          },
+          "shares": {
+            "train": 0.6412402155528458,
+            "val": 0.09157062502458403,
+            "calibration": 0.0914919561027416,
+            "test": 0.16710262360854344
+          },
+          "purged": 0.008594579711285057,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.8541752486317895
+        },
+        "mitm": {
+          "counts": {
+            "train": 4527,
+            "val": 0,
+            "calibration": 0,
+            "test": 1024
+          },
+          "shares": {
+            "train": 0.7528687843006818,
+            "val": 0.0,
+            "calibration": 0.0,
+            "test": 0.17029768834192582
+          },
+          "purged": 0.07683352735739232,
+          "test_rows_earlier_than_last_train_row": 0.0,
+          "test_feature_vector_in_train": 0.0419921875
+        }
+      },
+      "per_split_rows": {
+        "train": 19937564,
+        "val": 3103945,
+        "calibration": 1195602,
+        "test": 2845641
+      },
+      "test_rows_with_feature_vector_in_train": 0.8791973407748904,
+      "test_rows_with_record_in_train_excluding_time": 0.22853761243951715,
+      "min_share_over_target": 0.0,
+      "unseen_test_classes": [],
+      "segments": 25
+    }
+  },
+  "selected_protocol": {
+    "name": "CFB-10",
+    "block_minutes": 10,
+    "rule": "no block met the floor; selected the block maximising the minimum coverage ratio"
+  },
+  "lightgbm_reference": {
+    "RS": {
+      "accuracy": 0.9451429584924731,
+      "macro_f1": 0.8700323577300049,
+      "mcc": 0.906127145946828,
+      "macro_mcc": 0.8655470508775756,
+      "binary_roc_auc": 0.9853571683495781,
+      "binary_pr_auc": 0.9772636181957735,
+      "decision_rule": "bayes",
+      "unseen_test_classes": []
+    },
+    "GF": {
+      "accuracy": 0.9970900623073674,
+      "macro_f1": 0.9985429111347786,
+      "mcc": 0.0,
+      "macro_mcc": 0.0,
+      "binary_roc_auc": 0.8884803053047855,
+      "binary_pr_auc": 0.9309760940689495,
+      "decision_rule": "bayes",
+      "unseen_test_classes": [
+        "xss",
+        "ransomware",
+        "backdoor",
+        "mitm"
+      ]
+    }
+  },
+  "elapsed_s": 1984.8287494182587
+}

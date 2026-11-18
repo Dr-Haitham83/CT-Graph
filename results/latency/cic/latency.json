@@ -1,0 +1,60 @@
+{
+ "cpu_threads": 4,
+ "micro_batch": 512,
+ "train_rows_used": 2000000,
+ "test_rows": 2729951,
+ "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+ "relational_features_us_per_flow": 4.704006520263555,
+ "trees": {
+  "LightGBM": 92,
+  "XGBoost": 200,
+  "CT-GBDT": [
+   300,
+   300,
+   300
+  ],
+  "CT-GBDT features": "flow+REL"
+ },
+ "timing": {
+  "LightGBM": {
+   "batch1_ms": {
+    "p50": 0.2385430002505018,
+    "p95": 0.39465115023631364
+   },
+   "micro_ms": {
+    "p50": 18.578390999664407,
+    "p95": 22.317679550360484
+   },
+   "micro_us_per_flow": 36.285919921219545,
+   "full_test_s": 96.97544052600006,
+   "full_us_per_flow": 35.522776975117885
+  },
+  "XGBoost": {
+   "batch1_ms": {
+    "p50": 1.8250484999953187,
+    "p95": 2.7708259997780256
+   },
+   "micro_ms": {
+    "p50": 15.375953999864578,
+    "p95": 16.481565649701224
+   },
+   "micro_us_per_flow": 30.031160155985503,
+   "full_test_s": 70.98267342100007,
+   "full_us_per_flow": 26.001445967711536
+  },
+  "CT-GBDT": {
+   "batch1_ms": {
+    "p50": 3.3040250000340166,
+    "p95": 4.932522749550115
+   },
+   "micro_ms": {
+    "p50": 199.99230150006042,
+    "p95": 218.75485915029458
+   },
+   "micro_us_per_flow": 390.6099638673055,
+   "full_test_s": 1044.5464410590002,
+   "full_us_per_flow": 382.6246115988896
+  }
+ },
+ "fusion_us_per_flow": 0.06926453515632147
+}

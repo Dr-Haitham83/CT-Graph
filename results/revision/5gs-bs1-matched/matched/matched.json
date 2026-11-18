@@ -1,0 +1,54 @@
+{
+ "features": 135,
+ "relational": 59,
+ "train_rows_used": 352533,
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "selection": "decision rule and smoothing on/off by validation macro-MCC; test scored once",
+ "models": {
+  "LightGBM_rel": {
+   "validation_grid": {
+    "raw|bayes": 0.9929945794361282,
+    "raw|balanced": 0.9922511688091934,
+    "smoothed|bayes": 0.9924263263917102,
+    "smoothed|balanced": 0.9714664907456902
+   },
+   "chosen": "raw|bayes",
+   "iterations": [
+    79,
+    90,
+    98
+   ],
+   "test_macro_mcc": 0.9945302684298141,
+   "test_macro_mcc_per_seed_unsmoothed": [
+    0.9938967738408555,
+    0.9941395020103214,
+    0.9938852423900951
+   ]
+  },
+  "XGBoost_rel": {
+   "validation_grid": {
+    "raw|bayes": 0.9933414794373526,
+    "raw|balanced": 0.9504246512654356,
+    "smoothed|bayes": 0.9931839407893125,
+    "smoothed|balanced": 0.9682913190692513
+   },
+   "chosen": "raw|bayes",
+   "iterations": [
+    381,
+    458,
+    360
+   ],
+   "test_macro_mcc": 0.9865767078966738,
+   "test_macro_mcc_per_seed_unsmoothed": [
+    0.9865884524018621,
+    0.9877067294151849,
+    0.9860716779656783
+   ]
+  }
+ },
+ "elapsed_s": 754.5836889743805
+}

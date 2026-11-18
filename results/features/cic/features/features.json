@@ -1,0 +1,1553 @@
+{
+ "prepared": "nids-cic",
+ "classes": [
+  "Benign",
+  "bot",
+  "brute_force_-web",
+  "brute_force_-xss",
+  "ddos_attack-hoic",
+  "ddos_attack-loic-udp",
+  "ddos_attacks-loic-http",
+  "dos_attacks-goldeneye",
+  "dos_attacks-hulk",
+  "dos_attacks-slowhttptest",
+  "dos_attacks-slowloris",
+  "ftp-bruteforce",
+  "infilteration",
+  "sql_injection",
+  "ssh-bruteforce"
+ ],
+ "families": {
+  "F1_size_shape": [
+   "mean_size_in",
+   "mean_size_out",
+   "log_size_ratio",
+   "frac_num_pkts_up_to_128_bytes",
+   "frac_num_pkts_128_to_256_bytes",
+   "frac_num_pkts_256_to_512_bytes",
+   "frac_num_pkts_512_to_1024_bytes",
+   "frac_num_pkts_1024_to_1514_bytes",
+   "size_hist_entropy",
+   "pkt_len_range_ratio"
+  ],
+  "F2_direction_balance": [
+   "log_byte_ratio",
+   "response_present",
+   "log_pkt_ratio"
+  ],
+  "F3_temporal_shape": [
+   "iat_cv_fwd",
+   "iat_peak_fwd",
+   "iat_cv_bwd",
+   "iat_peak_bwd",
+   "zero_duration",
+   "log_byte_rate",
+   "log_pkt_rate",
+   "single_packet"
+  ],
+  "F4_tcp_semantics": [
+   "all_syn",
+   "all_ack",
+   "all_fin",
+   "all_rst",
+   "all_psh",
+   "all_urg",
+   "cli_syn",
+   "cli_ack",
+   "cli_fin",
+   "cli_rst",
+   "cli_psh",
+   "cli_urg",
+   "srv_syn",
+   "srv_ack",
+   "srv_fin",
+   "srv_rst",
+   "srv_psh",
+   "srv_urg",
+   "handshake_complete",
+   "half_open",
+   "server_silent",
+   "reset_by_server",
+   "bilateral_fin"
+  ],
+  "F5_reliability": [
+   "retrans_rate_in",
+   "retrans_rate_out"
+  ],
+  "F7_window": [
+   "log_win_ratio",
+   "zero_win_in",
+   "zero_win_out"
+  ]
+ },
+ "removal_groups": {
+  "R_ttl": [
+   "MIN_TTL",
+   "MAX_TTL"
+  ],
+  "R_window_raw": [
+   "TCP_WIN_MAX_IN",
+   "TCP_WIN_MAX_OUT"
+  ],
+  "R_absolute_throughput": [
+   "SRC_TO_DST_SECOND_BYTES",
+   "DST_TO_SRC_SECOND_BYTES",
+   "SRC_TO_DST_AVG_THROUGHPUT",
+   "DST_TO_SRC_AVG_THROUGHPUT"
+  ],
+  "R_dns_ttl": [
+   "DNS_TTL_ANSWER"
+  ]
+ },
+ "results": {
+  "BASE_current_features": {
+   "families": [],
+   "dropped": [],
+   "features": 62,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6735992795714564,
+    "per_class_f1": {
+     "Benign": 0.9963,
+     "bot": 1.0,
+     "brute_force_-web": 0.0391,
+     "brute_force_-xss": 0.1961,
+     "ddos_attack-hoic": 0.9896,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9993,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6451,
+     "sql_injection": 0.2121,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.38521051046041827,
+   "calibration": {
+    "macro_mcc": 0.6243969688880584,
+    "per_class_f1": {
+     "Benign": 0.9945,
+     "bot": 0.9999,
+     "brute_force_-web": 0.2121,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8722,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9996,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5032,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     27195615.6
+    ],
+    [
+     "L7_PROTO",
+     19286081.7
+    ],
+    [
+     "byte_asymmetry",
+     8032754.1
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     6547348.9
+    ],
+    [
+     "TCP_FLAGS",
+     4186679.1
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3556808.6
+    ],
+    [
+     "IN_BYTES",
+     3511427.6
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3273926.2
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     2773821.5
+    ],
+    [
+     "OUT_BYTES",
+     2491092.9
+    ],
+    [
+     "MIN_TTL",
+     2480288.0
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2447067.6
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     1906183.2
+    ],
+    [
+     "packet_asymmetry",
+     1780852.4
+    ],
+    [
+     "DST_TO_SRC_SECOND_BYTES",
+     1375892.5
+    ]
+   ],
+   "seconds": 1226.6306521892548
+  },
+  "ADD_F1_size_shape": {
+   "families": [
+    "F1_size_shape"
+   ],
+   "dropped": [],
+   "features": 72,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6737068277251733,
+    "per_class_f1": {
+     "Benign": 0.9967,
+     "bot": 1.0,
+     "brute_force_-web": 0.0388,
+     "brute_force_-xss": 0.2545,
+     "ddos_attack-hoic": 0.9997,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9813,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6452,
+     "sql_injection": 0.1613,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.38558483753596035,
+   "calibration": {
+    "macro_mcc": 0.6342941324381298,
+    "per_class_f1": {
+     "Benign": 0.9965,
+     "bot": 1.0,
+     "brute_force_-web": 0.189,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.9917,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9843,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5076,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     22491106.4
+    ],
+    [
+     "L7_PROTO",
+     14441689.8
+    ],
+    [
+     "frac_num_pkts_512_to_1024_bytes",
+     10813373.0
+    ],
+    [
+     "log_size_ratio",
+     6654790.8
+    ],
+    [
+     "mean_size_in",
+     5378912.4
+    ],
+    [
+     "IN_BYTES",
+     5063574.6
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     4136873.0
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3538500.4
+    ],
+    [
+     "frac_num_pkts_256_to_512_bytes",
+     3514910.0
+    ],
+    [
+     "TCP_FLAGS",
+     3325220.5
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     3277204.6
+    ],
+    [
+     "SHORTEST_FLOW_PKT",
+     2442398.7
+    ],
+    [
+     "MIN_TTL",
+     2325823.4
+    ],
+    [
+     "pkt_len_range_ratio",
+     2200008.1
+    ],
+    [
+     "OUT_BYTES",
+     1776119.3
+    ]
+   ],
+   "seconds": 1357.5799615383148
+  },
+  "ADD_F2_direction_balance": {
+   "families": [
+    "F2_direction_balance"
+   ],
+   "dropped": [],
+   "features": 65,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.673810219552804,
+    "per_class_f1": {
+     "Benign": 0.9962,
+     "bot": 1.0,
+     "brute_force_-web": 0.0388,
+     "brute_force_-xss": 0.2545,
+     "ddos_attack-hoic": 0.9876,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9993,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6457,
+     "sql_injection": 0.1613,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.38601805886015644,
+   "calibration": {
+    "macro_mcc": 0.623707940408056,
+    "per_class_f1": {
+     "Benign": 0.9942,
+     "bot": 1.0,
+     "brute_force_-web": 0.2188,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8592,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.995,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5039,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     27827565.3
+    ],
+    [
+     "L7_PROTO",
+     18458800.8
+    ],
+    [
+     "log_byte_ratio",
+     9342033.3
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     7030651.4
+    ],
+    [
+     "TCP_FLAGS",
+     3892211.2
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3821207.8
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3632827.6
+    ],
+    [
+     "IN_BYTES",
+     3503670.8
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3048489.5
+    ],
+    [
+     "MIN_TTL",
+     2243381.6
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2118100.5
+    ],
+    [
+     "OUT_BYTES",
+     1886955.9
+    ],
+    [
+     "DST_TO_SRC_SECOND_BYTES",
+     1515529.4
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     1452582.0
+    ],
+    [
+     "log_pkt_ratio",
+     1448827.8
+    ]
+   ],
+   "seconds": 1290.729329586029
+  },
+  "ADD_F3_temporal_shape": {
+   "families": [
+    "F3_temporal_shape"
+   ],
+   "dropped": [],
+   "features": 70,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6567185356180553,
+    "per_class_f1": {
+     "Benign": 0.9963,
+     "bot": 1.0,
+     "brute_force_-web": 0.0377,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.9891,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9802,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6445,
+     "sql_injection": 0.2973,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.36808386010875443,
+   "calibration": {
+    "macro_mcc": 0.6224922902791383,
+    "per_class_f1": {
+     "Benign": 0.9945,
+     "bot": 1.0,
+     "brute_force_-web": 0.2154,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.874,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9671,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5052,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     19563658.4
+    ],
+    [
+     "L7_PROTO",
+     13596796.9
+    ],
+    [
+     "forward_byte_fraction",
+     8003729.1
+    ],
+    [
+     "OUT_BYTES",
+     7225599.7
+    ],
+    [
+     "log_byte_rate",
+     6216402.5
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     5756404.0
+    ],
+    [
+     "TCP_FLAGS",
+     4211678.2
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3727131.5
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3614448.9
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3482101.1
+    ],
+    [
+     "IN_BYTES",
+     3133099.3
+    ],
+    [
+     "iat_peak_fwd",
+     2212011.9
+    ],
+    [
+     "MIN_TTL",
+     2098450.4
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2091488.2
+    ],
+    [
+     "IN_PKTS",
+     2060407.3
+    ]
+   ],
+   "seconds": 1321.3608627319336
+  },
+  "ADD_F4_tcp_semantics": {
+   "families": [
+    "F4_tcp_semantics"
+   ],
+   "dropped": [],
+   "features": 85,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6726298698507712,
+    "per_class_f1": {
+     "Benign": 0.9965,
+     "bot": 1.0,
+     "brute_force_-web": 0.0424,
+     "brute_force_-xss": 0.1961,
+     "ddos_attack-hoic": 0.9935,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.978,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6456,
+     "sql_injection": 0.2121,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.3860887960763751,
+   "calibration": {
+    "macro_mcc": 0.6269678446591983,
+    "per_class_f1": {
+     "Benign": 0.9952,
+     "bot": 1.0,
+     "brute_force_-web": 0.2171,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.9152,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9671,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5061,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     26427862.9
+    ],
+    [
+     "L7_PROTO",
+     18582357.1
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     9528050.0
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     6758222.4
+    ],
+    [
+     "TCP_FLAGS",
+     4102134.4
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3844123.9
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3622097.4
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3387964.4
+    ],
+    [
+     "IN_BYTES",
+     3057872.9
+    ],
+    [
+     "OUT_BYTES",
+     2371671.5
+    ],
+    [
+     "all_rst",
+     2290127.2
+    ],
+    [
+     "MIN_TTL",
+     2191929.2
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2117507.2
+    ],
+    [
+     "IN_PKTS",
+     1318474.2
+    ],
+    [
+     "RETRANSMITTED_IN_BYTES",
+     1229580.6
+    ]
+   ],
+   "seconds": 1356.8951756954193
+  },
+  "ADD_F5_reliability": {
+   "families": [
+    "F5_reliability"
+   ],
+   "dropped": [],
+   "features": 64,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6699797095167757,
+    "per_class_f1": {
+     "Benign": 0.9962,
+     "bot": 1.0,
+     "brute_force_-web": 0.0397,
+     "brute_force_-xss": 0.1277,
+     "ddos_attack-hoic": 0.9875,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9787,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6453,
+     "sql_injection": 0.2571,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.3845338302765189,
+   "calibration": {
+    "macro_mcc": 0.6204239520229431,
+    "per_class_f1": {
+     "Benign": 0.9942,
+     "bot": 1.0,
+     "brute_force_-web": 0.2137,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8592,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9664,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5033,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "L7_PROTO",
+     18987707.3
+    ],
+    [
+     "TCP_WIN_MAX_IN",
+     18274710.6
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     9037366.5
+    ],
+    [
+     "OUT_BYTES",
+     8522592.8
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     6320683.0
+    ],
+    [
+     "TCP_FLAGS",
+     4133457.1
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3758877.8
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3631862.4
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3371208.3
+    ],
+    [
+     "IN_BYTES",
+     3215914.6
+    ],
+    [
+     "DST_TO_SRC_SECOND_BYTES",
+     2889697.2
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2179753.7
+    ],
+    [
+     "MAX_TTL",
+     1970021.9
+    ],
+    [
+     "byte_asymmetry",
+     1608187.2
+    ],
+    [
+     "IN_PKTS",
+     1314897.8
+    ]
+   ],
+   "seconds": 1259.703689813614
+  },
+  "ADD_F7_window": {
+   "families": [
+    "F7_window"
+   ],
+   "dropped": [],
+   "features": 65,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6705662027960408,
+    "per_class_f1": {
+     "Benign": 0.9963,
+     "bot": 1.0,
+     "brute_force_-web": 0.0421,
+     "brute_force_-xss": 0.1277,
+     "ddos_attack-hoic": 0.9899,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9802,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6449,
+     "sql_injection": 0.2571,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.383921226045887,
+   "calibration": {
+    "macro_mcc": 0.619253355400051,
+    "per_class_f1": {
+     "Benign": 0.9943,
+     "bot": 0.9998,
+     "brute_force_-web": 0.186,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.871,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9674,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5023,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     27870354.5
+    ],
+    [
+     "log_win_ratio",
+     17649167.1
+    ],
+    [
+     "L7_PROTO",
+     8089747.2
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     7088874.6
+    ],
+    [
+     "TCP_FLAGS",
+     4086059.0
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3764268.5
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3633164.3
+    ],
+    [
+     "IN_BYTES",
+     3317492.9
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3044686.6
+    ],
+    [
+     "SRC_TO_DST_AVG_THROUGHPUT",
+     2851392.9
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2391836.5
+    ],
+    [
+     "MIN_TTL",
+     2241484.4
+    ],
+    [
+     "OUT_BYTES",
+     1874644.8
+    ],
+    [
+     "NUM_PKTS_UP_TO_128_BYTES",
+     1438562.5
+    ],
+    [
+     "byte_asymmetry",
+     1391044.6
+    ]
+   ],
+   "seconds": 1277.2954387664795
+  },
+  "DROP_R_ttl": {
+   "families": [],
+   "dropped": [
+    "MIN_TTL",
+    "MAX_TTL"
+   ],
+   "features": 60,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6695627438010027,
+    "per_class_f1": {
+     "Benign": 0.9964,
+     "bot": 1.0,
+     "brute_force_-web": 0.03,
+     "brute_force_-xss": 0.1277,
+     "ddos_attack-hoic": 0.9916,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9787,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.644,
+     "sql_injection": 0.2571,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.3736460976708407,
+   "calibration": {
+    "macro_mcc": 0.625916813105901,
+    "per_class_f1": {
+     "Benign": 0.9949,
+     "bot": 1.0,
+     "brute_force_-web": 0.2051,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8997,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9653,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5021,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     28590063.6
+    ],
+    [
+     "L7_PROTO",
+     18677525.7
+    ],
+    [
+     "byte_asymmetry",
+     8863403.5
+    ],
+    [
+     "TCP_FLAGS",
+     4233127.8
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3885887.9
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3579954.1
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     3565279.6
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3354119.7
+    ],
+    [
+     "IN_BYTES",
+     2597663.7
+    ],
+    [
+     "OUT_BYTES",
+     2502548.4
+    ],
+    [
+     "SRC_TO_DST_AVG_THROUGHPUT",
+     2501281.3
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     2472880.8
+    ],
+    [
+     "TCP_WIN_MAX_OUT",
+     2340616.0
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     1917234.4
+    ],
+    [
+     "packet_asymmetry",
+     1865207.7
+    ]
+   ],
+   "seconds": 1251.732570886612
+  },
+  "DROP_R_window_raw": {
+   "families": [],
+   "dropped": [
+    "TCP_WIN_MAX_IN",
+    "TCP_WIN_MAX_OUT"
+   ],
+   "features": 60,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6687876804468788,
+    "per_class_f1": {
+     "Benign": 0.9964,
+     "bot": 1.0,
+     "brute_force_-web": 0.0235,
+     "brute_force_-xss": 0.1277,
+     "ddos_attack-hoic": 0.9918,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9783,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.641,
+     "sql_injection": 0.2571,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.3479648713562374,
+   "calibration": {
+    "macro_mcc": 0.6150836143067689,
+    "per_class_f1": {
+     "Benign": 0.9945,
+     "bot": 0.9999,
+     "brute_force_-web": 0.1207,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8998,
+     "ddos_attacks-loic-http": 0.988,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9495,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.4974,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "L7_PROTO",
+     19598045.1
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     10509091.8
+    ],
+    [
+     "IN_BYTES",
+     8242903.3
+    ],
+    [
+     "byte_asymmetry",
+     7976453.5
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     6897479.1
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     6516224.0
+    ],
+    [
+     "TCP_FLAGS",
+     6089392.7
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     3785247.6
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3741722.8
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3577278.4
+    ],
+    [
+     "OUT_BYTES",
+     2884367.4
+    ],
+    [
+     "DST_TO_SRC_SECOND_BYTES",
+     2851306.4
+    ],
+    [
+     "MAX_TTL",
+     2241424.0
+    ],
+    [
+     "CLIENT_TCP_FLAGS",
+     1636419.3
+    ],
+    [
+     "MAX_IP_PKT_LEN",
+     1476200.2
+    ]
+   ],
+   "seconds": 1303.9610204696655
+  },
+  "DROP_R_absolute_throughput": {
+   "families": [],
+   "dropped": [
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT"
+   ],
+   "features": 58,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6556782471876798,
+    "per_class_f1": {
+     "Benign": 0.9967,
+     "bot": 1.0,
+     "brute_force_-web": 0.0411,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9798,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6445,
+     "sql_injection": 0.2571,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.3626124433210128,
+   "calibration": {
+    "macro_mcc": 0.633609102054268,
+    "per_class_f1": {
+     "Benign": 0.9966,
+     "bot": 1.0,
+     "brute_force_-web": 0.186,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.9958,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9829,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5005,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "TCP_WIN_MAX_IN",
+     25431073.9
+    ],
+    [
+     "L7_PROTO",
+     11479520.6
+    ],
+    [
+     "byte_asymmetry",
+     8834445.3
+    ],
+    [
+     "MIN_TTL",
+     4571992.1
+    ],
+    [
+     "duration_s",
+     4547986.1
+    ],
+    [
+     "NUM_PKTS_128_TO_256_BYTES",
+     4536510.9
+    ],
+    [
+     "TCP_FLAGS",
+     4182307.1
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     4093124.8
+    ],
+    [
+     "IN_BYTES",
+     3987591.4
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3818329.8
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     3729920.5
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3579048.7
+    ],
+    [
+     "packet_asymmetry",
+     2090905.7
+    ],
+    [
+     "SRC_TO_DST_IAT_AVG",
+     2057759.0
+    ],
+    [
+     "CLIENT_TCP_FLAGS",
+     1579013.2
+    ]
+   ],
+   "seconds": 1218.8652746677399
+  },
+  "DROP_R_dns_ttl": {
+   "families": [],
+   "dropped": [
+    "DNS_TTL_ANSWER"
+   ],
+   "features": 61,
+   "rule": "bayes",
+   "val": {
+    "macro_mcc": 0.6697881849128408,
+    "per_class_f1": {
+     "Benign": 0.9962,
+     "bot": 1.0,
+     "brute_force_-web": 0.0373,
+     "brute_force_-xss": 0.1277,
+     "ddos_attack-hoic": 0.9876,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.979,
+     "ftp-bruteforce": 0.8983,
+     "infilteration": 0.6448,
+     "sql_injection": 0.2571,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "val_cvar": 0.3842077854404034,
+   "calibration": {
+    "macro_mcc": 0.616431757461582,
+    "per_class_f1": {
+     "Benign": 0.9942,
+     "bot": 0.9999,
+     "brute_force_-web": 0.1846,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8592,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9502,
+     "ftp-bruteforce": 0.9101,
+     "infilteration": 0.5033,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "top_gain": [
+    [
+     "L7_PROTO",
+     18203975.7
+    ],
+    [
+     "TCP_WIN_MAX_IN",
+     17058816.5
+    ],
+    [
+     "byte_asymmetry",
+     8967888.6
+    ],
+    [
+     "OUT_BYTES",
+     8582676.4
+    ],
+    [
+     "DST_TO_SRC_AVG_THROUGHPUT",
+     6941365.2
+    ],
+    [
+     "CLIENT_TCP_FLAGS",
+     4612366.5
+    ],
+    [
+     "SRC_TO_DST_IAT_MIN",
+     4049837.5
+    ],
+    [
+     "NUM_PKTS_512_TO_1024_BYTES",
+     3629035.5
+    ],
+    [
+     "MIN_IP_PKT_LEN",
+     3441636.2
+    ],
+    [
+     "DST_TO_SRC_IAT_MAX",
+     3368073.8
+    ],
+    [
+     "SRC_TO_DST_SECOND_BYTES",
+     3196549.3
+    ],
+    [
+     "MIN_TTL",
+     2262622.6
+    ],
+    [
+     "DST_TO_SRC_SECOND_BYTES",
+     1519806.4
+    ],
+    [
+     "packet_asymmetry",
+     1376854.3
+    ],
+    [
+     "LONGEST_FLOW_PKT",
+     1283953.2
+    ]
+   ],
+   "seconds": 1280.124018907547
+  }
+ },
+ "kept_after_screening": [],
+ "removed_raw_groups": [],
+ "final_families": [],
+ "final": {
+  "val": {
+   "macro_mcc": 0.6735992795714564,
+   "per_class_f1": {
+    "Benign": 0.9963,
+    "bot": 1.0,
+    "brute_force_-web": 0.0391,
+    "brute_force_-xss": 0.1961,
+    "ddos_attack-hoic": 0.9896,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9993,
+    "ftp-bruteforce": 0.8983,
+    "infilteration": 0.6451,
+    "sql_injection": 0.2121,
+    "ssh-bruteforce": 1.0
+   }
+  },
+  "calibration": {
+   "macro_mcc": 0.6243969688880584,
+   "per_class_f1": {
+    "Benign": 0.9945,
+    "bot": 0.9999,
+    "brute_force_-web": 0.2121,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.8722,
+    "ddos_attacks-loic-http": 0.9882,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9996,
+    "ftp-bruteforce": 0.9101,
+    "infilteration": 0.5032,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   }
+  },
+  "val_cvar": 0.38521051046041827,
+  "features": 62,
+  "families": [],
+  "dropped": []
+ },
+ "base": {
+  "val": {
+   "macro_mcc": 0.6735992795714564,
+   "per_class_f1": {
+    "Benign": 0.9963,
+    "bot": 1.0,
+    "brute_force_-web": 0.0391,
+    "brute_force_-xss": 0.1961,
+    "ddos_attack-hoic": 0.9896,
+    "ddos_attacks-loic-http": 0.9995,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9993,
+    "ftp-bruteforce": 0.8983,
+    "infilteration": 0.6451,
+    "sql_injection": 0.2121,
+    "ssh-bruteforce": 1.0
+   }
+  },
+  "calibration": {
+   "macro_mcc": 0.6243969688880584,
+   "per_class_f1": {
+    "Benign": 0.9945,
+    "bot": 0.9999,
+    "brute_force_-web": 0.2121,
+    "brute_force_-xss": 0.0,
+    "ddos_attack-hoic": 0.8722,
+    "ddos_attacks-loic-http": 0.9882,
+    "dos_attacks-slowhttptest": 0.0,
+    "dos_attacks-slowloris": 0.9996,
+    "ftp-bruteforce": 0.9101,
+    "infilteration": 0.5032,
+    "sql_injection": 0.0,
+    "ssh-bruteforce": 1.0
+   }
+  },
+  "val_cvar": 0.38521051046041827,
+  "features": 62
+ },
+ "invariance": {
+  "mean_size_in": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.10560472729696056
+  },
+  "mean_size_out": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.06436127255509133
+  },
+  "log_size_ratio": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.09572827919149828
+  },
+  "frac_num_pkts_up_to_128_bytes": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.0544258769458807
+  },
+  "frac_num_pkts_128_to_256_bytes": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.05812854856889124
+  },
+  "frac_num_pkts_256_to_512_bytes": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.037225867249141634
+  },
+  "frac_num_pkts_512_to_1024_bytes": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.04379664675309661
+  },
+  "frac_num_pkts_1024_to_1514_bytes": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.01976011077666061
+  },
+  "size_hist_entropy": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.07308306453355358
+  },
+  "pkt_len_range_ratio": {
+   "family": "F1_size_shape",
+   "mean_classwise_ks_train_val": 0.08792045925518337
+  },
+  "log_byte_ratio": {
+   "family": "F2_direction_balance",
+   "mean_classwise_ks_train_val": 0.10092012943492196
+  },
+  "response_present": {
+   "family": "F2_direction_balance",
+   "mean_classwise_ks_train_val": 0.02660081888423156
+  },
+  "log_pkt_ratio": {
+   "family": "F2_direction_balance",
+   "mean_classwise_ks_train_val": 0.056807922792325695
+  },
+  "iat_cv_fwd": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.09408197217414487
+  },
+  "iat_peak_fwd": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.09823305957687184
+  },
+  "iat_cv_bwd": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.0916570369023085
+  },
+  "iat_peak_bwd": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.09632338080611139
+  },
+  "zero_duration": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "log_byte_rate": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.10777155576675294
+  },
+  "log_pkt_rate": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.11001642988387982
+  },
+  "single_packet": {
+   "family": "F3_temporal_shape",
+   "mean_classwise_ks_train_val": 0.0035390700078976904
+  },
+  "all_syn": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.05085081144911965
+  },
+  "all_ack": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.04303521852038996
+  },
+  "all_fin": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.02277665379805531
+  },
+  "all_rst": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.06217414080691308
+  },
+  "all_psh": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.04865326142036892
+  },
+  "all_urg": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 8.232326657917824e-05
+  },
+  "cli_syn": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.05085081144911965
+  },
+  "cli_ack": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.04764956661198856
+  },
+  "cli_fin": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.021078401767118
+  },
+  "cli_rst": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.04319914424134738
+  },
+  "cli_psh": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.048769148893810704
+  },
+  "cli_urg": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 8.232326657917824e-05
+  },
+  "srv_syn": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.05266873706664285
+  },
+  "srv_ack": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.045795198055906844
+  },
+  "srv_fin": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.022186880131878205
+  },
+  "srv_rst": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.044064142790018926
+  },
+  "srv_psh": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.044933460702588184
+  },
+  "srv_urg": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.0
+  },
+  "handshake_complete": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.05266873706664285
+  },
+  "half_open": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.004625942646293891
+  },
+  "server_silent": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.0444077045663097
+  },
+  "reset_by_server": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.044064142790018926
+  },
+  "bilateral_fin": {
+   "family": "F4_tcp_semantics",
+   "mean_classwise_ks_train_val": 0.02048862810094089
+  },
+  "retrans_rate_in": {
+   "family": "F5_reliability",
+   "mean_classwise_ks_train_val": 0.016550963195614353
+  },
+  "retrans_rate_out": {
+   "family": "F5_reliability",
+   "mean_classwise_ks_train_val": 0.003834280486133303
+  },
+  "log_win_ratio": {
+   "family": "F7_window",
+   "mean_classwise_ks_train_val": 0.06904157362016945
+  },
+  "zero_win_in": {
+   "family": "F7_window",
+   "mean_classwise_ks_train_val": 0.03997661752065139
+  },
+  "zero_win_out": {
+   "family": "F7_window",
+   "mean_classwise_ks_train_val": 0.05008199799135278
+  }
+ },
+ "protocol": "train/validation/calibration only; keep iff better on validation AND calibration (+0.002) without CVaR loss"
+}

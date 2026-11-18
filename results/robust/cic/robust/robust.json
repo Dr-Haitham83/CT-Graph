@@ -1,0 +1,416 @@
+{
+ "prepared": "nids-cic",
+ "protocol": "train/validation/calibration only; test never opened",
+ "ewma_window_flows": 50000,
+ "fit_seeds": [
+  7,
+  8,
+  9
+ ],
+ "configs": {
+  "flow": {
+   "features": 62,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.6714862409638697,
+     "calibration": 0.6163076108402153
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6595335763198161,
+     "calibration": 0.6171162718343495
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6726500313534517,
+     "calibration": 0.6182905357750565
+    }
+   ],
+   "val_mean": 0.6678899495457125,
+   "val_sd": 0.0059279188104864764,
+   "cal_mean": 0.617238139483207,
+   "cal_sd": 0.0008140993457731124,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.6659037830570359,
+    "calibration": 0.6166665450874065,
+    "val_per_class": {
+     "Benign": 0.9609,
+     "bot": 0.9999,
+     "brute_force_-web": 0.0464,
+     "brute_force_-xss": 0.1104,
+     "ddos_attack-hoic": 0.9872,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9974,
+     "ftp-bruteforce": 0.9013,
+     "infilteration": 0.6778,
+     "sql_injection": 0.3101,
+     "ssh-bruteforce": 1.0
+    },
+    "cal_per_class": {
+     "Benign": 0.902,
+     "bot": 1.0,
+     "brute_force_-web": 0.2077,
+     "brute_force_-xss": -0.0,
+     "ddos_attack-hoic": 0.8658,
+     "ddos_attacks-loic-http": 0.9882,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.9624,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.5612,
+     "sql_injection": -0.0,
+     "ssh-bruteforce": 1.0
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.7046314646912432,
+     "rest": 0.6598132524573799,
+     "head_rows": 70000
+    },
+    "calibration": {
+     "head": 0.6994996679734471,
+     "rest": 0.613223524666416,
+     "head_rows": 55000
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.0,
+    0.0
+   ],
+   "gain_vs_flow_ensemble": [
+    0.0,
+    0.0
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z0_segment_reset": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.6785446814437727,
+     "calibration": 0.7112707289329213
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6673282620235702,
+     "calibration": 0.7025539715720347
+    },
+    {
+     "rule": "bayes",
+     "val": 0.668544943008416,
+     "calibration": 0.721726299493027
+    }
+   ],
+   "val_mean": 0.6714726288252529,
+   "val_sd": 0.005025304258387732,
+   "cal_mean": 0.711850333332661,
+   "cal_sd": 0.007837792862052587,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.6726921662718954,
+    "calibration": 0.728850626859623,
+    "val_per_class": {
+     "Benign": 0.9205,
+     "bot": 1.0,
+     "brute_force_-web": 0.4325,
+     "brute_force_-xss": 0.4368,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9911,
+     "dos_attacks-slowhttptest": -0.0,
+     "dos_attacks-slowloris": 0.3154,
+     "ftp-bruteforce": 0.9012,
+     "infilteration": 0.2532,
+     "sql_injection": 0.8216,
+     "ssh-bruteforce": 1.0
+    },
+    "cal_per_class": {
+     "Benign": 0.926,
+     "bot": 1.0,
+     "brute_force_-web": 0.4789,
+     "brute_force_-xss": 0.8132,
+     "ddos_attack-hoic": 1.0,
+     "ddos_attacks-loic-http": 0.9915,
+     "dos_attacks-slowhttptest": 0.0214,
+     "dos_attacks-slowloris": 0.2703,
+     "ftp-bruteforce": 0.9127,
+     "infilteration": 0.4572,
+     "sql_injection": 0.8752,
+     "ssh-bruteforce": 0.9999
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.5427044827306936,
+     "rest": 0.6773858024908969,
+     "head_rows": 70000
+    },
+    "calibration": {
+     "head": 0.6135615161506534,
+     "rest": 0.733866237627239,
+     "head_rows": 55000
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.0035826792795404794,
+    0.09461219384945396
+   ],
+   "gain_vs_flow_ensemble": [
+    0.006788383214859528,
+    0.1121840817722165
+   ],
+   "passes_rule_seedmean": true
+  },
+  "P10_Z1_continuous": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.6121153263480416,
+     "calibration": 0.5093428196621225
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6125550433558296,
+     "calibration": 0.507785588074508
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6478319819990213,
+     "calibration": 0.5387478094155846
+    }
+   ],
+   "val_mean": 0.6241674505676308,
+   "val_sd": 0.016734313523659203,
+   "cal_mean": 0.518625405717405,
+   "cal_sd": 0.014242883380803435,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.6457770116805351,
+    "calibration": 0.5413860493446502,
+    "val_per_class": {
+     "Benign": 0.9563,
+     "bot": 1.0,
+     "brute_force_-web": 0.003,
+     "brute_force_-xss": 0.5419,
+     "ddos_attack-hoic": 0.9999,
+     "ddos_attacks-loic-http": 0.9937,
+     "dos_attacks-slowhttptest": 0.4361,
+     "dos_attacks-slowloris": 0.4734,
+     "ftp-bruteforce": 0.2597,
+     "infilteration": 0.6084,
+     "sql_injection": 0.4804,
+     "ssh-bruteforce": 0.9966
+    },
+    "cal_per_class": {
+     "Benign": 0.8782,
+     "bot": 1.0,
+     "brute_force_-web": 0.0401,
+     "brute_force_-xss": 0.0,
+     "ddos_attack-hoic": 0.8364,
+     "ddos_attacks-loic-http": 0.9878,
+     "dos_attacks-slowhttptest": 0.4299,
+     "dos_attacks-slowloris": 0.4465,
+     "ftp-bruteforce": 0.402,
+     "infilteration": 0.4811,
+     "sql_injection": 0.0,
+     "ssh-bruteforce": 0.9946
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.8103812686839708,
+     "rest": 0.6414886765493941,
+     "head_rows": 70000
+    },
+    "calibration": {
+     "head": 0.7111859904434751,
+     "rest": 0.5321137890547379,
+     "head_rows": 55000
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.04372249897808167,
+    -0.09861273376580204
+   ],
+   "gain_vs_flow_ensemble": [
+    -0.020126771376500763,
+    -0.0752804957427563
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z2_ewma_50k": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.6558509292024353,
+     "calibration": 0.6307376283372368
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6613818481448779,
+     "calibration": 0.6440310712352584
+    },
+    {
+     "rule": "bayes",
+     "val": 0.6754931531541187,
+     "calibration": 0.642464945807328
+    }
+   ],
+   "val_mean": 0.6642419768338107,
+   "val_sd": 0.008270005744857499,
+   "cal_mean": 0.6390778817932744,
+   "cal_sd": 0.0059320068553125735,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.7023231619930422,
+    "calibration": 0.6652957551720529,
+    "val_per_class": {
+     "Benign": 0.9575,
+     "bot": 1.0,
+     "brute_force_-web": 0.1862,
+     "brute_force_-xss": 0.6487,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 0.9977,
+     "dos_attacks-slowhttptest": 0.0,
+     "dos_attacks-slowloris": 0.4153,
+     "ftp-bruteforce": 0.9026,
+     "infilteration": 0.6083,
+     "sql_injection": 0.7147,
+     "ssh-bruteforce": 0.997
+    },
+    "cal_per_class": {
+     "Benign": 0.9292,
+     "bot": 0.9997,
+     "brute_force_-web": 0.3141,
+     "brute_force_-xss": 0.7768,
+     "ddos_attack-hoic": 0.9895,
+     "ddos_attacks-loic-http": 0.9915,
+     "dos_attacks-slowhttptest": -0.0001,
+     "dos_attacks-slowloris": 0.4113,
+     "ftp-bruteforce": 0.9157,
+     "infilteration": 0.5163,
+     "sql_injection": 0.1459,
+     "ssh-bruteforce": 0.9937
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.6684757691122506,
+     "rest": 0.7054428174147747,
+     "head_rows": 70000
+    },
+    "calibration": {
+     "head": 0.6137148861405387,
+     "rest": 0.6822709731445578,
+     "head_rows": 55000
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    -0.003647972711901759,
+    0.021839742310067356
+   ],
+   "gain_vs_flow_ensemble": [
+    0.03641937893600633,
+    0.04862921008464638
+   ],
+   "passes_rule_seedmean": false
+  },
+  "P10_Z3_raw_counts": {
+   "features": 77,
+   "seeds": [
+    {
+     "rule": "bayes",
+     "val": 0.8340037747130206,
+     "calibration": 0.8387259168791944
+    },
+    {
+     "rule": "bayes",
+     "val": 0.834222490678156,
+     "calibration": 0.8380260763931867
+    },
+    {
+     "rule": "bayes",
+     "val": 0.8369119581923358,
+     "calibration": 0.8433107229566481
+    }
+   ],
+   "val_mean": 0.8350460745278374,
+   "val_sd": 0.0013223969538764435,
+   "cal_mean": 0.8400209054096764,
+   "cal_sd": 0.0023437318953236437,
+   "seed_ensemble": {
+    "rule": "bayes",
+    "val": 0.8437745750157243,
+    "calibration": 0.8512879672516201,
+    "val_per_class": {
+     "Benign": 0.963,
+     "bot": 1.0,
+     "brute_force_-web": 0.1234,
+     "brute_force_-xss": 0.8966,
+     "ddos_attack-hoic": 0.9998,
+     "ddos_attacks-loic-http": 0.9995,
+     "dos_attacks-slowhttptest": 0.9819,
+     "dos_attacks-slowloris": 0.7813,
+     "ftp-bruteforce": 0.9958,
+     "infilteration": 0.6604,
+     "sql_injection": 0.7242,
+     "ssh-bruteforce": 0.9993
+    },
+    "cal_per_class": {
+     "Benign": 0.9377,
+     "bot": 1.0,
+     "brute_force_-web": 0.4663,
+     "brute_force_-xss": 0.9597,
+     "ddos_attack-hoic": 0.9947,
+     "ddos_attacks-loic-http": 0.9982,
+     "dos_attacks-slowhttptest": 0.9551,
+     "dos_attacks-slowloris": 0.7752,
+     "ftp-bruteforce": 0.9907,
+     "infilteration": 0.5346,
+     "sql_injection": 0.6048,
+     "ssh-bruteforce": 0.9984
+    }
+   },
+   "segment_head_vs_rest": {
+    "val": {
+     "head": 0.8665654425413933,
+     "rest": 0.8592960968874155,
+     "head_rows": 70000
+    },
+    "calibration": {
+     "head": 0.7616653045149886,
+     "rest": 0.8767535151646481,
+     "head_rows": 55000
+    }
+   },
+   "gain_vs_flow_seedmean": [
+    0.16715612498212495,
+    0.2227827659264694
+   ],
+   "gain_vs_flow_ensemble": [
+    0.17787079195868838,
+    0.23462142216421367
+   ],
+   "passes_rule_seedmean": true
+  }
+ },
+ "rank_correlation_with_segment_reset_z": {
+  "T_segz_cont": {
+   "median_spearman": 0.9189502817993884,
+   "min": 0.9005644910548689
+  },
+  "T_segz_ewma": {
+   "median_spearman": 0.9613239568065247,
+   "min": 0.9190575306664792
+  },
+  "T_segz_static": {
+   "median_spearman": 0.9257062875662394,
+   "min": 0.888657178064808
+  }
+ }
+}

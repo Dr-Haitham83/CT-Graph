@@ -1,0 +1,74 @@
+{
+ "timestamp_utc": "20260923T051050Z",
+ "all_pass": true,
+ "tests": {
+  "autograd_detector_loss_gradcheck": {
+   "pass": true,
+   "max_rel_err": 5.7349585725519524e-08
+  },
+  "autograd_hsic_gradcheck_fixed_bandwidth": {
+   "pass": true,
+   "max_rel_err": 2.0233516740768265e-06
+  },
+  "conformal_fpr_control_alpha_0.01": {
+   "pass": true,
+   "mean_fpr": 0.010118333333333333,
+   "needs_n": 9999
+  },
+  "em_prior_recovery": {
+   "pass": true,
+   "estimate": [
+    0.7055394626611871,
+    0.19763197225773524,
+    0.09682856508107733
+   ],
+   "truth": [
+    0.7,
+    0.2,
+    0.1
+   ],
+   "monotone": true
+  },
+  "ctlg_G1_interval_safe_and_G2_bounded": {
+   "pass": true,
+   "edges": 51254,
+   "max_in_degree": 23,
+   "naive_start_definite_violations": 5113
+  },
+  "resonator_exact_retroactive_insertion": {
+   "pass": true,
+   "max_rel_diff": 8.529461653876251e-15
+  },
+  "rayleigh_null_EZ_1_and_tail": {
+   "pass": true,
+   "mean_Z": 1.014197615118054,
+   "fpr_at_alpha_0_01": 0.008
+  },
+  "hoeffding_R_matches_paper": {
+   "pass": true,
+   "R": 265
+  },
+  "clopper_pearson": {
+   "pass": true,
+   "ci_0_of_1000": [
+    0.0,
+    0.0036820838968656708
+   ],
+   "ci_10_of_100": [
+    0.04900468922148697,
+    0.1762225977400228
+   ]
+  },
+  "verifier_soundness_vs_oracle": {
+   "pass": true,
+   "random_claims": 600,
+   "unsound_accepted": 0
+  },
+  "mmd_null_and_alternative": {
+   "pass": true,
+   "p_null": 0.527363184079602,
+   "p_shift": 0.004975124378109453
+  }
+ },
+ "pipeline_version": "1.0.0"
+}

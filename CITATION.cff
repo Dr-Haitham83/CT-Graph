@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper."
+title: "CT-Graph: reproducibility package"
+license: MIT
+authors:
+  - family-names: Elwahsh
+    given-names: Haitham
+  - family-names: Khalifa
+    given-names: Tarek
+  - family-names: Alirr
+    given-names: Omar Ibrahim
+  - family-names: El-shafeiy
+    given-names: Engy
+preferred-citation:
+  type: unpublished
+  title: "CT-Graph: Collector-Causal Temporal Graph Context for Detecting Multi-Flow Attacks Missed by Per-Flow Intrusion Detectors"
+  year: 2026
+  notes: "Manuscript under review"
+  authors:
+    - family-names: Elwahsh
+      given-names: Haitham
+    - family-names: Khalifa
+      given-names: Tarek
+    - family-names: Alirr
+      given-names: Omar Ibrahim
+    - family-names: El-shafeiy
+      given-names: Engy

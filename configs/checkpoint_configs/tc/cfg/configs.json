@@ -1,0 +1,165 @@
+{
+ "ctg-cic-v6r8s42-train-full/nids-cic-rel/best.pt": {
+  "config": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "epochs": 12,
+   "patience": 6,
+   "batch_size": 8192,
+   "train_lanes": 8,
+   "encoder_depth": 0,
+   "jump_knowledge": false,
+   "context_norm": true,
+   "d_model": 128,
+   "heads": 4,
+   "K": 6,
+   "Ks": 3,
+   "Ku": 3,
+   "memory_scales_s": [
+    60.0,
+    3600.0,
+    86400.0,
+    604800.0
+   ],
+   "numeric_embedding": "linear",
+   "dropout": 0.1,
+   "seed": 42,
+   "replay_per_class": 16,
+   "replay_items": 4
+  },
+  "epoch": 7,
+  "best_validation_macro_mcc": 0.8552790857808207,
+  "decision_rule": "bayes",
+  "parameters": 238720
+ },
+ "ctg-cic-v6r8s43-train-full/nids-cic-rel/best.pt": {
+  "config": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "epochs": 12,
+   "patience": 6,
+   "batch_size": 8192,
+   "train_lanes": 8,
+   "encoder_depth": 0,
+   "jump_knowledge": false,
+   "context_norm": true,
+   "d_model": 128,
+   "heads": 4,
+   "K": 6,
+   "Ks": 3,
+   "Ku": 3,
+   "memory_scales_s": [
+    60.0,
+    3600.0,
+    86400.0,
+    604800.0
+   ],
+   "numeric_embedding": "linear",
+   "dropout": 0.1,
+   "seed": 43,
+   "replay_per_class": 16,
+   "replay_items": 4
+  },
+  "epoch": 9,
+  "best_validation_macro_mcc": 0.8632419487533616,
+  "decision_rule": "bayes",
+  "parameters": 238720
+ },
+ "ctg-cic-v6r8s44-train-full/nids-cic-rel/best.pt": {
+  "config": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "epochs": 12,
+   "patience": 6,
+   "batch_size": 8192,
+   "train_lanes": 8,
+   "encoder_depth": 0,
+   "jump_knowledge": false,
+   "context_norm": true,
+   "d_model": 128,
+   "heads": 4,
+   "K": 6,
+   "Ks": 3,
+   "Ku": 3,
+   "memory_scales_s": [
+    60.0,
+    3600.0,
+    86400.0,
+    604800.0
+   ],
+   "numeric_embedding": "linear",
+   "dropout": 0.1,
+   "seed": 44,
+   "replay_per_class": 16,
+   "replay_items": 4
+  },
+  "epoch": 4,
+  "best_validation_macro_mcc": 0.8896161330990405,
+  "decision_rule": "bayes",
+  "parameters": 238720
+ },
+ "ctg-ton-v4bs43-train-full/nids-ton/best.pt": {
+  "config": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "epochs": 12,
+   "patience": 6,
+   "batch_size": 4096,
+   "train_lanes": 8,
+   "encoder_depth": 0,
+   "jump_knowledge": false,
+   "context_norm": true,
+   "d_model": 128,
+   "heads": 4,
+   "K": 6,
+   "Ks": 3,
+   "Ku": 3,
+   "memory_scales_s": [
+    60.0,
+    3600.0,
+    86400.0,
+    604800.0
+   ],
+   "dropout": 0.1,
+   "seed": 43,
+   "replay_per_class": 16,
+   "replay_items": 4
+  },
+  "epoch": 3,
+  "best_validation_macro_mcc": 0.7661229274844159,
+  "decision_rule": "bayes",
+  "parameters": 223147
+ },
+ "ctg-ton-v4bs44-train-full/nids-ton/best.pt": {
+  "config": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "epochs": 12,
+   "patience": 6,
+   "batch_size": 4096,
+   "train_lanes": 8,
+   "encoder_depth": 0,
+   "jump_knowledge": false,
+   "context_norm": true,
+   "d_model": 128,
+   "heads": 4,
+   "K": 6,
+   "Ks": 3,
+   "Ku": 3,
+   "memory_scales_s": [
+    60.0,
+    3600.0,
+    86400.0,
+    604800.0
+   ],
+   "dropout": 0.1,
+   "seed": 44,
+   "replay_per_class": 16,
+   "replay_items": 4
+  },
+  "epoch": 12,
+  "best_validation_macro_mcc": 0.7977403495595213,
+  "decision_rule": "bayes",
+  "parameters": 223147
+ }
+}

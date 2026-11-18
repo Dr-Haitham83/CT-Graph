@@ -1,0 +1,955 @@
+{
+  "classes": [
+    "Benign",
+    "httpflood",
+    "icmpflood",
+    "slowratedos",
+    "synflood",
+    "synscan",
+    "tcpconnectscan",
+    "udpflood",
+    "udpscan"
+  ],
+  "manifest_sha256": "db0c0112059d60ad448d5c28471f7f4a9aea6b8dd528847dca74f7377a7da910",
+  "split_plan": {
+    "scope": "site",
+    "block_s": 45.0,
+    "embargo_s": 5.1
+  },
+  "sizes": {
+    "train": 416312,
+    "val": 22454,
+    "calibration": 24058,
+    "test": 728116
+  },
+  "label_permutation_control": false,
+  "excluded": {},
+  "models": {
+    "DNN": {
+      "name": "DNN (Vinayakumar et al., IEEE Access 2019)",
+      "doi": "10.1109/ACCESS.2019.2895334",
+      "paper_sha256": "405a3bcb46676f7f42fcca1c5413b97d0c88261c6887192fd9e3c16b1623d29c",
+      "paper_path": "/data/output/nids-5gs-bs2/papers/ctg-dnn-vinayakumar2019-access.pdf",
+      "source": "https://github.com/vinayakumarr/Network-Intrusion-Detection (UNSW-NB15/dnn/multiclass/dnn5.py)",
+      "source_commit": "197e51c6d7e27456c15b958f538ac16309c43ac9",
+      "implementation": "re-implementation in run_pipeline.py (--mode baseline_models) of the paper's NIDS DNN (Table 8) and the authors' released Keras code",
+      "architecture": "input -> 5 x [Dense(ReLU) -> BatchNorm -> Dropout 0.01] with 1024, 768, 512, 256, 128 units -> Dense(K, softmax); categorical cross-entropy",
+      "paper_hyperparameters": {
+        "hidden_units": [
+          1024,
+          768,
+          512,
+          256,
+          128
+        ],
+        "dropout": 0.01,
+        "batch_normalization": true,
+        "activation": "relu",
+        "optimizer": "adam",
+        "batch_size": 64,
+        "learning_rate": 0.1,
+        "epochs": 500,
+        "input_normalisation": "row-wise L2"
+      },
+      "resolved_unspecified": {
+        "stopping rule": "best validation-accuracy weights (the paper monitors validation accuracy); stop after 5 epochs without improvement, at 500 epochs, or at the compute budget",
+        "learning rate actually used with Adam": "paper text 0.1 vs released code Keras default 0.001: min(one epoch, 50,000 steps) each from the same initialisation, higher validation accuracy wins; the winner continues with full epochs (best_epoch 0 = the trial weights)"
+      },
+      "changes": [
+        "Input: the frozen split's flow feature vector, the same information budget as the tabular baselines (raw numeric features + train-vocabulary category codes); missing counters are set to 0 before the paper's row-wise L2 normalisation (sklearn Normalizer in the release).",
+        "Output layer: the K classes of the frozen vocabulary (the paper uses 5-10 per dataset).",
+        "Epochs: the paper trains up to 500 epochs; the release runs 1000 epochs checkpointing on training loss with the TEST set passed as validation data. Here the test split is never seen in training (see resolved_unspecified for stopping).",
+        "Batch normalisation follows Table 8 and Section VII-C (the released dnn5.py has dropout only); Keras-1 defaults are reproduced (Glorot-uniform weights, zero biases, BN epsilon 1e-3 and momentum 0.99, Adam epsilon 1e-8).",
+        "Decision rule: posterior argmax or its prior-corrected version, chosen on validation macro-MCC (the common protocol for every baseline).",
+        "PyTorch re-implementation (the release is Keras 1)."
+      ],
+      "decision_rule": "balanced",
+      "validation_macro_mcc": {
+        "bayes": 0.8404308658560572,
+        "balanced": 0.9937096162127649
+      },
+      "training": {
+        "selected_lr": 0.001,
+        "history": {
+          "lr=0.1 (paper text)": {
+            "trial_steps": 50000,
+            "train_loss": 0.32426500700351185,
+            "val_accuracy": 0.7815088625634631,
+            "complete": true
+          },
+          "lr=0.001 (released code)": {
+            "trial_steps": 50000,
+            "train_loss": 0.12195079152713559,
+            "val_accuracy": 0.9036251892758529,
+            "complete": true
+          },
+          "epoch1": {
+            "train_loss": 0.08977793086854187,
+            "val_accuracy": 0.9486951100026721,
+            "complete": true
+          },
+          "epoch2": {
+            "train_loss": 0.08413810401769795,
+            "val_accuracy": 0.9556426471898103,
+            "complete": true
+          },
+          "epoch3": {
+            "train_loss": 0.08018520218457992,
+            "val_accuracy": 0.9498975683619845,
+            "complete": true
+          },
+          "epoch4": {
+            "train_loss": 0.0782680439224093,
+            "val_accuracy": 0.9578694219292776,
+            "complete": true
+          },
+          "epoch5": {
+            "train_loss": 0.07255091781718663,
+            "val_accuracy": 0.95907188028859,
+            "complete": true
+          },
+          "epoch6": {
+            "train_loss": 0.062138501694873345,
+            "val_accuracy": 0.9684243341943529,
+            "complete": true
+          },
+          "epoch7": {
+            "train_loss": 0.059658034469651886,
+            "val_accuracy": 0.9406341854458004,
+            "complete": true
+          },
+          "epoch8": {
+            "train_loss": 0.05918673630919254,
+            "val_accuracy": 0.7873430123808676,
+            "complete": true
+          },
+          "epoch9": {
+            "train_loss": 0.05747799793599502,
+            "val_accuracy": 0.9758172263293845,
+            "complete": true
+          },
+          "epoch10": {
+            "train_loss": 0.05616396785920255,
+            "val_accuracy": 0.966642914402779,
+            "complete": true
+          },
+          "epoch11": {
+            "train_loss": 0.05824436003830481,
+            "val_accuracy": 0.9294112407588848,
+            "complete": true
+          },
+          "epoch12": {
+            "train_loss": 0.059015389903896646,
+            "val_accuracy": 0.9710519283869243,
+            "complete": true
+          },
+          "epoch13": {
+            "train_loss": 0.057544717555376185,
+            "val_accuracy": 0.9743030195065467,
+            "complete": true
+          },
+          "epoch14": {
+            "train_loss": 0.0561358487320585,
+            "val_accuracy": 0.9738131290638639,
+            "complete": true
+          }
+        },
+        "best_epoch": 9,
+        "epochs_run": 14,
+        "stopped_by": "patience",
+        "best_val_accuracy": 0.9758172263293845
+      },
+      "parameters": 1430537,
+      "fit_seconds": 1511.6503422260284,
+      "inputs": 76,
+      "device": "cpu",
+      "test": {
+        "macro_mcc": 0.6471612782927902,
+        "macro_f1": 0.6676398891817645,
+        "accuracy": 0.5221571837454472,
+        "mcc": 0.4131975205495206,
+        "weighted_f1": 0.5254141009141688,
+        "balanced_accuracy": 0.7853346880606247,
+        "detection_rate": 0.8961497649032073,
+        "false_alarm_rate": 0.7041614321994104,
+        "per_class": {
+          "Benign": {
+            "precision": 0.7828805267129882,
+            "recall": 0.29583856780058954,
+            "f1": 0.42940976007508025,
+            "mcc": 0.23360322223274876,
+            "support": 406759
+          },
+          "httpflood": {
+            "precision": 0.9909622326383277,
+            "recall": 0.9665269767869576,
+            "f1": 0.9785920925747348,
+            "mcc": 0.9762220769460221,
+            "support": 76121
+          },
+          "icmpflood": {
+            "precision": 0.9607535321821036,
+            "recall": 0.99836867862969,
+            "f1": 0.9792,
+            "mcc": 0.979362980025202,
+            "support": 613
+          },
+          "slowratedos": {
+            "precision": 0.9321901182366299,
+            "recall": 0.9895544719051313,
+            "f1": 0.9600161279483905,
+            "mcc": 0.958339446689589,
+            "support": 36092
+          },
+          "synflood": {
+            "precision": 0.986232790988736,
+            "recall": 0.164440734557596,
+            "f1": 0.28188159542121266,
+            "mcc": 0.4015677486500268,
+            "support": 4792
+          },
+          "synscan": {
+            "precision": 0.9622200584225901,
+            "recall": 0.9863259806367901,
+            "f1": 0.974123909507615,
+            "mcc": 0.9738349977967026,
+            "support": 10019
+          },
+          "tcpconnectscan": {
+            "precision": 0.5830482482010145,
+            "recall": 0.9863300738375573,
+            "f1": 0.7328736654804271,
+            "mcc": 0.7544205160017906,
+            "support": 10022
+          },
+          "udpflood": {
+            "precision": 0.3258822331325172,
+            "recall": 0.691657518585299,
+            "f1": 0.4430272062373054,
+            "mcc": 0.2022484965377706,
+            "support": 175811
+          },
+          "udpscan": {
+            "precision": 0.12989824637367395,
+            "recall": 0.9889691898060099,
+            "f1": 0.22963464539111492,
+            "mcc": 0.3448520197552596,
+            "support": 7887
+          }
+        },
+        "binary": {
+          "macro_f1": 0.5361999150076495,
+          "accuracy": 0.5607883908607969,
+          "mcc": 0.23360322223274876,
+          "detection_rate": 0.8961497649032073,
+          "false_alarm_rate": 0.7041614321994104,
+          "precision": 0.5013579198061309,
+          "f1": 0.6429900699402187,
+          "confusion": [
+            [
+              120335,
+              286424
+            ],
+            [
+              33373,
+              287984
+            ]
+          ],
+          "roc_auc": 0.4277380586853766,
+          "pr_auc": 0.37259911354024017
+        },
+        "ci95_segment_bootstrap": {
+          "macro_mcc": [
+            0.43436545165511414,
+            0.9696768000037904
+          ],
+          "macro_f1": [
+            0.513446119120413,
+            0.9764572061981658
+          ],
+          "accuracy": [
+            0.3489628852268299,
+            0.9740025536730005
+          ],
+          "mcc": [
+            0.03185132460406307,
+            0.9616494786647856
+          ]
+        },
+        "test_segments": 10,
+        "alternative_rule": {
+          "macro_mcc": 0.6262640046621584,
+          "macro_f1": 0.6559740562158874,
+          "accuracy": 0.5449914574051388,
+          "mcc": 0.44237014044329487
+        },
+        "novel_feature_vector_subset": {
+          "macro_mcc": 0.5688062679926815,
+          "macro_f1": 0.5556996786087989,
+          "accuracy": 0.8357504333023235,
+          "mcc": 0.7969150495765529,
+          "weighted_f1": 0.8486301473035066,
+          "balanced_accuracy": 0.6391338001472984,
+          "detection_rate": 0.8519580261070148,
+          "false_alarm_rate": 0.06418085731062831,
+          "rows": 259057
+        },
+        "rows": 728116
+      }
+    },
+    "NEGSC": {
+      "name": "NEGSC (Xu et al., Computer Networks 2024)",
+      "doi": "10.1016/j.comnet.2024.110495",
+      "paper_sha256": "738da0586a05b5a193112e8f98fe0fb4d1ade079949e5fe5600696f0a2ea5307",
+      "paper_path": "/data/output/nids-5gs-bs2/papers/ctg-negsc-2403.01501v1.pdf",
+      "source": "https://github.com/renj-xu/NEGSC",
+      "source_commit": "11791e71fdcf6c1c9176338f1b0332c318ceea27",
+      "implementation": "re-implementation in run_pipeline.py (--mode baseline_models) of the paper (Sections 3.2-3.6, Algorithm 1, Eqs. 1-8, Table I) and the authors' released notebook NEGSC.ipynb",
+      "architecture": "NEGAT encoder (K = 1 layer, 3 heads averaged, attention over [h_v || e_vu || h_u], node inputs all ones) and a second NEGAT as generation module; centre + 2 neighbour subgraphs; optimal-transport contrast (Wasserstein plan, Gromov-Wasserstein structural loss, BCE on exp(-d/0.1)); downstream linear edge classifier on [z_u || z_v]",
+      "paper_hyperparameters": {
+        "layers_K": 1,
+        "attention_heads": 3,
+        "learning_rate": 0.001,
+        "activation": "relu",
+        "optimizer": "adam",
+        "loss": "BCE (contrast) / CE (classifier)"
+      },
+      "resolved_unspecified": {
+        "graph size": "release: g_len = 35000 flows per training graph",
+        "self-supervised epochs": "release: 300 epochs per training graph, one Adam step each (default lr 0.001)",
+        "sampled centres": "release: 20000 centres per step, sampled with replacement",
+        "subgraph size": "release: k1 = 3 (centre + 2 distinct neighbours; centres with fewer are skipped)",
+        "temperatures": "release: tau 0.5 in the cost matrices; logits exp(-WD/0.01), exp(-GWD/0.1); Sinkhorn 40 iterations (beta 0.5); GW lambda 0.1 with 5 outer x 20 inner iterations",
+        "classifier training": "release: MLPPredictor Linear(2d -> K), Adam lr 0.001, 10000 full-batch iterations, cross-entropy on both directed copies of each training flow",
+        "categorical coding": "release: category_encoders.TargetEncoder (min_samples_leaf 20, smoothing 10) on TCP_FLAGS, L7_PROTO, PROTOCOL with the LabelEncoder index as target, then StandardScaler",
+        "node identity": "release: IP:port endpoints; the destination IP is replaced by a random address in 172.16.0.1-172.31.0.1 per flow"
+      },
+      "changes": [
+        "Splits: the release down-samples 3% of each attack class and splits 70/30 at random; here the frozen temporal train/validation/test splits are used.",
+        "Graphs: 35000-flow graphs are consecutive flows inside one segment-scoped stream in availability order, for every split; the release chunks the shuffled training data and embeds the WHOLE test set as one graph (transductive over all test flows). Chunked graphs keep segments apart and bound memory.",
+        "Self-supervised stage on 23 randomly chosen full training graphs (805,000 flows, the scale of the release's 3% training set) instead of every training graph; 300 epochs each as released.",
+        "Classifier stage: embeddings of a uniform random sample of at most 800,000 training flows (release: its whole down-sampled training graph), both edge directions, 10000 full-batch iterations as released.",
+        "Loss: only the Gromov-Wasserstein term is back-propagated, exactly as in the release (its edge-level Wasserstein inputs are rebuilt from Python lists, i.e. detached, and the node-level Wasserstein BCE is only printed); those terms are therefore not recomputed. Steps with a non-finite loss would be skipped and counted.",
+        "Per-flow prediction: the forward-direction edge (the release scores both directed copies of each flow and counts both).",
+        "Features: the frozen feature vector with missing counters set to 0; the target encoding covers the dataset's categorical fields plus TCP_FLAGS when present; the scaler is fitted on the whole training split; the embedding width equals the feature count (the release hard-codes 39 for NF-v2).",
+        "Graph operations use PyTorch/PyG index operations instead of networkx/DGL with the same multigraph semantics; the neighbour sampling, sub-adjacency lookup and negative permutation are vectorised forms of the release's Python loops.",
+        "Decision rule: posterior argmax or its prior-corrected version, chosen on validation macro-MCC (the common protocol; the release uses argmax)."
+      ],
+      "decision_rule": "balanced",
+      "validation_macro_mcc": {
+        "bayes": 0.610223635872782,
+        "balanced": 0.7716047105434828
+      },
+      "training": {
+        "ssl_graphs": 9,
+        "ssl_steps": 1789,
+        "non_finite_steps_skipped": 0,
+        "ssl_loss_first_last": [
+          0.34941366314888,
+          0.34783005714416504
+        ],
+        "classifier_flows": 416312,
+        "graphs": {
+          "train": 28,
+          "val": 17,
+          "test": 27
+        }
+      },
+      "edge_features": 76,
+      "target_encoded": [
+        "State",
+        "Proto",
+        "Cause",
+        "Dir",
+        "Flgs",
+        "TcpOpt",
+        "tls_alpn",
+        "tls_ja4",
+        "quic_alpn"
+      ],
+      "fit_seconds": 5902.898609161377,
+      "device": "cpu",
+      "test": {
+        "macro_mcc": 0.4304552291691532,
+        "macro_f1": 0.4167666123604392,
+        "accuracy": 0.46668388004109235,
+        "mcc": 0.41879649488426746,
+        "weighted_f1": 0.41415946802673304,
+        "balanced_accuracy": 0.7152172556236277,
+        "detection_rate": 0.9837470476759492,
+        "false_alarm_rate": 0.8539012043986735,
+        "per_class": {
+          "Benign": {
+            "precision": 0.9192111368909512,
+            "recall": 0.14609879560132658,
+            "f1": 0.2521250124626386,
+            "mcc": 0.22667149988783267,
+            "support": 406759
+          },
+          "httpflood": {
+            "precision": 0.9811446286256246,
+            "recall": 0.9105371710828812,
+            "f1": 0.9445231800714071,
+            "mcc": 0.9391241544195894,
+            "support": 76121
+          },
+          "icmpflood": {
+            "precision": 0.0498371335504886,
+            "recall": 0.99836867862969,
+            "f1": 0.09493523617466842,
+            "mcc": 0.22125811152277317,
+            "support": 613
+          },
+          "slowratedos": {
+            "precision": 0.45773231347431387,
+            "recall": 0.9583564224758949,
+            "f1": 0.6195525622884164,
+            "mcc": 0.6399186720851929,
+            "support": 36092
+          },
+          "synflood": {
+            "precision": 0.1018383425736796,
+            "recall": 0.0728297161936561,
+            "f1": 0.08492517337875655,
+            "mcc": 0.08101281621158504,
+            "support": 4792
+          },
+          "synscan": {
+            "precision": 0.5272669625871909,
+            "recall": 0.49795388761353426,
+            "f1": 0.5121913659463067,
+            "mcc": 0.5057950456300722,
+            "support": 10019
+          },
+          "tcpconnectscan": {
+            "precision": 0.3043237591487791,
+            "recall": 0.9874276591498703,
+            "f1": 0.46525622943112366,
+            "mcc": 0.5392007782114713,
+            "support": 10022
+          },
+          "udpflood": {
+            "precision": 0.37730089380756093,
+            "recall": 0.8689331156753559,
+            "f1": 0.526143948421582,
+            "mcc": 0.355256430677001,
+            "support": 175811
+          },
+          "udpscan": {
+            "precision": 0.14374554167504985,
+            "recall": 0.99644985419044,
+            "f1": 0.2512468030690537,
+            "mcc": 0.36585955387686087,
+            "support": 7887
+          }
+        },
+        "binary": {
+          "macro_f1": 0.4470684128764728,
+          "accuracy": 0.5157983068631922,
+          "mcc": 0.22667149988783267,
+          "detection_rate": 0.9837470476759492,
+          "false_alarm_rate": 0.8539012043986735,
+          "precision": 0.47648862187361524,
+          "f1": 0.642011813290307,
+          "confusion": [
+            [
+              59427,
+              347332
+            ],
+            [
+              5223,
+              316134
+            ]
+          ],
+          "roc_auc": 0.5765610447298885,
+          "pr_auc": 0.5491195125145618
+        },
+        "ci95_segment_bootstrap": {
+          "macro_mcc": [
+            0.2674267442850363,
+            0.7812375045573542
+          ],
+          "macro_f1": [
+            0.27694407583652225,
+            0.7860124131481814
+          ],
+          "accuracy": [
+            0.34667123724880256,
+            0.8406480965899887
+          ],
+          "mcc": [
+            0.1504720845656491,
+            0.785798269751657
+          ]
+        },
+        "test_segments": 10,
+        "alternative_rule": {
+          "macro_mcc": 0.4899655397689337,
+          "macro_f1": 0.495959432582557,
+          "accuracy": 0.5573493783957502,
+          "mcc": 0.5172260830580071
+        },
+        "novel_feature_vector_subset": {
+          "macro_mcc": 0.5629858037304858,
+          "macro_f1": 0.5577769267781316,
+          "accuracy": 0.8924522402405648,
+          "mcc": 0.8524497156656675,
+          "weighted_f1": 0.9060983128795582,
+          "balanced_accuracy": 0.6683263653956575,
+          "detection_rate": 0.9768308021884736,
+          "false_alarm_rate": 0.3805930710510863,
+          "rows": 259057
+        },
+        "rows": 728116
+      }
+    },
+    "EULER": {
+      "name": "Euler (King and Huang, ACM TOPS 2023)",
+      "doi": "10.1145/3588771",
+      "paper_sha256": "456fa5973b43a9bfc16d5926d485027ee102111aaff48964b12e2efeb6cbe778",
+      "paper_path": "/data/output/nids-5gs-bs2/papers/ctg-euler-ndss22-authors.pdf",
+      "source": "https://github.com/iHeartGraph/Euler",
+      "source_commit": "b6ab8fdf0adbc7fb1ad1e8968b2dff3ce7245b02",
+      "implementation": "re-implementation in run_pipeline.py (--mode baseline_models) of the paper (Sections III-IV, VI) and the released lanl_experiments code in its default configuration (GCN -> GRU, detector)",
+      "architecture": "per-snapshot 2-layer GCN (one-hot node identities, 32 hidden, 32 output, sigmoid-standardised edge weights, self loops, DropEdge 0.8, dropout 0.25, tanh) -> GRU(32) with input dropout 0.25 -> Linear(16); inner-product edge likelihood; BCE on edges vs sampled non-edges; an edge is anomalous if its likelihood <= cutoff",
+      "paper_hyperparameters": {
+        "encoder": "GCN",
+        "rnn": "GRU",
+        "hidden": 32,
+        "embedding": 16,
+        "delta_s": 1800,
+        "fpweight_lambda": 0.6,
+        "validation_edges": 0.05
+      },
+      "resolved_unspecified": {
+        "learning rate": "release run.py default 0.005",
+        "epochs": "release DEFAULT_TR: 100",
+        "patience": "release: 5 epochs without validation AUC + AP improvement, counted after epoch 1",
+        "negative ratio": "release: 10 non-edges per training edge, 1 per validation edge"
+      },
+      "changes": [
+        "Task: Euler is an unsupervised link-likelihood anomaly detector and is evaluated as published, as a binary detector (attack vs benign); no attack-type head is added. The post-hoc compares it with the proposed model's binary decision (predicted class != benign).",
+        "Nodes: hosts (IP addresses) of the flow records (paper: LANL source/destination computers); one edge per (source host, destination host) and snapshot, weighted by the sigmoid of its standardised flow count (paper Section VI-A; the release's LANL loader default divides by the std without centring).",
+        "Training data: the benign flows of the training split (paper: all snapshots before the first red-team event, i.e. normal activity).",
+        "Cutoff: Eq. 6 with lambda 0.6 on the benign flows of the validation split (paper: the final 5% of the training period).",
+        "Snapshots are built per segment-scoped stream and the GRU state is reset at every segment (the protocol's state isolation; LANL is one continuous stream).",
+        "Snapshot width: the release default is 30 min and the paper reports that smaller windows always helped; delta is chosen from {60, 300, 1800} s on validation binary MCC among widths whose largest training segment needs at most 5e6 dense node-steps (CPU memory).",
+        "Detector mode (release default): a flow is scored once its snapshot closes, i.e. up to delta later than the proposed model's causal per-flow decision.",
+        "Single-process PyTorch instead of distributed RPC workers; gradients are accumulated per segment for one full-batch Adam step per epoch, as the release does across workers.",
+        "Unseen hosts at validation/test share the release's extra identity row (eye(N + 1))."
+      ],
+      "output": "binary (anomaly) detection; no attack-type output",
+      "delta_s": 1800,
+      "delta_candidates_s": [
+        60,
+        300,
+        1800
+      ],
+      "node_steps_per_delta": {
+        "60": 1764,
+        "300": 392,
+        "1800": 98
+      },
+      "delta_selection": {
+        "60": {
+          "macro_f1": 0.9113098871910856,
+          "accuracy": 0.9127995012024583,
+          "mcc": 0.8226700131521052,
+          "detection_rate": 0.9270437262357415,
+          "false_alarm_rate": 0.10549338758901322,
+          "precision": 0.9186028257456829,
+          "f1": 0.9228039741365716,
+          "confusion": [
+            [
+              8793,
+              1037
+            ],
+            [
+              921,
+              11703
+            ]
+          ],
+          "roc_auc": 0.9454762328404164,
+          "pr_auc": 0.9379465857628408
+        },
+        "300": {
+          "macro_f1": 0.7083935701271844,
+          "accuracy": 0.7088714705620379,
+          "mcc": 0.4565066588335211,
+          "detection_rate": 0.5944233206590621,
+          "false_alarm_rate": 0.1441505595116989,
+          "precision": 0.8411613047864589,
+          "f1": 0.6965885356231144,
+          "confusion": [
+            [
+              8413,
+              1417
+            ],
+            [
+              5120,
+              7504
+            ]
+          ],
+          "roc_auc": 0.8980973926845086,
+          "pr_auc": 0.9045523088170883
+        },
+        "1800": {
+          "macro_f1": 0.9535037212329297,
+          "accuracy": 0.9548410082836021,
+          "mcc": 0.9111338501718743,
+          "detection_rate": 1.0,
+          "false_alarm_rate": 0.10315361139369278,
+          "precision": 0.9256489221293445,
+          "f1": 0.9613890792780443,
+          "confusion": [
+            [
+              8816,
+              1014
+            ],
+            [
+              0,
+              12624
+            ]
+          ],
+          "roc_auc": 0.9314996737954608,
+          "pr_auc": 0.9165464565979015
+        }
+      },
+      "training": {
+        "epochs_run": 39,
+        "best_val_auc_plus_ap": 1.6027431345947467,
+        "history": [
+          {
+            "epoch": 0,
+            "train_loss": 0.6951179325580596,
+            "val_auc": 0.4266493055555556,
+            "val_ap": 0.48774043773679426
+          },
+          {
+            "epoch": 1,
+            "train_loss": 0.6938623905181884,
+            "val_auc": 0.46397569444444453,
+            "val_ap": 0.5092351024432767
+          },
+          {
+            "epoch": 2,
+            "train_loss": 0.6930189549922943,
+            "val_auc": 0.5034722222222222,
+            "val_ap": 0.5297189544947614
+          },
+          {
+            "epoch": 3,
+            "train_loss": 0.6927349150180817,
+            "val_auc": 0.5004340277777778,
+            "val_ap": 0.5797267821681586
+          },
+          {
+            "epoch": 4,
+            "train_loss": 0.6921062022447586,
+            "val_auc": 0.4210069444444444,
+            "val_ap": 0.4516740297684475
+          },
+          {
+            "epoch": 5,
+            "train_loss": 0.6915820747613907,
+            "val_auc": 0.5477430555555556,
+            "val_ap": 0.594828631063448
+          },
+          {
+            "epoch": 6,
+            "train_loss": 0.6909675508737564,
+            "val_auc": 0.5477430555555556,
+            "val_ap": 0.5483397419484703
+          },
+          {
+            "epoch": 7,
+            "train_loss": 0.6891399651765824,
+            "val_auc": 0.5987413194444444,
+            "val_ap": 0.6004076183417733
+          },
+          {
+            "epoch": 8,
+            "train_loss": 0.688187512755394,
+            "val_auc": 0.5533854166666667,
+            "val_ap": 0.5679762418496545
+          },
+          {
+            "epoch": 9,
+            "train_loss": 0.6845051497220993,
+            "val_auc": 0.6128472222222223,
+            "val_ap": 0.636180147367693
+          },
+          {
+            "epoch": 10,
+            "train_loss": 0.6807201653718948,
+            "val_auc": 0.568142361111111,
+            "val_ap": 0.6089770372165151
+          },
+          {
+            "epoch": 11,
+            "train_loss": 0.6747908294200897,
+            "val_auc": 0.5750868055555556,
+            "val_ap": 0.6168623790601149
+          },
+          {
+            "epoch": 12,
+            "train_loss": 0.670024397969246,
+            "val_auc": 0.5473090277777778,
+            "val_ap": 0.5602001401062543
+          },
+          {
+            "epoch": 13,
+            "train_loss": 0.6630276083946228,
+            "val_auc": 0.5008680555555556,
+            "val_ap": 0.5484385468499751
+          },
+          {
+            "epoch": 14,
+            "train_loss": 0.6525815665721894,
+            "val_auc": 0.6254340277777778,
+            "val_ap": 0.6563070486589355
+          },
+          {
+            "epoch": 15,
+            "train_loss": 0.6536523401737213,
+            "val_auc": 0.5381944444444444,
+            "val_ap": 0.5319748375822613
+          },
+          {
+            "epoch": 16,
+            "train_loss": 0.646989569067955,
+            "val_auc": 0.6219618055555557,
+            "val_ap": 0.6641870061351107
+          },
+          {
+            "epoch": 17,
+            "train_loss": 0.6441337704658509,
+            "val_auc": 0.5733506944444444,
+            "val_ap": 0.5855544616228532
+          },
+          {
+            "epoch": 18,
+            "train_loss": 0.6497312307357788,
+            "val_auc": 0.654513888888889,
+            "val_ap": 0.6447552712383291
+          },
+          {
+            "epoch": 19,
+            "train_loss": 0.6306666642427444,
+            "val_auc": 0.6731770833333334,
+            "val_ap": 0.6093291373282318
+          },
+          {
+            "epoch": 20,
+            "train_loss": 0.6276012539863587,
+            "val_auc": 0.5846354166666666,
+            "val_ap": 0.5675823419485658
+          },
+          {
+            "epoch": 21,
+            "train_loss": 0.6245348662137985,
+            "val_auc": 0.6762152777777778,
+            "val_ap": 0.6647603954292705
+          },
+          {
+            "epoch": 22,
+            "train_loss": 0.6117480665445327,
+            "val_auc": 0.681640625,
+            "val_ap": 0.7060297604480014
+          },
+          {
+            "epoch": 23,
+            "train_loss": 0.6155179649591446,
+            "val_auc": 0.6453993055555556,
+            "val_ap": 0.6856868349063883
+          },
+          {
+            "epoch": 24,
+            "train_loss": 0.5997455954551697,
+            "val_auc": 0.6892361111111112,
+            "val_ap": 0.6601799925928069
+          },
+          {
+            "epoch": 25,
+            "train_loss": 0.6097827315330505,
+            "val_auc": 0.7196180555555556,
+            "val_ap": 0.6934875311806419
+          },
+          {
+            "epoch": 26,
+            "train_loss": 0.5945658832788467,
+            "val_auc": 0.7261284722222222,
+            "val_ap": 0.7078536251848256
+          },
+          {
+            "epoch": 27,
+            "train_loss": 0.5984215855598449,
+            "val_auc": 0.6666666666666667,
+            "val_ap": 0.7114982603778508
+          },
+          {
+            "epoch": 28,
+            "train_loss": 0.6083542108535767,
+            "val_auc": 0.7606336805555555,
+            "val_ap": 0.7734252362977531
+          },
+          {
+            "epoch": 29,
+            "train_loss": 0.5956131637096405,
+            "val_auc": 0.6371527777777777,
+            "val_ap": 0.67089490165264
+          },
+          {
+            "epoch": 30,
+            "train_loss": 0.6016080975532532,
+            "val_auc": 0.6753472222222222,
+            "val_ap": 0.6656948071850088
+          },
+          {
+            "epoch": 31,
+            "train_loss": 0.5891304910182953,
+            "val_auc": 0.7530381944444445,
+            "val_ap": 0.7722525105779297
+          },
+          {
+            "epoch": 32,
+            "train_loss": 0.5908498376607895,
+            "val_auc": 0.7439236111111112,
+            "val_ap": 0.7072481045241427
+          },
+          {
+            "epoch": 33,
+            "train_loss": 0.5840193331241608,
+            "val_auc": 0.7860243055555556,
+            "val_ap": 0.8167188290391911
+          },
+          {
+            "epoch": 34,
+            "train_loss": 0.5932166278362274,
+            "val_auc": 0.69140625,
+            "val_ap": 0.6959067140348684
+          },
+          {
+            "epoch": 35,
+            "train_loss": 0.5863188207149506,
+            "val_auc": 0.7200520833333334,
+            "val_ap": 0.7001554861932457
+          },
+          {
+            "epoch": 36,
+            "train_loss": 0.592833498120308,
+            "val_auc": 0.66796875,
+            "val_ap": 0.6548466149132705
+          },
+          {
+            "epoch": 37,
+            "train_loss": 0.5878766775131226,
+            "val_auc": 0.7532552083333334,
+            "val_ap": 0.7561094513011675
+          },
+          {
+            "epoch": 38,
+            "train_loss": 0.5858775079250336,
+            "val_auc": 0.7018229166666667,
+            "val_ap": 0.6833271843456757
+          }
+        ],
+        "stopped_by": "patience"
+      },
+      "cutoff": 0.6318063139915466,
+      "cutoff_fit": {
+        "tpr": 0.8739837398373984,
+        "fpr": 0.4166666666666667,
+        "edges": 492
+      },
+      "validation_binary": {
+        "macro_f1": 0.9535037212329297,
+        "accuracy": 0.9548410082836021,
+        "mcc": 0.9111338501718743,
+        "detection_rate": 1.0,
+        "false_alarm_rate": 0.10315361139369278,
+        "precision": 0.9256489221293445,
+        "f1": 0.9613890792780443,
+        "confusion": [
+          [
+            8816,
+            1014
+          ],
+          [
+            0,
+            12624
+          ]
+        ],
+        "roc_auc": 0.9314996737954608,
+        "pr_auc": 0.9165464565979015
+      },
+      "host_vocabulary": 123,
+      "fit_seconds": 19.72571301460266,
+      "test": {
+        "binary": {
+          "macro_f1": 0.6043443852241664,
+          "accuracy": 0.6561289684610694,
+          "mcc": 0.3053380393226901,
+          "detection_rate": 0.33346402910159106,
+          "false_alarm_rate": 0.08895193468368248,
+          "precision": 0.74758446523374,
+          "f1": 0.461205078545298,
+          "confusion": [
+            [
+              370577,
+              36182
+            ],
+            [
+              214196,
+              107161
+            ]
+          ],
+          "roc_auc": 0.32623525548627574,
+          "pr_auc": 0.5628817763139365
+        },
+        "ci95_segment_bootstrap": {
+          "mcc": [
+            -0.0813936333923894,
+            0.756947440979491
+          ],
+          "accuracy": [
+            0.500728143011008,
+            0.881213992104382
+          ]
+        },
+        "test_segments": 10,
+        "rows": 728116,
+        "novel_feature_vector_subset": {
+          "macro_f1": 0.3599358012871645,
+          "accuracy": 0.40778284315806945,
+          "mcc": -0.06666149060556299,
+          "detection_rate": 0.3921563398623093,
+          "false_alarm_rate": 0.48899001761597183,
+          "precision": 0.8412130919352839,
+          "f1": 0.5349363113317934,
+          "confusion": [
+            [
+              17405,
+              16655
+            ],
+            [
+              136763,
+              88234
+            ]
+          ],
+          "rows": 259057
+        }
+      }
+    }
+  },
+  "self_checks": {
+    "dnn_table8_dense_parameters": true,
+    "negsc_bidirectional_multigraph": true,
+    "negsc_subgraphs_centre_last": true,
+    "negsc_sub_adjacency_symmetric": true,
+    "negsc_sinkhorn_marginals": true,
+    "euler_snapshots_and_weights": true,
+    "euler_unseen_hosts_share_extra_identity": true
+  },
+  "smoke_run": false
+}

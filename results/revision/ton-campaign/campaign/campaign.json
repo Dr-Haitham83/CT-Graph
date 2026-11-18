@@ -1,0 +1,316 @@
+{
+ "prepared": "nids-ton",
+ "time_basis": "unix",
+ "classes": {
+  "Benign": {
+   "records": {
+    "train": 13316551,
+    "val": 1866875,
+    "calibration": 486476,
+    "test": 923308
+   },
+   "segments": {
+    "train": 10,
+    "val": 11,
+    "calibration": 10,
+    "test": 11
+   },
+   "test_before_last_train_share": 0.9883614135261473,
+   "episodes_gap_600s": {
+    "episodes": 16,
+    "multi_split_episodes": 10,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 727842,
+    "test_records_in_test_only_episodes": 195466,
+    "test_records_shared_share": 0.7882981626932725
+   },
+   "episodes_gap_3600s": {
+    "episodes": 11,
+    "multi_split_episodes": 8,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 923308,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "backdoor": {
+   "records": {
+    "train": 122382,
+    "val": 29866,
+    "calibration": 18618,
+    "test": 30780
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 30780,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 30780,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "ddos": {
+   "records": {
+    "train": 2488230,
+    "val": 606648,
+    "calibration": 333394,
+    "test": 629754
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 629754,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 629754,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "dos": {
+   "records": {
+    "train": 121046,
+    "val": 27147,
+    "calibration": 19106,
+    "test": 31384
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 31384,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 31384,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "injection": {
+   "records": {
+    "train": 229867,
+    "val": 38784,
+    "calibration": 43637,
+    "test": 48947
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 48947,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 48947,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "mitm": {
+   "records": {
+    "train": 3681,
+    "val": 447,
+    "calibration": 716,
+    "test": 782
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 2,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 782,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 782,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "password": {
+   "records": {
+    "train": 948573,
+    "val": 225901,
+    "calibration": 172179,
+    "test": 225125
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 225125,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 225125,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "ransomware": {
+   "records": {
+    "train": 1946,
+    "val": 326,
+    "calibration": 390,
+    "test": 543
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 2
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 542,
+    "test_records_in_test_only_episodes": 1,
+    "test_records_shared_share": 0.998158379373849
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 543,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "scanning": {
+   "records": {
+    "train": 812050,
+    "val": 88440,
+    "calibration": 42568,
+    "test": 289426
+   },
+   "segments": {
+    "train": 2,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 4,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 1,
+    "test_records_in_shared_episodes": 0,
+    "test_records_in_test_only_episodes": 289426,
+    "test_records_shared_share": 0.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 2,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 289426,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  },
+  "xss": {
+   "records": {
+    "train": 1658561,
+    "val": 435564,
+    "calibration": 239312,
+    "test": 423367
+   },
+   "segments": {
+    "train": 1,
+    "val": 1,
+    "calibration": 1,
+    "test": 1
+   },
+   "test_before_last_train_share": 0.0,
+   "episodes_gap_600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 423367,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   },
+   "episodes_gap_3600s": {
+    "episodes": 1,
+    "multi_split_episodes": 1,
+    "test_only_episodes": 0,
+    "test_records_in_shared_episodes": 423367,
+    "test_records_in_test_only_episodes": 0,
+    "test_records_shared_share": 1.0
+   }
+  }
+ }
+}

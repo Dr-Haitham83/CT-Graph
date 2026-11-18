@@ -1,0 +1,132 @@
+{
+ "model": "CT-GBDT v5 (flow vs flow + causal relational context; double held-out rule)",
+ "relational_features": [
+  "src_flows_10s",
+  "src_newdport_frac_10s",
+  "src_newdport_10s",
+  "src_syn_frac_10s",
+  "src_rst_frac_10s",
+  "src_empty_frac_10s",
+  "src_newpeer_frac_10s",
+  "src_newpeer_10s",
+  "src_newsport_frac_10s",
+  "src_newsport_10s",
+  "src_seqport_frac_10s",
+  "src_gap_cv_10s",
+  "src_flows_60s",
+  "src_newdport_frac_60s",
+  "src_newdport_60s",
+  "src_syn_frac_60s",
+  "src_rst_frac_60s",
+  "src_empty_frac_60s",
+  "src_newpeer_frac_60s",
+  "src_newpeer_60s",
+  "src_newsport_frac_60s",
+  "src_newsport_60s",
+  "src_seqport_frac_60s",
+  "src_gap_cv_60s",
+  "src_burstiness",
+  "dst_flows_10s",
+  "dst_newdport_frac_10s",
+  "dst_newdport_10s",
+  "dst_syn_frac_10s",
+  "dst_rst_frac_10s",
+  "dst_empty_frac_10s",
+  "dst_newpeer_frac_10s",
+  "dst_newpeer_10s",
+  "dst_newsport_frac_10s",
+  "dst_newsport_10s",
+  "dst_flows_60s",
+  "dst_newdport_frac_60s",
+  "dst_newdport_60s",
+  "dst_syn_frac_60s",
+  "dst_rst_frac_60s",
+  "dst_empty_frac_60s",
+  "dst_newpeer_frac_60s",
+  "dst_newpeer_60s",
+  "dst_newsport_frac_60s",
+  "dst_newsport_60s",
+  "dst_burstiness",
+  "pair_flows_10s",
+  "pair_newdport_frac_10s",
+  "pair_newdport_10s",
+  "pair_syn_frac_10s",
+  "pair_rst_frac_10s",
+  "pair_empty_frac_10s",
+  "pair_flows_60s",
+  "pair_newdport_frac_60s",
+  "pair_newdport_60s",
+  "pair_syn_frac_60s",
+  "pair_rst_frac_60s",
+  "pair_empty_frac_60s",
+  "pair_burstiness"
+ ],
+ "classes": [
+  "Benign",
+  "bot",
+  "brute_force_-web",
+  "brute_force_-xss",
+  "ddos_attack-hoic",
+  "ddos_attack-loic-udp",
+  "ddos_attacks-loic-http",
+  "dos_attacks-goldeneye",
+  "dos_attacks-hulk",
+  "dos_attacks-slowhttptest",
+  "dos_attacks-slowloris",
+  "ftp-bruteforce",
+  "infilteration",
+  "sql_injection",
+  "ssh-bruteforce"
+ ],
+ "selection": {
+  "flow": {
+   "validation": {
+    "bayes": 0.6729154692398053,
+    "balanced": 0.5633978088073565
+   },
+   "calibration": {
+    "bayes": 0.619877941034423,
+    "balanced": 0.5660113845179392
+   },
+   "rule_on_val": "bayes",
+   "trees": 300
+  },
+  "flow+relational": {
+   "validation": {
+    "bayes": 0.8392437144677579,
+    "balanced": 0.7481322432871648
+   },
+   "calibration": {
+    "bayes": 0.9018867746207042,
+    "balanced": 0.7819136695382715
+   },
+   "rule_on_val": "bayes",
+   "trees": 300
+  }
+ },
+ "chosen_feature_set": "flow+relational",
+ "gain_validation": 0.16632824522795264,
+ "gain_calibration": 0.28200883358628126,
+ "rule": "adopt flow+relational iff +0.002 on BOTH validation and calibration",
+ "seed42": {
+  "trees": 300,
+  "validation_macro_mcc": {
+   "bayes": 0.8392437144677579,
+   "balanced": 0.7481322432871648
+  }
+ },
+ "seed43": {
+  "trees": 300,
+  "validation_macro_mcc": {
+   "bayes": 0.8427319600361858,
+   "balanced": 0.7476075242122007
+  }
+ },
+ "seed44": {
+  "trees": 300,
+  "validation_macro_mcc": {
+   "bayes": 0.8460000649691106,
+   "balanced": 0.748151969946277
+  }
+ }
+}
